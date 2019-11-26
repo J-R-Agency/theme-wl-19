@@ -1,1 +1,80 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+body {
+	background-color: white;
+}
+
+/* -- GLOBAL -- */
+/* -- Typography -- */
+
+h3 {
+	padding: 15px 5px;
+	font-size: 16pt;
+}
+
+h4 {
+	font-size: 14pt;
+}
+
+.entry-title {
+	display: none;
+}
+
+/* -- Footer -- */
+div#wrapper-footer.wrapper {
+	text-align: center;
+	background-color: $primary;
+	color: white;
+}
+
+/* -- Styling -- */
+button {
+	-webkit-appearance: button;
+	border: none;
+}
+
+.wp-block-columns.want-to-be-btn {
+	margin-bottom: 0px;
+}
+
+.wp-block-column.want-to-be-btn {
+	flex-basis: auto;
+	margin: 0px 0px 10px 10px;
+}
+
+/* -- HOMEPAGE -- */
+/* -- Search Bar --*/
+form.wp-block-search {
+	background-color: $blue;
+	color: white;
+	padding: 20px 30px;
+	border-radius: $corner-rad;
+}
+
+button.wp-block-search__button {
+	background-color: $dark-blue;
+	color: white;
+	border-radius: $corner-rad;
+	padding: 5px 40px;
+}
+
+/*-- What do you want to be? Buttons -- */
+.wp-block-button__link {
+	font-size: $regular-font-size;
+}
+
+.want-to-be-btn > .wp-block-button__link {
+	width: 150px;
+	padding: 7px;
+}
+
+.action-box {
+	text-align: center;
+	padding: 30px;
+	border-radius: $corner-rad;
+	margin: 20px;
+	h4, p {
+		color: white;
+	}	
+}
+

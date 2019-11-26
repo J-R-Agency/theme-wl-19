@@ -27,7 +27,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<!--<?php understrap_site_info(); ?>-->
+
+						<p>Copyright Wellbeing Liverpool 2019</p>
+						
+						<p>Legal Notices</p>
+						
+						<p>Contact</p>
+						
+						<p>Privacy Policy</p>
 
 					</div><!-- .site-info -->
 
