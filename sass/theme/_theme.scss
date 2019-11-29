@@ -1,19 +1,45 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+@font-face {
+    font-family: 'Lato Regular';
+    src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url("../fonts/Lato/Lato-Black.ttf") format("truetype");
+}
+
 body {
 	background-color: white;
+	font-family: 'Lato Regular', sans-serif;
 }
 
 /* -- GLOBAL -- */
 /* -- Typography -- */
 
 h3 {
-	padding: 15px 5px;
+	font-family: 'Lato Black', sans-serif;
+	padding: 15px 0px;
 	font-size: 16pt;
+	font-size: 14pt;
 }
 
 h4 {
+	font-family: 'Lato Black', sans-serif;
 	font-size: 14pt;
+	padding: 15px 0px;
+	margin: 0;
+	@media all and (max-width: $breakpoint-phone) {
+		padding: 0;	
+		font-size: 12pt;
+	}
+}
+
+p {
+	@media all and (max-width: $breakpoint-phone) {
+		font-size: 10pt;	
+	}
 }
 
 .entry-title {
@@ -37,17 +63,23 @@ button {
 	margin-bottom: 0px;
 }
 
-.wp-block-column.want-to-be-btn {
+.want-to-be-btn {
 	flex-basis: auto;
 	margin: 0px 0px 10px 10px;
+	border-radius: $corner-rad;
+	@media all and (max-width: $breakpoint-phone) {
+		width: 50px;
+		font-size: 10pt;
+	}
 }
 
 /* -- HOMEPAGE -- */
 /* -- Search Bar --*/
+
 form.wp-block-search {
 	background-color: $blue;
 	color: white;
-	padding: 20px 30px;
+	padding: 10px 30px 20px 30px;
 	border-radius: $corner-rad;
 }
 
@@ -56,6 +88,36 @@ button.wp-block-search__button {
 	color: white;
 	border-radius: $corner-rad;
 	padding: 5px 40px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		margin: 10px 0px 10px 0px;
+	}
+}
+
+.wp-block-search .wp-block-search__button {
+	@media all and (max-width: $breakpoint-phone) {
+		margin-left: 0px;
+	}
+}
+
+.wp-block-search__input {
+	border: 0;
+	padding: 0px 10px 0px 10px;
+}
+
+/* -- What would you like to try? -- */
+.try-icon {
+	width: 150px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		display: flex;
+		width: 80px;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.try-copy {
 }
 
 /*-- What do you want to be? Buttons -- */
