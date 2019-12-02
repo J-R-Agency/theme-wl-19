@@ -26,6 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
+	
+	<!-- TERTIARY MENU -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="tertiary-menu">
 			<?php
@@ -45,7 +47,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav>
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
-
+		
+		
+		<!-- PRIMARY MENU -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="primary-menu">
 
 					<!-- Your site title as branding in the menu -->
@@ -83,9 +87,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-
+				
+				<!-- MOBILE MENU -->
+				<div id="mobile-menu">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'mobile_menu',
+								'container_class' => 'collapse navbar-collapse',
+								'container_id'    => 'navbarNavDropdown',
+								'menu_class'      => 'navbar-nav',
+								'fallback_cb'     => '',
+								'menu_id'         => 'mobile',
+								'depth'           => 1,
+								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						);
+					?>
+				</div>
+				
 		</nav><!-- .site-navigation -->
 		
+
+				
+
+		
+		<!-- SECONDARY MENU -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-secondary" id="secondary-menu">
 			<strong>Be more active: </strong>
 			<?php
@@ -109,10 +136,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 <script type="text/javascript">
 	var tertiaryMenu = document.getElementById("tertiary-menu");
 	var secondaryMenu = document.getElementById("secondary-menu");
+	var primaryMenu = document.getElementById("main-menu");
+	var mobileMenu = document.getElementById("mobile-menu");
 	
 	if (screen.width < 640) {
-		tertiaryMenu.style.display = "none";
+		primaryMenu.style.display = "none";
 		secondaryMenu.style.display = "none";
+		tertiaryMenu.style.display = "none";
+		mobileMenu.style.display = "flex";
+	}
+	else {
+		primaryMenu.style.display = "flex";
+		secondaryMenu.style.display = "flex";
+		tertiaryMenu.style.display = "flex";
+		mobileMenu.style.display = "none";
 	}
 </script>
 

@@ -48,6 +48,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 			'primary' => __( 'Primary Menu', 'understrap' ),
 			'secondary_menu' => __( 'Secondary Menu', 'understrap' ),
 			'tertiary_menu' => __('Tertiary Menu', 'understrap' ),
+			'mobile_menu' => __('Mobile Menu', 'understrap' ),
 		) );
 
 		/*
