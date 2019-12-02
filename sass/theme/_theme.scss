@@ -1,5 +1,7 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+
+/*-- FONTS --*/
 @font-face {
     font-family: 'Lato Regular';
     src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
@@ -10,19 +12,39 @@
     src: url("../fonts/Lato/Lato-Black.ttf") format("truetype");
 }
 
-body {
-	background-color: white;
-	font-family: 'Lato Regular', sans-serif;
+/*-- MIX-INS --*/
+@mixin horizontal-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+
 /* -- GLOBAL -- */
+html, body {
+	background-color: white;
+	font-family: 'Lato Regular', sans-serif;
+	height: 100%;
+}
+
+.horizontal-center {
+	@include horizontal-center;
+}
+
 /* -- Typography -- */
+
+h2 {
+	font-family: 'Lato Regular', sans-serif;
+}
 
 h3 {
 	font-family: 'Lato Black', sans-serif;
 	padding: 15px 0px;
-	font-size: 16pt;
-	font-size: 14pt;
+	font-size: 21pt;
+	@media all and (max-width: $breakpoint-phone) {
+		padding: 0;	
+		font-size: 14pt;
+	}
 }
 
 h4 {
@@ -36,21 +58,77 @@ h4 {
 	}
 }
 
-p {
+p, ul, li {
 	@media all and (max-width: $breakpoint-phone) {
 		font-size: 10pt;	
 	}
 }
 
-.entry-title {
-	display: none;
+.center-text {
+	text-align: center;
+}
+
+/* -- Navs & Menus -- */
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255,255,255,1);
+}
+
+.bg-secondary {
+	background-color: $secondary;
+}
+
+#primary-menu {
+	height: 75px;
+}
+
+#secondary-menu {
+	color: white;
+	text-align: center;
+}
+
+#tertiary-menu {
+	height: 30px;
+	font-size: $small-font-size;
 }
 
 /* -- Footer -- */
 div#wrapper-footer.wrapper {
-	text-align: center;
+	display: none;
+}
+
+#wrapper-footer-full {
 	background-color: $primary;
 	color: white;
+}
+
+.footer-left {
+	display: flex;
+	align-items: center;
+}
+
+.footer-right {
+	text-align: right;
+	
+	.links {
+		margin-bottom: 40px;
+		font-size: $small-font-size;
+	}
+	
+	span {
+		padding: 10px 0px 10px 40px;
+		
+		@media all and (max-width: $breakpoint-phone) {
+			padding: 10px 20px 10px 0px;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+	
+	@media all and (max-width: $breakpoint-phone) {
+		text-align: left;
+	}
 }
 
 /* -- Styling -- */
@@ -74,7 +152,35 @@ button {
 }
 
 /* -- HOMEPAGE -- */
+
+/* -- Styles -- */
+
+.highlight {
+	background-color: $light-grey;
+	padding: 30px;
+	border: solid white 20px;
+	@media all and (max-width: $breakpoint-phone) {
+		border-top: solid white 20px;
+		border-bottom: solid white 20px;
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
 /* -- Search Bar --*/
+
+.search {
+	background-color: $blue;
+	padding: 30px;
+	border: solid white 20px;
+	color: white;
+	@media all and (max-width: $breakpoint-phone) {
+		border-top: solid white 20px;
+		border-bottom: solid white 20px;
+		border-left: 0;
+		border-right: 0;
+	}
+}
 
 form.wp-block-search {
 	background-color: $blue;
@@ -106,18 +212,18 @@ button.wp-block-search__button {
 }
 
 /* -- What would you like to try? -- */
-.try-icon {
+.activity-icon {
 	width: 150px;
-	
 	@media all and (max-width: $breakpoint-phone) {
-		display: flex;
-		width: 80px;
-		align-items: center;
-		justify-content: center;
+		width: 100px;
 	}
 }
 
-.try-copy {
+.activity-description, .activity-name {
+	text-align: center;
+		@media all and (max-width: $breakpoint-phone) {
+			text-align: left;
+		}	
 }
 
 /*-- What do you want to be? Buttons -- */
@@ -140,3 +246,46 @@ button.wp-block-search__button {
 	}	
 }
 
+
+/* -- CONTENT PAGES -- */
+/* -- Images --*/
+.hero {
+	@include horizontal-center;
+	
+	padding: 50px 20px 50px 20px;
+	
+	img {
+		height: 350px;
+		width: 100%;
+		object-fit: cover;
+		
+		@media all and (max-width: $breakpoint-phone) {
+			height: 200px;
+			padding: 0;
+		}
+	}
+	@media all and (max-width: $breakpoint-phone) {
+		padding: 0px;
+	}
+}
+
+.content-copy {
+	padding-right: 20%;
+	padding-left: 20%;
+	@media all and (max-width: $breakpoint-phone) {
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+}
+
+.call-to-action-btn {
+	@include horizontal-center;
+	
+	text-align: center;
+	background-color: $green;
+	width: auto;
+	color: white;
+	padding: 10px;
+	margin: 20px 0px 20px 0px;
+	border-radius: $corner-rad;
+}

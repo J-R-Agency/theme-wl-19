@@ -8,12 +8,17 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
 /* Colors */
-$primary: #969FA9; // Thats a sample how you could change a BootStrap variable.
 $blue: #00A8F8;
 $dark-blue: #0077AF;
+$green: #4e8f48;
+$light-grey: #f0f4f7;
+
+$primary: $blue; // Thats a sample how you could change a BootStrap variable.
+$secondary: $dark-blue;
 
 /* Fonts */
 $regular-font-size: 12pt;
+$small-font-size: 9pt;
 
 /* Styles */
 $corner-rad: 5px;

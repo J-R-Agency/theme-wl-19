@@ -167,5 +167,6 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
+
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
