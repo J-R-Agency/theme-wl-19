@@ -13,7 +13,7 @@
 }
 
 /*-- MIX-INS --*/
-@mixin horizontal-center {
+@mixin centered {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -21,7 +21,20 @@
 
 @mixin vertical-center {
 	display: flex;
-    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin action-box {
+	color: white;
+	text-align: center;
+	width: auto;
+	margin: 20px 0px 20px 0px;
+	padding: 20px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		text-align: left;
+	}	
 }
 
 
@@ -32,12 +45,16 @@ html, body {
 	height: 100%;
 }
 
-.horizontal-center {
-	@include horizontal-center;
+.centered {
+	@include centered;
 }
 
 .vertical-center {
 	@include vertical-center;
+}
+
+.container {
+	width: 100%;
 }
 
 /* -- Typography -- */
@@ -83,7 +100,7 @@ p, ul, li {
 
 /* -- Links -- */
 
-p, h1, h2, h3, h4 {
+p {
 	a {
 		background:
 		 linear-gradient(
@@ -105,8 +122,19 @@ p, h1, h2, h3, h4 {
 	}	
 }
 
+ h1, h2, h3, h4 {
+	 a {
+		 color: black;
+		 
+		 &:hover {
+			color: black;
+		 	text-decoration: none;
+		 }
+	 }
+ }
+
 .call-to-action-btn {
-	@include horizontal-center;
+	@include centered;
 	
 	text-align: center;
 	background-color: $green;
@@ -123,20 +151,59 @@ p, h1, h2, h3, h4 {
 	}
 }
 
+/* -- Images -- */
+.icon {
+	width: 125px;
+	transition: transform 0.2s;
+	
+	&:hover {
+		transform: scale(.9);
+		transition: transform 0.2s;
+	}
+}
+
 /* -- Navs & Menus -- */
 
+.navbar-brand {
+	width: 200px;
+}
+
+.navbar-dark .navbar-toggler {
+	border: solid $secondary 3px;
+	background-color: $secondary;
+}
+
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");	
+}
+
+
 .navbar-dark .navbar-nav .nav-link {
-	color: rgba(255,255,255,1);
+	color: rgba(0,0,0,1);
+	
+	&:hover, &:active, &:focus {
+		color: $secondary;
+	}
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+	background-color: $secondary;
+		&:hover, &:active, &:focus {
+			color: white;
+		}
 }
 
 #primary-menu {
-	//border-bottom: solid $hot-pink 5px;
+	color: black;
 }
 
-#secondary-menu {
+#secondary-menu, #secondaryNavDropdown a {
 	color: white;
 	text-align: center;
-	//border-bottom: solid $hot-pink 5px;
+	
+	a:hover {
+		color: yellow;
+	}
 }
 
 #tertiaryNavDropdown {
@@ -146,13 +213,28 @@ p, h1, h2, h3, h4 {
 }
 
 /* -- Footer -- */
-div#wrapper-footer.wrapper {
-	display: none;
+
+.wrapper {
+	padding: 0;
 }
 
-#wrapper-footer-full {
-	background-color: $primary;
+.partners {
+	background-color: white;
+	color: black;
+	padding: 20px;
+	
+	img {
+		margin: 20px;
+		height: 70px;
+		object-fit: contain;
+		
+	}
+}
+
+.footer-links {
+	background-color: $secondary;
 	color: white;
+	padding: 20px 0px 20px 0px;
 }
 
 .footer-left {
@@ -206,7 +288,12 @@ button {
 	border-radius: $corner-rad;
 	
 	ul {
-		padding: 0;
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	li {
+		padding: 5px 0px 5px 0px;
 	}
 	
 	@media all and (max-width: $breakpoint-phone) {
@@ -271,25 +358,6 @@ button.wp-block-search__button {
 	}
 }
 
-.activity-name a {
-	color: black;
-	background: none;
-	
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-.activity-icon {
-	width: 125px;
-	transition: transform 0.2s;
-	
-	&:hover {
-		transform: scale(.9);
-		transition: transform 0.2s;
-	}
-}
-
 .activity-description, .activity-name {
 	text-align: center;
 		@media all and (max-width: $breakpoint-phone) {
@@ -337,7 +405,7 @@ button.wp-block-search__button {
 /* -- CONTENT PAGES -- */
 /* -- Images --*/
 .hero {
-	@include horizontal-center;
+	@include centered;
 	
 	padding: 30px 20px 30px 20px;
 	
@@ -365,3 +433,32 @@ button.wp-block-search__button {
 	}
 }
 
+.action-box-one {
+	@include action-box;
+
+	background-color: $blue;
+	
+	.call-to-action-btn {
+		background-color: $dark-blue;
+	}
+}
+
+.action-box-two {	
+	@include action-box;
+	
+	background-color: $green;
+	
+	.call-to-action-btn {
+		background-color: $dark-green;
+	}
+}
+
+.action-box-three {	
+	@include action-box;
+	
+	background-color: $purple;
+	
+	.call-to-action-btn {
+		background-color: $dark-purple;
+	}
+}

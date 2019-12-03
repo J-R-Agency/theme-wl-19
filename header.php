@@ -106,10 +106,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 				</div>
 				
-		</nav><!-- .site-navigation -->
-		
-
-				
+		</nav><!-- .site-navigation -->	
 
 		
 		<!-- SECONDARY MENU -->

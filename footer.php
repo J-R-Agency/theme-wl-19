@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container-fluid">
 
 		<div class="row">
 
@@ -27,15 +27,54 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
-
-						<!--<p>Copyright Wellbeing Liverpool 2019</p>
+						<!--<?php understrap_site_info(); ?>-->
+						<div class="row partners">
+							<div class="col-12">
+								<h4>
+									Delivered in partnership with
+								</h4>
+							</div>
+							<div class="row">
+								<div class="col-4">
+									<img src="http://192.168.33.10/wellbeing/wp-content/uploads/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
+								</div>
+								<div class="col-4">
+									<img src="http://192.168.33.10/wellbeing/wp-content/uploads/2019/12/citizens-advice-liverpool-logo.jpg" alt="Healthwatch Liverpool">
+								</div>
+							</div>
+						</div>
 						
-						<p>Legal Notices</p>
+						<div class="row footer-links">
+							<div class="col-md-6 col-xs-12 footer-left">
+								<h2>
+									Wellbeing Liverpool
+								</h2>
+							</div>
+							
+							<div class="col-md-6 col-xs-12 footer-right">
+								<div class="row">
+									<div class="col-12 links">
+										<span>Legal Notices</span>
+							<span>Contact</span>
+							<span>Privacy Policy</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<p>
+											0300 77 77 007
+										</p>
+										<p>	enquiries@healthwatchliverpool.co.uk
+										</p>
+										<p>
+											4th floor, 151 Dale Street, Liverpool, L2 2AH
+										</p>
+									</div>
+								</div>
+									
+							</div>
 						
-						<p>Contact</p>
-						
-						<p>Privacy Policy</p>-->
+						</div>
 
 					</div><!-- .site-info -->
 

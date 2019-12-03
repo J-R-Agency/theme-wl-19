@@ -10,16 +10,22 @@ $breakpoint-desktop: 1024px;
 /* Colors */
 $blue: #30b5f2;
 $dark-blue: #0077AF;
-$green: #4e8f48;
+
+$green: #499c36;
+$dark-green: #126328;
+
+$purple: #996fca;
+$dark-purple: #69317d;
+
+$pink: #ff8cd3;
+$hot-pink: #ce1584;
+
 $orange: #b8b6a1;
 $red: #d70014;
-$purple: #996fca;
-$pink: #ff8cd3;
-$hot-pink: #e83378;
 $light-grey: #f0f4f7;
 
-$primary: $blue; // Thats a sample how you could change a BootStrap variable.
-$secondary: $dark-blue;
+$primary: #ffff; // Thats a sample how you could change a BootStrap variable.
+$secondary: $hot-pink;
 
 /* Fonts */
 $regular-font-size: 12pt;

@@ -28,12 +28,12 @@ get_header(); ?>
 	
 	<div class="row mt-5">
 		<div class="col-12">
-			<h3 class="horizontal-center">What do you want to be?</h3>
+			<h3 class="centered">What do you want to be?</h3>
 		</div>
 	</div>
 
 	<!-- MOOD BUTTONS -->
-	<div class="row mb-5 horizontal-center mood-btns">
+	<div class="row mb-5 centered mood-btns">
 		<div class="col-md-2 col-4">
 			<button style="background-color: #4e8f48;">Active</button>
 		</div>
@@ -55,7 +55,7 @@ get_header(); ?>
 	<div class="row highlight">
 		<div class="row">
 			<div class="col-12">
-				<h3 class="horizontal-center">What would you like to try?</h3>
+				<h3 class="centered">What would you like to try?</h3>
 			</div>
 		</div>
 		
@@ -73,12 +73,12 @@ get_header(); ?>
 					?>
 					<div class="col-md-3 col-12 activity">
 						<!-- Activity icon -->
-						<div class="col-md-12 col-4 horizontal-center">
+						<div class="col-md-12 col-4 centered">
 							<?php if( $link ): ?>
 								<a href="<?php echo $link; ?>">
 							<?php endif; ?>
 				
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="activity-icon horizontal-center"/>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="icon centered"/>
 						
 							<?php if( $link ): ?>
 								</a>
