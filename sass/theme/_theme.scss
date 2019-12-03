@@ -19,6 +19,11 @@
 	justify-content: center;
 }
 
+@mixin vertical-center {
+	display: flex;
+    align-items: center;
+}
+
 
 /* -- GLOBAL -- */
 html, body {
@@ -31,6 +36,10 @@ html, body {
 	@include horizontal-center;
 }
 
+.vertical-center {
+	@include vertical-center;
+}
+
 /* -- Typography -- */
 
 h2 {
@@ -38,23 +47,27 @@ h2 {
 }
 
 h3 {
+	font-size: 21pt;
+	
 	font-family: 'Lato Black', sans-serif;
 	padding: 15px 0px;
-	font-size: 21pt;
+	
 	@media all and (max-width: $breakpoint-phone) {
-		padding: 0;	
+		padding: 5px 0px 5px 0px;
 		font-size: 14pt;
 	}
 }
 
 h4 {
-	font-family: 'Lato Black', sans-serif;
 	font-size: 14pt;
+	
+	font-family: 'Lato Black', sans-serif;
 	padding: 15px 0px;
-	margin: 0;
+	
 	@media all and (max-width: $breakpoint-phone) {
-		padding: 0;	
+		padding: 5px 0px 5px 0px;	
 		font-size: 12pt;
+		margin: 0;
 	}
 }
 
@@ -68,26 +81,68 @@ p, ul, li {
 	text-align: center;
 }
 
+/* -- Links -- */
+
+p, h1, h2, h3, h4 {
+	a {
+		background:
+		 linear-gradient(
+		   to bottom, #ffd900 0%,
+		   #ffd900 100%
+		 );
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 4px;
+		color: #000;
+		text-decoration: none;
+		transition: background-size .4s;
+		
+		&:hover {
+			background-size: 4px 50px;
+			color: inherit;
+			text-decoration: none;
+		}
+	}	
+}
+
+.call-to-action-btn {
+	@include horizontal-center;
+	
+	text-align: center;
+	background-color: $green;
+	width: auto;
+	color: white;
+	padding: 10px;
+	margin: 20px 0px 20px 0px;
+	border-radius: $corner-rad;
+	
+	&:hover {
+		color: white;
+		text-decoration: none;
+		filter: brightness(90%);
+	}
+}
+
 /* -- Navs & Menus -- */
+
 .navbar-dark .navbar-nav .nav-link {
 	color: rgba(255,255,255,1);
 }
 
-.bg-secondary {
-	background-color: $secondary;
-}
-
 #primary-menu {
+	//border-bottom: solid $hot-pink 5px;
 }
 
 #secondary-menu {
 	color: white;
 	text-align: center;
+	//border-bottom: solid $hot-pink 5px;
 }
 
-#tertiary-menu {
+#tertiaryNavDropdown {
 	height: 30px;
 	font-size: $small-font-size;
+	flex-direction: row-reverse;
 }
 
 /* -- Footer -- */
@@ -136,28 +191,24 @@ button {
 	border: none;
 }
 
-.wp-block-columns.want-to-be-btn {
-	margin-bottom: 0px;
-}
-
-.want-to-be-btn {
-	flex-basis: auto;
-	margin: 0px 0px 10px 10px;
-	border-radius: $corner-rad;
-	@media all and (max-width: $breakpoint-phone) {
-		width: 50px;
-		font-size: 10pt;
-	}
-}
-
 /* -- HOMEPAGE -- */
-
 /* -- Styles -- */
 
 .highlight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
 	background-color: $light-grey;
 	padding: 30px;
 	border: solid white 20px;
+	border-radius: $corner-rad;
+	
+	ul {
+		padding: 0;
+	}
+	
 	@media all and (max-width: $breakpoint-phone) {
 		border-top: solid white 20px;
 		border-bottom: solid white 20px;
@@ -173,6 +224,8 @@ button {
 	padding: 30px;
 	border: solid white 20px;
 	color: white;
+	
+	
 	@media all and (max-width: $breakpoint-phone) {
 		border-top: solid white 20px;
 		border-bottom: solid white 20px;
@@ -211,10 +264,29 @@ button.wp-block-search__button {
 }
 
 /* -- What would you like to try? -- */
-.activity-icon {
-	width: 150px;
+.activity {
 	@media all and (max-width: $breakpoint-phone) {
-		width: 100px;
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.activity-name a {
+	color: black;
+	background: none;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.activity-icon {
+	width: 125px;
+	transition: transform 0.2s;
+	
+	&:hover {
+		transform: scale(.9);
+		transition: transform 0.2s;
 	}
 }
 
@@ -225,33 +297,49 @@ button.wp-block-search__button {
 		}	
 }
 
-/*-- What do you want to be? Buttons -- */
-.wp-block-button__link {
-	font-size: $regular-font-size;
+/*-- What do you want to be?-- */
+
+.what-do-you-want-to-be {
+	padding: 20px 0px 500px 0px;
 }
 
-.want-to-be-btn > .wp-block-button__link {
-	width: 150px;
-	padding: 7px;
-}
-
-.action-box {
-	text-align: center;
-	padding: 30px;
-	border-radius: $corner-rad;
-	margin: 20px;
-	h4, p {
+.mood-btns {
+	
+	display: flex;
+	justify-content: center;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		display: flex;
+		justify-content: left;
+	}
+	
+	button {
+		width: 150px;
+		padding: 7px;
+		margin: 10px;
 		color: white;
-	}	
+		
+		&:hover {
+			color: white;
+			text-decoration: none;
+			filter: brightness(90%);
+		}	
+		
+		@media all and (max-width: $breakpoint-phone) {
+			width: 90px;
+			padding: 5px;
+			margin: 5px 0px 5px 0px;
+			font-size: $small-font-size;
+		}
+	}
 }
-
 
 /* -- CONTENT PAGES -- */
 /* -- Images --*/
 .hero {
 	@include horizontal-center;
 	
-	padding: 50px 20px 50px 20px;
+	padding: 30px 20px 30px 20px;
 	
 	img {
 		height: 350px;
@@ -277,14 +365,3 @@ button.wp-block-search__button {
 	}
 }
 
-.call-to-action-btn {
-	@include horizontal-center;
-	
-	text-align: center;
-	background-color: $green;
-	width: auto;
-	color: white;
-	padding: 10px;
-	margin: 20px 0px 20px 0px;
-	border-radius: $corner-rad;
-}

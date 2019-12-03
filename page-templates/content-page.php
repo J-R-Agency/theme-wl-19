@@ -14,6 +14,8 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <div class="container-fluid">
+	
+	<?php if ( has_post_thumbnail() ): ?>
 	<div class="row">
 		<div class="col-12">
 			<div class="hero" style="background-image: url("<?php echo $image['url']; ?>");>
@@ -21,6 +23,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<?php endif ?>
+	
 	
 	<div class="row">
 		<div class="col-12">

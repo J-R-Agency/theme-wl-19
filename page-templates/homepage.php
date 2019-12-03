@@ -16,36 +16,38 @@ get_header(); ?>
 <div class="container-fluid">
 	
 	<div class="row mt-20">
-		<div class="col-md-6 col-sm-12 highlight">
-			<p>Wellbeing Liverpool is a service designed to help you find activities, groups and organisations that can help you live the life you want to live.</p>
+		<div class="col-md-6 col-sm-12 highlight vertical-center">
+			<p> <?php while(have_posts()) : the_post(); ?>
+				<?php the_content();?>
+				<?php endwhile; ?></p>
 		</div>
 		<div class="col-md-6 col-sm-12 search">
 			<h4>What would you like to do?</h4>
 		</div>
 	</div>
 	
-	<div class="row">
+	<div class="row mt-5">
 		<div class="col-12">
-			<h3 class="center-title">What do you want to be?</h3>
+			<h3 class="horizontal-center">What do you want to be?</h3>
 		</div>
 	</div>
 
 	<!-- MOOD BUTTONS -->
-	<div class="row horizontal-center">
-		<div class="col-2">
-			<button>Active</button>
+	<div class="row mb-5 horizontal-center mood-btns">
+		<div class="col-md-2 col-4">
+			<button style="background-color: #4e8f48;">Active</button>
 		</div>
-		<div class="col-2">
-			<button>Creative</button>
+		<div class="col-md-2 col-4">
+			<button style="background-color: #fa952f;">Creative</button>
 		</div>
-		<div class="col-2">
-			<button>Useful</button>
+		<div class="col-md-2 col-4">
+			<button style="background-color: #d70014;">Useful</button>
 		</div>
-		<div class="col-2">
-			<button>Social</button>
+		<div class="col-md-2 col-4">
+			<button style="background-color: #996fca;">Social</button>
 		</div>
-		<div class="col-2">
-			<button>Calm</button>
+		<div class="col-md-2 col-4">
+			<button style="background-color: #ff8cd3;;">Calm</button>
 		</div>
 	</div>
 	
@@ -69,9 +71,9 @@ get_header(); ?>
 					$link = get_sub_field('activity_link');
 			
 					?>
-					<div class="col-md-3 col-xs-12">
+					<div class="col-md-3 col-12 activity">
 						<!-- Activity icon -->
-						<div class="col-md-12 col-xs-6 horizontal-center">
+						<div class="col-md-12 col-4 horizontal-center">
 							<?php if( $link ): ?>
 								<a href="<?php echo $link; ?>">
 							<?php endif; ?>
@@ -84,10 +86,22 @@ get_header(); ?>
 						</div>
 						
 						<!-- Activity copy -->
-						<div class="col-md-12 col-xs-6">
-						    <h4 class="activity-name"><?php echo $name; ?></h4>
+						<div class="col-md-12 col-8">
+							
+							
+							<h4 class="activity-name">
+								<?php if( $link ): ?>
+									<a href="<?php echo $link; ?>">
+								<?php endif; ?>							
+							    	<?php echo $name; ?>
+								<?php if( $link ): ?>
+									</a>
+								<?php endif; ?>	
+							</h4>					    	
+						    	
 						    <p class="activity-description"><?php echo $description; ?></p>
 						</div>
+						
 					</div>
 					
 				<?php endwhile; ?>
@@ -102,16 +116,25 @@ get_header(); ?>
 	
 	<div class="row mt-20">
 		<div class="col-md-6 col-sm-12 highlight">
-			<h4>Benefits of an Action Plan</h4>
+			<h4><?php the_field("action_plan_title"); ?></h4>
 			<ul>
-				<li>Be more productive</li>
-				<li>Reduce stress</li>
-				<li>Stay on target</li>
-				<li>Feel more supported</li>
+				<?php the_field("action_plan_copy"); ?>
 			</ul>
 		</div>
 		<div class="col-md-6 col-sm-12 search">
-			<h4>Create your action plan!</h4>
+			<h4><?php the_field("create_ac_title");?></h4>
+			<p><?php the_field("create_ac_copy");?></p>
+			
+			<?php
+				$link = get_field('create_ac_link');
+				if( $link ): 
+			    	$link_url = $link['url'];
+					$link_title = $link['title'];
+					$link_target = $link['target'] ? $link['target'] : '_self';
+			?>
+			<a class="call-to-action-btn" style="background-color: #0077AF;" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+			<?php endif; ?>
+			
 		</div>
 	</div>
 	
