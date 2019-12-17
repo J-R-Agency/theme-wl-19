@@ -1,0 +1,38 @@
+.content-copy {
+	padding-right: 20%;
+	padding-left: 20%;
+	@media all and (max-width: $breakpoint-phone) {
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+}
+
+.action-box-one {
+	@include action-box;
+
+	background-color: $blue;
+	
+	.call-to-action-btn {
+		background-color: $dark-blue;
+	}
+}
+
+.action-box-two {	
+	@include action-box;
+	
+	background-color: $green;
+	
+	.call-to-action-btn {
+		background-color: $dark-green;
+	}
+}
+
+.action-box-three {	
+	@include action-box;
+	
+	background-color: $purple;
+	
+	.call-to-action-btn {
+		background-color: $dark-purple;
+	}
+}

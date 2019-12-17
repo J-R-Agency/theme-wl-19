@@ -17,14 +17,14 @@ get_header(); ?>
 			
 			<div class="row">
 				<div class="col-12 content-copy">
-					<h3>Get in touch</h3>
+					<h1>Get in touch</h1>
 					<p>Here are a few ways to get in touch with us. Please choose whichever method feels the most comfortable for you.</p>
 					
 					
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.238219084266!2d-2.997528484682095!3d53.41056567760082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21d234cfabf9%3A0x93751a74f8df9d9b!2sCitizens%20Advice%20Liverpool%20office!5e0!3m2!1sen!2suk!4v1575385333769!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 					
-					<h3>Contact Information</h3>
-					<h4>Citizens Advice Liverpool</h4>
+					<h1>Contact Information</h1>
+					<h2>Citizens Advice Liverpool</h2>
 					<p>Citizens Advice Liverpool gives you advice on a wide range of subjects such as: benefits, work, debt & money, consumer, family, housing, law & courts, immigration and health. There are a number of ways that you can contact us, depending on the advice you need.</p>
 				</div>
 			</div>

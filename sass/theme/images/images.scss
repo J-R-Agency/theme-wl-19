@@ -1,0 +1,32 @@
+.hero {
+	@include centered;
+	
+	padding: 30px 20px 30px 20px;
+	height: 500px;
+	margin: 0px -15px 20px -15px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		padding: 0px;
+		height: 250px;
+	}
+		
+	img {
+		width: 100%;
+		object-fit: cover;
+		
+		@media all and (max-width: $breakpoint-phone) {
+			height: 200px;
+			padding: 0;
+		}
+	}
+}
+
+.icon {
+	width: 125px;
+	transition: transform 0.2s;
+	
+	&:hover {
+		transform: scale(.9);
+		transition: transform 0.2s;
+	}
+}

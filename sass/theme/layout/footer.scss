@@ -1,0 +1,52 @@
+.wrapper {
+	padding: 0;
+}
+
+.partners {
+	background-color: white;
+	color: black;
+	padding: 20px;
+	
+	img {
+		margin: 20px;
+		height: 70px;
+		object-fit: contain;
+		
+	}
+}
+
+.footer-links {
+	background-color: $secondary;
+	color: white;
+	padding: 20px 0px 20px 0px;
+}
+
+.footer-left {
+	display: flex;
+	align-items: center;
+}
+
+.footer-right {
+	text-align: right;
+	
+	.links {
+		margin-bottom: 40px;
+		font-size: $small-font-size;
+	}
+	
+	span {
+		padding: 10px 0px 10px 40px;
+		
+		@media all and (max-width: $breakpoint-phone) {
+			padding: 10px 20px 10px 0px;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+	
+	@media all and (max-width: $breakpoint-phone) {
+		text-align: left;
+	}
+}

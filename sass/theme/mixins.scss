@@ -1,0 +1,31 @@
+@mixin centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin vertical-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin action-box {
+	color: white;
+	text-align: center;
+	width: auto;
+	margin: 20px 0px 20px 0px;
+	padding: 20px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		text-align: left;
+	}	
+}
+
+.centered {
+	@include centered;
+}
+
+.vertical-center {
+	@include vertical-center;
+}

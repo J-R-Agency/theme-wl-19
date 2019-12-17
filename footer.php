@@ -54,9 +54,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="col-md-6 col-xs-12 footer-right">
 								<div class="row">
 									<div class="col-12 links">
-										<span>Legal Notices</span>
-							<span>Contact</span>
-							<span>Privacy Policy</span>
+										<span>
+											<a href="<?php echo get_permalink( get_page_by_path( 'get-in-touch' ) ); ?>">																		Get in touch
+											</a>
+										</span>
+										<span>
+											<a href="<?php echo get_permalink( get_page_by_path( 'privacy-policy' ) ); ?>">
+												Privacy Policy
+											</a>
+										</span>
+										<span>
+											<a href="<?php echo get_permalink( get_page_by_path( 'legal-information' ) ); ?>">
+												Legal Information
+											</a>										
+										</span>
 									</div>
 								</div>
 								<div class="row">

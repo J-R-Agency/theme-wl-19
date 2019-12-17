@@ -16,42 +16,29 @@ get_header(); ?>
 <div class="container-fluid">
 	
 	<?php if ( has_post_thumbnail() ): ?>
-	<div class="row">
-		<div class="col-12">
-			<div class="hero" style="background-image: url("<?php echo $image['url']; ?>");>
-			    <?php $image = the_post_thumbnail(); ?>
-			</div>
-		</div>
-	</div>
+		<?php $thumb = get_the_post_thumbnail_url(); ?>
+			<div class="hero" style="background: url('<?php echo $thumb; ?>') no-repeat; background-size: cover;"></div>	
 	<?php endif ?>
 	
 	
 	<div class="row">
 		<div class="col-12">
-			<h3 class="center-text"><?php the_title(); ?></h3>
+			<h1 class="centered"><?php the_title(); ?></h1>
 		</div>
 	</div>
-	
+
 	<div class="row">
-		<div class="col-12 content-copy">
-			<?php the_field('content_copy'); ?>
+		<div class="col-12 content-copy">	
+		<?php while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
+	        <div class="entry-content-page">
+	            <?php the_content(); ?> <!-- Page Content -->
+	            <h1 class="centered"><?php the_field('cta_title'); ?></h1>
+	        </div><!-- .entry-content-page -->
+	    <?php
+	    endwhile; //resetting the page loop
+	    wp_reset_query(); //resetting the page query
+	    ?>
 		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-1"></div>
-		<div class="col-10 content-copy">
-			<?php 
-			$link = get_field('call_to_action');
-			if( $link ): 
-			    $link_url = $link['url'];
-			    $link_title = $link['title'];
-			    $link_target = $link['target'] ? $link['target'] : '_self';
-			    ?>
-			    <a class="call-to-action-btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-			<?php endif; ?>
-		</div>
-		<div class="col-1"></div>
 	</div>
 	
 	
@@ -79,7 +66,7 @@ get_header(); ?>
 					<div class="col-md-8 col-12 action-box-three">
 				<?php } ?>
 				
-					<h4><?php echo $title; ?></h4>
+					<h2><?php echo $title; ?></h2>
 					<p><?php echo $description; ?></p>
 					
 					<?php 

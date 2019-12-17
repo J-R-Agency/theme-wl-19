@@ -16,136 +16,112 @@ get_header(); ?>
 <div class="container-fluid">
 	
 	<div class="row mt-20">
-		<div class="col-md-6 col-sm-12 highlight vertical-center">
-			<p> <?php while(have_posts()) : the_post(); ?>
-				<?php the_content();?>
-				<?php endwhile; ?></p>
+		
+		<!-- What we do -->
+		<div class="col-md-6 col-12 d-flex">
+			<div class="highlight w-100">
+				<p class="vertical-center">
+					<?php while(have_posts()) : the_post(); ?>
+						<?php the_content();?>
+					<?php endwhile; ?>
+				</p>
+			</div>
 		</div>
-		<div class="col-md-6 col-sm-12 search">
-			<h4>What would you like to do?</h4>
+		<!-- end what we do -->
+		
+		<!-- What would you like to do? (action-box bar) -->
+		<div class="col-md-6 col-12 d-flex">
+			<?php include get_template_directory() ."/global-templates/search-box.php"; ?>
 		</div>
+		<!-- end What would you like to do? -->
+		
 	</div>
+	
 	
 	<div class="row mt-5">
 		<div class="col-12">
-			<h3 class="centered">What do you want to be?</h3>
-		</div>
-	</div>
-
-	<!-- MOOD BUTTONS -->
-	<div class="row mb-5 centered mood-btns">
-		<div class="col-md-2 col-4">
-			<button style="background-color: #4e8f48;">Active</button>
-		</div>
-		<div class="col-md-2 col-4">
-			<button style="background-color: #fa952f;">Creative</button>
-		</div>
-		<div class="col-md-2 col-4">
-			<button style="background-color: #d70014;">Useful</button>
-		</div>
-		<div class="col-md-2 col-4">
-			<button style="background-color: #996fca;">Social</button>
-		</div>
-		<div class="col-md-2 col-4">
-			<button style="background-color: #ff8cd3;;">Calm</button>
+			<h1 class="centered">What do you want to be?</h1>
 		</div>
 	</div>
 	
+	<!-- MOOD BUTTONS -->
+	<?php include get_template_directory() ."/global-templates/mood-buttons.php"; ?>
+	<!-- end mood buttons -->
+	
 	<!-- What would you like to try? -->
-	<div class="row highlight">
-		<div class="row">
-			<div class="col-12">
-				<h3 class="centered">What would you like to try?</h3>
-			</div>
-		</div>
-		
-		<div class="row">
-			<?php if( have_rows('activity') ): ?>
-						
-				<?php while( have_rows('activity') ): the_row(); 
-			
-					// vars
-					$image = get_sub_field('activity_icon');
-					$name = get_sub_field('activity_name');
-					$description = get_sub_field('activity_description');
-					$link = get_sub_field('activity_link');
-			
-					?>
-					<div class="col-md-3 col-12 activity">
-						<!-- Activity icon -->
-						<div class="col-md-12 col-4 centered">
-							<?php if( $link ): ?>
-								<a href="<?php echo $link; ?>">
-							<?php endif; ?>
-				
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="icon centered"/>
-						
-							<?php if( $link ): ?>
-								</a>
-							<?php endif; ?>
-						</div>
-						
-						<!-- Activity copy -->
-						<div class="col-md-12 col-8">
-							
-							
-							<h4 class="activity-name">
-								<?php if( $link ): ?>
-									<a href="<?php echo $link; ?>">
-								<?php endif; ?>							
-							    	<?php echo $name; ?>
-								<?php if( $link ): ?>
-									</a>
-								<?php endif; ?>	
-							</h4>					    	
-						    	
-						    <p class="activity-description"><?php echo $description; ?></p>
-						</div>
-						
-					</div>
-					
-				<?php endwhile; ?>
-			
-			<?php endif; ?>
-		</div>
-	</div>
+	<?php include get_template_directory() ."/global-templates/activity-buttons.php"; ?>	
+	<!-- end What would you like to try? -->
 	
 	<!-- Horizontal break -->
 	<hr>
 	
 	
 	<div class="row mt-20">
-		<div class="col-md-6 col-sm-12 highlight">
-			<h4><?php the_field("action_plan_title"); ?></h4>
-			<ul>
-				<?php the_field("action_plan_copy"); ?>
-			</ul>
+		
+		<!-- Benefits of an Action Plan -->
+		<div class="col-md-6 col-sm-12 d-flex">
+			<div class="highlight w-100">
+				<h1><?php the_field("benefits_title"); ?></h1>
+				<ul>
+					<?php
+						// check if the repeater field has rows of data
+						if( have_rows('benefits_list') ):
+						
+						 	// loop through the rows of data
+						    while ( have_rows('benefits_list') ) : the_row();
+						
+						        // display a sub field value
+						        $bulletPoint = get_sub_field('benefits_bullet_point');
+					?> 
+							<li><?php echo $bulletPoint; ?></li>  
+						<?php
+						    endwhile;
+						else :
+						    // no rows found
+						endif;
+						?>				
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-6 col-sm-12 search">
-			<h4><?php the_field("create_ac_title");?></h4>
-			<p><?php the_field("create_ac_copy");?></p>
-			
-			<?php
-				$link = get_field('create_ac_link');
-				if( $link ): 
-			    	$link_url = $link['url'];
-					$link_title = $link['title'];
-					$link_target = $link['target'] ? $link['target'] : '_self';
-			?>
-			<a class="call-to-action-btn" style="background-color: #0077AF;" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-			<?php endif; ?>
-			
+		<!-- end benefits of an action plan -->
+		
+		<!-- Create your Action Plan -->
+		<div class="col-md-6 col-sm-12 d-flex">
+			<div class="action-box w-100">
+				<h1><?php the_field("create_ac_title");?></h1>
+				<p><?php the_field("create_ac_copy");?></p>
+				
+				<?php
+					$link = get_field('create_ac_link');
+					if( $link ): 
+				    	$link_url = $link['url'];
+						$link_title = $link['title'];
+						$link_target = $link['target'] ? $link['target'] : '_self';
+				?>
+				<a class="call-to-action-btn" style="background-color: #0077AF;" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<?php endif; ?>
+			</div>
 		</div>
+		<!-- end create an action plan -->
+		
 	</div>
 	
 	<div class="row mt-20">
-		<div class="col-md-6 col-sm-12 highlight">
-			<h4>Twitter</h4>
-			
+		<!-- TWITTER BOX -->
+		<div class="col-md-6 col-sm-12 d-flex">
+			<div class="highlight w-100">
+				<h1>Twitter</h1>
+			</div>
 		</div>
-		<div class="col-md-6 col-sm-12 search">
-			<h4>Instagram</h4>
+		<!-- end twitter -->
+		
+		<!-- INSTAGRAM BOX -->
+		<div class="col-md-6 col-sm-12 d-flex">
+			<div class="action-box w-100">
+				<h1>Instagram</h1>
+			</div>
 		</div>
+		<!-- end instagram -->
 	</div>	
 	
 </div>
