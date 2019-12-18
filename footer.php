@@ -39,10 +39,10 @@ $uploads = wp_get_upload_dir();
 							</div>
 							<div class="row">
 								<div class="col-4">
-									<img src="<?php echo $uploads['basedir'];?>/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
+									<img src="<?php echo $uploads['baseurl'];?>/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
 								</div>
 								<div class="col-4">
-									<img src="<?php echo $uploads['basedir'];?>/2019/12/citizens-advice-liverpool-logo.jpg" alt="Citizens Advice Liverpool">
+									<img src="<?php echo $uploads['baseurl'];?>/2019/12/citizens-advice-liverpool-logo.jpg" alt="Citizens Advice Liverpool">
 								</div>
 							</div>
 						</div>
