@@ -11,6 +11,9 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+
+// Get uploads path
+$uploads = wp_get_upload_dir();
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -36,10 +39,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 							<div class="row">
 								<div class="col-4">
-									<img src="http://192.168.33.10/wellbeing/wp-content/uploads/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
+									<img src="<?php echo $uploads['baseurl'];?>/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
 								</div>
 								<div class="col-4">
-									<img src="http://192.168.33.10/wellbeing/wp-content/uploads/2019/12/citizens-advice-liverpool-logo.jpg" alt="Healthwatch Liverpool">
+									<img src="<?php echo $uploads['baseurl'];?>/2019/12/citizens-advice-liverpool-logo.jpg" alt="Citizens Advice Liverpool">
 								</div>
 							</div>
 						</div>

@@ -17,7 +17,7 @@ get_header(); ?>
 	
 	<?php if ( has_post_thumbnail() ): ?>
 		<?php $thumb = get_the_post_thumbnail_url(); ?>
-			<div class="hero" style="background: url('<?php echo $thumb; ?>') no-repeat; background-size: cover;"></div>	
+			<div class="hero" style="background: url('<?php echo $thumb; ?>') no-repeat; background-size: cover; background-position: center;"></div>	
 	<?php endif ?>
 	
 	
