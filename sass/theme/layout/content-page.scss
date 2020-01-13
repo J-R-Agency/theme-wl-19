@@ -43,7 +43,7 @@
 	@include action-box;
 	
 	// background-color: lighten($theme-active, 25%);
-	background-color: mix($theme-active, white, 10%);
+	background-color: mix($theme-active, white, 90%);
 	
 	.call-to-action-btn {
 		background-color: $theme-active;
@@ -54,7 +54,7 @@
 .action-box--calm {	
 	@include action-box;
 	
-	background-color: mix($theme-calm, white, 10%);
+	background-color: mix($theme-calm, white, 90%);
 	
 	.call-to-action-btn {
 		background-color: $theme-calm;
@@ -65,7 +65,7 @@
 .action-box--creative {	
 	@include action-box;
 	
-	background-color: mix($theme-creative, white, 10%);
+	background-color: mix($theme-creative, white, 90%);
 	
 	.call-to-action-btn {
 		background-color: $theme-creative;
@@ -76,7 +76,7 @@
 .action-box--useful {	
 	@include action-box;
 	
-	background-color: mix($theme-useful, white, 10%);
+	background-color: mix($theme-useful, white, 90%);
 	
 	.call-to-action-btn {
 		background-color: $theme-useful;
@@ -87,7 +87,7 @@
 .action-box--social {	
 	@include action-box;
 	
-	background-color: mix($theme-social, white, 10%);
+	background-color: mix($theme-social, white, 90%);
 	
 	.call-to-action-btn {
 		background-color: $theme-social;
