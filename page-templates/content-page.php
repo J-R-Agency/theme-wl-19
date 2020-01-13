@@ -54,17 +54,17 @@ get_header(); ?>
 	        $title = get_sub_field('action_title');
 	        $description = get_sub_field('action_description');
 	        $link = get_sub_field('action_link');
+	        $modifier = get_sub_field('modifier');
+	        if(!empty($modifier)){
+	        	$modifier_class = " action-box--" . $modifier ;
+	        }
 	?>    
 			<div class="row content-copy">
 				<div class="col-md-2 col-0"></div>
 				
-				<?php if( get_row_index() == 1 ) { ?>
-					<div class="col-md-8 col-12 action-box-one">
-				<?php } elseif( get_row_index() == 2 ) { ?>
-					<div class="col-md-8 col-12 action-box-two">
-				<?php } else {?>
-					<div class="col-md-8 col-12 action-box-three">
-				<?php } ?>
+				<?php
+					echo "<div class=\"col-md-8 col-12 action-box action-box--" . get_row_index() . $modifier_class "\">" ;
+				?>
 				
 					<h2><?php echo $title; ?></h2>
 					<p><?php echo $description; ?></p>

@@ -7,7 +7,7 @@
 	}
 }
 
-.action-box-one {
+.action-box--1 {
 	@include action-box;
 
 	background-color: $blue;
@@ -17,7 +17,7 @@
 	}
 }
 
-.action-box-two {	
+.action-box--2 {	
 	@include action-box;
 	
 	background-color: $green;
@@ -27,7 +27,7 @@
 	}
 }
 
-.action-box-three {	
+.action-box--3 {	
 	@include action-box;
 	
 	background-color: $purple;
@@ -36,3 +36,60 @@
 		background-color: $dark-purple;
 	}
 }
+
+
+
+.action-box--active {	
+	@include action-box;
+	
+	background-color: lighten($theme-active, 50%);
+	
+	.call-to-action-btn {
+		background-color: $theme-active;
+	}
+}
+
+
+.action-box--calm {	
+	@include action-box;
+	
+	background-color: lighten($theme-calm, 50%);
+	
+	.call-to-action-btn {
+		background-color: $theme-calm;
+	}
+}
+
+
+.action-box--creative {	
+	@include action-box;
+	
+	background-color: lighten($theme-creative, 50%);
+	
+	.call-to-action-btn {
+		background-color: $theme-creative;
+	}
+}
+
+
+.action-box--useful {	
+	@include action-box;
+	
+	background-color: lighten($theme-useful, 50%);
+	
+	.call-to-action-btn {
+		background-color: $theme-useful;
+	}
+}
+
+
+.action-box--social {	
+	@include action-box;
+	
+	background-color: lighten($theme-social, 50%);
+	
+	.call-to-action-btn {
+		background-color: $theme-social;
+	}
+}
+
