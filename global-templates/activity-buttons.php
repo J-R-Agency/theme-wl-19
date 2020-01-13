@@ -37,7 +37,7 @@
 							
 							<h2 class="activity-name">
 								<?php if( $link ): ?>
-									<a href="<?php echo $link; ?>">
+									<a href="<?php echo $link['url']; ?>">
 								<?php endif; ?>							
 							    	<?php echo $name; ?>
 								<?php if( $link ): ?>
