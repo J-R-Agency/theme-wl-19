@@ -50,7 +50,7 @@ get_header(); ?>
 			    $link_url = $link['url'];
 			    $link_title = $link['title'];
 			    $link_target = $link['target'] ? $link['target'] : '_self';
-			    $modifier = get_sub_field('modifier');
+			    $modifier = get_field('modifier');
 		        if(!empty($modifier)){
 		        	$modifier_class = " call-to-action-btn--" . $modifier ;
 		        }
