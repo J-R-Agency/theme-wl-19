@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="container-fluid">
+<div class="container">
 	
 	<div class="row mt-20">
 		
