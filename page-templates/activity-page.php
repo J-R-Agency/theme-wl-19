@@ -21,7 +21,7 @@ get_header(); ?>
 	<?php endif ?>
 	
 	
-	<div class="row">
+	<div class="row entry-header">
 		<div class="col-12">
 			<h1 class="centered"><?php the_title(); ?></h1>
 		</div>
@@ -50,8 +50,12 @@ get_header(); ?>
 			    $link_url = $link['url'];
 			    $link_title = $link['title'];
 			    $link_target = $link['target'] ? $link['target'] : '_self';
+			    $modifier = get_sub_field('modifier');
+		        if(!empty($modifier)){
+		        	$modifier_class = " call-to-action-btn--" . $modifier ;
+		        }
 			    ?>
-			    <a class="call-to-action-btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+			    <a class="call-to-action-btn <?php echo $modifier_class ;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 			<?php endif; ?>
 		</div>
 		<div class="col-1"></div>

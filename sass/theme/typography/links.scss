@@ -47,4 +47,21 @@ p {
 		text-decoration: none;
 		filter: brightness(90%);
 	}
+
+	&--active{
+		background-color: $theme-active;
+	}
+	&--calm{
+		background-color: $theme-calm;
+	}
+	&--creative{
+		background-color: $theme-creative;
+	}
+	&--useful{
+		background-color: $theme-useful;
+	}
+	&--social{
+		background-color: $theme-social;
+	}
+
 }
