@@ -21,7 +21,7 @@ get_header(); ?>
 	<?php endif ?>
 	
 	
-	<div class="row">
+	<div class="row entry-header">
 		<div class="col-12">
 			<h1 class="centered"><?php the_title(); ?></h1>
 		</div>
