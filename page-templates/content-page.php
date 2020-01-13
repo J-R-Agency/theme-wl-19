@@ -63,7 +63,7 @@ get_header(); ?>
 				<div class="col-md-2 col-0"></div>
 				
 				<?php
-					// echo "<div class=\"col-md-8 col-12 action-box action-box--" . get_row_index() . $modifier_class "\">" ;
+					echo "<div class=\"col-md-8 col-12 action-box action-box--" . get_row_index() . $modifier_class . "\">" ;
 				?>
 
 				
