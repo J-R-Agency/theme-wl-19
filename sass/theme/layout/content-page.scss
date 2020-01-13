@@ -65,6 +65,7 @@
 .action-box--creative {	
 	@include action-box;
 	
+	color: $theme-creative;
 	background-color: mix($theme-creative, white, 75%);
 	
 	.call-to-action-btn {
