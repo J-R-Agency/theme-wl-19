@@ -55,9 +55,9 @@ get_header(); ?>
 	        $description = get_sub_field('action_description');
 	        $link = get_sub_field('action_link');
 	        $modifier = get_sub_field('modifier');
-	        // if(!empty($modifier)){
-	        // 	$modifier_class = " action-box--" . $modifier ;
-	        // }
+	        if(!empty($modifier)){
+	        	$modifier_class = " action-box--" . $modifier ;
+	        }
 	?>    
 			<div class="row content-copy">
 				<div class="col-md-2 col-0"></div>
