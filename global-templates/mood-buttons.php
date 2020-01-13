@@ -1,17 +1,17 @@
 	<div class="row mb-5 centered mood-btns">
 		<div class="col-md-2 col-4">
-			<button class="btn btn--active">Active</button>
+			<a href="/active/" title="Be active"><button class="btn btn--active">Active</button></a>
 		</div>
 		<div class="col-md-2 col-4">
-			<button class="btn btn--creative">Creative</button>
+			<a href="/creative/" title="Be creative"><button class="btn btn--creative">Creative</button></a>
 		</div>
 		<div class="col-md-2 col-4">
-			<button class="btn btn--useful">Useful</button>
+			<a href="/useful/" title="Be useful"><button class="btn btn--useful">Useful</button></a>
 		</div>
 		<div class="col-md-2 col-4">
-			<button class="btn btn--social">Social</button>
+			<a href="/social/" title="Be social"><button class="btn btn--social">Social</button></a>
 		</div>
 		<div class="col-md-2 col-4">
-			<button class="btn btn--calm">Calm</button>
+			<a href="/calm/" title="Be calm"><button class="btn btn--calm">Calm</button></a>
 		</div>
 	</div>
