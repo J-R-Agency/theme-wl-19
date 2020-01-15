@@ -24,7 +24,7 @@
 // Active state
 .navbar-dark .navbar-nav .active > .nav-link {
 	background-color: $secondary;
-	border-radius: 3px;
+	border-radius: 5px;
 		&:hover, &:active, &:focus {
 			color: white;
 		}
