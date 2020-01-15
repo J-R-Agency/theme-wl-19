@@ -11,10 +11,7 @@
 		padding: 0px;
 		height: 250px;
 	}
-	@include respond-to('lg') {
-		padding: 0px;
-		height: 500px;
-	}	
+	
 	img {
 		width: 100%;
 		object-fit: cover;
