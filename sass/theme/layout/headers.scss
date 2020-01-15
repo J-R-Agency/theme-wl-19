@@ -1,10 +1,10 @@
 .navbar-brand {
     @include respond-to('sm'){
-		width: 200px;
+		width: 180px;
     }
 
     @include respond-to('md'){
-		width: 240px;
+		width: 220px;
     }
 
     @include respond-to('lg'){
