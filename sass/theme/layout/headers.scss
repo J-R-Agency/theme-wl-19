@@ -1,8 +1,7 @@
 .navbar-brand {
-    @include respond-to('sm'){
-		width: 180px;
-    }
-
+	
+	width: 180px;
+    
     @include respond-to('md'){
 		width: 200px;
     }
