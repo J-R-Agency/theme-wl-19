@@ -1,5 +1,19 @@
 .navbar-brand {
-	width: 200px;
+    @include respond-to('sm'){
+		width: 200px;
+    }
+
+    @include respond-to('md'){
+		width: 240px;
+    }
+
+    @include respond-to('lg'){
+		width: 280px;
+    }
+
+    @include respond-to('xl'){
+		width: 320px;
+    }
 }
 
 .navbar-dark .navbar-toggler {
