@@ -5,12 +5,13 @@
 	height: 500px;
 	margin: 0px -15px 20px -15px;
 	
+	background-size: cover; background-position: center;
+	
 	@media all and (max-width: $breakpoint-phone) {
 		padding: 0px;
 		height: 250px;
 	}
-	@include respond-to($breakpoint-superwide)
-	{
+	@include respond-to('lg') {
 		padding: 0px;
 		height: 500px;
 	}	

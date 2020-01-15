@@ -8,6 +8,22 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-superwide: 1280px;
 
+// BREAKPOINTS -------
+
+$sm: 769px; // small
+$md: 1025px; // medium
+$lg: 1400px; // large
+$xl: 1600px; // extra large
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 769px,
+  md: 1025px, 
+  lg: 1400px,
+  xl: 1600px
+) !default;
+
+
 /* Colors */
 $blue: #30b5f2;
 $dark-blue: #0077AF;
