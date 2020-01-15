@@ -8,12 +8,28 @@
 	background-size: cover; 
 	background-position: center;
 	background-repeat: no-repeat;
-	
-	@media all and (max-width: $breakpoint-phone) {
+
+    @include respond-to('sm'){
 		padding: 0px;
 		height: 250px;
-	}
-	
+    }
+
+    @include respond-to('md'){
+		padding: 0px;
+		height: 330px;
+    }
+
+    @include respond-to('lg'){
+		padding: 0px;
+		height: 480px;
+    }
+
+    @include respond-to('xl'){
+		padding: 0px;
+		height: 640px;
+    }
+
+
 	img {
 		width: 100%;
 		object-fit: cover;
