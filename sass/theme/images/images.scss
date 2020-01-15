@@ -9,8 +9,8 @@
 		padding: 0px;
 		height: 250px;
 	}
-		
-	@media all and (max-width: $breakpoint-superwide) {
+	@include respond-to($breakpoint-superwide)
+	{
 		padding: 0px;
 		height: 500px;
 	}	
