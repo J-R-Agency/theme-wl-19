@@ -4,7 +4,7 @@
     }
 
     @include respond-to('md'){
-		width: 220px;
+		width: 200px;
     }
 
     @include respond-to('lg'){
