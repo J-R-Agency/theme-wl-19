@@ -11,22 +11,22 @@
 
     @include respond-to('sm'){
 		padding: 0px;
-		height: 250px;
+		height: 240px;
     }
 
     @include respond-to('md'){
 		padding: 0px;
-		height: 330px;
+		height: 320px;
     }
 
     @include respond-to('lg'){
 		padding: 0px;
-		height: 480px;
+		height: 400px;
     }
 
     @include respond-to('xl'){
 		padding: 0px;
-		height: 640px;
+		height: 480px;
 		background-position: 50% 25%;
     }
 
