@@ -5,7 +5,9 @@
 	height: 500px;
 	margin: 0px -15px 20px -15px;
 	
-	background-size: cover; background-position: center;
+	background-size: cover; 
+	background-position: center;
+	background-repeat: no-repeat;
 	
 	@media all and (max-width: $breakpoint-phone) {
 		padding: 0px;
