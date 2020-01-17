@@ -59,6 +59,8 @@ function create_post_type() {
             'rewrite' => array('slug' => 'activities'),
 			'taxonomies' => array( 'themes' ),
 	        'hierarchical' => false,
+            'menu_icon' => 'dashicons-awards',
+
         )
     );
 }
