@@ -34,3 +34,33 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+
+/* -- CUSTOM THEME FUNCTIONALITY FOR J&R -- */
+
+/* -- ADD POST TYPE SUPPORT FOR EXCERPTS ON PAGES -- */
+add_post_type_support( 'page', 'excerpt' );
+
+
+/* -- CREATE **TEST** IMPORT FUNCTIONALITY FOR WELLBEING DIRECTORY FROM LIVEWELL -- */
+
+// Our custom post type function
+function create_post_type() {
+ 
+    register_post_type( 'activities',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Activities' ),
+                'singular_name' => __( 'Activity' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'activities'),
+			'taxonomies' => array( 'themes' ),
+	        'hierarchical' => false,
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_post_type' );
