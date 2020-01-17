@@ -93,7 +93,7 @@ function create_topics_nonhierarchical_taxonomy() {
  
 // Now register the non-hierarchical taxonomy like tag
  
-  register_taxonomy('themes','post',array(
+  register_taxonomy('themes','activities',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
