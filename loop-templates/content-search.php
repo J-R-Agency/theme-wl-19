@@ -42,21 +42,22 @@ defined( 'ABSPATH' ) || exit;
 		$search_summary_parts = preg_split('#<p([^>])*>#',$search_summary);
 
 		//echo substr($search_summary, 0, 255);
-		$search_summary_display_max = 8 ;
+		$search_summary_display_max = 255 ;
 		//$search_summary_parts_max = count( $search_summary_parts ) ;
 
 		$search_summary_parts_max = 3 ;
 
-		while ( ( strlen( $search_summary_display ) <= $search_summary_display_max ) && ( $i <= $search_summary_parts_max ) ) {
-			// $search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) ;
-
-			$search_summary_display = $i ;
-			echo $i ;
-			$i = $i++ ;
-
-			if ( $search_summary_display == $search_summary_display_max || $i == $search_summary_parts_max ) {
+		while ( $i <= $search_summary_parts_max ) {
+			
+			if ( strlen( $search_summary_display >= $search_summary_display_max ) ) {
 				break ;
+			} else {
+				$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) ;
+				$i = $i++ ;		
 			}
+
+
+
 		}
 
 		echo $search_summary_display;
