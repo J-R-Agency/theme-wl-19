@@ -46,7 +46,7 @@ foreach ($paragraphs as $paragraph) {
 }
 
 
-
+/*
 
 
 		$search_summary = str_replace("</p>", "", $search_summary);
@@ -78,7 +78,7 @@ foreach ($paragraphs as $paragraph) {
 		}
 
 		echo $search_summary_display;
-
+*/
 		?>
 
 	</div><!-- .entry-summary -->
