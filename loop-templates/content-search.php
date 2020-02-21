@@ -37,6 +37,18 @@ defined( 'ABSPATH' ) || exit;
 		<?php 
 		$search_summary = get_the_content(); 
 
+$xml = $search_summary; 
+$dom = new DOMDocument;
+$dom->loadXML($xml);
+$paragraphs = $dom->getElementsByTagName('p');
+foreach ($paragraphs as $paragraph) {
+    echo $paragraph->nodeValue, PHP_EOL;
+}
+
+
+
+
+
 		$search_summary = str_replace("</p>", "", $search_summary);
 
 		$search_summary_parts = preg_split('#<p([^>])*>#', $search_summary);
