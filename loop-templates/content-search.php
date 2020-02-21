@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 				break ;
 			} else {
 				$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) ;
-				$i = $i++ ;		
+				$i = $i + 1 ;		
 			}
 
 
