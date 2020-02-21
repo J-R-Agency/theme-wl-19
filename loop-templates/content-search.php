@@ -37,9 +37,9 @@ defined( 'ABSPATH' ) || exit;
 		<?php 
 		$search_summary = get_the_content(); 
 
-		$search_summary = str_replace("</p>", "", $search_summary);
+		//$search_summary = str_replace("</p>", "", $search_summary);
 
-		$search_summary_parts = preg_split('#<p([^>])*>#',$search_summary);
+		$search_summary_parts = preg_split('#<p([^>])*>#', $search_summary);
 
 		//echo substr($search_summary, 0, 255);
 		$search_summary_display_max = 255 ;
