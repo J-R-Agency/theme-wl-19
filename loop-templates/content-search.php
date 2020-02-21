@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
 
 		while ( $i <= $search_summary_parts_max ) {
 
-			echo " ( " . strlen( $search_summary_display . " ) " ;
+			//echo " ( " . strlen( $search_summary_display . " ) " ;
 
 			
 			if ( strlen( $search_summary_display >= $search_summary_display_max ) ) {
