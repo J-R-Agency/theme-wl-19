@@ -44,7 +44,8 @@ $paragraphs = $dom->getElementsByTagName('p');
 foreach ($paragraphs as $paragraph) {
     echo $paragraph->nodeValue, PHP_EOL;
 }
-
+unset( $dom );
+unset( $xml );
 
 /*
 
