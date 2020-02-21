@@ -43,7 +43,9 @@ defined( 'ABSPATH' ) || exit;
 
 		//echo substr($search_summary, 0, 255);
 		$search_summary_display_max = 255 ;
-		$search_summary_parts_max = count( $search_summary_parts ) ;
+		//$search_summary_parts_max = count( $search_summary_parts ) ;
+
+		$search_summary_parts_max = 3 ;
 
 		while ( ( strlen( $search_summary_display ) <= $search_summary_display_max ) && ( $i <= $search_summary_parts_max ) ) {
 			// $search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) ;
