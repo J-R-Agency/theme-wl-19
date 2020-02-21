@@ -51,10 +51,13 @@ defined( 'ABSPATH' ) || exit;
 
 			echo " ( " . strlen( $search_summary_display ) . " ) " ;
 			
-			if ( strlen( $search_summary_display >= $search_summary_display_max ) ) {
+			if ( strlen( $search_summary_display ) >= $search_summary_display_max ) {
 				break ;
 			} else {
-				$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) ;
+				$search_summary_display_diff = $search_summary_display_max - strlen( $search_summary_display ) ;
+				if ( strlen( wp_strip_all_tags( $search_summary_parts[$i] ) ) <= $search_summary_display_diff ) {
+					$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) . " " ;
+				}
 				$i = $i + 1 ;		
 			}
 
