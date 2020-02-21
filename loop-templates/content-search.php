@@ -34,7 +34,12 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-summary">
 
-		<?php the_excerpt(); ?>
+		<?php 
+		$search_summary = get_the_content(); 
+
+		echo substr($search_summary, 0, 255);
+		
+		?>
 
 	</div><!-- .entry-summary -->
 
