@@ -53,6 +53,10 @@ defined( 'ABSPATH' ) || exit;
 			$search_summary_display = $i ;
 			echo $i ;
 			$i = $i++ ;
+
+			if ( $search_summary_display == $search_summary_display_max || $i == $search_summary_parts_max ) {
+				break ;
+			}
 		}
 
 		echo $search_summary_display;
