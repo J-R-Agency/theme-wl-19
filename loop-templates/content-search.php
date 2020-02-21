@@ -42,11 +42,14 @@ defined( 'ABSPATH' ) || exit;
 		$search_summary_parts = preg_split('#<p([^>])*>#',$search_summary);
 
 		//echo substr($search_summary, 0, 255);
+		$search_summary_display_max = 255 ;
+		$search_summary_parts_max = count( $search_summary_parts ) ;
+		while ( ( strlen( $search_summary_display ) <= $search_summary_display_max ) && ( $i <= $search_summary_parts_max ) ) {
+			$search_summary_display .= $search_summary_parts[$i];
+			$i = $i++;
+		}
+		echo $search_summary_display;
 
-		echo $search_summary_parts[0];
-		echo $search_summary_parts[1];
-		echo $search_summary_parts[2];
-		
 		?>
 
 	</div><!-- .entry-summary -->
