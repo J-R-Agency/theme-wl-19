@@ -1,0 +1,114 @@
+/* -- HOMEPAGE -- */
+/* -- Styles -- */
+
+.highlight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+	background-color: $light-grey;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 20px 10px;
+	
+	ul {
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	li {
+		padding: 5px 0px 5px 0px;
+	}
+}
+
+.action-box {
+	background-color: $blue;
+	padding: 30px;
+	color: white;
+	margin: 20px 10px;
+	border-radius: 10px;
+}
+
+/* -- Search Bar --*/
+
+form.wp-block-search {
+	background-color: $blue;
+	color: white;
+	padding: 10px 30px 20px 30px;
+	border-radius: $corner-rad;
+}
+
+button.wp-block-search__button {
+	background-color: $dark-blue;
+	color: white;
+	border-radius: $corner-rad;
+	padding: 5px 40px;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		margin: 10px 0px 10px 0px;
+	}
+}
+
+.wp-block-search .wp-block-search__button {
+	@media all and (max-width: $breakpoint-phone) {
+		margin-left: 0px;
+	}
+}
+
+.wp-block-search__input {
+	border: 0;
+	padding: 0px 10px 0px 10px;
+}
+
+/* -- What would you like to try? -- */
+.activity {
+	@media all and (max-width: $breakpoint-phone) {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.activity-description, .activity-name {
+	text-align: center;
+		@media all and (max-width: $breakpoint-phone) {
+			text-align: left;
+		}	
+}
+
+/*-- What do you want to be?-- */
+
+.what-do-you-want-to-be {
+	padding: 20px 0px 500px 0px;
+}
+
+.mood-btns {
+	display: flex;
+	justify-content: center;
+	
+	@media all and (max-width: $breakpoint-phone) {
+		display: flex;
+		justify-content: left;
+	}
+	
+	button {
+		width: 150px;
+		padding: 7px;
+		margin: 10px;
+		color: white;
+		border-radius: 8px;
+		
+		&:hover {
+			color: white;
+			text-decoration: none;
+			filter: brightness(90%);
+		}	
+		
+		@media all and (max-width: $breakpoint-phone) {
+			width: 90px;
+			padding: 5px;
+			margin: 5px 0px 5px 0px;
+			font-size: $small-font-size;
+		}
+	}
+}
