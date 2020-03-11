@@ -17,4 +17,6 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
 
+	<?php echo get_user_favorites($user_id, $site_id); ?>
+	
 <?php endif;
