@@ -68,6 +68,7 @@ defined( 'ABSPATH' ) || exit;
 		}
 		echo $search_summary_display;
 		?>
+		<?php echo get_favorites_button($post_id, $site_id); ?>
 
 	</div><!-- .entry-summary -->
 
