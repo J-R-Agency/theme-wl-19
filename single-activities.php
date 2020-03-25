@@ -36,6 +36,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 					endif;
 					?>
 
+					<?php
+					// Get API custom fields 
+					$websiteurl = get_field('websiteurl');
+					$wellbeing-api-cost-bracket = get_field('wellbeing-api-cost-bracket');
+					$wellbeing-api-theme = get_field('wellbeing-api-theme');
+					$wellbeing-api-days-of-the-week = get_field('wellbeing-api-days-of-the-week');
+
+					echo "<pre>
+						websiteurl = $websiteurl
+						wellbeing-api-cost-bracket = $wellbeing-api-cost-bracket
+						wellbeing-api-theme = $wellbeing-api-theme
+						wellbeing-api-days-of-the-week = $wellbeing-api-days-of-the-week
+						</pre>
+						";
+					?>
+
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
