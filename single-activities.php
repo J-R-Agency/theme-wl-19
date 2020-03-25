@@ -50,6 +50,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 						wellbeing-api-days-of-the-week = $wellbeing_api_days_of_the_week
 						</pre>
 						";
+
+						$wl_api_cost = explode(",",$wellbeing_api_cost_bracket);
+						$wl_api_theme = explode(",",$wellbeing_api_theme);
+						$wl_api_days = explode(",",$wellbeing_api_days_of_the_week);
+
+						function wl_api_format_cost($wl_api_cost) {
+							foreach $wl_api_cost as $cost{
+								echo str_replace ("WLFREE", "FREE");
+								echo str_replace ("WLLowCost", "&pound;");
+								echo str_replace ("WLMidCost", "&pound;&pound;");
+								echo str_replace ("WLHighCost", "&pound;&pound;&pound;");
+							}
+						}
+
 					?>
 
 				<?php endwhile; // end of the loop. ?>
