@@ -77,8 +77,62 @@ $container = get_theme_mod( 'understrap_container_type' );
 								}
 							}
 						//}
-
-					?>
+						//function wl_api_format_cost($wl_api_cost) {
+							foreach ( $wl_api_theme as $theme ) {
+								switch ($theme) {
+									case "WLActive";
+										echo str_replace ("WLActive", "Active", $theme);
+										break;
+									
+									case "WLCalm";
+										echo str_replace ("WLCalm", "Calm", $theme);
+										break;
+									case "WLSocial";
+										echo str_replace ("WLSocial", "Social", $theme);
+										break;
+									case "WLCreative";
+										echo str_replace ("WLCreative", "Creative", $theme);
+										break;
+									case "WLUseful";
+										echo str_replace ("WLUseful", "Useful", $theme);
+										break;
+									default:
+										# code...
+										break;
+								}
+							}
+						//}
+						//function wl_api_format_cost($wl_api_cost) {
+							foreach ( $wl_api_days as $days ) {
+								switch ($days) {
+									case "WLMonday";
+										echo str_replace ("WLMonday", "Monday", $days);
+										break;
+									case "WLTuesday";
+										echo str_replace ("WLTuesday", "Tuesday", $days);
+										break;
+									case "WLWednesday";
+										echo str_replace ("WLWednesday", "Wednesday", $days);
+										break;
+									case "WLThursday";
+										echo str_replace ("WLThursday", "Thursday", $days);
+										break;
+									case "WLFriday";
+										echo str_replace ("WLFriday", "Friday", $days);
+										break;
+									case "WLSaturday";
+										echo str_replace ("WLSaturday", "Saturday", $days);
+										break;
+									case "WLSunday";
+										echo str_replace ("WLSunday", "Sunday", $days);
+										break;
+									default:
+										# code...
+										break;
+								}
+							}
+						//}
+						?>
 
 				<?php endwhile; // end of the loop. ?>
 
