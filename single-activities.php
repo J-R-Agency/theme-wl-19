@@ -57,10 +57,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						//function wl_api_format_cost($wl_api_cost) {
 							foreach ( $wl_api_cost as $cost ) {
-								echo str_replace ("WLFREE", "FREE", $cost);
-								echo str_replace ("WLLowCost", "&pound;", $cost);
-								echo str_replace ("WLMidCost", "&pound;&pound;", $cost);
-								echo str_replace ("WLHighCost", "&pound;&pound;&pound;", $cost);
+								switch ($cost) {
+									case "WLFREE";
+										echo str_replace ("WLFREE", "FREE", $cost);
+										break;
+									
+									case "WLLowCost";
+										echo str_replace ("WLLowCost", "&pound;", $cost);
+										break;
+									case "WLMidCost";
+										echo str_replace ("WLMidCost", "&pound;&pound;", $cost);
+										break;
+									case "WLHighCost";
+										echo str_replace ("WLHighCost", "&pound;&pound;&pound;", $cost);
+										break;
+									default:
+										# code...
+										break;
+								}
 							}
 						//}
 
