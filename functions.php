@@ -106,45 +106,6 @@ function create_topics_nonhierarchical_taxonomy() {
   ));
 }
 
-//hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_cost_taxonomy', 0 );
- 
-//create a custom taxonomy name it topics for your posts
- 
-function create_cost_taxonomy() {
- 
-// Add new taxonomy, make it hierarchical like categories
-//first do the translations part for GUI
- 
-  $labels = array(
-    'name' => _x( 'Costs', 'taxonomy general name' ),
-    'singular_name' => _x( 'Cost', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Costs' ),
-    'all_items' => __( 'All Costs' ),
-    'parent_item' => __( 'Parent Cost' ),
-    'parent_item_colon' => __( 'Parent Cost:' ),
-    'edit_item' => __( 'Edit Cost' ), 
-    'update_item' => __( 'Update Cost' ),
-    'add_new_item' => __( 'Add New Cost' ),
-    'new_item_name' => __( 'New Cost Name' ),
-    'menu_name' => __( 'Costs' ),
-  );    
- 
-// Now register the taxonomy
- 
-  register_taxonomy('costs',array('activity'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'cost' ),
-  ));
- 
-}
-
-
-
 
 // Limit search to custom post type
 
