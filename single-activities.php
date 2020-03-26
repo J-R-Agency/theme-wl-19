@@ -39,98 +39,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php
 					// Get API custom fields 
 					$websiteurl = get_field('websiteurl');
-					$wellbeing_api_cost_bracket = get_field('wellbeing-api-cost-bracket');
-					$wellbeing_api_theme = get_field('wellbeing-api-theme');
-					$wellbeing_api_days_of_the_week = get_field('wellbeing-api-days-of-the-week');
 
 					echo "<pre>
 						websiteurl = $websiteurl
-						wellbeing-api-cost-bracket = $wellbeing_api_cost_bracket
-						wellbeing-api-theme = $wellbeing_api_theme
-						wellbeing-api-days-of-the-week = $wellbeing_api_days_of_the_week
+
 						</pre>
 						";
 
-						$wl_api_cost = explode(",",$wellbeing_api_cost_bracket);
-						$wl_api_theme = explode(",",$wellbeing_api_theme);
-						$wl_api_days = explode(",",$wellbeing_api_days_of_the_week);
-
-						//function wl_api_format_cost($wl_api_cost) {
-							foreach ( $wl_api_cost as $cost ) {
-								switch ($cost) {
-									case "WLFREE";
-										echo str_replace ("WLFREE", "FREE", $cost);
-										break;
-									
-									case "WLLowCost";
-										echo str_replace ("WLLowCost", "&pound;", $cost);
-										break;
-									case "WLMidCost";
-										echo str_replace ("WLMidCost", "&pound;&pound;", $cost);
-										break;
-									case "WLHighCost";
-										echo str_replace ("WLHighCost", "&pound;&pound;&pound;", $cost);
-										break;
-									default:
-										# code...
-										break;
-								}
-							}
-						//}
-						//function wl_api_format_cost($wl_api_cost) {
-							foreach ( $wl_api_theme as $theme ) {
-								switch ($theme) {
-									case "WLActive";
-										echo str_replace ("WLActive", "Active", $theme);
-										break;
-									
-									case "WLCalm";
-										echo str_replace ("WLCalm", "Calm", $theme);
-										break;
-									case "WLSocial";
-										echo str_replace ("WLSocial", "Social", $theme);
-										break;
-									case "WLCreative";
-										echo str_replace ("WLCreative", "Creative", $theme);
-										break;
-									case "WLUseful";
-										echo str_replace ("WLUseful", "Useful", $theme);
-										break;
-									default:
-										# code...
-										break;
-								}
-							}
-						//}
-						//function wl_api_format_cost($wl_api_cost) {
-							foreach ( $wl_api_days as $days ) {
-								switch ($days) {
-									case "WLMonday";
-										echo str_replace ("WLMonday", "Monday", $days);
-										break;
-									case "WLTuesday";
-										echo str_replace ("WLTuesday", "Tuesday", $days);
-										break;
-									case "WLWednesday";
-										echo str_replace ("WLWednesday", "Wednesday", $days);
-										break;
-									case "WLThursday";
-										echo str_replace ("WLThursday", "Thursday", $days);
-										break;
-									case "WLFriday";
-										echo str_replace ("WLFriday", "Friday", $days);
-										break;
-									case "WLSaturday";
-										echo str_replace ("WLSaturday", "Saturday", $days);
-										break;
-									case "WLSunday";
-										echo str_replace ("WLSunday", "Sunday", $days);
-										break;
-									default:
-										# code...
-										break;
-								}
-							}
 						//}
 						?>
 
