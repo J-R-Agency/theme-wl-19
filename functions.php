@@ -208,15 +208,7 @@ function create_days_nonhierarchical_taxonomy() {
 
 
    // Add terms
-    $term_taxonomy_ids = wp_insert_term('Monday', 'days');
-
-    if ( is_wp_error( $term_taxonomy_ids ) ) {
-        $error_string = $term_taxonomy_ids -> get_error_message();
-        echo "There was an error somewhere and the terms couldn't be set. $error_string" ;
-    } else {
-        echo "Success! These categories were added to the post.";
-    }
-
+  wp_insert_term('Monday', 'days');
   wp_insert_term('Tuesday', 'days');
   wp_insert_term('Wednesday', 'days');
   wp_insert_term('Thursday', 'days');
