@@ -54,6 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 						?>
+						<?php the_terms( $post->ID, 'themes', 'themes: ', ' / ' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
