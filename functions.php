@@ -104,6 +104,15 @@ function create_topics_nonhierarchical_taxonomy() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'theme' ),
   ));
+
+
+  // Add terms
+  wp_insert_term('Active', 'theme');
+  wp_insert_term('Calm', 'theme');
+  wp_insert_term('Social', 'theme');
+  wp_insert_term('Creative', 'theme');
+  wp_insert_term('Useful', 'theme');
+
 }
 
 
@@ -145,6 +154,13 @@ function create_costs_nonhierarchical_taxonomy() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'cost' ),
   ));
+
+  // Add terms
+  wp_insert_term('Free', 'cost');
+  wp_insert_term('£', 'cost');
+  wp_insert_term('££', 'cost');
+  wp_insert_term('£££', 'cost');
+
 }
 
 
@@ -191,10 +207,15 @@ function create_days_nonhierarchical_taxonomy() {
 
 
 
-    $terms = get_terms('days', array('hide_empty' => false));
-    foreach ($terms as $term) {
-        echo $term->name;
-    }
+   // Add terms
+  wp_insert_term('Monday', 'day');
+  wp_insert_term('Tuesday', 'day');
+  wp_insert_term('Wednesday', 'day');
+  wp_insert_term('Thursday', 'day');
+  wp_insert_term('Friday', 'day');
+  wp_insert_term('Saturday', 'day');
+  wp_insert_term('Sunday', 'day');
+
 
 }
 
