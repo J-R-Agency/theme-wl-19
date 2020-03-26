@@ -188,7 +188,18 @@ function create_days_nonhierarchical_taxonomy() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'day' ),
   ));
+
+
+
+    $terms = get_terms('days', array('hide_empty' => false));
+    foreach ($terms as $term) {
+        echo $term->name;
+    }
+
 }
+
+
+
 
 
 
