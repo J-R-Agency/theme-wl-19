@@ -107,11 +107,11 @@ function create_topics_nonhierarchical_taxonomy() {
 
 
   // Add terms
-  wp_insert_term('Active', 'theme');
-  wp_insert_term('Calm', 'theme');
-  wp_insert_term('Social', 'theme');
-  wp_insert_term('Creative', 'theme');
-  wp_insert_term('Useful', 'theme');
+  wp_insert_term('Active', 'themes');
+  wp_insert_term('Calm', 'themes');
+  wp_insert_term('Social', 'themes');
+  wp_insert_term('Creative', 'themes');
+  wp_insert_term('Useful', 'themes');
 
 }
 
@@ -156,10 +156,10 @@ function create_costs_nonhierarchical_taxonomy() {
   ));
 
   // Add terms
-  wp_insert_term('Free', 'cost');
-  wp_insert_term('£', 'cost');
-  wp_insert_term('££', 'cost');
-  wp_insert_term('£££', 'cost');
+  wp_insert_term('Free', 'costs');
+  wp_insert_term('£', 'costs');
+  wp_insert_term('££', 'costs');
+  wp_insert_term('£££', 'costs');
 
 }
 
