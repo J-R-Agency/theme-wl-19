@@ -69,7 +69,7 @@ add_action( 'init', 'create_post_type' );
 
 //hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
  
-add_action( 'init', 'create_topics_nonhierarchical_taxonomy', 0 );
+add_action( 'init', 'create_topics_nonhierarchical_taxonomy', 15 );
  
 function create_topics_nonhierarchical_taxonomy() {
  
@@ -110,7 +110,7 @@ function create_topics_nonhierarchical_taxonomy() {
 
 //hook into the init action and call create_costs_nonhierarchical_taxonomy when it fires
  
-add_action( 'init', 'create_costs_nonhierarchical_taxonomy', 0 );
+add_action( 'init', 'create_costs_nonhierarchical_taxonomy', 15 );
  
 function create_costs_nonhierarchical_taxonomy() {
  
@@ -153,7 +153,7 @@ function create_costs_nonhierarchical_taxonomy() {
 
 //hook into the init action and call create_days_nonhierarchical_taxonomy when it fires
  
-add_action( 'init', 'create_days_nonhierarchical_taxonomy', 0 );
+add_action( 'init', 'create_days_nonhierarchical_taxonomy', 15 );
  
 function create_days_nonhierarchical_taxonomy() {
  
