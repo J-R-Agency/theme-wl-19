@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'activities' ); ?>
 
 					<?php understrap_post_nav(); ?>
 
@@ -39,22 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php
 					// Get API custom fields 
 					$websiteurl = get_field('websiteurl');
-
-					// echo "<pre>
-					// 	websiteurl = $websiteurl
-
-					// 	</pre>
-					// 	";
-   
-						//}
-						?>
-						<?php
-
-						// print_r ( get_the_terms( $post->ID, "themes" ) ) ; 
-
-
-						?>
-						<?php the_terms( $post->ID, 'themes', 'themes: ', ' / ' ); ?>
+					?>
 
 				<?php endwhile; // end of the loop. ?>
 
