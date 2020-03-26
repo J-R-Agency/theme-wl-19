@@ -57,7 +57,7 @@ function create_post_type() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'activities'),
-			'taxonomies' => array( 'themes' ),
+			'taxonomies' => array( 'theme', 'cost', 'day' ),
 	        'hierarchical' => false,
             'menu_icon' => 'dashicons-awards',
 
@@ -208,7 +208,7 @@ function create_days_nonhierarchical_taxonomy() {
 
 
    // Add terms
-    $term_taxonomy_ids = wp_insert_term('Monday', 'day');
+    $term_taxonomy_ids = wp_insert_term('Monday', 'days');
 
     if ( is_wp_error( $term_taxonomy_ids ) ) {
         $error_string = $term_taxonomy_ids -> get_error_message();
@@ -217,12 +217,12 @@ function create_days_nonhierarchical_taxonomy() {
         echo "Success! These categories were added to the post.";
     }
 
-  wp_insert_term('Tuesday', 'day');
-  wp_insert_term('Wednesday', 'day');
-  wp_insert_term('Thursday', 'day');
-  wp_insert_term('Friday', 'day');
-  wp_insert_term('Saturday', 'day');
-  wp_insert_term('Sunday', 'day');
+  wp_insert_term('Tuesday', 'days');
+  wp_insert_term('Wednesday', 'days');
+  wp_insert_term('Thursday', 'days');
+  wp_insert_term('Friday', 'days');
+  wp_insert_term('Saturday', 'days');
+  wp_insert_term('Sunday', 'days');
 
 
 }
