@@ -40,17 +40,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 					// Get API custom fields 
 					$websiteurl = get_field('websiteurl');
 
-					echo "<pre>
-						websiteurl = $websiteurl
+					// echo "<pre>
+					// 	websiteurl = $websiteurl
 
-						</pre>
-						";
+					// 	</pre>
+					// 	";
    
 						//}
 						?>
 						<?php
 
-						print_r ( get_the_terms( $post->ID, "themes" ) ) ; 
+						// print_r ( get_the_terms( $post->ID, "themes" ) ) ; 
 
 
 						?>
