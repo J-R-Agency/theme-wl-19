@@ -1,4 +1,4 @@
-<div class="row highlight">
+ <div class="row highlight">
 		<div class="row">
 			<div class="col-12">
 				<h1 class="centered">What would you like to try?</h1>
@@ -15,7 +15,8 @@
 					$name = get_sub_field('activity_name');
 					$description = get_sub_field('activity_description');
 					$link = get_sub_field('activity_link');
-			
+					
+					if ($link!=""){
 					?>
 					<div class="col-md-3 col-12 activity">
 						<!-- Activity icon -->
@@ -49,6 +50,7 @@
 						</div>
 						
 					</div>
+					<?php } // End if ?>
 					
 				<?php endwhile; ?>
 			
