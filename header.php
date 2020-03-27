@@ -12,8 +12,6 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 
-$google_api_key = "AIzaSyBPaQv0YSGsYVDNNtKZVy1Sh76Xc8n2ckQ";
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

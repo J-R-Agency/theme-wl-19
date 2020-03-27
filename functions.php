@@ -219,7 +219,14 @@ function create_days_nonhierarchical_taxonomy() {
 
 }
 
+function wl_set_google_api_key() {
 
+    global $wl_google_api_key;
+    $wl_google_api_key = "AIzaSyBPaQv0YSGsYVDNNtKZVy1Sh76Xc8n2ckQ" ;
+
+}
+    
+add_action( 'after_setup_theme', 'wl_set_google_api_key' );
 
 
 

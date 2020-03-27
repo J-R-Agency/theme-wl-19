@@ -7,6 +7,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+global $wl_google_api_key;
+
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -34,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
   width="100%"
   height="300"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $google_api_key ;?>&q=Sunflowers,Liverpool" allowfullscreen>
+  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $wl_google_api_key ;?>&q=Sunflowers,Liverpool" allowfullscreen>
 </iframe>
 		<?php
 		wp_link_pages(
