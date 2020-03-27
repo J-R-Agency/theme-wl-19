@@ -32,9 +32,9 @@ defined( 'ABSPATH' ) || exit;
 		<?php the_content(); ?>
 <iframe
   width="100%"
-  height="50%"
+  height="300"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPaQv0YSGsYVDNNtKZVy1Sh76Xc8n2ckQ&q=Sunflowers,Liverpool" allowfullscreen>
+  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $google_api_key ;?>&q=Sunflowers,Liverpool" allowfullscreen>
 </iframe>
 		<?php
 		wp_link_pages(
