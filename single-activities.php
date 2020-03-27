@@ -35,6 +35,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						comments_template();
 					endif;
 					?>
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPaQv0YSGsYVDNNtKZVy1Sh76Xc8n2ckQ&q=Sunflowers,Liverpool" allowfullscreen>
+</iframe>
 
 					<?php
 					// Get API custom fields 
