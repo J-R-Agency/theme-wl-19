@@ -33,6 +33,18 @@ global $wl_google_api_key;
 	<div class="entry-content">
 		<?php echo get_favorites_button($post_id, $site_id); ?>
 		<?php the_content(); ?>
+
+<?php
+// Get API custom fields 
+$websiteurl = get_field('websiteurl');
+$wl_api_main_address = get_field("main_address");
+
+echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
+
+?>
+
+
+
 <iframe
   width="100%"
   height="300"

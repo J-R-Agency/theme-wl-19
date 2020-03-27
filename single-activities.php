@@ -36,11 +36,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					endif;
 					?>
 
-					<?php
-					// Get API custom fields 
-					$websiteurl = get_field('websiteurl');
-					?>
-
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
