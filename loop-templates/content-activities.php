@@ -16,11 +16,11 @@ defined( 'ABSPATH' ) || exit;
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-
-		<?php the_terms( $post->ID, 'themes', 'Themes: ', ' / ' ); ?>
-		<?php the_terms( $post->ID, 'costs', 'Costs: ', ' / ' ); ?>
-		<?php the_terms( $post->ID, 'days', 'Days: ', ' / ' ); ?>
-
+			<div class="activity-taxonomies">
+				<?php the_terms( $post->ID, 'themes', 'Themes: ', '  ' ); ?>
+				<?php the_terms( $post->ID, 'costs', ' Cost: ', '  ' ); ?>
+				<?php the_terms( $post->ID, 'days', ' Days: ', '  ' ); ?>
+			</div>
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->

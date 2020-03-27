@@ -35,3 +35,15 @@
 	background-color: $light-grey;
 	border-color: $grey;
 }
+
+.activity-taxonomies{
+	a {
+		display: inline-block;
+		background-color: #eee;
+		padding: 1rem;
+		border-radius: 3px;
+	}
+	a:hover{
+		background-color: #ddd;
+	}
+}
