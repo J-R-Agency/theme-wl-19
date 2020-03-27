@@ -43,13 +43,11 @@ echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
 ?>
 
-
-
 <iframe
   width="100%"
   height="300"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $wl_google_api_key ;?>&q=Sunflowers,Liverpool" allowfullscreen>
+  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $wl_google_api_key ;?>&q=<?php echo urlencode($wl_api_main_address);?>" allowfullscreen>
 </iframe>
 		<?php
 		wp_link_pages(
