@@ -30,7 +30,10 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 		<?php echo get_favorites_button($post_id, $site_id); ?>
 		<?php the_content(); ?>
-
+<iframe
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPaQv0YSGsYVDNNtKZVy1Sh76Xc8n2ckQ&q=Sunflowers,Liverpool" allowfullscreen>
+</iframe>
 		<?php
 		wp_link_pages(
 			array(
