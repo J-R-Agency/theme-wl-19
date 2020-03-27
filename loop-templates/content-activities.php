@@ -17,9 +17,9 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="entry-meta">
 			<div class="activity-taxonomies">
-				<?php the_terms( $post->ID, 'themes', 'Themes: ', '  ' ); ?>
-				<?php the_terms( $post->ID, 'costs', ' Cost: ', '  ' ); ?>
-				<?php the_terms( $post->ID, 'days', ' Days: ', '  ' ); ?>
+				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', 'Themes: ', '  ' ); ?></div>
+				<div class="activity-taxonomies__cost"><?php the_terms( $post->ID, 'costs', ' Cost: ', '  ' ); ?></div>
+				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' Days: ', '  ' ); ?></div>
 			</div>
 		</div><!-- .entry-meta -->
 
