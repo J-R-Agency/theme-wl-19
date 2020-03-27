@@ -66,7 +66,7 @@ defined( 'ABSPATH' ) || exit;
 				$i = $i + 1 ;		
 			}
 		}
-		echo $search_summary_display;
+		echo "<div class=\"search_summary\">" . $search_summary_display . "</div>" ;
 		?>
 			<div class="activity-taxonomies">
 				<?php the_terms( $post->ID, 'themes', '', '' ); ?>
