@@ -4,7 +4,12 @@
 		font-weight: bold;
 	}
 }
+
 .entry-content p:first-of-type{
-		font-size: 1.25rem;
-		font-weight: bold;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.edit-link {
+	display: none;
 }
