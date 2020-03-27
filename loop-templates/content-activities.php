@@ -32,13 +32,13 @@ global $wl_google_api_key;
 			$activity_link[1] = "";
 		}
 
-		if ( $wl_api_logo_url!="" ){
+/*		if ( $wl_api_logo_url!="" ){
 			echo "
 				<div class=\"activity-logo\">
 					" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] "
 				</div>
 			";
-		}
+		}*/
 		?>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
