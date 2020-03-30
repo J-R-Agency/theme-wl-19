@@ -44,8 +44,8 @@
 }
 
 .hero_inner{
-		height: 500px;
-		width:500px;
+	height: 500px;
+	width:500px;
 	margin-top: -500px;
     @include respond-to('sm'){
 		padding: 0px;
@@ -67,8 +67,6 @@
 		margin-top: -480px;
     }
 
-	height:100%;
-	width:100%;
 	filter: blur(0px);
 	background-size: contain; 
 	background-position: center;
