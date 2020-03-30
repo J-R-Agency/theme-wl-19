@@ -46,7 +46,7 @@
 
 .hero_inner{
 		height: 500px;
-
+		width:500px;
 	margin-top: -500px;
     @include respond-to('sm'){
 		padding: 0px;
