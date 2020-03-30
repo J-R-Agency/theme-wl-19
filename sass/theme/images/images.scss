@@ -1,7 +1,7 @@
 .hero {
 	@include centered;
 	
-	padding: 30px 20px 30px 20px;
+	//padding: 30px 20px 30px 20px;
 	height: 500px;
 	margin: 0px -15px 20px -15px;
 	
@@ -45,7 +45,7 @@
 
 .hero_inner{
 	height: 500px;
-	width:500px;
+	width: 100%;
 	margin-top: -500px;
     @include respond-to('sm'){
 		padding: 0px;
