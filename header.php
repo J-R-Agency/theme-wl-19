@@ -112,7 +112,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		
 		<!-- SECONDARY MENU -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-secondary" id="secondary-menu">
-			<div class="be-more-active"> </div><div class="arrow-right"></div>
+			<div class="be-more-active"> &nbsp; </div><div class="arrow-right"></div>
 			<?php
 				wp_nav_menu(
 					array(
