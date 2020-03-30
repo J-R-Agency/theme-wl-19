@@ -1,6 +1,9 @@
 .hero {
 	@include centered;
 	
+	position: fixed;
+	left: 0;
+	top:0;
 	padding: 30px 20px 30px 20px;
 	height: 500px;
 	margin: 0px -15px 20px -15px;
@@ -45,7 +48,10 @@
 }
 
 .hero_inner{
-	height:100%;
+	position: fixed;
+	left: 0;
+	top:0;
+		height:100%;
 	width:100%;
 	z-index: 20;
 	filter: blur(0px);
