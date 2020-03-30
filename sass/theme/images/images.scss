@@ -10,7 +10,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	filter: blur(35px);
-    
+    z-index: -1;
     @include respond-to('sm'){
 		padding: 0px;
 		height: 240px;
