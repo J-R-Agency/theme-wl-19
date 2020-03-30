@@ -9,7 +9,7 @@
 	background-size: cover; 
 	background-position: center;
 	background-repeat: no-repeat;
-	filter: blur(5px);
+	filter: blur(3px);
     @include respond-to('sm'){
 		padding: 0px;
 		height: 240px;
@@ -50,21 +50,25 @@
     @include respond-to('sm'){
 		padding: 0px;
 		margin-top: -240px;
+		height: 240px;
     }
 
     @include respond-to('md'){
 		padding: 0px;
 		margin-top: -320px;
+		height: 320px;
     }
 
     @include respond-to('lg'){
 		padding: 0px;
 		margin-top: -400px;
+		height: 400px;
     }
 
     @include respond-to('xl'){
 		padding: 0px;
 		margin-top: -480px;
+		height: 480px;
     }
 
 	filter: blur(0px);
