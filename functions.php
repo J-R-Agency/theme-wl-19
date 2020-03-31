@@ -57,8 +57,8 @@ function create_post_type() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'activities'),
-			'taxonomies' => array( 'theme', 'cost', 'day' ),
-	        'hierarchical' => false,
+            'taxonomies' => array( 'theme', 'cost', 'day' ),
+            'hierarchical' => false,
             'menu_icon' => 'dashicons-awards',
 
         )
