@@ -32,7 +32,7 @@ echo '</pre>';
 
 			echo "
 			<div class=\"lead_story__card\">
-				<h3><a href=\"" . the_permalink() . "\">" . the_title() . "</a></h3>
+				<h3><a href=\"" . the_permalink() . "\">" . $post->post_title . "</a></h3>
 				<p class=\"lead_story__excerpt\">" . the_excerpt() . "</p>
 			</div>";
 
