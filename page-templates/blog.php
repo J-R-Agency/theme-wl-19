@@ -18,8 +18,8 @@ get_header(); ?>
 		
 		<!-- Lead story -->
 		<?php
-		$lead_story = get_field("lead_story");
-		if ( isset($lead_story)){
+		$lead_story = the_field("lead_story");
+		if ( isset( $lead_story ) ){
 
 			setup_postdata( $lead_story );
 
