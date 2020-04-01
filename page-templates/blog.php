@@ -35,11 +35,11 @@ get_header(); ?>
 			echo get_the_post_thumbnail_url( '15528' );  
 
 			echo "
-			<div class=\"lead_story__card\">
-				<div class=\"lead_story__image\">
+			<div class=\"lead_story__card flex-container\">
+				<div class=\"lead_story__image flex-item\">
 					<img src=\"\"> 
 				</div>
-				<div class=\"lead_story__details\">
+				<div class=\"lead_story__details flex-item\">
 					<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
 					<p class=\"lead_story__excerpt\">POST EXCERPT" . $post->post_excerpt . "</p>
 					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div>
