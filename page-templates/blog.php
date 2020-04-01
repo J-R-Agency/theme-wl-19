@@ -24,11 +24,8 @@ get_header(); ?>
 			$post = $lead_story ;
 			setup_postdata( $post );
 
-echo '<pre>';
-	echo "TEST";
-    print_r( $post  );
-	echo "TEST";
-echo '</pre>';
+
+
 
 			echo "
 			<div class=\"lead_story__card\">
