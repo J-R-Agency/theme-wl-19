@@ -51,17 +51,21 @@ get_header(); ?>
 	</div>
 	
 	<div class="row mt-20">
-
+		<div class="blog_container flex-container">
 <?php $catquery = new WP_Query( 'cat=38&posts_per_page=5' ); ?>
-<ul>
 <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-<li><h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-<ul><li><?php the_content(); ?></li>
-</ul>
-</li>
+			<div class="flex-item">
+				<div class="blog-item__img">
+					<img src="">
+				</div>
+				<h3 class="blog-item__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+				<div class="blog-item__summary">
+					<?php the_excerpt(); ?>
+				</div>
+			</div>
 <?php endwhile; ?> 
-</ul>
 <?php wp_reset_postdata(); ?>
+		</div>
 
 		<!-- News & Views -->
 
