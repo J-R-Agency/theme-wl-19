@@ -24,7 +24,7 @@ get_header(); ?>
 			$post = $lead_story ;
 			setup_postdata( $post );
 
-			echo "HELLO: " . $post->ID . " | ";
+			// echo "HELLO: " . $post->ID . " | ";
  
 
 			echo "
