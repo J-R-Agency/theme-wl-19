@@ -25,12 +25,12 @@ get_header(); ?>
 			setup_postdata( $post );
 
 
-
+			get_the_post_thumbnail( $post->ID );  
 
 			echo "
 			<div class=\"lead_story__card\">
-				<h3><a href=\"" . the_permalink() . "\">" . $post->post_title . "</a></h3>
-				<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
+				<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
+				<p class=\"lead_story__excerpt\">POST EXCERPT" . $post->post_excerpt . "</p>
 			</div>";
 
 		}
