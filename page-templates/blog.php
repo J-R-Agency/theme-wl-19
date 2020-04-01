@@ -18,10 +18,11 @@ get_header(); ?>
 		
 		<!-- Lead story -->
 		<?php
-		//$lead_story = get_field("lead_story");
+		$lead_story = get_field("lead_story");
 		if ( isset( $lead_story ) ){
 
-			setup_postdata( $lead_story );
+			$post = $lead_story ;
+			setup_postdata( $post );
 
 			echo "
 			<div class=\"lead_story__card\">
