@@ -30,7 +30,7 @@ get_header(); ?>
 
 			// echo "HELLO: " . $post->ID . " | ";
  
-
+			echo "HERE 33";
 			echo "
 			<div class=\"lead_story__card flex-container\">
 				<div class=\"lead_story__image flex-item\">
@@ -42,7 +42,7 @@ get_header(); ?>
 					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div>
 				</div>
 			</div>";
-
+			echo "HERE 45";
 		}
 
 		?>
