@@ -18,7 +18,9 @@ get_header(); ?>
 		
 		<!-- Lead story -->
 		<?php
+		echo "HERE 21";
 		$lead_story = get_field( "lead_story" );
+		echo "HERE 23";
 		if (  $lead_story != "" ){
 			global $post;
 			$post = $lead_story ;
