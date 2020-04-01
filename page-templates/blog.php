@@ -26,13 +26,6 @@ get_header(); ?>
 
 			echo "HELLO: " . $post->ID . " | ";
  
-			echo get_the_post_thumbnail( $post->ID );  
-
-			echo get_the_post_thumbnail( '15528' );  
-
-			echo get_the_post_thumbnail_url ( $post->ID );  
-
-			echo get_the_post_thumbnail_url( '15528' );  
 
 			echo "
 			<div class=\"lead_story__card flex-container\">
