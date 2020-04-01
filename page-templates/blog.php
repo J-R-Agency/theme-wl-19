@@ -25,7 +25,9 @@ get_header(); ?>
 			setup_postdata( $post );
 
 echo '<pre>';
+	echo "TEST";
     print_r( get_field('lead_story')  );
+	echo "TEST";
 echo '</pre>';
 
 			echo "
