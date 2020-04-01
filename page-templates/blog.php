@@ -31,19 +31,34 @@ get_header(); ?>
 			echo get_the_post_thumbnail( '15528' );  
 
 			echo get_the_post_thumbnail_url ( $post->ID );  
-			
+
 			echo get_the_post_thumbnail_url( '15528' );  
 
 			echo "
 			<div class=\"lead_story__card\">
-				<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
-				<p class=\"lead_story__excerpt\">POST EXCERPT" . $post->post_excerpt . "</p>
+				<div class=\"lead_story__image\">
+					<img src=\"\"> 
+				</div>
+				<div class=\"lead_story__details\">
+					<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
+					<p class=\"lead_story__excerpt\">POST EXCERPT" . $post->post_excerpt . "</p>
+					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div
+				</div>
 			</div>";
 
 		}
 
 		?>
-		
+		<div class="flex-container">
+			Container
+			<div class="flex-item">
+				Item 1
+			</div>
+			<div class="flex-item">
+				Item 2
+			</div>
+		</div>
+
 	</div>
 	
 	<div class="row mt-20">
