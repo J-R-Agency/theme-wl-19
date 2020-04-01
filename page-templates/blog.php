@@ -24,6 +24,10 @@ get_header(); ?>
 			$post = $lead_story ;
 			setup_postdata( $post );
 
+echo '<pre>';
+    print_r( get_field('lead_story')  );
+echo '</pre>';
+
 			echo "
 			<div class=\"lead_story__card\">
 				<h3><a href=\"" . the_permalink() . "\">" . the_title() . "</a></h3>
