@@ -26,7 +26,7 @@ get_header(); ?>
 
 echo '<pre>';
 	echo "TEST";
-    print_r( get_field('lead_story')  );
+    print_r( $post  );
 	echo "TEST";
 echo '</pre>';
 
