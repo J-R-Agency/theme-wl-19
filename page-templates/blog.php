@@ -52,7 +52,7 @@ get_header(); ?>
 	
 	<div class="row mt-20">
 		<div class="blog_container flex-container">
-<?php $catquery = new WP_Query( 'cat=38&posts_per_page=5' ); ?>
+<?php $catquery = new WP_Query( 'cat=news&posts_per_page=3' ); ?>
 <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="flex-item">
 				<div class="blog-item__img">
