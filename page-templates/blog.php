@@ -33,8 +33,8 @@ get_header(); ?>
 					<img src=\"\"> 
 				</div>
 				<div class=\"lead_story__details flex-item\">
-					<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
-					<p class=\"lead_story__excerpt\">POST EXCERPT" . $post->post_excerpt . "</p>
+					<h3><a href=\"" . the_permalink() . "\">" . $post->post_title . "</a></h3>
+					<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
 					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div>
 				</div>
 			</div>";
