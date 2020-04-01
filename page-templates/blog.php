@@ -28,6 +28,8 @@ get_header(); ?>
  
 			echo get_the_post_thumbnail( $post->ID );  
 
+			echo get_the_post_thumbnail( '15528' );  
+
 			echo "
 			<div class=\"lead_story__card\">
 				<h3><a href=\"" . the_permalink() . "\">POST TITLE: " . $post->post_title . "</a></h3>
