@@ -54,9 +54,10 @@ get_header(); ?>
 		<div class="blog_container flex-container">
 <?php $catquery = new WP_Query( 'cat=news&posts_per_page=3' ); ?>
 <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-			<div class="flex-item">
+			<div class="blog-item flex-item">
 				<div class="blog-item__img">
 					<img src="">
+					<?php get_the_post_thumbnail(); ?>
 				</div>
 				<h3 class="blog-item__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 				<div class="blog-item__summary">
