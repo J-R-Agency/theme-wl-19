@@ -17,6 +17,21 @@ get_header(); ?>
 	<div class="row mt-20">
 		
 		<!-- Lead story -->
+		<?php
+		$lead_story = get_field("lead_story");
+		if ( isset($lead_story)){
+
+			setup_postdata( $lead_story );
+
+			echo "
+			<div class=\"lead_story__card\">
+				<h3><a href=\"" . the_permalink() . "\">" . the_title() . "</a></h3>
+				<p class=\"lead_story__excerpt\">" . the_excerpt() . "</p>
+			</div>";
+
+		}
+
+		?>
 		
 	</div>
 	
