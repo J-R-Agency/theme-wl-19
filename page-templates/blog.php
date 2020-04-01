@@ -21,7 +21,7 @@ get_header(); ?>
 		$lead_story = get_field("lead_story");
 		if ( isset( $lead_story ) ){
 
-			setup_postdata( $lead_story );
+			//setup_postdata( $lead_story );
 
 			echo "
 			<div class=\"lead_story__card\">
