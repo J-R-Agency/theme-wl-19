@@ -24,7 +24,8 @@ get_header(); ?>
 			$post = $lead_story ;
 			setup_postdata( $post );
 
-
+			echo "HELLO: " . $post->ID . " | ";
+ 
 			echo get_the_post_thumbnail( $post->ID );  
 
 			echo "
