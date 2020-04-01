@@ -25,7 +25,7 @@ get_header(); ?>
 			setup_postdata( $post );
 
 
-			get_the_post_thumbnail( $post->ID );  
+			echo get_the_post_thumbnail( $post->ID );  
 
 			echo "
 			<div class=\"lead_story__card\">
