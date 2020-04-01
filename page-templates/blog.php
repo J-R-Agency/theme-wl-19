@@ -20,7 +20,7 @@ get_header(); ?>
 		<?php
 		$lead_story = get_field("lead_story");
 		if ( isset( $lead_story ) ){
-
+			global $post;
 			$post = $lead_story ;
 			setup_postdata( $post );
 
