@@ -24,7 +24,9 @@ get_header(); ?>
 		if (  $lead_story != "" ){
 			global $post;
 			$post = $lead_story ;
+			echo "HERE 27";
 			setup_postdata( $post );
+			echo "HERE 29";
 
 			// echo "HELLO: " . $post->ID . " | ";
  
