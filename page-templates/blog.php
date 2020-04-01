@@ -18,19 +18,12 @@ get_header(); ?>
 		
 		<!-- Lead story -->
 		<?php
-		echo "HERE 21";
 		$lead_story = get_field( "lead_story" );
-		echo "HERE 23";
 		if (  $lead_story != "" ){
 			global $post;
 			$post = $lead_story ;
-			echo "HERE 27";
 			setup_postdata( $post );
-			echo "HERE 29";
-
-			// echo "HELLO: " . $post->ID . " | ";
- 
-			echo "HERE 33";
+			print_r( $post );
 			echo "
 			<div class=\"lead_story__card flex-container\">
 				<div class=\"lead_story__image flex-item\">
@@ -42,7 +35,6 @@ get_header(); ?>
 					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div>
 				</div>
 			</div>";
-			echo "HERE 45";
 		}
 
 		?>
