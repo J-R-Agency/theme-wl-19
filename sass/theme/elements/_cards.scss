@@ -1,12 +1,17 @@
 .lead_story__card{
 	background: $grey ;
-	padding: 1rem;
-	margin: 1rem 0;
+	padding: 1rem ;
+	margin: 1rem 0 ;
 
 }
 
 .lead_story__image{
-	background: $dark-grey;
+	background: $dark-grey ;
+}
+
+.lead_story__info{
+	margin-left: 1rem ;
+
 }
 
 .flex-container{
@@ -15,5 +20,5 @@
 }
 
 .flex-item{
-	flex-basis: 49%
+	flex-basis: 50% ;
 }
