@@ -18,7 +18,7 @@ get_header(); ?>
 		
 		<!-- Lead story -->
 		<?php
-		$lead_story = get_field( "lead_story" );
+		//$lead_story = get_field( "lead_story" );
 		if ( isset( $lead_story ) ){
 			global $post;
 			$post = $lead_story ;
