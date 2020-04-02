@@ -95,11 +95,10 @@ if( have_rows('blog_block') ):
 */
 
 		echo "
-
 			<div class=\"row mt-20\">
 				<div class=\"blog_container flex-container\">" ;
-		$catquery = new WP_Query( 'cat=" . $block_category . "&posts_per_page=3' ) 
-		while($catquery->have_posts()) : $catquery->the_post();
+		$catquery = new WP_Query( 'cat=" . $block_category . "&posts_per_page=3' ) ;
+		while($catquery->have_posts()) : $catquery->the_post() ;
 			echo "
 					<div class=\"blog-item flex-item\">
 						<div class=\"blog-item__img\">
@@ -112,8 +111,8 @@ if( have_rows('blog_block') ):
 							" . the_excerpt() . "
 						</div>
 					</div>" ;
-		endwhile;
-		wp_reset_postdata();
+		endwhile ;
+		wp_reset_postdata() ;
 		echo "
 				</div>
 			</div>" ;
