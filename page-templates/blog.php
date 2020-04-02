@@ -71,7 +71,40 @@ get_header(); ?>
 		<!-- News & Views -->
 
 	</div>
-	
+
+
+
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('blog_block') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('blog_block') ) : the_row();
+
+        // display a sub field value
+        $block_title = the_sub_field('block_title');
+        $block_intro = the_sub_field('block_intro');
+        $block_category = the_sub_field('block_category');
+
+        echo "<pre>" ;
+        print_r( $block_title );
+        print_r( $block_intro );
+        print_r( $block_category );
+        echo "</pre>" ;
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+
+
+
 	<div class="row mt-20">
 		
 		<!-- Reports & Publications -->
