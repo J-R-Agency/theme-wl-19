@@ -90,7 +90,7 @@ $categories = get_terms( $args );
 // echo "</pre>";
 
 foreach ($categories as $category){
-	print_r($category);
+	//print_r($category);
 	echo get_field("days_order", "days_" . $category->term_id);
 
 }
