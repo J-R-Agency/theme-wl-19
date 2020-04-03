@@ -87,15 +87,6 @@ if( have_rows('blog_block') ):
         $block_intro = get_sub_field('block_intro');
         $block_category = get_sub_field('block_category');
 
-        echo "<pre>" ;
-        print_r( $block_title );
-        print_r( $block_intro );
-        print_r( $block_category );
-        $block_category = (int)$block_category;
-        $current_category = get_term( $block_category, "post" ) ;
-        print_r( $current_category );
-        echo "</pre>" ;
-
 ?>
 
 	<div class="row mt-20">
@@ -104,7 +95,6 @@ if( have_rows('blog_block') ):
 		unset($catquery);
 		unset($new_query);
 		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
-		echo $new_query ;
 		$catquery = new WP_Query( $new_query ) ;
 		while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="blog-item flex-item">
