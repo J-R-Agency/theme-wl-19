@@ -74,9 +74,13 @@ defined( 'ABSPATH' ) || exit;
 
 // check if the repeater field has rows of data
 if( have_rows('blog_block') ):
-global $wpdb;
+
  	// loop through the rows of data
     while ( have_rows('blog_block') ) : the_row();
+
+    	unset($block_title);
+    	unset($block_intro);
+    	unset($block_category);
 
         // display a sub field value
         $block_title = the_sub_field('block_title');
