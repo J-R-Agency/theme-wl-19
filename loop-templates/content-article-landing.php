@@ -72,7 +72,7 @@ if( have_rows('blog_block') ):
 	<div class="row mt-20">
 		<div class="blog_container flex-container">
 			<h3 class="block_title"><?php echo $block_title ; ?></h3>
-			<div class="block_intro"><?php echo $block_intro ; ?></div>
+			<div class="block_intro"><?php print_r( $block_intro ) ; ?></div>
 		<?php 
 		unset($catquery);
 		unset($new_query);
