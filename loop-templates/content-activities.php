@@ -45,9 +45,9 @@ global $wl_google_api_key;
 
 		<div class="entry-meta">
 			<div class="activity-taxonomies">
-				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', 'Themes: ', '  ' ); ?></div>
-				<div class="activity-taxonomies__cost"><?php the_terms( $post->ID, 'costs', ' Cost: ', '  ' ); ?></div>
-				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' Days: ', '  ' ); ?></div>
+				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?></div>
+				<div class="activity-taxonomies__cost"><?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
+				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
 			</div>
 		</div><!-- .entry-meta -->
 

@@ -69,8 +69,8 @@ defined( 'ABSPATH' ) || exit;
 		echo "<div class=\"search_summary\">" . $search_summary_display . "</div>" ;
 		?>
 			<div class="activity-taxonomies">
-				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', 'Themes: ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' Cost: ', '  ' ); ?></div>
-				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' Days: ', '  ' ); ?></div>
+				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
+				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
 			</div>		
 		<?php echo "<div class=\"wishlist\"> " . get_favorites_button($post_id, $site_id) . "</div>"; ?>
 
