@@ -68,6 +68,60 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</div>
 
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('blog_block') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('blog_block') ) : the_row();
+
+        // display a sub field value
+        $block_title = the_sub_field('block_title');
+        $block_intro = the_sub_field('block_intro');
+        $block_category = the_sub_field('block_category');
+/*
+        echo "<pre>" ;
+        print_r( $block_title );
+        print_r( $block_intro );
+        print_r( $block_category );
+        echo "</pre>" ;
+*/
+
+		echo "
+			<div class=\"row mt-20\">
+				<div class=\"blog_container flex-container\">" ;
+		$catquery = new WP_Query( 'cat=" . $block_category . "&posts_per_page=3' ) ;
+		while($catquery->have_posts()) : $catquery->the_post() ;
+			echo "
+					<div class=\"blog-item flex-item\">
+						<div class=\"blog-item__img\">
+							" ;
+							get_the_post_thumbnail();
+			echo "
+						</div>
+						<h3 class=\"blog-item__title\"><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>
+						<div class=\"blog-item__summary\">
+							" . the_excerpt() . "
+						</div>
+					</div>" ;
+		endwhile ;
+		wp_reset_postdata() ;
+		echo "
+				</div>
+			</div>" ;
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+
+
 		<?php
 		wp_link_pages(
 			array(
