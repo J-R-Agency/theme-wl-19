@@ -87,7 +87,8 @@ if( have_rows('blog_block') ):
         print_r( $block_title );
         print_r( $block_intro );
         print_r( $block_category );
-        echo get_the_category( $block_category ) ;
+        $current_category = get_category( $block_category ) ;
+        echo $current_category->name ;
         echo "</pre>" ;
 
 
