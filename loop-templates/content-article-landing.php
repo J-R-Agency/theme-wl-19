@@ -83,9 +83,9 @@ if( have_rows('blog_block') ):
     	unset($block_category);
 
         // display a sub field value
-        $block_title = the_sub_field('block_title');
-        $block_intro = the_sub_field('block_intro');
-        $block_category = the_sub_field('block_category');
+        $block_title = get_sub_field('block_title');
+        $block_intro = get_sub_field('block_intro');
+        $block_category = get_sub_field('block_category');
 
         echo "<pre>" ;
         print_r( $block_title );
