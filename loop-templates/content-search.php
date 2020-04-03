@@ -91,13 +91,13 @@ $categories = get_terms( $args );
 
 foreach ($categories as $category){
 	//print_r($category);
-	echo "<br>" . get_field("days_order", "days_" . $category->term_id);
+	//echo "<br>" . get_field("days_order", "days_" . $category->term_id);
 	$day_of_the_week = get_field("days_order", "days_" . $category->term_id);
 		$days[$day_of_the_week] = $category->slug;
 
 }
 
-print_r(sort($days));
+//print_r(sort($days));
 
 
 function cmp($a, $b)
@@ -113,7 +113,7 @@ $a = array(3, 2, 5, 6, 1);
 usort($a, "cmp");
 
 foreach ($a as $key => $value) {
-    echo "$key: $value\n";
+   // echo "$key: $value\n";
 }
 
 		?>
