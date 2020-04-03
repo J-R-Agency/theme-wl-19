@@ -18,7 +18,19 @@ $container = get_theme_mod( 'understrap_container_type' );
   <?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
 
-
+	<?php if ( has_post_thumbnail() ): ?>
+		<?php $thumb = get_the_post_thumbnail_url(); ?>
+			<div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div>
+			<div class="hero_inner" style="background-image: url('<?php echo $thumb; ?>') ;"></div>	
+	<?php endif ?>
+	
+	
+	<div class="row entry-header">
+		<div class="col-12">
+			<h1 class="centered"><?php the_title(); ?></h1>
+		</div>
+	</div>
+	
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
