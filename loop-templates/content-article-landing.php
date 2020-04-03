@@ -90,9 +90,9 @@ if( have_rows('blog_block') ):
 ?>
 
 	<div class="row mt-20">
-		<div class="blog_container flex-container">
 		<?php echo $block_title ; ?>
 		<?php echo $block_intro ; ?>
+		<div class="blog_container flex-container">
 		<?php 
 		unset($catquery);
 		unset($new_query);
