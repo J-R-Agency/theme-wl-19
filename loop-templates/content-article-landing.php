@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class=\"lead_story__details flex-item\">
 					<h3><a href=\"\">" . $post->post_title . "</a></h3>
 					<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
-					<div class=\"lead_story__button\"><a href=\"#\"> Read more &gt;</a></div>
+					<div class=\"lead_story__button\"><a href=\"" . the_permalink() . "\"> Read more &gt;</a></div>
 				</div>
 			</div>";
 		}
