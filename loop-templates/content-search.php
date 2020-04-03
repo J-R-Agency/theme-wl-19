@@ -91,6 +91,8 @@ $categories = get_terms( $args );
 
 foreach ($categories as $category){
 	print_r($category);
+	echo get_field("days_order");
+
 }
 
 
