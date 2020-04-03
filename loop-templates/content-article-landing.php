@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<!-- Lead story -->
 		<?php
-		$lead_story = the_field( "lead_story" );
+		$lead_story = get_field( "lead_story" );
 		if (  $lead_story != "" ){
 			global $post;
 			$post = $lead_story ;
