@@ -101,8 +101,11 @@ if( have_rows('blog_block') ):
 		<div class="blog_container flex-container">
 		<?php 
 		unset($catquery);
-		$catquery = new WP_Query( 'cat=' . $block_category . '&posts_per_page=3' ); ?>
-		<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+		unset($new_query);
+		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
+		echo $new_query ;
+		$catquery = new WP_Query( $new_query ) ;
+		while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="blog-item flex-item">
 				<div class="blog-item__img">
 					<img src="">
