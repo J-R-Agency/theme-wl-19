@@ -37,6 +37,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class=\"lead_story__card flex-container\">
 				<div class=\"lead_story__image flex-item\">
 					<img src=\"\"> 
+					" . get_the_post_thumbnail() . "
 				</div>
 				<div class=\"lead_story__details flex-item\">
 					<h3><a href=\"\">" . $post->post_title . "</a></h3>
@@ -47,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 		}
 
 		?>
-		
+
 
 		<?php
 		wp_link_pages(
