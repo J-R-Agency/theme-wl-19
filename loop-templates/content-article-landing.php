@@ -91,6 +91,29 @@ global $wpdb;
         print_r( $current_category );
         echo "</pre>" ;
 
+?>
+
+	<div class="row mt-20">
+		<div class="blog_container flex-container">
+		<?php $catquery = new WP_Query( 'cat=1&posts_per_page=3' ); ?>
+		<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+			<div class="blog-item flex-item">
+				<div class="blog-item__img">
+					<img src="">
+					<?php get_the_post_thumbnail(); ?>
+				</div>
+				<h3 class="blog-item__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+				<div class="blog-item__summary">
+					<?php the_excerpt(); ?>
+				</div>
+			</div>
+		<?php endwhile; ?> 
+		<?php wp_reset_postdata(); ?>
+		</div>
+	</div>
+
+
+<?php
 
 
 
