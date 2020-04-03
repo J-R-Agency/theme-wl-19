@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 			$post = $lead_story ;
 			setup_postdata( $post );
 			echo "<pre>" ; 
-			print_r( $post );
+			print_r( $post->guid );
 			echo "</pre>" ;
 			echo "
 			<div class=\"lead_story__card flex-container\">
