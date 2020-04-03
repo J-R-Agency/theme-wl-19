@@ -245,5 +245,10 @@ return $query;
 add_filter('pre_get_posts','searchfilter');
 
 
-
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+return 35;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
