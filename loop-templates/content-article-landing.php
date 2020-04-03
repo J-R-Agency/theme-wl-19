@@ -74,7 +74,7 @@ defined( 'ABSPATH' ) || exit;
 
 // check if the repeater field has rows of data
 if( have_rows('blog_block') ):
-
+global $wpdb;
  	// loop through the rows of data
     while ( have_rows('blog_block') ) : the_row();
 
