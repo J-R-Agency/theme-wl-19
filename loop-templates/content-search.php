@@ -75,13 +75,18 @@ $args = array(
 	'taxonomy' => 'days'
 );
 
-$day_categories = get_terms( $args );  
+$categories = get_terms( $args );  
 echo "<pre>";
-print_r($day_categories);
+print_r($categories);
 echo "</pre>";
-$categories = usort($day_categories, function($a, $b) {
+$categories = usort($categories, function($a, $b) {
    return get_field("days_order", "days_".$a->term_id) - get_field("days_order", "days_".$b->term_id);
 });
+
+
+echo "<pre>";
+print_r($categories);
+echo "</pre>";
 
 foreach ($categories as $category){
 	print_r($category);
