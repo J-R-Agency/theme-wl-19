@@ -3,6 +3,10 @@
 	padding: 1rem ;
 	margin: 1rem 0 ;
 
+	& a:hover{
+		color: $dark-grey;
+	}
+
 }
 
 .lead_story__image{
