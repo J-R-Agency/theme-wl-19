@@ -66,7 +66,7 @@ if( have_rows('blog_block') ):
 
 ?>
 
-	<div class="row mt-20">
+	<div class="block_container">
 		<h3 class="block_title"><?php echo $block_title ; ?></h3>
 		<div class="block_intro"><?php echo $block_intro ; ?></div>
 		<div class="blog_container flex-container">
