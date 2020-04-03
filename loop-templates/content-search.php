@@ -97,7 +97,7 @@ foreach ($categories as $category){
 
 }
 
-print_r($days);
+print_r(sort($days));
 
 
 function cmp($a, $b)
