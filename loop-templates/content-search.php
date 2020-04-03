@@ -80,7 +80,7 @@ echo "<pre>";
 print_r($day_categories);
 echo "</pre>";
 $categories = usort($categories, function($a, $b) {
-   return get_field("days_order", "category_".$a->term_id) - get_field("days_order", "category_".$b->term_id);
+   return get_field("days_order", "days_".$a->term_id) - get_field("days_order", "days_".$b->term_id);
 });
 
 foreach ($categories as $category){
