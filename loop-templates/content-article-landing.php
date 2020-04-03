@@ -41,6 +41,7 @@ defined( 'ABSPATH' ) || exit;
 		}
 
 		?>
+		<?php wp_reset_postdata(); ?>
 
 	<div class="row mt-20">
 		<div class="blog_container flex-container">
