@@ -92,9 +92,12 @@ $categories = get_terms( $args );
 foreach ($categories as $category){
 	//print_r($category);
 	echo "<br>" . get_field("days_order", "days_" . $category->term_id);
+	$day_of_the_week = get_field("days_order", "days_" . $category->term_id);
+		$days[$day_of_the_week] = $category->slug;
 
 }
 
+print_r($days);
 
 
 function cmp($a, $b)
