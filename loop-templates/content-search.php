@@ -76,17 +76,18 @@ $args = array(
 );
 
 $categories = get_terms( $args );  
-echo "<pre>PRE ";
-print_r($categories);
-echo "</pre>";
-$categories = usort($categories, function($a, $b) {
-   return get_field("days_order", "days_".$a->term_id) - get_field("days_order", "days_".$b->term_id);
-});
+
+// echo "<pre>PRE ";
+// print_r($categories);
+// echo "</pre>";
+// $categories = usort($categories, function($a, $b) {
+//    return get_field("days_order", "days_".$a->term_id) - get_field("days_order", "days_".$b->term_id);
+// });
 
 
-echo "<pre>POST ";
-print_r($categories);
-echo "</pre>";
+// echo "<pre>POST ";
+// print_r($categories);
+// echo "</pre>";
 
 foreach ($categories as $category){
 	print_r($category);
