@@ -67,11 +67,29 @@ defined( 'ABSPATH' ) || exit;
 			}
 		}
 		echo "<div class=\"search_summary\">" . $search_summary_display . "</div>" ;
+
+		unset($days);
+		$days;
+
+$args = array(
+	'taxonomy' => 'days'
+);
+
+$day_categories = get_terms( $args );  
+
+usort($categories, function($a, $b) {
+   return get_field("days_order", "category_".$a->term_id) - get_field("days_order", "category_".$b->term_id);
+});
+
+foreach ($categories as $category){
+	print_r($category);
+}
+
 		?>
 			<div class="activity-taxonomies">
 				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
 				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
-			</div>		
+			</div>
 		<?php echo "<div class=\"wishlist\"> " . get_favorites_button($post_id, $site_id) . "</div>"; ?>
 
 	</div><!-- .entry-summary -->
