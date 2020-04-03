@@ -76,7 +76,7 @@ $args = array(
 );
 
 $categories = get_terms( $args );  
-echo "<pre>";
+echo "<pre>PRE ";
 print_r($categories);
 echo "</pre>";
 $categories = usort($categories, function($a, $b) {
@@ -84,7 +84,7 @@ $categories = usort($categories, function($a, $b) {
 });
 
 
-echo "<pre>";
+echo "<pre>POST ";
 print_r($categories);
 echo "</pre>";
 
