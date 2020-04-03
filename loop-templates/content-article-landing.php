@@ -95,7 +95,7 @@ global $wpdb;
 
 	<div class="row mt-20">
 		<div class="blog_container flex-container">
-		<?php $catquery = new WP_Query( 'cat=1&posts_per_page=3' ); ?>
+		<?php $catquery = new WP_Query( 'cat=' . $block_category . '&posts_per_page=3' ); ?>
 		<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="blog-item flex-item">
 				<div class="blog-item__img">
