@@ -92,7 +92,8 @@ if( have_rows('blog_block') ):
 ?>
 	<div class="row mt-20">
 		<div class="blog_container flex-container">
-		<?php 
+		<?php
+		unset($catquery);
 		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
 		$catquery = new WP_Query( $new_query ); ?>
 		<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
