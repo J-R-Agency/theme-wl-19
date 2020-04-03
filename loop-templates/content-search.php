@@ -77,6 +77,7 @@ $args = array(
 
 $day_categories = get_terms( $args );  
 
+print_r($day_categories);
 usort($categories, function($a, $b) {
    return get_field("days_order", "category_".$a->term_id) - get_field("days_order", "category_".$b->term_id);
 });
