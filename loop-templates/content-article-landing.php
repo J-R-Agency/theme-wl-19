@@ -88,28 +88,27 @@ if( have_rows('blog_block') ):
         echo "</pre>" ;
 */
 
-		echo "
-			<div class=\"row mt-20\">
-				<div class=\"blog_container flex-container\">" ;
-		$catquery = new WP_Query( 'cat=" . $block_category . "&posts_per_page=3' ) ;
-		while($catquery->have_posts()) : $catquery->the_post() ;
-			echo "
-					<div class=\"blog-item flex-item\">
-						<div class=\"blog-item__img\">
-							" ;
-							get_the_post_thumbnail();
-			echo "
-						</div>
-						<h3 class=\"blog-item__title\"><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>
-						<div class=\"blog-item__summary\">
-							" . the_excerpt() . "
-						</div>
-					</div>" ;
-		endwhile ;
-		wp_reset_postdata() ;
-		echo "
+
+?>
+	<div class="row mt-20">
+		<div class="blog_container flex-container">
+		<?php $catquery = new WP_Query( 'cat=' . $block_category . '&posts_per_page=3' ); ?>
+		<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+			<div class="blog-item flex-item">
+				<div class="blog-item__img">
+					<img src="">
+					<?php get_the_post_thumbnail(); ?>
 				</div>
-			</div>" ;
+				<h3 class="blog-item__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+				<div class="blog-item__summary">
+					<?php the_excerpt(); ?>
+				</div>
+			</div>
+		<?php endwhile; ?> 
+		<?php wp_reset_postdata(); ?>
+		</div>
+	</div>
+<?
 
     endwhile;
 
