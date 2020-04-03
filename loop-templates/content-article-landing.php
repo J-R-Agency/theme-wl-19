@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 			global $post;
 			$post = $lead_story ;
 			setup_postdata( $post );
-			//print_r( $post );
+			print_r( $post );
 			echo "
 			<div class=\"lead_story__card flex-container\">
 				<div class=\"lead_story__image flex-item\">
