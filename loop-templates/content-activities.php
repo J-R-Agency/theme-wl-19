@@ -10,6 +10,13 @@ defined( 'ABSPATH' ) || exit;
 
 global $wl_google_api_key;
 
+function dump($var){
+
+	echo "<pre>";
+	print_r($var);
+	echo "</pre>";
+
+}
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -20,6 +27,13 @@ global $wl_google_api_key;
 		$websiteurl = get_field('websiteurl');
 		$wl_api_main_address = get_field("main_address");
 		$wl_api_additional_information = get_field("additional_information");
+		$wl_api_activity_documents = get_field("activity_documents");
+
+		$activity_documents = unserialize($wl_api_activity_documents);
+
+		dump($activity_documents);
+
+
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -70,7 +84,14 @@ global $wl_google_api_key;
 
 <?php
 
+// Address
 echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
+
+// Documents
+
+echo "<div class=\"activity_documents\">" . $wl_api_activity_documents . "</div>" ;
+
+
 
 ?>
 
