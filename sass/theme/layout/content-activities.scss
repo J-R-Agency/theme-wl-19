@@ -21,4 +21,14 @@
 .additional_information{
 	background-color: rgba(255,209,133, 50);
 	border-radius: 1rem ;
+	padding: 1rem;
+	margin: 1rem 0;
+	dt{
+		font-size: 1.25rem
+		font-weight: bold;
+	}
+	dd{
+		font-size: 1rem;
+		p{font-size: 1rem;}
+	}
 }
