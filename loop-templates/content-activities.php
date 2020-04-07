@@ -19,6 +19,7 @@ global $wl_google_api_key;
 		// Get API custom fields 
 		$websiteurl = get_field('websiteurl');
 		$wl_api_main_address = get_field("main_address");
+		$wl_api_additional_information = get_field("additional_information");
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -58,6 +59,14 @@ global $wl_google_api_key;
 	<div class="entry-content">
 		<?php echo get_favorites_button($post_id, $site_id); ?>
 		<?php the_content(); ?>
+
+<?php
+
+	if ( $wl_api_additional_information != "" ) {
+		echo "<div class=\"additional_information\"> " . $wl_api_additional_information . "</div>" ;
+	}
+
+?>
 
 <?php
 
