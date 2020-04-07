@@ -10,6 +10,11 @@
 	font-weight: bold;
 }
 
+.entry-content dl p:first-of-type{
+	font-size: 1rem;
+	font-weight: normal;
+}
+
 .edit-link {
 	display: none;
 }
@@ -24,11 +29,14 @@
 	padding: 1rem;
 	margin: 1rem 0;
 	dt{
-		font-size: 1.25rem
+		font-size: 1.25rem;
 		font-weight: bold;
 	}
 	dd{
 		font-size: 1rem;
-		p{font-size: 1rem;}
+
+	}
+	p{
+		font-size: 1rem;
 	}
 }
