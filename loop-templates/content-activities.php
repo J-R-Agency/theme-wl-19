@@ -28,12 +28,13 @@ function dump($var){
 		$wl_api_main_address = get_field("main_address");
 		$wl_api_additional_information = get_field("additional_information");
 		$wl_api_activity_documents = get_field("activity_documents");
+		$wl_api_activity_images = get_field("activity_images");
 
 		$activity_documents = unserialize($wl_api_activity_documents);
+		$activity_images = unserialize($wl_api_activity_images);
 
 		dump($activity_documents);
-
-
+		dump($activity_images);
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -88,13 +89,15 @@ function dump($var){
 echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
 // Documents
-$activity_document_list[] = "<li><a href=\"" . $activity_documents["Url"] . "\" title=\"" . $activity_documents["Title"] . "\">" . $activity_documents["Title"] . "</a></li>";
-
+$activity_document_list[] = "<li><a href=\"" . $activity_documents["Url"] . "\" title=\"" . $activity_documents["Title"] . "\" target=\"_blank\">" . $activity_documents["Title"] . "</a></li>";
 $wl_api_activity_documents = implode(",", $activity_document_list);
-
 echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activity_documents . "</ol></div>" ;
 
 
+// Documents
+$activity_image_list[] = "<img src=\"" . $activity_images["Url"] . "\" title=\"" . $activity_images["Description"] . "\">" . $activity_images["Description"] . "";
+$wl_api_activity_images = implode(",", $activity_image_list);
+echo "<div class=\"activity_images\"><h3>Images</h3> <ul>" . $wl_api_activity_images . "</ol></div>" ;
 
 ?>
 
