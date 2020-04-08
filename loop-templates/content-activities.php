@@ -33,9 +33,6 @@ function dump($var){
 		$activity_documents = unserialize($wl_api_activity_documents);
 		$activity_images = unserialize($wl_api_activity_images);
 
-		dump($activity_documents);
-		dump($activity_images);
-
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
 		$wl_api_logo_url = get_field("logo_url");
