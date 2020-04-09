@@ -20,8 +20,16 @@
 }
 
 .blog-item{
-	flex-basis: 33%;
-	margin-right: 2rem;
+	flex-basis: 100%;
+	@include respond-to('md'){
+		flex-basis: 100%;
+		margin-right: 2rem;
+    }
+	@include respond-to('lg'){
+		flex-basis: 33%;
+		margin-right: 2rem;
+    }
+
 }
 
 .flex-container{
@@ -30,5 +38,11 @@
 }
 
 .flex-item{
-	flex-basis: 50% ;
+	flex-basis: 100%;
+	@include respond-to('md'){
+		flex-basis: 100%;
+    }
+	@include respond-to('lg'){
+		flex-basis: 50%;
+    }
 }
