@@ -62,6 +62,26 @@ get_header(); ?>
 		<div class="col-1"></div>
 	</div>
 	
+<?php
+$args = array(
+    'post_type' => 'activities',
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'themes',
+            'field' => 'id',
+            'terms' => '6'
+        )
+    )
+);
+$the_query = new WP_Query( $args );
+while ( $the_query->have_posts() ) : $the_query->the_post();
+    //content
+    the_permalink;
+endwhile;
+?>
+
 
 <?php
 $the_theme = get_field("theme");
