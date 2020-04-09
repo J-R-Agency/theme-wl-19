@@ -129,7 +129,7 @@ if ($activity_contacts != ""){
 		print_r($activity_contact);
 
 		foreach($activity_contact as $activity_contact_item){
-			echo "NEW LINE<br>"; 
+			echo "NEW LINE<br>" . key(activity_contact_item) ; 
 			print_r($activity_contact_item);
 
 		}
