@@ -88,7 +88,11 @@ echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 // Documents
 print_r($activity_documents);
 
-$activity_document_list[] = "<li><a href=\"" . $activity_documents["Url"] . "\" title=\"" . $activity_documents["Title"] . "\" target=\"_blank\">" . $activity_documents["Title"] . "</a></li>";
+foreach ($activity_documents as $activity_document) {
+	# code...
+	$activity_document_list[] = "<li><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+}
+
 $wl_api_activity_documents = implode(",", $activity_document_list);
 echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activity_documents . "</ol></div>" ;
 
