@@ -78,7 +78,8 @@ $args = array(
 $the_query = new WP_Query( $args );
 while ( $the_query->have_posts() ) : $the_query->the_post();
     //content
-    echo "hello" . the_permalink();
+    // echo "hello" . the_permalink();
+    the_title();
 endwhile;
 ?>
 
