@@ -99,7 +99,7 @@ echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activ
 
 
 // Images
-print_r($activity_images);
+dump($activity_images);
 
 foreach ($activity_images as $activity_image) {
 	$activity_image_list[] = "<img src=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\">" . $activity_image["Description"] . "";
