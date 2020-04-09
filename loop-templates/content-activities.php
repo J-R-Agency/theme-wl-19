@@ -87,6 +87,17 @@ echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
 dump($activity_documents);
 
+if ($activity_documents == ""){
+	echo "EMPTY";
+}elseif ($activity_documents == "N;") {
+	# code...
+}elseif ($activity_documents != ""){
+	echo "NOT EMPTY";
+}else{
+	echo "SOME OTHER CONDITION";
+	dump($activity_documents);
+}
+
 // Documents
 foreach ($activity_documents as $activity_document) {
 	# code...
