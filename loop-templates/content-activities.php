@@ -85,36 +85,30 @@ function dump($var){
 // Address
 echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
-dump($activity_documents);
-
-if ($activity_documents == ""){
-	echo "EMPTY";
-}elseif ($activity_documents == "N;") {
-	# code...
-}elseif ($activity_documents != ""){
-	echo "NOT EMPTY";
+if ($activity_documents != ""){
+	// Display documents
+	// Documents
+	foreach ($activity_documents as $activity_document) {
+		$activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+	}
+	$wl_api_activity_documents = implode("", $activity_document_list);
+	echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ol></div>" ;
 }else{
-	echo "SOME OTHER CONDITION";
-	dump($activity_documents);
+	// Do not display documents
 }
 
-// Documents
-foreach ($activity_documents as $activity_document) {
-	# code...
-	$activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+if ($activity_images != ""){
+	// Display images
+	// Images
+	foreach ($activity_images as $activity_image) {
+		$activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" style=\"background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
+	}
+	$wl_api_activity_images = "<div class=\"flex-container\">" . implode("", $activity_image_list) . "</div>";
+	echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
+}else{
+	// Do not display images
 }
 
-$wl_api_activity_documents = implode("", $activity_document_list);
-echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ol></div>" ;
-
-dump($activity_images);
-
-// Images
-foreach ($activity_images as $activity_image) {
-	$activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" style=\"background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
-}
-$wl_api_activity_images = "<div class=\"flex-container\">" . implode("", $activity_image_list) . "</div>";
-echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
 
 ?>
 
