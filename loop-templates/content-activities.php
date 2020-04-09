@@ -99,8 +99,10 @@ echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activ
 
 
 // Images
-foreach ($activity_documents as $activity_document) {
-	$activity_image_list[] = "<img src=\"" . $activity_images["Url"] . "\" title=\"" . $activity_images["Description"] . "\">" . $activity_images["Description"] . "";
+print_r($activity_images);
+
+foreach ($activity_images as $activity_image) {
+	$activity_image_list[] = "<img src=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\">" . $activity_image["Description"] . "";
 }
 $wl_api_activity_images = implode("", $activity_image_list);
 echo "<div class=\"activity_images\"><h3>Images</h3> <ul>" . $wl_api_activity_images . "</ul></div>" ;
