@@ -104,7 +104,7 @@ $posts_array = get_posts(
                             'post_type' => 'activities',
                             'tax_query' => array(
                                 array(
-                                'taxonomy' => 'themes',
+                                'taxonomy' => 'theme',
                                 'field' => $the_theme,
                                 'terms' => $term->name,
                                 )
