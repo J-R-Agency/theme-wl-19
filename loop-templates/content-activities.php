@@ -106,12 +106,12 @@ if ($activity_images != ""){
 		echo "$width, $height, $type, $attr";
 		unset($use_dimensions);
 		if ($width<250 && $height<250){
-			$use_dimensions = " style=\"width: " . $width . "px; height: " . $height . "px;\" ";
+			$use_dimensions = " width: " . $width . "px; height: " . $height . "px; ";
 		}else{
 			unset($use_dimensions);
 		}
 
-		$activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" $use_dimensions style=\"background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
+		$activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" $use_dimensions style=\"" . $use_dimensions . "background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
 	}
 	$wl_api_activity_images = "<div class=\"flex-container\">" . implode("", $activity_image_list) . "</div>";
 	echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
