@@ -81,7 +81,7 @@ get_header(); ?>
 	    )
 	);
 	$the_query = new WP_Query( $args );
-	echo "<h3>View activities<ul>";
+	echo "<h3>View activities<h3>";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    //content
 	    // echo "hello" . the_permalink();	
@@ -89,7 +89,7 @@ get_header(); ?>
 	    // echo "<li><a href=\"". get_permalink() . "\">" . the_title() . "</a></li>";
 	    echo the_title() . "<br>";
 	endwhile;
-	echo "</ul>";
+	echo "";
 	?>
 		<div class="col-1"></div>
 	</div>
