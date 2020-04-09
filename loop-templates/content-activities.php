@@ -102,8 +102,7 @@ if ($activity_images != ""){
 	// Images
 	foreach ($activity_images as $activity_image) {
 		list($width, $height, $type, $attr) = getimagesize($activity_image["Url"]);
-
-		echo "$width, $height, $type, $attr";
+		// echo "$width, $height, $type, $attr";
 		unset($use_dimensions);
 		if ($width<250 && $height<250){
 			$use_dimensions = " width: " . $width . "px; height: " . $height . "px; ";
