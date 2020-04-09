@@ -82,7 +82,8 @@ get_header(); ?>
 	echo "<h3>View activities<ul>";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    //content
-	    // echo "hello" . the_permalink();
+	    // echo "hello" . the_permalink();	
+	    echo get_permalink();
 	    echo "<li><a href=\"". get_permalink() . "\">" . the_title() . "</a></li>";
 	endwhile;
 	echo "</ul>";
