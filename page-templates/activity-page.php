@@ -109,7 +109,7 @@ $posts_array = get_posts(
                             )
                         )
                     );
-    print_r( $posts_array ); 
+   // print_r( $posts_array ); 
 
     foreach ($posts_array as $post) {	
     	# code...
