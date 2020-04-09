@@ -93,6 +93,7 @@ $args = array(
 ); 
 
 $terms = get_terms( $taxonomies, $args );
+print_r($terms);
 foreach ( $terms as $term ) {
 
 // here's my code for getting the posts for custom post type
