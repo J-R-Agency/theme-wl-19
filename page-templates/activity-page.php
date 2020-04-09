@@ -62,6 +62,57 @@ get_header(); ?>
 		<div class="col-1"></div>
 	</div>
 	
+
+<?php
+
+/* Add your taxonomy. */
+$taxonomies = array( 
+    'themes',
+);
+
+$args = array(
+    'orderby'           => 'name', 
+    'order'             => 'ASC',
+    'hide_empty'        => true, 
+    'exclude'           => array(), 
+    'exclude_tree'      => array(), 
+    'include'           => array(),
+    'number'            => '', 
+    'fields'            => 'all', 
+    'slug'              => '', 
+    'parent'            => '',
+    'hierarchical'      => true, 
+    'child_of'          => 0, 
+    'get'               => '', 
+    'name__like'        => '',
+    'description__like' => '',
+    'pad_counts'        => false, 
+    'offset'            => '', 
+    'search'            => '', 
+    'cache_domain'      => 'core'
+); 
+
+$terms = get_terms( $taxonomies, $args );
+foreach ( $terms as $term ) {
+
+// here's my code for getting the posts for custom post type
+
+$posts_array = get_posts(
+                        array( 'showposts' => -1,
+                            'post_type' => 'activities',
+                            'tax_query' => array(
+                                array(
+                                'taxonomy' => 'themes',
+                                'field' => term_id,
+                                'terms' => $term->name,
+                                )
+                            )
+                        )
+                    );
+    print_r( $posts_array ); 
+}
+
+?>
 	
 </div>
 
