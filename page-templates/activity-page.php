@@ -69,7 +69,7 @@ $args = array(
     'posts_per_page' => -1,
     'tax_query' => array(
         array(
-            'taxonomy' => 'theme',
+            'taxonomy' => 'themes',
             'field' => 'id',
             'terms' => '6'
         )
