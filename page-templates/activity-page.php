@@ -64,7 +64,8 @@ get_header(); ?>
 	
 
 <?php
-
+$the_theme = get_field("theme");
+print_r($the_theme);
 /* Add your taxonomy. */
 $taxonomies = array( 
     'themes',
