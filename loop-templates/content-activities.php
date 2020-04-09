@@ -101,6 +101,10 @@ if ($activity_images != ""){
 	// Display images
 	// Images
 	foreach ($activity_images as $activity_image) {
+		list($width, $height, $type, $attr) = getimagesize($activity_image["Url"]);
+
+		echo "$width, $height, $type, $attr";
+
 		$activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" style=\"background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
 	}
 	$wl_api_activity_images = "<div class=\"flex-container\">" . implode("", $activity_image_list) . "</div>";
