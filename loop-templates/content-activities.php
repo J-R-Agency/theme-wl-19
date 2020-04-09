@@ -106,7 +106,7 @@ if ($activity_images != ""){
 		echo "$width, $height, $type, $attr";
 		unset($use_dimensions);
 		if ($width<250 && $height<250){
-			$use_dimensions = " style=\"width: " . $width . "; height: " . $height . "\" ";
+			$use_dimensions = " style=\"width: " . $width . "px; height: " . $height . "px;\" ";
 		}else{
 			unset($use_dimensions);
 		}
