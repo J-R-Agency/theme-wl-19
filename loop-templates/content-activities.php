@@ -29,9 +29,11 @@ function dump($var){
 		$wl_api_additional_information = get_field("additional_information");
 		$wl_api_activity_documents = get_field("activity_documents");
 		$wl_api_activity_images = get_field("activity_images");
+		$wl_api_activity_contacts = get_field("contacts");
 
 		$activity_documents = unserialize($wl_api_activity_documents);
 		$activity_images = unserialize($wl_api_activity_images);
+		$activity_contacts = unserialize($wl_api_activity_contacts);
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -92,7 +94,7 @@ if ($activity_documents != ""){
 		$activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
 	}
 	$wl_api_activity_documents = implode("", $activity_document_list);
-	echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ol></div>" ;
+	echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ul></div>" ;
 }else{
 	// Do not display documents
 }
@@ -116,6 +118,22 @@ if ($activity_images != ""){
 	echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
 }else{
 	// Do not display images
+}
+
+
+if ($activity_contacts != ""){
+
+	dump($activity_contacts);
+
+	// Display documents
+	// Documents
+	foreach ($activity_contacts as $activity_contact) {
+		$activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["PhoneNumber"] . "</a></li>";
+	}
+	$wl_api_activity_contacts = implode("", $activity_contact_list);
+	echo "<div class=\"activity_contact__container\"><h3 class=\"activity_contact__title\">Contacts</h3> <ul class=\"activity_contact__list\">" . $wl_api_activity_contacts . "</ul></div>" ;
+}else{
+	// Do not display documents
 }
 
 
