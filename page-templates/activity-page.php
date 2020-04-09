@@ -83,7 +83,7 @@ get_header(); ?>
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    //content
 	    // echo "hello" . the_permalink();
-	    echo "<li><a href=\"". the_permalink() . "\">" . the_title() . "</a></li>";
+	    echo "<li><a href=\"". get_the_permalink() . "\">" . the_title() . "</a></li>";
 	endwhile;
 	echo "</ul>";
 	?>
