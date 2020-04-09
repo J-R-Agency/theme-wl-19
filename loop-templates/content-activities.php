@@ -93,7 +93,7 @@ foreach ($activity_documents as $activity_document) {
 	$activity_document_list[] = "<li><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
 }
 
-$wl_api_activity_documents = implode(",", $activity_document_list);
+$wl_api_activity_documents = implode("", $activity_document_list);
 echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activity_documents . "</ol></div>" ;
 
 
