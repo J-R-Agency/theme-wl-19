@@ -123,19 +123,20 @@ if ($activity_images != ""){
 
 if ($activity_contacts != ""){
 
-	// Display documents
-	// Documents
+	// Display contacts
+	// Contacts
 	foreach ($activity_contacts as $activity_contact) {
-		print_r($activity_contact);
 
-		foreach($activity_contact as $activity_contact_item){
-			echo "NEW LINE<br>" . key($activity_contact) ; 
-			print_r($activity_contact_item);
-
+		if ( $activity_contact["FullName"] != "" ){
+			$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
 		}
-		$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
-		$activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
-		$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
+		if ( $activity_contact["FullName"] != "" ){
+			$activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
+		}
+		if ( $activity_contact["FullName"] != "" ){
+			$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
+		}
+
 	}
 	$wl_api_activity_contacts = implode("", $activity_contact_list);
 	echo "<div class=\"activity_contact__container\"><h3 class=\"activity_contact__title\">Contacts</h3> <ul class=\"activity_contact__list\">" . $wl_api_activity_contacts . "</ul></div>" ;
