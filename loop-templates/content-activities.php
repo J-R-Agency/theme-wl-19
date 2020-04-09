@@ -85,6 +85,8 @@ function dump($var){
 // Address
 echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
+dump($activity_documents);
+
 // Documents
 foreach ($activity_documents as $activity_document) {
 	# code...
@@ -94,7 +96,7 @@ foreach ($activity_documents as $activity_document) {
 $wl_api_activity_documents = implode("", $activity_document_list);
 echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ol></div>" ;
 
-
+dump($activity_images);
 
 // Images
 foreach ($activity_images as $activity_image) {
