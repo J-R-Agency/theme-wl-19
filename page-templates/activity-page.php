@@ -110,6 +110,16 @@ $posts_array = get_posts(
                         )
                     );
     print_r( $posts_array ); 
+
+    foreach ($posts_array as $post) {	
+    	# code...
+    	setup_postdata($post);
+    	?>
+    	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    	<?php
+
+    }
+    wp_reset_postdata();
 }
 
 ?>
