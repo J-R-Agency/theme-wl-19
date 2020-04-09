@@ -130,10 +130,10 @@ if ($activity_contacts != ""){
 		if ( $activity_contact["FullName"] != "" ){
 			$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
 		}
-		if ( $activity_contact["FullName"] != "" ){
+		if ( $activity_contact["EmailAddress"] != "" ){
 			$activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
 		}
-		if ( $activity_contact["FullName"] != "" ){
+		if ( $activity_contact["PhoneNumber"] != "" ){
 			$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
 		}
 
