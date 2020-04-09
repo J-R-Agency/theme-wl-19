@@ -65,7 +65,7 @@ get_header(); ?>
 
 <?php
 $the_theme = get_field("theme");
-print_r($the_theme);
+//print_r($the_theme);
 /* Add your taxonomy. */
 $taxonomies = array( 
     'themes',
@@ -94,7 +94,7 @@ $args = array(
 ); 
 
 $terms = get_terms( $taxonomies, $args );
-print_r($terms);
+//print_r($terms);
 foreach ( $terms as $term ) {
 
 // here's my code for getting the posts for custom post type
@@ -105,7 +105,7 @@ $posts_array = get_posts(
                             'tax_query' => array(
                                 array(
                                 'taxonomy' => 'themes',
-                                'field' => term_id,
+                                'field' => $the_theme,
                                 'terms' => $term->name,
                                 )
                             )
