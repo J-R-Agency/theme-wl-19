@@ -63,6 +63,10 @@ get_header(); ?>
 	</div>
 	
 <?php
+
+$the_theme = get_field("theme");
+
+
 $args = array(
     'post_type' => 'activities',
     'post_status' => 'publish',
@@ -71,7 +75,7 @@ $args = array(
         array(
             'taxonomy' => 'themes',
             'field' => 'id',
-            'terms' => '6'
+            'terms' => $the_theme
         )
     )
 );
@@ -85,7 +89,7 @@ endwhile;
 
 
 <?php
-$the_theme = get_field("theme");
+
 //print_r($the_theme);
 /* Add your taxonomy. */
 $taxonomies = array( 
