@@ -98,7 +98,7 @@ echo "<div class=\"activity_documents__container\"><h3 class=\"activity_document
 
 // Images
 foreach ($activity_images as $activity_image) {
-	$activity_image_list[] = "<img class=\"activity_images__img\" src=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\">" ;
+	$activity_image_list[] = "<a href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" style=\"background-image('" . $activity_image["Url"] . "')\"></div></a>" ;
 }
 $wl_api_activity_images = implode("", $activity_image_list);
 echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
