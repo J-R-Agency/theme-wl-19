@@ -127,7 +127,12 @@ if ($activity_contacts != ""){
 	// Documents
 	foreach ($activity_contacts as $activity_contact) {
 		print_r($activity_contact);
-		
+
+		foreach($activity_contact as $activity_contact_item){
+			echo "NEW LINE"; 
+			print_r($activity_contact_item);
+
+		}
 		$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
 		$activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
 		$activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
