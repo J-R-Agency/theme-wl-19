@@ -61,95 +61,34 @@ get_header(); ?>
 		</div>
 		<div class="col-1"></div>
 	</div>
-	
-<?php
+	<div class="row">
+	<?php
 
-$the_theme = get_field("theme");
+	$the_theme = get_field("theme");
 
+	$args = array(
+	    'post_type' => 'activities',
+	    'post_status' => 'publish',
+	    'posts_per_page' => -1,
+	    'tax_query' => array(
+	        array(
+	            'taxonomy' => 'themes',
+	            'field' => 'id',
+	            'terms' => $the_theme
+	        )
+	    )
+	);
+	$the_query = new WP_Query( $args );
+	echo "<h3>View activities<ul>";
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	    //content
+	    // echo "hello" . the_permalink();
+	    echo "<li><a href=\"". the_permalink() . "\">" . the_title() . "</a></li>";
+	endwhile;
+	echo "</ul>";
+	?>
 
-$args = array(
-    'post_type' => 'activities',
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'themes',
-            'field' => 'id',
-            'terms' => $the_theme
-        )
-    )
-);
-$the_query = new WP_Query( $args );
-while ( $the_query->have_posts() ) : $the_query->the_post();
-    //content
-    // echo "hello" . the_permalink();
-    the_title();
-endwhile;
-?>
-
-
-<?php
-
-//print_r($the_theme);
-/* Add your taxonomy. */
-$taxonomies = array( 
-    'themes',
-);
-
-$args = array(
-    'orderby'           => 'name', 
-    'order'             => 'ASC',
-    'hide_empty'        => true, 
-    'exclude'           => array(), 
-    'exclude_tree'      => array(), 
-    'include'           => array(),
-    'number'            => '', 
-    'fields'            => 'all', 
-    'slug'              => '', 
-    'parent'            => '',
-    'hierarchical'      => true, 
-    'child_of'          => 0, 
-    'get'               => '', 
-    'name__like'        => '',
-    'description__like' => '',
-    'pad_counts'        => false, 
-    'offset'            => '', 
-    'search'            => '', 
-    'cache_domain'      => 'core'
-); 
-
-$terms = get_terms( $taxonomies, $args );
-//print_r($terms);
-foreach ( $terms as $term ) {
-
-// here's my code for getting the posts for custom post type
-
-$posts_array = get_posts(
-                        array( 'showposts' => -1,
-                            'post_type' => 'activities',
-                            'tax_query' => array(
-                                array(
-                                'taxonomy' => 'theme',
-                                'field' => $the_theme,
-                                'terms' => $term->name,
-                                )
-                            )
-                        )
-                    );
-   // print_r( $posts_array ); 
-
-    foreach ($posts_array as $post) {	
-    	# code...
-    	setup_postdata($post);
-    	?>
-    	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-    	<?php
-
-    }
-    wp_reset_postdata();
-}
-
-?>
+	</div>
 	
 </div>
 
