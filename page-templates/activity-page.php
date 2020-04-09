@@ -85,7 +85,7 @@ get_header(); ?>
 	    // echo "hello" . the_permalink();	
 	    // echo get_permalink();
 	    // echo "<li><a href=\"". get_permalink() . "\">" . the_title() . "</a></li>";
-	    echo the_title();
+	    echo the_title() . "<br>";
 	endwhile;
 	echo "</ul>";
 	?>
