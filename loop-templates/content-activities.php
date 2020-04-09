@@ -12,7 +12,7 @@ global $wl_google_api_key;
 
 function dump($var){
 
-	echo "<pre> HERE ";
+	echo "<pre>";
 	print_r($var);
 	echo "</pre>";
 
@@ -86,26 +86,22 @@ function dump($var){
 echo "<div class=\"main_address\">" . $wl_api_main_address . "</div>" ;
 
 // Documents
-print_r($activity_documents);
-
 foreach ($activity_documents as $activity_document) {
 	# code...
-	$activity_document_list[] = "<li><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+	$activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
 }
 
 $wl_api_activity_documents = implode("", $activity_document_list);
-echo "<div class=\"activity_documents\"><h3>Documents</h3> <ul>" . $wl_api_activity_documents . "</ol></div>" ;
+echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ol></div>" ;
 
 
 
 // Images
-dump($activity_images);
-
 foreach ($activity_images as $activity_image) {
-	$activity_image_list[] = "<img src=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\">" . $activity_image["Description"] . "";
+	$activity_image_list[] = "<img class=\"activity_images__img\" src=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\">" ;
 }
 $wl_api_activity_images = implode("", $activity_image_list);
-echo "<div class=\"activity_images\"><h3>Images</h3> <ul>" . $wl_api_activity_images . "</ul></div>" ;
+echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
 
 ?>
 
