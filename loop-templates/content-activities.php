@@ -12,7 +12,7 @@ global $wl_google_api_key;
 
 function dump($var){
 
-	echo "<pre>";
+	echo "<pre> HERE ";
 	print_r($var);
 	echo "</pre>";
 
