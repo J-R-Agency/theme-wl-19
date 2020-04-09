@@ -62,7 +62,9 @@ get_header(); ?>
 		<div class="col-1"></div>
 	</div>
 	<div class="row">
-	<?php
+		<div class="col-1"></div>
+		<div class="col-10 content-copy">
+		<?php
 
 	$the_theme = get_field("theme");
 
@@ -89,7 +91,7 @@ get_header(); ?>
 	endwhile;
 	echo "</ul>";
 	?>
-
+		<div class="col-1"></div>
 	</div>
 	
 </div>
