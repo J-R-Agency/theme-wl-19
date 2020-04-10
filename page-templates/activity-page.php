@@ -91,9 +91,9 @@ get_header(); ?>
 			";
 		}
 
-		$wl_summary = "<li><a href=\"". $wl_link . "\">" . $wl_title . "</a></li>";
+		$wl_summary = "<a href=\"". $wl_link . "\">" . $wl_title . "</a>";
 
-	    echo $wl_summary;
+	   // echo $wl_summary;
 
 
 	    ?>
