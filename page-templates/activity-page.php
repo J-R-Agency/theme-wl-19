@@ -84,11 +84,11 @@ get_header(); ?>
 		}
 
 		if ( $wl_api_logo_url!="" ){
-			echo "
-				<div class=\"activity-logo\">
-					" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
-				</div>
-			";
+			// echo "
+			// 	<div class=\"activity-logo\">
+			// 		" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+			// 	</div>
+			// ";
 		}
 
 		$wl_summary = "<a href=\"". $wl_link . "\">" . $wl_title . "</a>";
