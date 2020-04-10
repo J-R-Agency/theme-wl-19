@@ -81,9 +81,9 @@ function dump($var){
 	}
 
 ?>
-
+HELLO
 	<?php get_template_part( 'global-templates/activity', 'contacts' ); ?>
-
+BYE
 
 <?php
 
