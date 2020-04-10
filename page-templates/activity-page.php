@@ -40,23 +40,6 @@ get_header(); ?>
 	    ?>
 		</div>
 	</div>
-		
-	<div class="row">
-		<div class="col-12 content-copy">
-			<div class="new-flex__container">
-				<div class="new-flex__item">
-					NUMBER ONE
-				</div>
-				<div class="new-flex__item">
-					NUMBER TWO
-				</div>
-				<div class="new-flex__item">
-					NUMBER THREE
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 	<div class="row">
 		<div class="col-12 content-copy">
