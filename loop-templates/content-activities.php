@@ -82,7 +82,10 @@ function dump($var){
 
 ?>
 HELLO
-	<?php get_template_part( 'loop-templates/activity', 'contacts' ); ?>
+	<?php 
+	$args = the_ID() ;
+	wl_display_activity_contacts( $args ); 
+	?>
 BYE
 
 <?php
