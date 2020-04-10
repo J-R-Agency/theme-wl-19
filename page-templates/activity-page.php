@@ -61,7 +61,7 @@ get_header(); ?>
 	    )
 	);
 	$the_query = new WP_Query( $args );
-	echo "<h3>Here's a selection of activities from our directory<h3>";
+	echo "<h3>Here's a selection of " . the_title() . " activities from our directory<h3>";
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    // content
