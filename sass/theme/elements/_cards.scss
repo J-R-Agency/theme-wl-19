@@ -55,6 +55,7 @@
 	flex-basis: 100%;
 
 	.activity-card__item{
+		background-color: $dark-grey;
 		flex-basis: 100%;
 		@include respond-to('md'){
 			flex-basis: 100%;
