@@ -46,3 +46,26 @@
 		flex-basis: 50%;
     }
 }
+
+.activity-container{
+	background: $grey ;
+	padding: 1rem ;
+	margin: 1rem 0 ;
+	border-radius: 10px;
+	flex-basis: 100%;
+
+	.activity-card__item{
+		flex-basis: 100%;
+	}
+
+	.activity-card__img{
+		background-size: cover;
+		height: 50px;
+		width: 200px;
+	}
+
+	.activity-card__summary{
+		font-size: 1rem;
+	}
+}
+
