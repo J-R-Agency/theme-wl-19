@@ -81,12 +81,9 @@ function dump($var){
 	}
 
 ?>
-HELLO
 	<?php 
-	$args = the_ID() ;
-	wl_display_activity_contacts( $args ); 
+	wl_display_activity_contacts( the_ID() ); 
 	?>
-BYE
 
 <?php
 
