@@ -462,3 +462,13 @@ function wl_display_activity_logo ( $args ) {
 
 add_action( 'init', 'wl_display_activity_logo', 0 );
 
+function wl_dump ( $var ) {
+
+  echo "<pre>";
+  print_r($var);
+  echo "</pre>";
+
+}
+
+add_action( 'init', 'wl_dump', 0 );
+
