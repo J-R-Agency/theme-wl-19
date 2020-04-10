@@ -75,9 +75,10 @@ was
 	?>
 		<div class="col-1"></div>
 	</div>
-	
+here	
 </div>
-here
+
+
 <?php
 get_footer();
 ?>
