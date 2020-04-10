@@ -67,7 +67,7 @@ get_header(); ?>
 	    // content
 	    unset($entries); // reset current entry
 		$entries["link"] = get_permalink();
-		$entries["title"] = the_title();
+		$entries["title"] = get_the_title();
 		$wl_link = $entries["link"];
 		$wl_title = $entries["title"];
 	    // echo "hello" . the_permalink();	
