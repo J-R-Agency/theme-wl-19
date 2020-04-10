@@ -62,7 +62,8 @@ get_header(); ?>
 	    )
 	);
 	$the_query = new WP_Query( $args );
-	echo "<h3>Here's a selection of activities from our directory<h3><ul>";
+	echo "<h3>Here's a selection of activities from our directory<h3>";
+	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    // content
 	    unset($entries); // reset current entry
@@ -90,11 +91,24 @@ get_header(); ?>
 			";
 		}
 
+		$wl_summary = "<li><a href=\"". $wl_link . "\">" . $wl_title . "</a></li>";
 
-	    echo "<li><a href=\"". $wl_link . "\">" . $wl_title . "</a></li>";
+	    echo $wl_summary;
+
+
+	    ?>
+
+	    <div class="activity-card__item">
+	    	<div class="activity-card__img" style="background-image: url('<?php echo $wl_api_logo_url ;?>');">
+	    	</div>
+	    	<div class="activity-card__summary">
+	    		<?php echo $wl_summary ;?>
+	    	</div>
+	    </div>
+	    <?php
 
 	endwhile;
-	echo "</ul>";
+	echo "</div";
     wp_reset_query(); //resetting the page query
 
 	?>
