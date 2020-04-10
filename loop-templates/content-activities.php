@@ -25,7 +25,6 @@ function dump($var){
 		<?php
 		// Get API custom fields 
 		$websiteurl = get_field('websiteurl');
-		$wl_api_main_address = get_field("main_address");
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -72,16 +71,12 @@ function dump($var){
 	wl_display_activity_contacts( $post->ID ); 
 	wl_display_activity_documents( $post->ID ); 
 	wl_display_activity_images( $post->ID ); 
+	wl_display_activity_largemap( $post->ID ); 
 
 ?>
 
 
-<iframe
-  width="100%"
-  height="300"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=<?php echo $wl_google_api_key ;?>&q=<?php echo urlencode($wl_api_main_address);?>" allowfullscreen>
-</iframe>
+
 		<?php
 		wp_link_pages(
 			array(

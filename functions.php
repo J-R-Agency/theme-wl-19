@@ -397,11 +397,34 @@ function wl_display_activity_images ( $args ) {
   } else {
     // Do not display images
   }
-
-
   
 }
 
 add_action( 'init', 'wl_display_activity_images', 0 );
+
+ 
+function wl_display_activity_largemap ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+  
+  global $wl_google_api_key;
+
+  $wl_api_main_address = get_field("main_address");
+
+  echo "
+  <iframe
+    width=\"100%\"
+    height=\"300\"
+    frameborder=\"0\" style=\"border:0\"
+    src=\"https://www.google.com/maps/embed/v1/place?key=" . $wl_google_api_key . "&q=" . urlencode($wl_api_main_address) . "\" allowfullscreen>
+  </iframe>
+  ";
+  
+}
+
+add_action( 'init', 'wl_display_activity_largemap', 0 );
 
 
