@@ -68,7 +68,7 @@ get_header(); ?>
 	    'post_type' => 'activities',
 	    'post_status' => 'publish',
 	    'orderby'        => 'rand',
-	    'posts_per_page' => 5,
+	    'posts_per_page' => 9,
 	    'tax_query' => array(
 	        array(
 	            'taxonomy' => 'themes',
