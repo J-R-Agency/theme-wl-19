@@ -332,7 +332,6 @@ function wl_display_activity_contacts ( $args ) {
         </div>" ;
   } else {
     // Do not display documents
-    echo "Invalid reference";
   }
 }
 
