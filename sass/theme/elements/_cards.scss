@@ -57,7 +57,7 @@
 	.activity-card__item{
 		background-color: $white;
 		border: 1px solid $grey;
-		flex-basis: 31%;
+		flex-basis: 32%;
 		margin: 0 0 1rem 0;
 		padding: 1rem;
 		@include respond-to('md'){
@@ -69,7 +69,7 @@
 	}
 
 	.activity-card__img{
-		background-color: $dark-grey;
+		// background-color: $dark-grey;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center, center;
