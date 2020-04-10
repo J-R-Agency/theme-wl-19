@@ -68,9 +68,11 @@ get_header(); ?>
 	    unset($entries); // reset current entry
 		$entries["link"] = get_permalink();
 		$entries["title"] = the_title();
+		$wl_link = $entries["link"];
+		$wl_title = $entries["title"];
 	    // echo "hello" . the_permalink();	
 	    // echo get_permalink();
-	    echo "<li><a href=\"". $entries["link"] . "\">" . $entries["title"] . "</a></li>";
+	    echo "<li><a href=\"". $wl_link . "\">" . $wl_title . "</a></li>";
 
 	endwhile;
 	echo "</ul>";
