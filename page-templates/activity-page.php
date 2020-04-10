@@ -90,7 +90,9 @@ get_header(); ?>
 			// ";
 		}
 
-		$wl_summary = "<a href=\"". $wl_link . "\">" . $wl_title . "</a>";
+		$wl_link["start"] = "<a href=\"" . $wl_link . "\" title=\"" . $wl_title . "\">";
+		$wl_link["end"] = "</a>";
+		$wl_summary = $wl_link["start"] . $wl_title . $wl_link["end"];
 
 	   // echo $wl_summary;
 
@@ -98,14 +100,14 @@ get_header(); ?>
 	    ?>
 
 	    <div class="activity-card__item">
-	    	<?php echo $activity_link[0] ;?>
+	    	<?php echo $wl_link["start"] ;?>
 	    	<div class="activity-card__img" style="background-image: url('<?php echo $wl_api_logo_url ;?>');">
 	    		<!-- <img src="<?php echo $wl_api_logo_url ;?>"> -->
 	    	</div>
 	    	<div class="activity-card__summary">
 	    		<?php echo $wl_summary ;?>
 	    	</div>
-	    	<?php echo $activity_link[1] ;?>
+	    	<?php echo $wl_link["end"] ;?>
 	    </div>
 	    <?php
 
