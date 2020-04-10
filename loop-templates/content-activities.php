@@ -41,15 +41,15 @@ global $wl_google_api_key;
 		<?php echo get_favorites_button($post_id, $site_id); ?>
 		<?php the_content(); ?>
 
-<?php
+		<?php
 
-	wl_display_additional_information( $post->ID ); 
-	wl_display_activity_contacts( $post->ID ); 
-	wl_display_activity_documents( $post->ID ); 
-	wl_display_activity_images( $post->ID ); 
-	wl_display_activity_largemap( $post->ID ); 
+		wl_display_additional_information( $post->ID ); 
+		wl_display_activity_contacts( $post->ID ); 
+		wl_display_activity_documents( $post->ID ); 
+		wl_display_activity_images( $post->ID ); 
+		wl_display_activity_largemap( $post->ID ); 
 
-?>
+		?>
 
 
 
