@@ -64,7 +64,8 @@ get_header(); ?>
 	$the_query = new WP_Query( $args );
 	echo "<h3>Here's a selection of activities from our directory<h3>";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
-	    //content
+	    // content
+		print_r(the_post());
 	    // echo "hello" . the_permalink();	
 	    // echo get_permalink();
 	    // echo "<li><a href=\"". get_permalink() . "\">" . the_title() . "</a></li>";
