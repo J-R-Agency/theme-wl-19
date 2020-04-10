@@ -42,8 +42,7 @@ get_header(); ?>
 	</div>
 		
 	<div class="row">
-		<div class="col-1"></div>
-		<div class="col-10 content-copy">
+		<div class="col-12 content-copy">
 		<?php
 
 	$the_theme = get_field("theme");
@@ -113,7 +112,6 @@ get_header(); ?>
     wp_reset_query(); //resetting the page query
 
 	?>
-		<div class="col-1"></div>
 	</div>	
 </div>
 
