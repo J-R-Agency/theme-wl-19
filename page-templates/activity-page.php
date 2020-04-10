@@ -72,6 +72,8 @@ was
 	    echo the_title() . "<br>";
 	endwhile;
 	echo "";
+    wp_reset_query(); //resetting the page query
+
 	?>
 		<div class="col-1"></div>
 	</div>
