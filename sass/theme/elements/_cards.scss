@@ -47,6 +47,16 @@
     }
 }
 
+.new-flex__container{
+	display: flex;
+}
+
+.new-flex__item{
+	flex-basis: 33%;
+	background-color: $grey;
+}
+
+
 .activity-container{
 	background-color: $grey ;
 	padding: 1rem ;
