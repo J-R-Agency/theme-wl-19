@@ -62,16 +62,18 @@ get_header(); ?>
 	    )
 	);
 	$the_query = new WP_Query( $args );
-	echo "<h3>Here's a selection of activities from our directory<h3>";
+	echo "<h3>Here's a selection of activities from our directory<h3><ul>";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    // content
-		echo get_permalink();
+	    unset($entries); // reset current entry
+		$entries["link"] = get_permalink();
+		$entries["title"] = the_title();
 	    // echo "hello" . the_permalink();	
 	    // echo get_permalink();
-	    // echo "<li><a href=\"". get_permalink() . "\">" . the_title() . "</a></li>";
-	    echo the_title() . "<br>";
+	    echo "<li><a href=\"". $entries["link"] . "\">" . $entries["title"] . "</a></li>";
+
 	endwhile;
-	echo "";
+	echo "</ul>";
     wp_reset_query(); //resetting the page query
 
 	?>
