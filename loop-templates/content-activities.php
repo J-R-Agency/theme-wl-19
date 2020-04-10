@@ -82,7 +82,7 @@ function dump($var){
 
 ?>
 HELLO
-	<?php get_template_part( 'global-templates/activity', 'contacts' ); ?>
+	<?php get_template_part( 'loop-templates/activity', 'contacts' ); ?>
 BYE
 
 <?php

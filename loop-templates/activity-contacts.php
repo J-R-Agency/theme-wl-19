@@ -50,6 +50,6 @@ if ($activity_contacts != ""){
 			</div>" ;
 }else{
 	// Do not display documents
-	echo "Invalide reference";
+	echo "Invalid reference";
 }
 ?>
