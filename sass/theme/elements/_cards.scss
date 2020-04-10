@@ -56,6 +56,12 @@
 
 	.activity-card__item{
 		flex-basis: 100%;
+		@include respond-to('md'){
+			flex-basis: 100%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 50%;
+	    }
 	}
 
 	.activity-card__img{
