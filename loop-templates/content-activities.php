@@ -26,25 +26,8 @@ function dump($var){
 		// Get API custom fields 
 		$websiteurl = get_field('websiteurl');
 
-		// Get logo if available
-		$wl_api_logo_description = get_field("logo_description");
-		$wl_api_logo_url = get_field("logo_url");
+		wl_display_activity_logo( $post->ID ); 
 
-		if ( $websiteurl !="" ) {
-			$activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
-			$activity_link[1] = "</a>";
-		} else {
-			$activity_link[0] = "";
-			$activity_link[1] = "";
-		}
-
-		if ( $wl_api_logo_url!="" ){
-			echo "
-				<div class=\"activity-logo\">
-					" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
-				</div>
-			";
-		}
 		?>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

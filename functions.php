@@ -428,3 +428,37 @@ function wl_display_activity_largemap ( $args ) {
 add_action( 'init', 'wl_display_activity_largemap', 0 );
 
 
+function wl_display_activity_logo ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+  
+  // Get website URL 
+  $websiteurl = get_field('websiteurl');
+
+  // Get logo if available
+  $wl_api_logo_description = get_field("logo_description");
+  $wl_api_logo_url = get_field("logo_url");
+
+  if ( $websiteurl !="" ) {
+    $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+    $activity_link[1] = "</a>";
+  } else {
+    $activity_link[0] = "";
+    $activity_link[1] = "";
+  }
+
+  if ( $wl_api_logo_url!="" ){
+    echo "
+      <div class=\"activity-logo\">
+        " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+      </div>
+    ";
+  }
+  
+}
+
+add_action( 'init', 'wl_display_activity_logo', 0 );
+
