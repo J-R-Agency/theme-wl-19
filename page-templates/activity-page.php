@@ -117,8 +117,7 @@ get_header(); ?>
 
 <div class="container-cta">
 	<div class="row">
-		<div class="col-1"></div>
-		<div class="col-10 content-copy">
+		<div class="col-12 content-copy">
 			<h1 class="centered"><?php the_field('cta_button_title'); ?></h1>
 			<?php 
 			$link = get_field('cta_button');
@@ -134,7 +133,6 @@ get_header(); ?>
 			    <a class="call-to-action-btn <?php echo $modifier_class ;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 			<?php endif; ?>
 		</div>
-		<div class="col-1"></div>
 	</div>
 </div>
 
