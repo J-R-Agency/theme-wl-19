@@ -70,8 +70,27 @@ get_header(); ?>
 		$entries["title"] = get_the_title();
 		$wl_link = $entries["link"];
 		$wl_title = $entries["title"];
-	    // echo "hello" . the_permalink();	
-	    // echo get_permalink();
+
+		$wl_api_logo_description = get_field("logo_description");
+		$wl_api_logo_url = get_field("logo_url");
+
+		if ( $websiteurl !="" ) {
+			$activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+			$activity_link[1] = "</a>";
+		} else {
+			$activity_link[0] = "";
+			$activity_link[1] = "";
+		}
+
+		if ( $wl_api_logo_url!="" ){
+			echo "
+				<div class=\"activity-logo\">
+					" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+				</div>
+			";
+		}
+
+
 	    echo "<li><a href=\"". $wl_link . "\">" . $wl_title . "</a></li>";
 
 	endwhile;
