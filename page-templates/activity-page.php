@@ -108,7 +108,7 @@ get_header(); ?>
 	    <?php
 
 	endwhile;
-	echo "</div";
+	echo "</div>";
     wp_reset_query(); //resetting the page query
 
 	?>
