@@ -41,7 +41,6 @@ get_header(); ?>
 		</div>
 	</div>
 		
-was
 	<div class="row">
 		<div class="col-1"></div>
 		<div class="col-10 content-copy">
@@ -76,10 +75,10 @@ was
 
 	?>
 		<div class="col-1"></div>
-	</div>
-here	
+	</div>	
 </div>
 
+<div class="container-cta">
 	<div class="row">
 		<div class="col-1"></div>
 		<div class="col-10 content-copy">
@@ -100,7 +99,7 @@ here
 		</div>
 		<div class="col-1"></div>
 	</div>
-
+</div>
 
 <?php
 get_footer();
