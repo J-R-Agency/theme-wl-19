@@ -73,6 +73,7 @@
 		border: 1px solid $dark-grey;
 		flex-basis: 30%;
 		margin-right: 1rem;
+		padding: 1rem;
 		@include respond-to('md'){
 			flex-basis: 100%;
 	    }
