@@ -98,12 +98,14 @@ get_header(); ?>
 	    ?>
 
 	    <div class="activity-card__item">
+	    	<?php echo $activity_link[0] ;?>
 	    	<div class="activity-card__img" style="background-image: url('<?php echo $wl_api_logo_url ;?>');">
 	    		<!-- <img src="<?php echo $wl_api_logo_url ;?>"> -->
 	    	</div>
 	    	<div class="activity-card__summary">
 	    		<?php echo $wl_summary ;?>
 	    	</div>
+	    	<?php echo $activity_link[1] ;?>
 	    </div>
 	    <?php
 
