@@ -69,14 +69,14 @@ if( have_rows('blog_block') ):
 	<div class="block_container">
 		<h3 class="block_title"><?php echo $block_title ; ?></h3>
 		<div class="block_intro"><?php echo $block_intro ; ?></div>
-		<div class="blog_container flex-container">
+		<div class="blog_container">
 		<?php 
 		unset($catquery);
 		unset($new_query);
 		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
 		$catquery = new WP_Query( $new_query ) ;
 		while($catquery->have_posts()) : $catquery->the_post(); ?>
-			<div class="blog-item flex-item">
+			<div class="blog-item">
 				<div class="blog-item__img">
 					<img src="">
 					<?php get_the_post_thumbnail(); ?>
