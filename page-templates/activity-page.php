@@ -118,8 +118,11 @@ get_header(); ?>
 <div class="container-cta">
 	<div class="row">
 		<div class="col-12 content-copy">
-			<h1 class="centered"><?php the_field('cta_button_title'); ?></h1>
-			<?php 
+			<?php
+			$cta_button_title = get_field('cta_button_title');
+			if ( $cta_button_title != "" ) {
+				echo "<h1 class=\"centered\">$cta_button_title</h1>" ;
+			}
 			$link = get_field('cta_button');
 			if( $link ): 
 			    $link_url = $link['url'];
