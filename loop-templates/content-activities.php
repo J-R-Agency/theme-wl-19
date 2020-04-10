@@ -10,7 +10,6 @@ defined( 'ABSPATH' ) || exit;
 
 global $wl_google_api_key;
 
-
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -21,8 +20,6 @@ global $wl_google_api_key;
 		$websiteurl = get_field('websiteurl');
 
 		wl_display_activity_logo( $post->ID ); 
-
-		wl_dump( $websiteurl );
 
 		?>
 
