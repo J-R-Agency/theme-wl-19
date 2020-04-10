@@ -76,14 +76,11 @@ function dump($var){
 
 <?php
 
-	if ( $wl_api_additional_information != "" ) {
-		echo "<div class=\"additional_information\"> " . $wl_api_additional_information . "</div>" ;
-	}
+	wl_display_additional_information( $post->ID ); 
+	wl_display_activity_contacts( $post->ID ); 
+
 
 ?>
-	<?php 
-	wl_display_activity_contacts( $post->ID ); 
-	?>
 
 <?php
 

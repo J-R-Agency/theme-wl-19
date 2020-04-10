@@ -246,54 +246,84 @@ add_filter('pre_get_posts','searchfilter');
 
 
 
-function wl_display_activity_contacts($args){
+
+// WL ACTIVITY FUNCTIONS
+
+function wl_display_example ( $args ) {
+
+}
+
+add_action( 'init', 'wl_display_example', 0 );
+
+
+function wl_display_additional_information ( $args ) {
 
 // Aggregates all relevant contact fields pulled through from
 // the Live Well API for this particular entry 
 
-    setup_postdata ( $args ) ;
-    
-    $wl_api_main_address = get_field("main_address");
-    $wl_api_activity_contacts = get_field("contacts");
-    $activity_contacts = unserialize($wl_api_activity_contacts);
-
-
-if ($activity_contacts != ""){
-
-  // Display contacts
-  // Contacts
-  foreach ($activity_contacts as $activity_contact) {
-
-    if ( $activity_contact["FullName"] != "" ){
-      $activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
-    }
-    if ( $activity_contact["EmailAddress"] != "" ){
-      $activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
-    }
-    if ( $activity_contact["PhoneNumber"] != "" ){
-      $activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
-    }
-
-  }
-
-  $wl_api_activity_contacts = implode("", $activity_contact_list);
+  setup_postdata ( $args ) ;
   
-  if ( $websiteurl != "" ) {
+  $wl_api_additional_information = get_field("additional_information");
 
-    $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
-
+  if ( $wl_api_additional_information != "" ) {
+    
+    echo "<div class=\"additional_information\"> " . $wl_api_additional_information . "</div>" ;
+  
   }
-  echo "
-    <div class=\"activity_contact__container\">
-      <h3 class=\"activity_contact__title\">Contacts</h3>
-      <div class=\"main_address\">" . 
-      $wl_api_main_address . 
-      "</div>
-      <ul class=\"activity_contact__list\">" . 
-      $wl_api_activity_contacts . 
-      "</ul>
-      $website_link
-      </div>" ;
+
+}
+
+add_action( 'init', 'wl_display_additional_information', 0 );
+
+
+function wl_display_activity_contacts ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+  
+  $wl_api_main_address = get_field("main_address");
+  $wl_api_activity_contacts = get_field("contacts");
+  $activity_contacts = unserialize($wl_api_activity_contacts);
+
+
+  if ($activity_contacts != ""){
+
+    // Display contacts
+    // Contacts
+    foreach ($activity_contacts as $activity_contact) {
+
+      if ( $activity_contact["FullName"] != "" ){
+        $activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["FullName"] . "</li>";
+      }
+      if ( $activity_contact["EmailAddress"] != "" ){
+        $activity_contact_list[] = "<li class=\"activity_contact__item\"><a href=\"mailto:" . $activity_contact["EmailAddress"] . "\" title=\"" . $activity_contact["FullName"] . "\" target=\"_blank\">" . $activity_contact["EmailAddress"] . "</a></li>";
+      }
+      if ( $activity_contact["PhoneNumber"] != "" ){
+        $activity_contact_list[] = "<li class=\"activity_contact__item\">" . $activity_contact["PhoneNumber"] . "</li>";
+      }
+
+    }
+
+    $wl_api_activity_contacts = implode("", $activity_contact_list);
+    
+    if ( $websiteurl != "" ) {
+
+      $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
+
+    }
+    echo "
+      <div class=\"activity_contact__container\">
+        <h3 class=\"activity_contact__title\">Contacts</h3>
+        <div class=\"main_address\">" . 
+        $wl_api_main_address . 
+        "</div>
+        <ul class=\"activity_contact__list\">" . 
+        $wl_api_activity_contacts . 
+        "</ul>
+        $website_link
+        </div>" ;
   } else {
     // Do not display documents
     echo "Invalid reference";
