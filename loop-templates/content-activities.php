@@ -26,12 +26,6 @@ function dump($var){
 		// Get API custom fields 
 		$websiteurl = get_field('websiteurl');
 		$wl_api_main_address = get_field("main_address");
-		$wl_api_additional_information = get_field("additional_information");
-		$wl_api_activity_images = get_field("activity_images");
-		$wl_api_activity_contacts = get_field("contacts");
-
-		$activity_images = unserialize($wl_api_activity_images);
-		$activity_contacts = unserialize($wl_api_activity_contacts);
 
 		// Get logo if available
 		$wl_api_logo_description = get_field("logo_description");
@@ -77,6 +71,7 @@ function dump($var){
 	wl_display_additional_information( $post->ID ); 
 	wl_display_activity_contacts( $post->ID ); 
 	wl_display_activity_documents( $post->ID ); 
+	wl_display_activity_images( $post->ID ); 
 
 ?>
 

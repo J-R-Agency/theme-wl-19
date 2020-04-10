@@ -367,4 +367,42 @@ function wl_display_activity_documents ( $args ) {
 add_action( 'init', 'wl_display_activity_documents', 0 );
 
 
+function wl_display_activity_images ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+
+  $wl_api_activity_images = get_field("activity_images");
+  $activity_images = unserialize($wl_api_activity_images);
+
+
+  if ($activity_images != ""){
+    // Display images
+    // Images
+    foreach ($activity_images as $activity_image) {
+      list($width, $height, $type, $attr) = getimagesize($activity_image["Url"]);
+      // echo "$width, $height, $type, $attr";
+      unset($use_dimensions);
+      if ($width<250 && $height<250){
+        $use_dimensions = " width: " . $width . "px; height: " . $height . "px; ";
+      }else{
+        unset($use_dimensions);
+      }
+
+      $activity_image_list[] = "<a class=\"flex-item\" href=\"" . $activity_image["Url"] . "\" title=\"" . $activity_image["Description"] . "\" target=\"_blank\"><div class=\"activity_images__img\" $use_dimensions style=\"" . $use_dimensions . "background-image: url('" . $activity_image["Url"] . "')\"></div></a>" ;
+    }
+    $wl_api_activity_images = "<div class=\"flex-container\">" . implode("", $activity_image_list) . "</div>";
+    echo "<div class=\"activity_images__container\"><h3 class=\"activity_images__title\">Images</h3>" . $wl_api_activity_images . "</div>" ;
+  } else {
+    // Do not display images
+  }
+
+
+  
+}
+
+add_action( 'init', 'wl_display_activity_images', 0 );
+
 
