@@ -405,7 +405,7 @@ add_action( 'init', 'wl_display_activity_images', 0 );
  
 function wl_display_activity_largemap ( $args ) {
 
-// Aggregates all relevant contact fields pulled through from
+// Aggregates all relevant address fields pulled through from
 // the Live Well API for this particular entry 
 
   setup_postdata ( $args ) ;
@@ -414,15 +414,19 @@ function wl_display_activity_largemap ( $args ) {
 
   $wl_api_main_address = get_field("main_address");
 
-  echo "
-  <iframe
-    width=\"100%\"
-    height=\"300\"
-    frameborder=\"0\" style=\"border:0\"
-    src=\"https://www.google.com/maps/embed/v1/place?key=" . $wl_google_api_key . "&q=" . urlencode($wl_api_main_address) . "\" allowfullscreen>
-  </iframe>
-  ";
-  
+  if ( $wl_api_main_address != "" ) {
+
+    echo "
+    <iframe
+      width=\"100%\"
+      height=\"300\"
+      frameborder=\"0\" style=\"border:0\"
+      src=\"https://www.google.com/maps/embed/v1/place?key=" . $wl_google_api_key . "&q=" . urlencode ( $wl_api_main_address ) . "\" allowfullscreen>
+    </iframe>
+    ";
+  } else {
+    
+  }
 }
 
 add_action( 'init', 'wl_display_activity_largemap', 0 );
@@ -442,7 +446,7 @@ function wl_display_activity_logo ( $args ) {
   $wl_api_logo_description = get_field("logo_description");
   $wl_api_logo_url = get_field("logo_url");
 
-  if ( $websiteurl !="" ) {
+  if ( $websiteurl != "" ) {
     $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
     $activity_link[1] = "</a>";
   } else {
@@ -450,7 +454,7 @@ function wl_display_activity_logo ( $args ) {
     $activity_link[1] = "";
   }
 
-  if ( $wl_api_logo_url!="" ){
+  if ( $wl_api_logo_url != "" ){
     echo "
       <div class=\"activity-logo\">
         " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
