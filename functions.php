@@ -251,6 +251,12 @@ add_filter('pre_get_posts','searchfilter');
 
 function wl_display_example ( $args ) {
 
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+
+  
 }
 
 add_action( 'init', 'wl_display_example', 0 );
@@ -258,7 +264,7 @@ add_action( 'init', 'wl_display_example', 0 );
 
 function wl_display_additional_information ( $args ) {
 
-// Aggregates all relevant contact fields pulled through from
+// Aggregates all relevant AI fields pulled through from
 // the Live Well API for this particular entry 
 
   setup_postdata ( $args ) ;
@@ -331,4 +337,34 @@ function wl_display_activity_contacts ( $args ) {
 }
 
 add_action( 'init', 'wl_display_activity_contacts', 0 );
+
+
+
+function wl_display_activity_documents ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+
+  $wl_api_activity_documents = get_field("activity_documents");
+  $activity_documents = unserialize($wl_api_activity_documents);
+
+  if ($activity_documents != ""){
+    // Display documents
+    // Documents
+    foreach ($activity_documents as $activity_document) {
+      $activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+    }
+    $wl_api_activity_documents = implode("", $activity_document_list);
+    echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ul></div>" ;
+  }else{
+    // Do not display documents
+  }
+
+}
+
+add_action( 'init', 'wl_display_activity_documents', 0 );
+
+
 

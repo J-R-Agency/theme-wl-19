@@ -27,11 +27,9 @@ function dump($var){
 		$websiteurl = get_field('websiteurl');
 		$wl_api_main_address = get_field("main_address");
 		$wl_api_additional_information = get_field("additional_information");
-		$wl_api_activity_documents = get_field("activity_documents");
 		$wl_api_activity_images = get_field("activity_images");
 		$wl_api_activity_contacts = get_field("contacts");
 
-		$activity_documents = unserialize($wl_api_activity_documents);
 		$activity_images = unserialize($wl_api_activity_images);
 		$activity_contacts = unserialize($wl_api_activity_contacts);
 
@@ -78,23 +76,12 @@ function dump($var){
 
 	wl_display_additional_information( $post->ID ); 
 	wl_display_activity_contacts( $post->ID ); 
-
+	wl_display_activity_documents( $post->ID ); 
 
 ?>
 
 <?php
 
-if ($activity_documents != ""){
-	// Display documents
-	// Documents
-	foreach ($activity_documents as $activity_document) {
-		$activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
-	}
-	$wl_api_activity_documents = implode("", $activity_document_list);
-	echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ul></div>" ;
-}else{
-	// Do not display documents
-}
 
 if ($activity_images != ""){
 	// Display images
