@@ -49,11 +49,13 @@
 
 .new-flex__container{
 	display: flex;
+	flex-direction: row;
 	width:100%;
 }
 
 .new-flex__item{
 	flex-basis: 33%;
+	flex-grow: 1;
 	background-color: $grey;
 }
 
