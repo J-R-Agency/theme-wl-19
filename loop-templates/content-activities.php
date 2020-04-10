@@ -82,7 +82,7 @@ function dump($var){
 
 ?>
 	<?php 
-	wl_display_activity_contacts( the_ID() ); 
+	wl_display_activity_contacts( $post->ID ); 
 	?>
 
 <?php
