@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 			setup_postdata( $post );
 			$lead_link = $post->guid ;
 			echo "
-			<div class=\"flex-container\">
+			<div class=\"block_container\">
 				<div class=\"lead_story__card\">
 					<div class=\"lead_story__image\">
 						" . get_the_post_thumbnail() . "
