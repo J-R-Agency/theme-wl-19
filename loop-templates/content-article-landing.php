@@ -30,7 +30,6 @@ defined( 'ABSPATH' ) || exit;
 			<div class=\"flex-container\">
 				<div class=\"lead_story__card\">
 					<div class=\"lead_story__image\">
-						<img src=\"\"> 
 						" . get_the_post_thumbnail() . "
 					</div>
 					<div class=\"lead_story__details\">

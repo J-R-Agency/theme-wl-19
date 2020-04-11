@@ -29,7 +29,7 @@
 	align-content: space-between;
 }
 
-.lead_story__image, .lead_story__info{
+.lead_story__image, .lead_story__details{
 	flex-basis: 100%;
 	@include respond-to('md'){
 		flex-basis: 100%;
