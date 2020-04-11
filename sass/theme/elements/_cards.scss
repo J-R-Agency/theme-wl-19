@@ -16,14 +16,14 @@
 }
 
 
-.article-container{
+.article__container{
 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: space-between;
 
-	.article-item{
+	.article__item{
 		background-color: $white;
 		border: 1px solid $grey;
 		flex-basis: 100%;
@@ -37,7 +37,7 @@
 	    }
 	}
 
-	.activity-card__img{
+	.article__img{
 		// background-color: $dark-grey;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 		margin-bottom: 1rem;
 	}
 
-	.activity-card__summary{
+	.article__summary{
 		text-align: center;
 		font-size: 1rem;
 	}

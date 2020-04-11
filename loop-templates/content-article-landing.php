@@ -81,20 +81,20 @@ if( have_rows('blog_block') ):
 	<div class="block_container">
 		<h3 class="block_title"><?php echo $block_title ; ?></h3>
 		<div class="block_intro"><?php echo $block_intro ; ?></div>
-		<div class="blog_container">
+		<div class="article__container">
 		<?php 
 		unset($catquery);
 		unset($new_query);
 		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
 		$catquery = new WP_Query( $new_query ) ;
 		while($catquery->have_posts()) : $catquery->the_post(); ?>
-			<div class="blog-item">
-				<div class="blog-item__img">
+			<div class="article__item">
+				<div class="article__img">
 					<img src="">
 					<?php get_the_post_thumbnail(); ?>
 				</div>
-				<h3 class="blog-item__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-				<div class="blog-item__summary">
+				<h3 class="article__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+				<div class="article__summary">
 					<?php the_excerpt(); ?>
 				</div>
 			</div>
