@@ -44,14 +44,14 @@ defined( 'ABSPATH' ) || exit;
 		<?php wp_reset_postdata(); ?>
 
 	<div class="block_container">
-		<div class="blog_container">
-			<div class="blog-item">
+		<div class="article-container">
+			<div class="article-item">
 				ITEM
 			</div>
-			<div class="blog-item">
+			<div class="article-item">
 				ITEM
 			</div>
-			<div class="blog-item">
+			<div class="article-item">
 				ITEM
 			</div>
 		</div>
