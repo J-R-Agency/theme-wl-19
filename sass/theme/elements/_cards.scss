@@ -15,31 +15,42 @@
 
 }
 
+
 .article-container{
-	
-	background: $grey ;
 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: space-between;
 
-}
-
-.article-item{
-
-	background-color: $white;
-	border: 1px solid $dark-grey;
-	flex-basis: 100%;
-	margin: 0 0 1rem 0;
-	padding: 1rem;
-	@include respond-to('md'){
+	.article-item{
+		background-color: $white;
+		border: 1px solid $grey;
 		flex-basis: 100%;
-    }
-	@include respond-to('lg'){
-		flex-basis: 32%;
-    }
+		margin: 0 0 1rem 0;
+		padding: 1rem;
+		@include respond-to('md'){
+			flex-basis: 100%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 32%;
+	    }
+	}
 
+	.activity-card__img{
+		// background-color: $dark-grey;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center, center;
+		height: 100px;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.activity-card__summary{
+		text-align: center;
+		font-size: 1rem;
+	}
 }
 
 .flex-container{
@@ -68,6 +79,7 @@
 	.activity-card__item{
 		background-color: $white;
 		border: 1px solid $grey;
+		flex-basis: 100%;
 		margin: 0 0 1rem 0;
 		padding: 1rem;
 		@include respond-to('md'){
@@ -75,7 +87,6 @@
 	    }
 		@include respond-to('lg'){
 			flex-basis: 32%;
-			width:320px;
 	    }
 	}
 
