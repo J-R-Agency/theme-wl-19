@@ -1,4 +1,4 @@
-.lead_story__card{
+/*.lead_story__card{
 	background: $grey ;
 	padding: 1rem ;
 	margin: 1rem 0 ;
@@ -17,6 +17,26 @@
 .lead_story__info{
 	margin-left: 1rem ;
 
+}
+
+*/
+
+
+.lead_story__card{
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.lead_story__image, .lead_story__info{
+	flex-basis: 100%;
+	@include respond-to('md'){
+		flex-basis: 100%;
+    }
+	@include respond-to('lg'){
+		flex-basis: 48%;
+    }
 }
 
 

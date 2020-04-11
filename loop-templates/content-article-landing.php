@@ -28,12 +28,12 @@ defined( 'ABSPATH' ) || exit;
 			$lead_link = $post->guid ;
 			echo "
 			<div class=\"flex-container\">
-				<div class=\"lead_story__card \">
-					<div class=\"lead_story__image flex-item\">
+				<div class=\"lead_story__card\">
+					<div class=\"lead_story__image\">
 						<img src=\"\"> 
 						" . get_the_post_thumbnail() . "
 					</div>
-					<div class=\"lead_story__details flex-item\">
+					<div class=\"lead_story__details\">
 						<h3><a href=\"\">" . $post->post_title . "</a></h3>
 						<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
 						<div class=\"lead_story__button\"><a class=\"btn btn-secondary understrap-read-more-link\" href=\"" . $lead_link . "\"> Read more &gt;</a></div>
