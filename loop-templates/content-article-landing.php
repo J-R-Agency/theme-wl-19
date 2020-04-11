@@ -27,17 +27,20 @@ defined( 'ABSPATH' ) || exit;
 			setup_postdata( $post );
 			$lead_link = $post->guid ;
 			echo "
-			<div class=\"lead_story__card flex-container\">
-				<div class=\"lead_story__image flex-item\">
-					<img src=\"\"> 
-					" . get_the_post_thumbnail() . "
+			<div class=\"flex-container\">
+				<div class=\"lead_story__card \">
+					<div class=\"lead_story__image flex-item\">
+						<img src=\"\"> 
+						" . get_the_post_thumbnail() . "
+					</div>
+					<div class=\"lead_story__details flex-item\">
+						<h3><a href=\"\">" . $post->post_title . "</a></h3>
+						<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
+						<div class=\"lead_story__button\"><a class=\"btn btn-secondary understrap-read-more-link\" href=\"" . $lead_link . "\"> Read more &gt;</a></div>
+					</div>
 				</div>
-				<div class=\"lead_story__details flex-item\">
-					<h3><a href=\"\">" . $post->post_title . "</a></h3>
-					<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
-					<div class=\"lead_story__button\"><a class=\"btn btn-secondary understrap-read-more-link\" href=\"" . $lead_link . "\"> Read more &gt;</a></div>
-				</div>
-			</div>";
+			</div>
+			";
 		}
 
 		?>
