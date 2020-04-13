@@ -29,10 +29,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 // Temp reveal functions
 
+echo "<pre>";
+echo "SESSION: ";
 print_r( $_SESSION['simplefavorites']);
-
+echo "COOKIE: ";
 print_r( $_COOKIE['simplefavorites']);
-
+echo "</pre>";
 ?>
 	<!-- ******************* The Navbar Area ******************* -->
 	
