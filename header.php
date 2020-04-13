@@ -25,7 +25,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
+<?php
 
+// Temp reveal functions
+
+print_r( $_SESSION['simplefavorites']);
+
+print_r( $_COOKIE['simplefavorites']);
+
+?>
 	<!-- ******************* The Navbar Area ******************* -->
 	
 	<!-- TERTIARY MENU -->
