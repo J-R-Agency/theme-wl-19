@@ -37,6 +37,23 @@ print_r( $_COOKIE['simplefavorites']);
 echo "WL_GOAL: ";
 print_r( $_COOKIE['wl_goal']);
 echo "</pre>";
+
+if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) &&  $_POST['action'] == "wl_set_goal") {
+
+    // Do some minor form validation to make sure there is content
+    if (isset ($_POST['wl_goal'])) {
+        $wl_goal =  $_POST['wl_goal'];
+    } else {
+        echo 'Please enter a GOAL';
+    }
+
+    echo "<pre>";
+    echo "FORM GOAL: " . $wl_goal;
+    echo "</pre>";
+
+}
+
+
 ?>
 	<!-- ******************* The Navbar Area ******************* -->
 	
