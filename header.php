@@ -34,6 +34,8 @@ echo "SESSION: ";
 print_r( $_SESSION['simplefavorites']);
 echo "COOKIE: ";
 print_r( $_COOKIE['simplefavorites']);
+echo "WL_GOAL: ";
+print_r( $_COOKIE['wl_goal']);
 echo "</pre>";
 ?>
 	<!-- ******************* The Navbar Area ******************* -->
