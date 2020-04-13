@@ -24,14 +24,9 @@ get_header(); ?>
 
 			<main class="site-main" id="main">
 				
-<form id="wl_set_goal" name="wl_set_goal" method="post" action="<?php the_permalink(); ?>">
-<label for="wl_goal">Goal</label><br>
-<input type="text" id="wl_goal" name="wl_goal" tabindex="1" size="20"><br>
-<input type="submit" id="submit" name="submit" value="Set Goal">
-</form>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'actionplan' ); ?>
 
 					<?php understrap_post_nav(); ?>
 

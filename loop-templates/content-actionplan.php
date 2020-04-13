@@ -1,0 +1,57 @@
+<?php
+/**
+ * Single post partial template.
+ *
+ * @package understrap
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+?>
+
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+	<header class="entry-header">
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<div class="entry-meta">
+
+			<?php understrap_posted_on(); ?>
+
+		</div><!-- .entry-meta -->
+
+	</header><!-- .entry-header -->
+
+	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+
+	<div class="entry-content">
+		
+<form id="wl_set_goal" name="wl_set_goal" method="post" action="<?php the_permalink(); ?>">
+<label for="wl_goal">Goal</label><br>
+<input type="text" id="wl_goal" name="wl_goal" tabindex="1" size="20"><br>
+<input type="submit" id="submit" name="submit" value="Set Goal">
+</form>
+
+
+		<?php echo get_favorites_button($post_id, $site_id); ?>
+		<?php the_content(); ?>
+
+		<?php
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+		<?php understrap_entry_footer(); ?>
+
+	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
