@@ -13,8 +13,7 @@
 		display: block;
 	}
 
-	div ul li input
-		&[type="text"] {
+	div ul li input[type="text"] {
 		width: 320px;
 	}
 }
