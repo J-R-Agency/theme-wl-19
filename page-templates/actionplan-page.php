@@ -93,7 +93,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 } else {
     echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
     echo "<br>Value is: " . $_COOKIE[$cookie_name];
-    $inputname = $_COOKIE[$cookie_name];
+    $wl_goal = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_one";
@@ -102,7 +102,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 } else {
     echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
     echo "<br>Value is: " . $_COOKIE[$cookie_name];
-    $inputname = $_COOKIE[$cookie_name];
+    $wl_step_one = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_two";
@@ -111,7 +111,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 } else {
     echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
     echo "<br>Value is: " . $_COOKIE[$cookie_name];
-    $inputname = $_COOKIE[$cookie_name];
+    $wl_step_two = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_three";
@@ -120,7 +120,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 } else {
     echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
     echo "<br>Value is: " . $_COOKIE[$cookie_name];
-    $inputname = $_COOKIE[$cookie_name];
+    $wl_step_three = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_notes";
@@ -129,7 +129,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 } else {
     echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
     echo "<br>Value is: " . $_COOKIE[$cookie_name];
-    $inputname = $_COOKIE[$cookie_name];
+    $wl_notes = $_COOKIE[$cookie_name];
 }
 
 ?>
