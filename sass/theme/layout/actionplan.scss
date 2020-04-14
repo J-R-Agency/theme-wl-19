@@ -13,4 +13,16 @@
 
 	}
 
+	input[type="submit"] {
+
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
+		border: 0px solid $dark-blue;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		color: $light;
+	
+	}
+
+
 }
