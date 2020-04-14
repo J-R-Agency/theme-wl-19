@@ -9,7 +9,11 @@
 		padding: 0;
 	}
 
-	.ofsearch {
+	li{
+		display: block;
+	}
+
+	div ul li .ofsearch {
 		width: 320px;
 	}
 }
