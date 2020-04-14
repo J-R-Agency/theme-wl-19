@@ -142,7 +142,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 ?>
 				<!-- action plan form -->
-				<form id="actionplan" action="" method="POST">
+				<form name="actionplan" id="actionplan" class="actionplan" action="" method="POST">
 					<h2>Action Plan</h2>
 					<label for="wl_goal">Goal</label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>">
