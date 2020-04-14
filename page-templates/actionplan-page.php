@@ -16,6 +16,14 @@ if($_POST['submit']) {
     // we can also echo some text here if form is submitted
     if($_POST['inputname']){
     	echo "The input exists:  " . $_POST['inputname'] ;
+
+
+		// PROOF OF CONCEPT
+		// GREG MACOY
+		$cookie_name = "wl_goal";
+		$cookie_value = $_POST['inputname'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
     }
 }
 
