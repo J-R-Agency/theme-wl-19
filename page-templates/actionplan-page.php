@@ -44,6 +44,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
+<?php
+$cookie_name = "wl_goal";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+    $inputname = $_COOKIE[$cookie_name];
+}
+?>
+				<!-- action plan form -->
+				<form id="formid" action="" method="POST">
+					<input type="text" name="inputname" value="<?php echo $inputname;?>" />
+					<input type="submit" name="submit" value="submit" />
+				</form>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
