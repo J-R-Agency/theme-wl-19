@@ -13,7 +13,8 @@
 		display: block;
 	}
 
-	div ul li .ofsearch {
+	div ul li input
+		&[name="ofsearch"] {
 		width: 320px;
 	}
 }
