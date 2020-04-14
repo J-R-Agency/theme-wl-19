@@ -11,9 +11,14 @@
 
 	li{
 		display: block;
+		margin-bottom: 1rem;
 	}
 
 	div ul li input[type="text"] {
-		width: 320px;
+		width: 100%;
+	}
+	div ul li input[type="submit"] {
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
 	}
 }
