@@ -15,16 +15,66 @@ if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
     if($_POST['inputname']){
+
     	echo "The input exists:  " . $_POST['inputname'] ;
-
-
-		// PROOF OF CONCEPT
-		// GREG MACOY
 		$cookie_name = "wl_goal";
 		$cookie_value = $_POST['inputname'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
 
     }
+
+    // Goal
+    if ( $_POST['wl_goal'] ) {
+    	
+    	echo "The wl_goal exists:  " . $_POST['wl_goal'] ;
+		$cookie_name = "wl_goal";
+		$cookie_value = $_POST['wl_goal'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
+
+    // Step One
+    if ( $_POST['wl_step_one'] ) {
+    	
+    	echo "The wl_step_one exists:  " . $_POST['wl_step_one'] ;
+		$cookie_name = "wl_step_one";
+		$cookie_value = $_POST['wl_step_one'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
+    // Step Two
+    if ( $_POST['wl_step_two'] ) {
+    	
+    	echo "The wl_step_two exists:  " . $_POST['wl_step_two'] ;
+		$cookie_name = "wl_step_two";
+		$cookie_value = $_POST['wl_step_two'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
+    // Step Three
+    if ( $_POST['wl_step_three'] ) {
+    	
+    	echo "The wl_step_three exists:  " . $_POST['wl_step_three'] ;
+		$cookie_name = "wl_step_three";
+		$cookie_value = $_POST['wl_step_three'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
+
+    // Notes
+    if ( $_POST['wl_notes'] ) {
+    	
+    	echo "The wl_notes exists:  " . $_POST['wl_notes'] ;
+		$cookie_name = "wl_notes";
+		$cookie_value = $_POST['wl_notes'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
 }
 
 get_header();
@@ -53,11 +103,65 @@ if(!isset($_COOKIE[$cookie_name])) {
     echo "Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
+
+$cookie_name = "wl_step_one";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+    $inputname = $_COOKIE[$cookie_name];
+}
+
+$cookie_name = "wl_step_two";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+    $inputname = $_COOKIE[$cookie_name];
+}
+
+$cookie_name = "wl_step_three";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+    $inputname = $_COOKIE[$cookie_name];
+}
+
+$cookie_name = "wl_notes";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+    $inputname = $_COOKIE[$cookie_name];
+}
+
 ?>
 				<!-- action plan form -->
-				<form id="formid" action="" method="POST">
-					<input type="text" name="inputname" value="<?php echo $inputname;?>" />
-					<input type="submit" name="submit" value="submit" />
+				<form id="actionplan" action="" method="POST">
+					<h2>Action Plan</h2>
+					<label for="wl_goal">Goal</label>
+					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>">
+					<h3>Key steps</h3>
+					<label for="wl_step_one">Step 1:</label>
+					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>">
+					<label for="wl_step_two">Step 2:</label>
+					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>">					
+					<label for="wl_step_three">Step 3:</label>
+					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>">
+					<label for="wl_notes">Notes:</label>
+					<textarea name="wl_notes" id="wl_notes"><?php echo $wl_notes;?></textarea>
+
+					
+					<input type="submit" name="submit" value="Create your Action Plan" />
+
+
+
+
 				</form>
 
 				<?php while ( have_posts() ) : the_post(); ?>
