@@ -11,8 +11,13 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Using ACF to create and set forms?
-acf_form_head();
+if($_POST['submit']) {
+  // we will add the code to process submitted form here
+    // we can also echo some text here if form is submitted
+    if($_POST['inputname']){
+    	echo "The input exists:  " . $_POST['inputname'] ;
+    }
+}
 
 get_header();
 
@@ -32,9 +37,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-				<p>My custom field: <?php the_field('goal'); ?></p>
-				
-				<?php acf_form(); ?>
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 					<?php
