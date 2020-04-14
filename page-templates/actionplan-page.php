@@ -14,19 +14,11 @@ defined( 'ABSPATH' ) || exit;
 if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
-    if($_POST['inputname']){
-
-    	echo "The input exists:  " . $_POST['inputname'] ;
-		$cookie_name = "wl_goal";
-		$cookie_value = $_POST['inputname'] ;
-		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
-
-    }
 
     // Goal
     if ( $_POST['wl_goal'] ) {
     	
-    	echo "The wl_goal exists:  " . $_POST['wl_goal'] ;
+    	echo "<br>The wl_goal exists:  " . $_POST['wl_goal'] ;
 		$cookie_name = "wl_goal";
 		$cookie_value = $_POST['wl_goal'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
@@ -37,7 +29,7 @@ if($_POST['submit']) {
     // Step One
     if ( $_POST['wl_step_one'] ) {
     	
-    	echo "The wl_step_one exists:  " . $_POST['wl_step_one'] ;
+    	echo "<br>The wl_step_one exists:  " . $_POST['wl_step_one'] ;
 		$cookie_name = "wl_step_one";
 		$cookie_value = $_POST['wl_step_one'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
@@ -47,7 +39,7 @@ if($_POST['submit']) {
     // Step Two
     if ( $_POST['wl_step_two'] ) {
     	
-    	echo "The wl_step_two exists:  " . $_POST['wl_step_two'] ;
+    	echo "<br>The wl_step_two exists:  " . $_POST['wl_step_two'] ;
 		$cookie_name = "wl_step_two";
 		$cookie_value = $_POST['wl_step_two'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
@@ -57,7 +49,7 @@ if($_POST['submit']) {
     // Step Three
     if ( $_POST['wl_step_three'] ) {
     	
-    	echo "The wl_step_three exists:  " . $_POST['wl_step_three'] ;
+    	echo "<br>The wl_step_three exists:  " . $_POST['wl_step_three'] ;
 		$cookie_name = "wl_step_three";
 		$cookie_value = $_POST['wl_step_three'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
@@ -68,7 +60,7 @@ if($_POST['submit']) {
     // Notes
     if ( $_POST['wl_notes'] ) {
     	
-    	echo "The wl_notes exists:  " . $_POST['wl_notes'] ;
+    	echo "<br>The wl_notes exists:  " . $_POST['wl_notes'] ;
 		$cookie_name = "wl_notes";
 		$cookie_value = $_POST['wl_notes'] ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
@@ -97,46 +89,46 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php
 $cookie_name = "wl_goal";
 if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
 } else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_one";
 if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
 } else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_two";
 if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
 } else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_step_three";
 if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
 } else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
 
 $cookie_name = "wl_notes";
 if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
 } else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
     $inputname = $_COOKIE[$cookie_name];
 }
 
