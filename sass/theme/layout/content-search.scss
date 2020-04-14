@@ -17,7 +17,9 @@
 
 	div ul li input[type="text"] {
 		width: 100%;
+		padding: 0.25rem 0.5rem;
 	}
+	
 	div ul li input[type="submit"] {
 		background-color: $dark-blue;
 		border-radius: $corner-rad;
