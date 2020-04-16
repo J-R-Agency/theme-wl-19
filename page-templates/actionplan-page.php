@@ -229,6 +229,15 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 					<!-- display shortlist from action plan (favorites plugin) -->
 					<?php
+
+
+					$cookie_name = "simplefavorites";
+					if(!isset($_COOKIE[$cookie_name])) {
+					// Not set
+					} else {
+					// Set
+					   echo $_COOKIE[$cookie_name] ;
+					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
 
