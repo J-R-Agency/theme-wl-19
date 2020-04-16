@@ -237,69 +237,33 @@ if(!isset($_COOKIE[$cookie_name])) {
 					} else {
 					// Set
 						$wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
-						echo "<pre>";
-						// var_dump ( $wl_simplefavorites ) ;
-						// var_dump( $wl_simplefavorites[0] ) ; // Single site (first)
-						// var_dump( $wl_simplefavorites[0]["posts"] ) ; // Single site (first)
 						$wl_shortlist = $wl_simplefavorites[0]["posts"] ;
-						print_r( $wl_shortlist ) ; // Single site (first)
-						echo "</pre>";
 
+						$args = array(
+						    'post_type' => 'activities',
+						    'post__in' => $wl_shortlist ,
+						);
+												
 
-$wl_include = implode ( ",", $wl_shortlist ) ;
-//$wl_include = $wl_shortlist ;
+						$shortlist_posts = new WP_Query($args);
 
-echo $wl_include ; 
+						if($shortlist_posts->have_posts()) : 
+						  while($shortlist_posts->have_posts()) : 
+						     $shortlist_posts->the_post();
 
-$args = array(
-    'post_type' => 'activities',
-    'post__in' => '19411,19412,19403,19402,19401',
-    'order_by' => 'post__in'
-);
+						     // echo "<h3><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>";
+						     echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-$args = array(
-    'post_type' => 'activities',
-    'post__in' => $wl_shortlist ,
-);
-						
-echo "<pre>
-ARGS: ";
-var_dump($args);
-echo "
-</pre>";
+							endwhile;
+						else: 
+							echo "Oops, there are no activities yet.";
+						endif;
 
-/*
-$query = new WP_Query( $args );
-
-						echo "<pre>";
-						var_dump( $query  ) ; // Single site (first)
-						echo "</pre>";
-
-*/
-   $shortlist_posts = new WP_Query($args);
-
-   if($shortlist_posts->have_posts()) : 
-      while($shortlist_posts->have_posts()) : 
-         $shortlist_posts->the_post();
-
-         // echo "<h3><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>";
-         echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
-
-      endwhile;
-   else: 
-?>
-
-      Oops, there are no posts.
-
-<?php
-   endif;
-wp_reset_postdata();
-
+						wp_reset_postdata();
 
 					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
-
 
 
 					<label for="wl_notes">Notes:</label>
