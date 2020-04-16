@@ -251,7 +251,7 @@ $wl_include = implode ( ",", $wl_shortlist ) ;
 echo $wl_include ; 
 
 $args = array(
-    'post__in' => $wl_include 
+    'include' => $wl_include 
 );
 
 var_dump($args);
