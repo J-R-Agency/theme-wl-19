@@ -239,6 +239,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						$wl_shortlist = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
 						echo "<pre>";
 						var_dump ( $wl_shortlist ) ;
+						var_dump( $wl_shortlist[0] ) ; // Single site (first)
 						echo "</pre>";
 						print_r ( "Array (single): " . $wl_shortlist['posts'] ) ;
 						print_r ( "OBJ: " . $wl_shortlist->posts ) ;
