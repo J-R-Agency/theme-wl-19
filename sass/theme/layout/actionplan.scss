@@ -95,6 +95,40 @@
 	padding: 1rem 2rem;
 }
 
+
+
+.wl_advice_header{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	padding: 1rem 0;
+
+	.wl_advice_icon{
+		flex-basis: 32%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 32%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 32%;
+	    }
+	}
+
+	.wl_advice_title{
+		flex-basis: 66%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 66%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 66%;
+	    }
+	}
+}
+
+
 .wl_advice_icon{
 	background-color: $grey;
 	border-radius: 50%;
