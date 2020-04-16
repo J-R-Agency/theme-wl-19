@@ -117,13 +117,13 @@
 	}
 
 	.wl_advice_title{
-		flex-basis: 56%;
+		flex-basis: 52%;
 		margin: 0 1rem 0 0;
 		@include respond-to('md'){
-			flex-basis: 56%;
+			flex-basis: 52%;
 	    }
 		@include respond-to('lg'){
-			flex-basis: 56%;
+			flex-basis: 52%;
 	    }
 	}
 }
