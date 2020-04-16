@@ -110,7 +110,7 @@ if($_POST['clear']) {
 
 	setcookie('simplefavorites', "", time() - 3600, "/");
 
-   	echo "<br>Cookies cleared & Action Plan deleted" ;
+ //  	echo "<br>Cookies cleared & Action Plan deleted" ;
 
    	unset($wl_goal);
 	unset($wl_step_one);
