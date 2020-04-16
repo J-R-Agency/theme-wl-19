@@ -213,21 +213,21 @@ if(!isset($_COOKIE[$cookie_name])) {
 					
 					<h2>Action Plan</h2>
 					<label for="wl_goal">Goal</label>
-					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>">
+					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal">
 
 					<h3>Key steps</h3>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
-					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>">
+					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
 					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
-					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>">					
+					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>" placeholder="Step 2">					
 					<label class="visually-hidden" for="wl_step_three">Step 3:</label>
-					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>">
+					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>" placeholder="Step 3">
 					<label class="visually-hidden" for="wl_step_four">Step 4:</label>
-					<input type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>">					
+					<input type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>" placeholder="Step 4">					
 					<label class="visually-hidden" for="wl_step_five">Step 5:</label>
-					<input type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>">
+					<input type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>" placeholder="Step 5">
 					<label for="wl_notes">Notes:</label>
-					<textarea name="wl_notes" id="wl_notes"><?php echo $wl_notes;?></textarea>
+					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo $wl_notes;?></textarea>
 
 					<input type="submit" name="submit" value="Create your Action Plan" />
 					<input type="submit" name="clear" value="Clear" />
