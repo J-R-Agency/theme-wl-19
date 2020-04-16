@@ -242,7 +242,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						// var_dump( $wl_simplefavorites[0] ) ; // Single site (first)
 						// var_dump( $wl_simplefavorites[0]["posts"] ) ; // Single site (first)
 						$wl_shortlist = $wl_simplefavorites[0]["posts"] ;
-						var_dump( $wl_shortlist ) ; // Single site (first)
+						print_r( $wl_shortlist ) ; // Single site (first)
 						echo "</pre>";
 
 $args = array(
