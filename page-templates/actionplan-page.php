@@ -251,6 +251,11 @@ $args = array(
 
 $posts = get_posts($args);
 
+						echo "<pre>";
+						var_dump( $posts  ) ; // Single site (first)
+						echo "</pre>";
+
+
 foreach ($posts as $p) : setup_postdata( $p );
     //post!
     ?>
