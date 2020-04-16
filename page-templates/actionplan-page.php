@@ -221,7 +221,9 @@ $theme_path = get_template_directory_uri();
 	<div class="wl_advice_privacy__img">
 		<img src="<?php echo $theme_path; ?>/assets/images/icon-lock.png"
 			alt="Privacy"
-			class="wl_advice_icon">
+			class="wl_advice_icon"
+			height="80"
+			width="80">
 	</div>
 	<div class="wl_advice_privacy__info">
 		<h3>Privacy first</h3>
@@ -236,7 +238,9 @@ $theme_path = get_template_directory_uri();
 			<div class="wl_advice_email__img">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-mail.png"
 					alt="Email your Action Plan"
-					class="wl_advice_icon">
+					class="wl_advice_icon"
+					height="80"
+					width="80">
 			</div>
 			<div class="wl_advice_email__title">
 				<h3>Email your Action Plan</h3>
@@ -252,7 +256,9 @@ $theme_path = get_template_directory_uri();
 			<div class="wl_advice_print__img">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-print.png"
 					alt="Print your Action Plan"
-					class="wl_advice_icon">
+					class="wl_advice_icon"
+					height="80"
+					width="80">
 			</div>
 			<div class="wl_advice_print__title">
 				<h3>Print your Action Plan</h3>
@@ -268,7 +274,9 @@ $theme_path = get_template_directory_uri();
 			<div class="wl_advice_share__img">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-group.png"
 					alt="Share your goals"
-					class="wl_advice_icon">
+					class="wl_advice_icon"
+					height="80"
+					width="80">
 			</div>
 			<div class="wl_advice_share__title">
 				<h3>Share your goals</h3>
@@ -284,7 +292,9 @@ $theme_path = get_template_directory_uri();
 			<div class="wl_advice_help__img">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png"
 					alt="We are here to help"
-					class="wl_advice_icon">
+					class="wl_advice_icon"
+					height="80"
+					width="80">
 			</div>
 			<div class="wl_advice_help__title">
 				<h3>We are here to help</h3>
