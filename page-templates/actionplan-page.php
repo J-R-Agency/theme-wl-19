@@ -255,14 +255,34 @@ $args = array(
 );
 
 var_dump($args);
-
+/*
 $query = new WP_Query( $args );
 
 						echo "<pre>";
 						var_dump( $query  ) ; // Single site (first)
 						echo "</pre>";
 
+*/
+   $shortlilst_posts = new WP_Query($args);
 
+   if($shortlilst_posts->have_posts()) : 
+      while($shortlilst_posts->have_posts()) : 
+         $shortlilst_posts->the_post();
+?>
+
+         <h1><?php the_title() ?></h1>
+
+<?php
+      endwhile;
+   else: 
+?>
+
+      Oops, there are no posts.
+
+<?php
+   endif;
+?>
+<?php 
 foreach ($query as $p) : setup_postdata( $p );
     //post!
     ?>
