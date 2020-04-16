@@ -25,34 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
-<?php
 
-// Temp reveal functions
-
-echo "<pre>";
-echo "COOKIE: ";
-print_r( $_COOKIE['simplefavorites']);
-echo "WL_GOAL: ";
-print_r( $_COOKIE['wl_goal']);
-echo "</pre>";
-
-if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) &&  $_POST['action'] == "wl_set_goal") {
-
-    // Do some minor form validation to make sure there is content
-    if (isset ($_POST['wl_goal'])) {
-        $wl_goal =  $_POST['wl_goal'];
-    } else {
-        echo 'Please enter a GOAL';
-    }
-
-    echo "<pre>";
-    echo "FORM GOAL: " . $wl_goal;
-    echo "</pre>";
-
-}
-
-
-?>
 	<!-- ******************* The Navbar Area ******************* -->
 	
 	<!-- TERTIARY MENU -->
