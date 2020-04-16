@@ -259,10 +259,15 @@ $args = array(
 
 $args = array(
     'post_type' => 'activities',
-    'include' => 19411, 19412,
+    'post__in' => 19411, 19412,
 );
-
+						
+echo "<pre>
+";
 var_dump($args);
+echo "
+</pre>";
+
 /*
 $query = new WP_Query( $args );
 
