@@ -259,7 +259,7 @@ $args = array(
 
 $args = array(
     'post_type' => 'activities',
-    'post__in' => array ( 19411, 19412 ) ,
+    'post__in' => $wl_shortlist ,
 );
 						
 echo "<pre>
