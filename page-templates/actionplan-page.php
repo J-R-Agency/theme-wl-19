@@ -257,6 +257,11 @@ $args = array(
     'order_by' => 'post__in'
 );
 
+$args = array(
+    'post_type' => 'activities',
+    'p' => 19411
+);
+
 var_dump($args);
 /*
 $query = new WP_Query( $args );
