@@ -209,13 +209,14 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 				<!-- action plan form -->
+				<div id="wl_actionplan" class="wl_actionplan">
 				<form name="actionplan" id="actionplan" class="actionplan" action="" method="POST">
 					
-					<h3>Action Plan</h3>
-					<label for="wl_goal"><h4>Goal</h4></label>
+					<h1>Action Plan</h1>
+					<label for="wl_goal"><h2>Goal</h2></label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal">
 
-					<h4>Key steps</h4>
+					<h2>Key steps</h2>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
 					<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
 					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
@@ -230,7 +231,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<!-- display shortlist from action plan (favorites plugin) -->
 					<?php
 
-					echo "<h4>Key Activities</h4>" ;
+					echo "<h2>Key Activities</h2>" ;
 
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
@@ -254,7 +255,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h4>" . get_the_title() ." - " . $post->ID . "</h4>";
+						     echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
 							endwhile;
 						else: 
@@ -275,7 +276,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<input type="submit" name="clear" value="Clear" />
 
 				</form>
-
+				</div>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
