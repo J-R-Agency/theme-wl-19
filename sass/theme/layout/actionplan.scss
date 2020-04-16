@@ -110,13 +110,13 @@
 	    }
 	}
 	.wl_advice_privacy__info{
-		flex-basis: 52%;
+		flex-basis: 65%;
 		margin: 0 1rem 0 0;
 		@include respond-to('md'){
-			flex-basis: 52%;
+			flex-basis: 65%;
 	    }
 		@include respond-to('lg'){
-			flex-basis: 52%;
+			flex-basis: 65%;
 	    }
 	}
 }
