@@ -56,6 +56,25 @@ if($_POST['submit']) {
 
     }
 
+    // Step Four
+    if ( $_POST['wl_step_four'] ) {
+    	
+    	echo "<br>The wl_step_four exists:  " . $_POST['wl_step_four'] ;
+		$cookie_name = "wl_step_four";
+		$cookie_value = $_POST['wl_step_four'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
+
+    // Step Three
+    if ( $_POST['wl_step_five'] ) {
+    	
+    	echo "<br>The wl_step_five exists:  " . $_POST['wl_step_five'] ;
+		$cookie_name = "wl_step_five";
+		$cookie_value = $_POST['wl_step_five'] ;
+		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
+
+    }
 
     // Notes
     if ( $_POST['wl_notes'] ) {
