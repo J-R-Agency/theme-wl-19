@@ -216,15 +216,15 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>">
 
 					<h3>Key steps</h3>
-					<label for="wl_step_one">Step 1:</label>
+					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
 					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>">
-					<label for="wl_step_two">Step 2:</label>
+					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
 					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>">					
-					<label for="wl_step_three">Step 3:</label>
+					<label class="visually-hidden" for="wl_step_three">Step 3:</label>
 					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>">
-					<label for="wl_step_four">Step 4:</label>
+					<label class="visually-hidden" for="wl_step_four">Step 4:</label>
 					<input type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>">					
-					<label for="wl_step_five">Step 5:</label>
+					<label class="visually-hidden" for="wl_step_five">Step 5:</label>
 					<input type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>">
 					<label for="wl_notes">Notes:</label>
 					<textarea name="wl_notes" id="wl_notes"><?php echo $wl_notes;?></textarea>
