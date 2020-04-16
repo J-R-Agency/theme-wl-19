@@ -245,6 +245,23 @@ if(!isset($_COOKIE[$cookie_name])) {
 						var_dump( $wl_shortlist ) ; // Single site (first)
 						echo "</pre>";
 
+$args = array(
+    'post__in' => $wl_shortlist
+);
+
+$posts = get_posts($args);
+
+foreach ($posts as $p) : setup_postdata( $post );
+    //post!
+    ?>
+	<li>
+		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	</li>
+<?php 
+endforeach;
+wp_reset_postdata();
+
+
 					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
