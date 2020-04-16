@@ -251,19 +251,19 @@ $wl_include = implode ( ",", $wl_shortlist ) ;
 echo $wl_include ; 
 
 $args = array(
-    'include' => $wl_include 
+    'post__in' => $wl_include 
 );
 
 var_dump($args);
 
-$posts = get_posts($args);
+$query = new WP_Query( $args );
 
 						echo "<pre>";
-						var_dump( $posts  ) ; // Single site (first)
+						var_dump( $query  ) ; // Single site (first)
 						echo "</pre>";
 
 
-foreach ($posts as $p) : setup_postdata( $p );
+foreach ($query as $p) : setup_postdata( $p );
     //post!
     ?>
 	<li>
