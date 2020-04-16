@@ -246,7 +246,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						echo "</pre>";
 
 $args = array(
-    'post__in' => $wl_shortlist
+    'include' => $wl_shortlist
 );
 
 $posts = get_posts($args);
