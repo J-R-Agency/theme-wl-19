@@ -226,7 +226,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 <h2>Put your plan into action!</h2>
 <div class="wl_advice_action__container">
 	
-	<div class="wl_advice_email__container">
+	<div class="wl_advice_action__item wl_advice_email__container">
 		<div class="wl_advice_email__header">
 			<div class="wl_advice_email__img">
 				IMG
@@ -240,7 +240,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 		</div>
 	</div>
 	
-	<div class="wl_advice_print__container">
+	<div class="wl_advice_action__item wl_advice_print__container">
 		<div class="wl_advice_print__header">
 			<div class="wl_advice_print__img">
 				IMG
@@ -254,7 +254,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 		</div>
 	</div>	
 
-	<div class="wl_advice_share__container">
+	<div class="wl_advice_action__item wl_advice_share__container">
 		<div class="wl_advice_share__header">
 			<div class="wl_advice_share__img">
 				IMG
@@ -268,7 +268,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 		</div>
 	</div>	
 
-	<div class="wl_advice_help__container">
+	<div class="wl_advice_action__item wl_advice_help__container">
 		<div class="wl_advice_help__header">
 			<div class="wl_advice_help__img">
 				IMG

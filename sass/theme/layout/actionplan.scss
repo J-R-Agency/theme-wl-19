@@ -85,6 +85,38 @@
 }
 
 
+/* Advice containers */
+
+
+.wl_advice_privacy__container{
+	background-color: $grey;
+	border-radius: $corner-rad;
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+}
+
+.wl_advice_action__container{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	.wl_advice_action__item{
+		background-color: $white;
+		flex-basis: 100%;
+		margin: 0 0 1rem 0;
+		padding: 1rem;
+		@include respond-to('md'){
+			flex-basis: 100%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 49%;
+	    }
+	}
+}
+
+
 /* Styling for plugin */
 
 .wl_steps_list{
