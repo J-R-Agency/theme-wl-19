@@ -247,6 +247,9 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 
 $wl_include = implode ( ",", $wl_shortlist ) ;
+
+echo $wl_include ; 
+
 $args = array(
     'include' => $wl_include 
 );
