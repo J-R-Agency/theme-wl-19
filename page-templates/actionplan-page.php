@@ -246,8 +246,8 @@ if(!isset($_COOKIE[$cookie_name])) {
 						echo "</pre>";
 
 
-// $wl_include = implode ( ",", $wl_shortlist ) ;
-$wl_include = $wl_shortlist ;
+$wl_include = implode ( ",", $wl_shortlist ) ;
+//$wl_include = $wl_shortlist ;
 
 echo $wl_include ; 
 
