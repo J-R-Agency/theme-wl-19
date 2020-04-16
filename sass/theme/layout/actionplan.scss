@@ -89,10 +89,36 @@
 
 
 .wl_advice_privacy__container{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
 	background-color: $grey;
 	border-radius: $corner-rad;
 	margin: 1rem 0;
 	padding: 1rem 2rem;
+
+	.wl_advice_privacy__img{
+		flex-basis: 30%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 30%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 30%;
+	    }
+	}
+	.wl_advice_privacy__info{
+		flex-basis: 52%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 52%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 52%;
+	    }
+	}
 }
 
 
