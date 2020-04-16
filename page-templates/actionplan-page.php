@@ -236,7 +236,9 @@ if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
 					} else {
 					// Set
-					   print_r ( $_COOKIE[$cookie_name] ) ;
+						$wl_shortlist = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
+						print_r ( $wl_shortlist ) ;
+
 					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
