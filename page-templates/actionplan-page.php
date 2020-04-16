@@ -226,6 +226,14 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<input class="wl_steps" type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>" placeholder="Step 4">					
 					<label class="visually-hidden" for="wl_step_five">Step 5:</label>
 					<input class="wl_steps" type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>" placeholder="Step 5">
+
+					<!-- display shortlist from action plan (favorites plugin) -->
+					<?php
+						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
+					?>
+
+
+
 					<label for="wl_notes">Notes:</label>
 					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo $wl_notes;?></textarea>
 
