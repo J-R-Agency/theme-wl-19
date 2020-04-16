@@ -253,7 +253,8 @@ echo $wl_include ;
 
 $args = array(
     'post_type' => 'activities',
-    'include' => $wl_include
+    'include' => $wl_include,
+    'orderby' => 'include'
 );
 
 var_dump($args);
