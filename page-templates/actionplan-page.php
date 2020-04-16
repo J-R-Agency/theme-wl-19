@@ -105,6 +105,18 @@ if($_POST['clear']) {
 
    	echo "<br>Cookies cleared & Action Plan deleted" ;
 
+   	unset($wl_goal);
+	unset($wl_step_one);
+	unset($wl_step_two);
+	unset($wl_step_three);
+	unset($wl_step_four);
+	unset($wl_step_five);
+	unset($wl_notes);
+
+	unset($simplefavorites);
+
+	header('Location: '.$_SERVER['PHP_SELF']);
+
 }
 
 get_header();
