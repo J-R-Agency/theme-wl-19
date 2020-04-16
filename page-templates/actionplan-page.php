@@ -230,6 +230,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<!-- display shortlist from action plan (favorites plugin) -->
 					<?php
 
+					echo "<h3>Key Activities</h3>" ;
 
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
