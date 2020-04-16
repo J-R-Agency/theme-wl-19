@@ -247,13 +247,13 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 
 $wl_include = implode ( ",", $wl_shortlist ) ;
-// $wl_include = $wl_shortlist ;
+//$wl_include = $wl_shortlist ;
 
 echo $wl_include ; 
 
 $args = array(
     'post_type' => 'activities',
-    'post__in' => $wl_include
+    'include' => $wl_include
 );
 
 var_dump($args);
