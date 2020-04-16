@@ -258,7 +258,7 @@ $args = array(
 );
 
 $args = array(
-    'post_type' => 'any',
+    'post_type' => 'activities',
     'post__in' => array ( 19411, 19412 ) ,
 );
 						
