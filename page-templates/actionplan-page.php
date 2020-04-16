@@ -210,6 +210,9 @@ if(!isset($_COOKIE[$cookie_name])) {
 <?php 
 if(!isset($_COOKIE["wl_goal"])) {
 // Not set
+
+$theme_path = get_template_directory_uri();
+
 ?>
 
 <!-- Action Plan Advice -->
