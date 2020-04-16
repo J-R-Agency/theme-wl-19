@@ -253,7 +253,7 @@ echo $wl_include ;
 
 $args = array(
     'post_type' => 'activities',
-    'include' => '19411,19412,19403,19402,19401',
+    'post__in' => '19411,19412,19403,19402,19401',
     'order_by' => 'post__in'
 );
 
