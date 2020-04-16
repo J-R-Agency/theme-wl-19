@@ -61,7 +61,7 @@ get_header(); ?>
 	    )
 	);
 	$the_query = new WP_Query( $args );
-	echo "<h3>Here's a selection of <em>" . get_the_title() . "</em> entries and organisations from our directory<h3>";
+	echo "<h3>Here's a selection of organisations that offer something '" . get_the_title() . "' you could try.<h3>";
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    // content
