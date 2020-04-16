@@ -259,7 +259,7 @@ $args = array(
 
 $args = array(
     'post_type' => 'activities',
-    'p' => 19411
+    'include' => 19411, 19412,
 );
 
 var_dump($args);
