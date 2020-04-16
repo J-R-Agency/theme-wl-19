@@ -263,11 +263,11 @@ $query = new WP_Query( $args );
 						echo "</pre>";
 
 */
-   $shortlilst_posts = new WP_Query($args);
+   $shortlist_posts = new WP_Query($args);
 
-   if($shortlilst_posts->have_posts()) : 
-      while($shortlilst_posts->have_posts()) : 
-         $shortlilst_posts->the_post();
+   if($shortlist_posts->have_posts()) : 
+      while($shortlist_posts->have_posts()) : 
+         $shortlist_posts->the_post();
 ?>
 
          <h1><?php the_title() ?></h1>
@@ -281,16 +281,6 @@ $query = new WP_Query( $args );
 
 <?php
    endif;
-?>
-<?php 
-foreach ($query as $p) : setup_postdata( $p );
-    //post!
-    ?>
-	<li>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</li>
-<?php 
-endforeach;
 wp_reset_postdata();
 
 
