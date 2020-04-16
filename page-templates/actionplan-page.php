@@ -254,6 +254,8 @@ $args = array(
     'include' => $wl_include 
 );
 
+var_dump($args);
+
 $posts = get_posts($args);
 
 						echo "<pre>";
