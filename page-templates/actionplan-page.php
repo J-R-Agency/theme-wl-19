@@ -216,7 +216,9 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 <div class="wl_advice_privacy__container">
 	<div class="wl_advice_privacy__img">
-		IMG
+		<img src="<?php echo $theme_path; ?>/assets/images/icon-lock.png"
+			alt="Privacy"
+			class="wl_advice_icon">
 	</div>
 	<div class="wl_advice_privacy__info">
 		<h3>Privacy first</h3>
@@ -229,10 +231,12 @@ if(!isset($_COOKIE["wl_goal"])) {
 	<div class="wl_advice_action__item wl_advice_email__container">
 		<div class="wl_advice_email__header">
 			<div class="wl_advice_email__img">
-				IMG
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-mail.png"
+					alt="Email your Action Plan"
+					class="wl_advice_icon">
 			</div>
 			<div class="wl_advice_email__title">
-				<h3>Email your action plan</h3>
+				<h3>Email your Action Plan</h3>
 			</div>
 		</div>
 		<div class="wl_advice_email__info">
@@ -243,7 +247,9 @@ if(!isset($_COOKIE["wl_goal"])) {
 	<div class="wl_advice_action__item wl_advice_print__container">
 		<div class="wl_advice_print__header">
 			<div class="wl_advice_print__img">
-				IMG
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-print.png"
+					alt="Print your Action Plan"
+					class="wl_advice_icon">
 			</div>
 			<div class="wl_advice_print__title">
 				<h3>Print your Action Plan</h3>
@@ -257,7 +263,9 @@ if(!isset($_COOKIE["wl_goal"])) {
 	<div class="wl_advice_action__item wl_advice_share__container">
 		<div class="wl_advice_share__header">
 			<div class="wl_advice_share__img">
-				IMG
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-group.png"
+					alt="Share your goals"
+					class="wl_advice_icon">
 			</div>
 			<div class="wl_advice_share__title">
 				<h3>Share your goals</h3>
@@ -271,7 +279,9 @@ if(!isset($_COOKIE["wl_goal"])) {
 	<div class="wl_advice_action__item wl_advice_help__container">
 		<div class="wl_advice_help__header">
 			<div class="wl_advice_help__img">
-				IMG
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png"
+					alt="We are here to help"
+					class="wl_advice_icon">
 			</div>
 			<div class="wl_advice_help__title">
 				<h3>We are here to help</h3>
