@@ -237,7 +237,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					} else {
 					// Set
 						$wl_shortlist = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
-						print_r ( "FULL: " . $wl_shortlist ) ;
+						print_r ( $wl_shortlist ) ;
 						print_r ( "Array (single): " . $wl_shortlist['posts'] ) ;
 						print_r ( "OBJ: " . $wl_shortlist->posts ) ;
 						print_r ( "Array (double): " . $wl_shortlist["posts"] ) ;
