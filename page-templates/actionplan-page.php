@@ -246,7 +246,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						echo "</pre>";
 
 $args = array(
-    'include' => implode(",", $wl_shortlist s)
+    'include' => implode ( ",", $wl_shortlist )
 );
 
 $posts = get_posts($args);
