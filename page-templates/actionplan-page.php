@@ -122,7 +122,7 @@ if($_POST['clear']) {
 
 	unset($simplefavorites);
 
-	header('Location: '.$_SERVER['PHP_SELF']);
+	header('Location: /action-plan-cleared/');
 
 }
 
