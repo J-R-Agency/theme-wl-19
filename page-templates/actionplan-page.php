@@ -211,11 +211,11 @@ if(!isset($_COOKIE[$cookie_name])) {
 				<!-- action plan form -->
 				<form name="actionplan" id="actionplan" class="actionplan" action="" method="POST">
 					
-					<h2>Action Plan</h2>
-					<label for="wl_goal">Goal</label>
+					<h3>Action Plan</h3>
+					<label for="wl_goal"><h4>Goal</h4></label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal">
 
-					<h3>Key steps</h3>
+					<h4>Key steps</h4>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
 					<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
 					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
@@ -230,7 +230,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<!-- display shortlist from action plan (favorites plugin) -->
 					<?php
 
-					echo "<h3>Key Activities</h3>" ;
+					echo "<h4>Key Activities</h4>" ;
 
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
@@ -254,7 +254,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
+						     echo "<h4>" . get_the_title() ." - " . $post->ID . "</h4>";
 
 							endwhile;
 						else: 
