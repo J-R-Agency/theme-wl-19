@@ -217,15 +217,15 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 					<h3>Key steps</h3>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
-					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
+					<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
 					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
-					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>" placeholder="Step 2">					
+					<input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>" placeholder="Step 2">					
 					<label class="visually-hidden" for="wl_step_three">Step 3:</label>
-					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>" placeholder="Step 3">
+					<input class="wl_steps" type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>" placeholder="Step 3">
 					<label class="visually-hidden" for="wl_step_four">Step 4:</label>
-					<input type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>" placeholder="Step 4">					
+					<input class="wl_steps" type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>" placeholder="Step 4">					
 					<label class="visually-hidden" for="wl_step_five">Step 5:</label>
-					<input type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>" placeholder="Step 5">
+					<input class="wl_steps" type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>" placeholder="Step 5">
 					<label for="wl_notes">Notes:</label>
 					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo $wl_notes;?></textarea>
 
