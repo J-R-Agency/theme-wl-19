@@ -123,6 +123,24 @@ if(!isset($_COOKIE[$cookie_name])) {
     $wl_step_three = $_COOKIE[$cookie_name];
 }
 
+$cookie_name = "wl_step_four";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
+    $wl_step_four = $_COOKIE[$cookie_name];
+}
+
+$cookie_name = "wl_step_five";
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "<br>Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "<br>Cookie '" . $cookie_name . "' is set!<br>";
+    echo "<br>Value is: " . $_COOKIE[$cookie_name];
+    $wl_step_five = $_COOKIE[$cookie_name];
+}
+
 $cookie_name = "wl_notes";
 if(!isset($_COOKIE[$cookie_name])) {
     echo "<br>Cookie named '" . $cookie_name . "' is not set!";
@@ -133,11 +151,18 @@ if(!isset($_COOKIE[$cookie_name])) {
 }
 
 ?>
+
+
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+
 				<!-- action plan form -->
 				<form name="actionplan" id="actionplan" class="actionplan" action="" method="POST">
+					
 					<h2>Action Plan</h2>
 					<label for="wl_goal">Goal</label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>">
+
 					<h3>Key steps</h3>
 					<label for="wl_step_one">Step 1:</label>
 					<input type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>">
@@ -145,26 +170,16 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<input type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>">					
 					<label for="wl_step_three">Step 3:</label>
 					<input type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>">
+					<label for="wl_step_four">Step 4:</label>
+					<input type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>">					
+					<label for="wl_step_five">Step 5:</label>
+					<input type="text" name="wl_step_five" id="wl_step_five" value="<?php echo $wl_step_five;?>">
 					<label for="wl_notes">Notes:</label>
 					<textarea name="wl_notes" id="wl_notes"><?php echo $wl_notes;?></textarea>
 
-					
 					<input type="submit" name="submit" value="Create your Action Plan" />
 
-
-
-
 				</form>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
 
 				<?php endwhile; // end of the loop. ?>
 
