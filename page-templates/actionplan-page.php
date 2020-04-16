@@ -238,9 +238,9 @@ if(!isset($_COOKIE[$cookie_name])) {
 					// Set
 						$wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
 						echo "<pre>";
-						var_dump ( $wl_simplefavorites ) ;
-						var_dump( $wl_simplefavorites[0] ) ; // Single site (first)
-						var_dump( $wl_simplefavorites[0]["posts"] ) ; // Single site (first)
+						// var_dump ( $wl_simplefavorites ) ;
+						// var_dump( $wl_simplefavorites[0] ) ; // Single site (first)
+						// var_dump( $wl_simplefavorites[0]["posts"] ) ; // Single site (first)
 						$wl_shortlist = $wl_simplefavorites[0]["posts"] ;
 						var_dump( $wl_shortlist ) ; // Single site (first)
 						echo "</pre>";
@@ -251,7 +251,7 @@ $args = array(
 
 $posts = get_posts($args);
 
-foreach ($posts as $p) : setup_postdata( $post );
+foreach ($posts as $p) : setup_postdata( $p );
     //post!
     ?>
 	<li>
