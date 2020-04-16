@@ -245,8 +245,10 @@ if(!isset($_COOKIE[$cookie_name])) {
 						print_r( $wl_shortlist ) ; // Single site (first)
 						echo "</pre>";
 
+
+$wl_include = implode ( ",", $wl_shortlist ) ;
 $args = array(
-    'include' => implode ( ",", $wl_shortlist )
+    'include' => $wl_include ;
 );
 
 $posts = get_posts($args);
