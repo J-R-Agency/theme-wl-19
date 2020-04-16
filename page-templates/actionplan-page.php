@@ -259,7 +259,10 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 							endwhile;
 						else: 
-							echo "Oops, there are no activities yet.";
+							echo "
+							<h3>Oops, you have no activities yet</h3>
+							<p>You can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
+							";
 						endif;
 
 						wp_reset_postdata();
