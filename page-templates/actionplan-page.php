@@ -240,6 +240,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						echo "<pre>";
 						var_dump ( $wl_shortlist ) ;
 						var_dump( $wl_shortlist[0] ) ; // Single site (first)
+						var_dump( $wl_shortlist[0]["posts"] ) ; // Single site (first)
 						echo "</pre>";
 						print_r ( "Array (single): " . $wl_shortlist['posts'] ) ;
 						print_r ( "OBJ: " . $wl_shortlist->posts ) ;
