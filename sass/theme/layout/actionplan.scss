@@ -46,10 +46,6 @@
     white-space: nowrap; /* added line */
 }
 
-.wl_steps{
-	margin-top: 0.5rem;
-}
-
 .wl_actionplan{
 
 	h2{
@@ -64,4 +60,17 @@
 		padding: 0;
 	}
 
+	.wl_steps {
+		margin-top: 0.5rem;
+	}
+
+	#wl_notes {
+		height: 8rem;
+	}
+
 }
+
+
+
+
+
