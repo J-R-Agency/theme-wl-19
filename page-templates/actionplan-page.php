@@ -207,6 +207,89 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+<?php 
+if(!isset($_COOKIE["wl_goal"])) {
+// Not set
+?>
+
+<!-- Action Plan Advice -->
+
+<div class="wl_advice_privacy__container">
+	<div class="wl_advice_privacy__img">
+		IMG
+	</div>
+	<div class="wl_advice_privacy__info">
+		<h3>Privacy first</h3>
+		<p>We don't store any personal data and your Action Plan can be cleared at any time</p> 
+	</div>
+</div>
+<h2>Put your plan into action!</h2>
+<div class="wl_advice_action__container">
+	
+	<div class="wl_advice_email__container">
+		<div class="wl_advice_email__header">
+			<div class="wl_advice_email__img">
+				IMG
+			</div>
+			<div class="wl_advice_email__title">
+				<h3>Email your action plan</h3>
+			</div>
+		</div>
+		<div class="wl_advice_email__info">
+			<p>Once you have created your Action Plan you can email it to yourself to to refer back to and keep you on track!</p>
+		</div>
+	</div>
+	
+	<div class="wl_advice_print__container">
+		<div class="wl_advice_print__header">
+			<div class="wl_advice_print__img">
+				IMG
+			</div>
+			<div class="wl_advice_print__title">
+				<h3>Print your Action Plan</h3>
+			</div>
+		</div>
+		<div class="wl_advice_print__info">
+			<p>You can print a copy of your Action Plan to pin on your wall so you can keep everything fresh in your mind.</p>
+		</div>
+	</div>	
+
+	<div class="wl_advice_share__container">
+		<div class="wl_advice_share__header">
+			<div class="wl_advice_share__img">
+				IMG
+			</div>
+			<div class="wl_advice_share__title">
+				<h3>Share your goals</h3>
+			</div>
+		</div>
+		<div class="wl_advice_share__info">
+			<p>We know it can help when you feel supported, so you can share your Action Plan with a friend, family member or health professional.</p>
+		</div>
+	</div>	
+
+	<div class="wl_advice_help__container">
+		<div class="wl_advice_help__header">
+			<div class="wl_advice_help__img">
+				IMG
+			</div>
+			<div class="wl_advice_help__title">
+				<h3>We are here to help</h3>
+			</div>
+		</div>
+		<div class="wl_advice_help__info">
+			<p>If you would like a hand setting up your Action Plan we can help. The best way to do this is a referral through your GP.</p>
+		</div>
+	</div>
+
+</div>
+
+<?php
+} else {
+// Set
+   
+}
+?>
 
 				<!-- action plan form -->
 				<div id="wl_actionplan" class="wl_actionplan">
@@ -255,7 +338,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h3>" . get_the_title() . "</h3>";
+						     echo "<h3>" . get_the_title()  . "</h3>";
 
 							endwhile;
 						else: 
