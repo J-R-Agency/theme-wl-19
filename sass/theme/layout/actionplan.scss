@@ -106,24 +106,24 @@
 	padding: 1rem 0;
 
 	.wl_advice_icon{
-		flex-basis: 32%;
+		flex-basis: 30%;
 		margin: 0 1rem 0 0;
 		@include respond-to('md'){
-			flex-basis: 32%;
+			flex-basis: 30%;
 	    }
 		@include respond-to('lg'){
-			flex-basis: 32%;
+			flex-basis: 30%;
 	    }
 	}
 
 	.wl_advice_title{
-		flex-basis: 60%;
+		flex-basis: 56%;
 		margin: 0 1rem 0 0;
 		@include respond-to('md'){
-			flex-basis: 60%;
+			flex-basis: 56%;
 	    }
 		@include respond-to('lg'){
-			flex-basis: 60%;
+			flex-basis: 56%;
 	    }
 	}
 }
