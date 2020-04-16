@@ -218,11 +218,11 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 					<h2>Key steps</h2>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
-					<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1">
+					<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo $wl_step_one;?>" placeholder="Step 1: e.g. Find out what groups there are">
 					<label class="visually-hidden" for="wl_step_two">Step 2:</label>
-					<input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>" placeholder="Step 2">					
+					<input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php echo $wl_step_two;?>" placeholder="Step 2: e.g. Join a walking group">					
 					<label class="visually-hidden" for="wl_step_three">Step 3:</label>
-					<input class="wl_steps" type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>" placeholder="Step 3">
+					<input class="wl_steps" type="text" name="wl_step_three" id="wl_step_three" value="<?php echo $wl_step_three;?>" placeholder="Step 3: e.g. Try to socialise at least once a week">
 					<label class="visually-hidden" for="wl_step_four">Step 4:</label>
 					<input class="wl_steps" type="text" name="wl_step_four" id="wl_step_four" value="<?php echo $wl_step_four;?>" placeholder="Step 4">					
 					<label class="visually-hidden" for="wl_step_five">Step 5:</label>
