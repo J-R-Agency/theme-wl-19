@@ -259,7 +259,7 @@ $args = array(
 
 $args = array(
     'post_type' => 'activities',
-    'include' => 19411, 19412,
+    'include' => '19411, 19412',
 );
 						
 echo "<pre>
