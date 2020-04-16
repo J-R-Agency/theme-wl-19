@@ -237,10 +237,10 @@ if(!isset($_COOKIE[$cookie_name])) {
 					} else {
 					// Set
 						$wl_shortlist = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
-						print_r ( $wl_shortlist ) ;
-						print_r ( $wl_shortlist['posts'] ) ;
-						print_r ( $wl_shortlist->posts ) ;
-						print_r ( $wl_shortlist["posts"] ) ;
+						print_r ( "FULL: " . $wl_shortlist ) ;
+						print_r ( "Array (single): " . $wl_shortlist['posts'] ) ;
+						print_r ( "OBJ: " . $wl_shortlist->posts ) ;
+						print_r ( "Array (double): " . $wl_shortlist["posts"] ) ;
 
 					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
