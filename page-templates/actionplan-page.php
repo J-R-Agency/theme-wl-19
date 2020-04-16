@@ -236,15 +236,14 @@ if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
 					} else {
 					// Set
-						$wl_shortlist = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
+						$wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
 						echo "<pre>";
-						var_dump ( $wl_shortlist ) ;
-						var_dump( $wl_shortlist[0] ) ; // Single site (first)
-						var_dump( $wl_shortlist[0]["posts"] ) ; // Single site (first)
+						var_dump ( $wl_simplefavorites ) ;
+						var_dump( $wl_simplefavorites[0] ) ; // Single site (first)
+						var_dump( $wl_simplefavorites[0]["posts"] ) ; // Single site (first)
+						$wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+						var_dump( $wl_shortlist ) ; // Single site (first)
 						echo "</pre>";
-						print_r ( "Array (single): " . $wl_shortlist['posts'] ) ;
-						print_r ( "OBJ: " . $wl_shortlist->posts ) ;
-						print_r ( "Array (double): " . $wl_shortlist["posts"] ) ;
 
 					}
 						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
