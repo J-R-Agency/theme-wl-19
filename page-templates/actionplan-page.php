@@ -218,10 +218,9 @@ $theme_path = get_template_directory_uri();
 <!-- Action Plan Advice -->
 
 <div class="wl_advice_privacy__container">
-	<div class="wl_advice_privacy__img">
+	<div class="wl_advice_privacy__img wl_advice_icon">
 		<img src="<?php echo $theme_path; ?>/assets/images/icon-lock.png"
 			alt="Privacy"
-			class="wl_advice_icon"
 			height="80"
 			width="80">
 	</div>
@@ -235,10 +234,9 @@ $theme_path = get_template_directory_uri();
 	
 	<div class="wl_advice_action__item wl_advice_email__container">
 		<div class="wl_advice_email__header">
-			<div class="wl_advice_email__img">
+			<div class="wl_advice_email__img wl_advice_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-mail.png"
 					alt="Email your Action Plan"
-					class="wl_advice_icon"
 					height="80"
 					width="80">
 			</div>
@@ -253,10 +251,9 @@ $theme_path = get_template_directory_uri();
 	
 	<div class="wl_advice_action__item wl_advice_print__container">
 		<div class="wl_advice_print__header">
-			<div class="wl_advice_print__img">
+			<div class="wl_advice_print__img wl_advice_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-print.png"
 					alt="Print your Action Plan"
-					class="wl_advice_icon"
 					height="80"
 					width="80">
 			</div>
@@ -271,10 +268,9 @@ $theme_path = get_template_directory_uri();
 
 	<div class="wl_advice_action__item wl_advice_share__container">
 		<div class="wl_advice_share__header">
-			<div class="wl_advice_share__img">
+			<div class="wl_advice_share__img wl_advice_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-group.png"
 					alt="Share your goals"
-					class="wl_advice_icon"
 					height="80"
 					width="80">
 			</div>
@@ -289,10 +285,9 @@ $theme_path = get_template_directory_uri();
 
 	<div class="wl_advice_action__item wl_advice_help__container">
 		<div class="wl_advice_help__header">
-			<div class="wl_advice_help__img">
+			<div class="wl_advice_help__img wl_advice_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png"
 					alt="We are here to help"
-					class="wl_advice_icon"
 					height="80"
 					width="80">
 			</div>
