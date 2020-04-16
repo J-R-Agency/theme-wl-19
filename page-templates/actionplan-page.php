@@ -270,11 +270,9 @@ $query = new WP_Query( $args );
    if($shortlist_posts->have_posts()) : 
       while($shortlist_posts->have_posts()) : 
          $shortlist_posts->the_post();
-?>
 
-         <h1><?php the_title() ?></h1>
+         echo "<h3><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>";
 
-<?php
       endwhile;
    else: 
 ?>
