@@ -88,6 +88,25 @@ if($_POST['submit']) {
 
 }
 
+if($_POST['clear']) {
+
+	// Delete Action Plan cookies
+	// Set expiration to time in the past
+	
+	setcookie('wl_goal', "", time() - 3600, "/");
+	setcookie('wl_step_one', "", time() - 3600, "/");
+	setcookie('wl_step_two', "", time() - 3600, "/");
+	setcookie('wl_step_three', "", time() - 3600, "/");
+	setcookie('wl_step_four', "", time() - 3600, "/");
+	setcookie('wl_step_five', "", time() - 3600, "/");
+	setcookie('wl_notes', "", time() - 3600, "/");
+
+	setcookie('simplefavorites', "", time() - 3600, "/");
+
+   	echo "<br>Cookies cleared & Action Plan deleted" ;
+
+}
+
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
@@ -197,6 +216,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 					<textarea name="wl_notes" id="wl_notes"><?php echo $wl_notes;?></textarea>
 
 					<input type="submit" name="submit" value="Create your Action Plan" />
+					<input type="submit" name="clear" value="Clear" />
 
 				</form>
 
