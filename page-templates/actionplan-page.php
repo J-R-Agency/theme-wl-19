@@ -252,7 +252,8 @@ $wl_include = $wl_shortlist ;
 echo $wl_include ; 
 
 $args = array(
-    'include' => $wl_include 
+    'post_type' => 'activities',
+    'include' => $wl_include
 );
 
 var_dump($args);
