@@ -251,7 +251,8 @@ if(!isset($_COOKIE[$cookie_name])) {
 						  while($shortlist_posts->have_posts()) : 
 						     $shortlist_posts->the_post();
 
-						     // echo "<h3><a href=\"" . the_permalink() . "\" rel=\"bookmark\">" . the_title() . "</a></h3>";
+						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
+
 						     echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
 							endwhile;
@@ -262,7 +263,7 @@ if(!isset($_COOKIE[$cookie_name])) {
 						wp_reset_postdata();
 
 					}
-						the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
+						// the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
 
 
