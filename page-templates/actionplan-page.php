@@ -258,8 +258,8 @@ $args = array(
 );
 
 $args = array(
-    'post_type' => 'activities',
-    'include' => array ( 19411, 19412 ) ,
+    'post_type' => 'any',
+    'post__in' => array ( 19411, 19412 ) ,
 );
 						
 echo "<pre>
