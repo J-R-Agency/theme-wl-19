@@ -350,6 +350,11 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 					echo "<h2>Key Activities</h2>" ;
 
+					$msg_no_activities = "
+							<h3>Oops, you have no activities yet</h3>
+							<p>You can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
+					";
+
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
@@ -357,6 +362,13 @@ if(!isset($_COOKIE["wl_goal"])) {
 					// Set
 						$wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
 						$wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
+						if ( empty( $wl_shortlist ) ) {
+
+							echo $msg_no_activities ;
+
+						} else {
+
 
 						$args = array(
 						    'post_type' => 'activities',
@@ -376,13 +388,15 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 							endwhile;
 						else: 
-							echo "
-							<h3>Oops, you have no activities yet</h3>
-							<p>You can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
-							";
+
+							echo $msg_no_activities ;
+
 						endif;
 
 						wp_reset_postdata();
+
+						}
+
 
 					}
 						// the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
