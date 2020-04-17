@@ -246,11 +246,11 @@
 		text-align: center;
 		@include respond-to('md'){
 			flex-basis: 48%;
-			text-align: left;
+	 		text-align: center;
 	    }
 		@include respond-to('lg'){
 			flex-basis: 48%;
-			text-align: left;
+			text-align: center;
 	    }
 	    &:last-child{
 	    	margin: 0;
