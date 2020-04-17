@@ -13,6 +13,12 @@ defined( 'ABSPATH' ) || exit;
 
 $theme_path = get_template_directory_uri();
 
+$steps_separator = "
+<!-- Separator -->
+<div class=\"wl_banner_next\">
+	<img src=\"" . $theme_path . "/assets/images/icon-down-arrow.png\"  alt=\"Next\" height=\"70\" width=\"70\">
+</div>" ;
+
 if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
@@ -215,13 +221,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 ?>
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-<!-- Separator -->
-<div class="wl_banner_next">
-	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
-		alt="Next"
-		height="70"
-		width="70">
-</div>
+<?php echo $steps_separator ; ?>
 
 <!-- Action Plan Advice -->
 
@@ -310,13 +310,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 </div>
 
-<!-- Separator -->
-<div class="wl_banner_next">
-	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
-		alt="Next"
-		height="70"
-		width="70">
-</div>
+<?php echo $steps_separator ; ?>
 
 <?php
 } else {
