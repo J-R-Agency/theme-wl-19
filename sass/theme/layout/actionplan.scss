@@ -333,6 +333,14 @@
 	margin: 1rem 0;
 }
 
+input, textarea {
+
+	border: 1px solid $grey;
+	border-radius: 3px;
+	padding: 0.25rem 0.5rem;
+
+}
+
 /* Styling for plugin */
 
 .wl_steps_list{
