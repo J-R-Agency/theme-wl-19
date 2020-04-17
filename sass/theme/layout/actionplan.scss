@@ -451,17 +451,17 @@
 	.frm_share_actionplan__col{
 		flex-basis: 100%;
 		// margin: 0 1rem 0 0;
-		margin-right: 0rem;
+		margin: 0 0 1rem 0;
 	    &:last-child{
 	    	margin: 0;
 	    }
 		@include respond-to('md'){
 			flex-basis: 47%;
-			margin-right: 2rem;
+			margin: 0 2rem 0 0;
 	    }
 		@include respond-to('lg'){
 			flex-basis: 47%;
-			margin-right: 2rem;
+			margin: 0 2rem 0 0;
 	    }
 
 	}	
