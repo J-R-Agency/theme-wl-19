@@ -455,6 +455,17 @@
 		margin-top: 1rem;
 	}
 
+	input[name="share"]{
+
+		background-color: $purple;
+		border-radius: $corner-rad;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	
+	}
+
 }
 
 /* Styling for plugin */
