@@ -370,7 +370,7 @@
 	}
 
 	.wl_actions_share__frm{
-		background-color: $purple;
+		background-color: rgba($purple, .3);
 		flex-basis: 100%;
 		padding: 1rem 2rem;
 		text-align: center;
@@ -459,6 +459,7 @@
 
 		background-color: $purple;
 		border-radius: $corner-rad;
+		border: 0px solid $purple;
 		width: 100%;
 		margin: 1rem 0;
 		padding: 0.5rem 1rem;
