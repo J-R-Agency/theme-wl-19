@@ -13,9 +13,12 @@ defined( 'ABSPATH' ) || exit;
 
 // Set up Action Plan variables
 echo "HELLO";
-$include_path = get_template_directory_uri() . '/global-templates/actionplan-variables.php' ; 
+$include_path = get_theme_file_path( '/global-templates/actionplan-variables.php' );
 echo " $include_path " ;
-include get_template_directory_uri() . '/global-templates/actionplan-variables.php' ; 
+include get_theme_file_path( '/global-templates/actionplan-variables.php' );
+
+//include get_template_directory_uri() . '/global-templates/actionplan-variables.php' ; 
+
 echo "HELLO";
 
 
