@@ -463,8 +463,8 @@ if ( $flg_action_plan ) {
 					width="70">
 			</div>
 			<div class="wl_actions_email__info">
-				Email
-				INFO
+					<label class="visually-hidden" for="wl_actionplan_actions__email">Step 1:</label>
+					<input class="wl_actionplan_actions__email" type="text" name="wl_actionplan_actions__email" id="wl_actionplan_actions__email" value="<?php echo $wl_actionplan_actions__email;?>" placeholder="you@youremail.com">
 			</div>
 			<div class="wl_actions_email__btn wl_action_btn">
 				<a href="#">Email your Action Plan</a>
@@ -478,8 +478,7 @@ if ( $flg_action_plan ) {
 					width="70">
 			</div>
 			<div class="wl_actions_print__info">
-				Print
-				INFO
+				Pin your Action Plan somewhere visible so you can track your progress
 			</div>
 			<div class="wl_actions_print__btn wl_action_btn">
 				<a href="#">Print your Action Plan</a>
