@@ -1,6 +1,5 @@
 <?php
 
-$theme_path = get_template_directory_uri();
 
 $steps_separator = "
 <!-- Separator -->
