@@ -20,6 +20,18 @@ if($_POST['email']) {
             echo " Not sent to $to "; 
         }
 
+
+$inipath = php_ini_loaded_file();
+
+if ($inipath) {
+    echo 'Loaded php.ini: ' . $inipath;
+} else {
+    echo 'A php.ini file is not loaded';
+}
+
+
+
+
     }
 
 	// header('Location: /action-plan/');
