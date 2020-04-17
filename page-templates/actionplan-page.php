@@ -520,7 +520,7 @@ if ( $flg_action_plan ) {
 			</div>
 		</div>
 	</div>
-</div>s
+</div>
 	<?php
 
 
