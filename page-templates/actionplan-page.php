@@ -456,6 +456,7 @@ if ( $flg_action_plan ) {
 <div class="wl_actions__container">
 	<div class="wl_actions__row wl_actions_columns">
 		<div class="wl_actions_columns__item wl_actions_email__container">
+			<form name="frm_email_actionplan" id="frm_email_actionplan" class="frm_email_actionplan" action="" method="POST">
 			<div class="wl_actions_email__img wl_action_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-mail.png"
 					alt="Email your Action Plan"
@@ -467,8 +468,10 @@ if ( $flg_action_plan ) {
 					<input class="wl_actionplan_actions__email" type="text" name="wl_actionplan_actions__email" id="wl_actionplan_actions__email" value="<?php echo $wl_actionplan_actions__email;?>" placeholder="you@youremail.com">
 			</div>
 			<div class="wl_actions_email__btn wl_action_btn">
-				<a href="#">Email your Action Plan</a>
+				<!--a href="#">Email your Action Plan</a-->
+				<input type="submit" name="email" value="Email your Action Plan" />
 			</div>
+			</form>
 		</div>
 		<div class="wl_actions_columns__item wl_actions_print__container">
 			<div class="wl_actions_print__img wl_action_icon">
