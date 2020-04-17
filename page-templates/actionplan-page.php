@@ -18,7 +18,11 @@ include get_theme_file_path( '/global-templates/actionplan-variables.php' );
 // Process posted action plan variables and set cookies
 include get_theme_file_path( '/global-templates/actionplan-postvariables.php' );
 
-
+if($_POST['submit']) {
+  // we will add the code to process submitted form here
+    // we can also echo some text here if form is submitted
+	echo "IN";
+}
 
 
 
