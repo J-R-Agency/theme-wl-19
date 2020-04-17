@@ -373,6 +373,7 @@
 		background-color: $purple;
 		flex-basis: 100%;
 		margin: 0 1rem 0 0;
+		padding: 1rem 2rem;
 		text-align: center;
 		@include respond-to('md'){
 			flex-basis: 100%;
