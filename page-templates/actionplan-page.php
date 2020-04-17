@@ -358,6 +358,8 @@ if(!isset($_COOKIE["wl_goal"])) {
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
+						echo $msg_no_activities ;
+
 					} else {
 					// Set
 						$wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
