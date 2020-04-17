@@ -15,6 +15,9 @@ defined( 'ABSPATH' ) || exit;
 $include_path = get_theme_file_path( '/global-templates/actionplan-variables.php' );
 include get_theme_file_path( '/global-templates/actionplan-variables.php' );
 
+foreach ($_POST as $key => $value) {
+    echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
+}
 
 
 echo "TEST: " . $_POST['submit'] ;
