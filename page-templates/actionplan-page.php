@@ -491,7 +491,7 @@ if ( $flg_action_plan ) {
 				<h3>Share your goals</h3>
 				<p>It can feel easier to achieve your goals if you have the support of a friend, family member or health professional. If you want to share your Action Plan, please fill in some details below.</p>
 			</div>
-			<div class="wl_actions_share__img">
+			<div class="wl_actions_share__img wl_action_icon">
 				<img src="<?php echo $theme_path; ?>/assets/images/icon-group.png"
 					alt="Share your goals"
 					height="70"
