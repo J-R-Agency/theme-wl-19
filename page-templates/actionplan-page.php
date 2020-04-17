@@ -208,12 +208,12 @@ if(!isset($_COOKIE[$cookie_name])) {
 
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 <?php 
 if(!isset($_COOKIE["wl_goal"])) {
 // Not set
 
 ?>
+					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 <!-- Separator -->
 <div class="wl_banner_next">
