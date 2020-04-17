@@ -456,8 +456,11 @@ if ( $flg_action_plan ) {
 <div class="wl_actions__container">
 	<div class="wl_actions__row wl_actions_columns">
 		<div class="wl_actions_columns__item wl_actions_email__container">
-			<div class="wl_actions_email__img">
-				IMG
+			<div class="wl_actions_email__img wl_action_icon">
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-mail.png"
+					alt="Email your Action Plan"
+					height="70"
+					width="70">
 			</div>
 			<div class="wl_actions_email__info">
 				Email
@@ -468,8 +471,11 @@ if ( $flg_action_plan ) {
 			</div>
 		</div>
 		<div class="wl_actions_columns__item wl_actions_print__container">
-			<div class="wl_actions_print__img">
-				IMG
+			<div class="wl_actions_print__img wl_action_icon">
+				<img src="<?php echo $theme_path; ?>/assets/images/icon-print.png"
+					alt="Print your Action Plan"
+					height="70"
+					width="70">
 			</div>
 			<div class="wl_actions_print__info">
 				Print

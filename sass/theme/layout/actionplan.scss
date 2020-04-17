@@ -164,7 +164,7 @@
 }
 
 
-.wl_advice_icon{
+.wl_advice_icon, .wl_action_icon{
 	background-color: $grey;
 	border-radius: 50%;
 	width: 100px;
@@ -172,7 +172,7 @@
 	padding: 1.2rem;
 }
 
-.wl_advice_email__img{
+.wl_advice_email__img, .wl_actions_email__img{
 	background-color: $green;
 }
 
@@ -181,7 +181,7 @@
 }
 
 
-.wl_advice_print__img{
+.wl_advice_print__img, .wl_actions_print__img{
 	background-color: $orange;
 }
 
