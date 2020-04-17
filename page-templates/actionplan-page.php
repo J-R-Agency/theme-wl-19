@@ -350,7 +350,14 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 					echo "<h2>Key Activities</h2>" ;
 
-					$msg_no_activities = "
+					// Action Plan but no activities yet
+					$msg_no_activities_a = "
+							<h3>Oops, you have no activities yet</h3>
+							<p>You can <a href=\"/types-of-activity/\">view types of activity</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
+					";
+
+					// No Action Plan or activities
+					$msg_no_activities_b = "
 							<h3>Oops, you have no activities yet</h3>
 							<p>You can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
 					";
@@ -358,7 +365,11 @@ if(!isset($_COOKIE["wl_goal"])) {
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
-						echo $msg_no_activities ;
+						if ( !isset($_COOKIE['wl_goal']) ) {
+							echo $msg_no_activities_b ;
+						} else {
+							echo $msg_no_activities_a ;
+						}
 
 					} else {
 					// Set
@@ -367,7 +378,11 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 						if ( empty( $wl_shortlist ) ) {
 
-							echo $msg_no_activities ;
+							if ( !isset($_COOKIE['wl_goal']) ) {
+								echo $msg_no_activities_b ;
+							} else {
+								echo $msg_no_activities_a ;
+							}
 
 						} else {
 
@@ -391,8 +406,12 @@ if(!isset($_COOKIE["wl_goal"])) {
 							endwhile;
 						else: 
 
-							echo $msg_no_activities ;
-
+							if ( !isset($_COOKIE['wl_goal']) ) {
+								echo $msg_no_activities_b ;
+							} else {
+								echo $msg_no_activities_a ;
+							}
+							
 						endif;
 
 						wp_reset_postdata();
