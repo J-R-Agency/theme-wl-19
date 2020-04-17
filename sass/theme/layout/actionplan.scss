@@ -433,10 +433,10 @@
 	    	margin: 0;
 	    }
 		@include respond-to('md'){
-			flex-basis: 50%;
+			flex-basis: 47%;
 	    }
 		@include respond-to('lg'){
-			flex-basis: 50%;
+			flex-basis: 47%;
 	    }
 
 	}	
