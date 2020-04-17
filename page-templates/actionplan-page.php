@@ -22,6 +22,8 @@ if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
 	echo "IN";
+} else {
+	echo "ELSE";
 }
 
 
