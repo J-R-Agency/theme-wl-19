@@ -325,7 +325,11 @@
 .wl_actions_email__container{
 	background-color: rgba($green, .3);
 	padding: 1rem;
-
+	
+	.wl_actionplan_actions__email {
+		width: 100%;
+	}
+	
 	input[name="email"]{
 
 		background-color: $green;
