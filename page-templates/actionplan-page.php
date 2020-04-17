@@ -21,6 +21,10 @@ include get_theme_file_path( '/global-templates/actionplan-postvariables.php' );
 // Clear action plan variables and expire cookies
 include get_theme_file_path( '/global-templates/actionplan-clear.php' );
 
+
+// Process email form variables and send email
+include get_theme_file_path( '/global-templates/actionplan-email.php' );
+
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
