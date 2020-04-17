@@ -244,6 +244,7 @@
 		flex-basis: 100%;
 		margin: 0 1rem 0 0;
 		text-align: center;
+		border-radius: $corner-rad;
 		@include respond-to('md'){
 			flex-basis: 48%;
 	 		text-align: center;
