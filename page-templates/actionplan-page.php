@@ -424,11 +424,21 @@ if(!isset($_COOKIE["wl_goal"])) {
 						// the_user_favorites_list($user_id, $site_id, $include_links = true, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
 					?>
 
+<?php
+// Set button text
+
+if ( !isset($_COOKIE['wl_goal']) ) {
+	$msg_btn_action_plan = "Create" ;
+} else {
+	$msg_btn_action_plan = "Update" ;
+}
+
+?>
 
 					<label for="wl_notes">Notes:</label>
 					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo $wl_notes;?></textarea>
 
-					<input type="submit" name="submit" value="Create your Action Plan" />
+					<input type="submit" name="submit" value="<?php echo $msg_btn_action_plan ;?> your Action Plan" />
 					<input type="submit" name="clear" value="Clear" />
 
 				</form>
