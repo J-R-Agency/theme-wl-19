@@ -500,7 +500,30 @@ if ( $flg_action_plan ) {
 				</div>
 			</div>
 			<div class="wl_actions_share__frm">
-				FORM
+				<form name="frm_share_actionplan" id="frm_share_actionplan" class="frm_share_actionplan" action="" method="POST">
+					<label for="wl_goal"><h2>Goal</h2></label>
+					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal for your wellbeing">
+					<div class="frm_share_actionplan__row">
+						<div class="frm_share_actionplan__col">
+							YOUR NAME
+						</div>
+						<div class="frm_share_actionplan__col">
+							YOUR EMAIL
+						</div>
+					</div>
+					<div class="frm_share_actionplan__row">
+						ADVICE
+					</div>
+					<div class="frm_share_actionplan__row">
+						<div class="frm_share_actionplan__col">
+							THEIR NAME
+						</div>
+						<div class="frm_share_actionplan__col">
+							THEIR EMAIL
+						</div>
+					</div>
+				</form>
+
 			</div>
 		</div>
 	</div>
