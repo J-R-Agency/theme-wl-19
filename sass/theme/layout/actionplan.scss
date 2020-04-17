@@ -358,6 +358,7 @@
 	.wl_actions_share__img{
 		flex-basis: 100%;
 		text-align: center;
+		margin-top: 2rem;
 		@include respond-to('md'){
 			flex-basis: 20%;
 			text-align: left;
