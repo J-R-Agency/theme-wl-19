@@ -215,6 +215,14 @@ $theme_path = get_template_directory_uri();
 
 ?>
 
+<!-- Separator -->
+<div class="wl_banner_next">
+	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
+		alt="Privacy"
+		height="70"
+		width="70">
+</div>
+
 <!-- Action Plan Advice -->
 
 <div class="wl_advice_privacy__container">
@@ -308,6 +316,14 @@ $theme_path = get_template_directory_uri();
    
 }
 ?>
+
+<!-- Separator -->
+<div class="wl_banner_next">
+	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
+		alt="Privacy"
+		height="70"
+		width="70">
+</div>
 
 				<!-- action plan form -->
 				<div id="wl_actionplan" class="wl_actionplan">
