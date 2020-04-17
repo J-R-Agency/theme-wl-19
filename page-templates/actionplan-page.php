@@ -452,11 +452,11 @@ if ( $flg_action_plan ) {
 
 	// Begin HTML
 	?>
-
+<h2>What to do next</h2>
 <div class="wl_actions__container">
 	<div class="wl_actions__row">
 		Email/Print
-		
+
 	</div>
 	<div class="wl_actions__row">
 		Share
