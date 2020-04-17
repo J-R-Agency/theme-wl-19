@@ -516,7 +516,8 @@ if ( $flg_action_plan ) {
 			</div>
 			<div class="wl_actions_help__info">
 				<h3>We are here to help!</h3>
-				<p>If you would like a guiding hand to help you create an Action Plan, please fill in the form below and help you on your way to getting what you want out of life.</p>
+				<p>If you would like a hand setting up your Action Plan we can help. The best way to do this is a referral through your GP.</p>
+				<p>If you are having any other issues, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
 			</div>
 		</div>
 	</div>
