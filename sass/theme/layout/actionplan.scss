@@ -256,6 +256,10 @@
 
 .wl_actions_print__btn a {
 	background-color: $orange;
+
+	&:hover{
+		color: $light;
+	}
 }
 
 .wl_actions_columns{
