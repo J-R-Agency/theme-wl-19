@@ -235,6 +235,29 @@
 	margin: 0 auto;
 }
 
+.wl_action_btn {
+
+	a{
+		display: block;
+		text-align: center;
+		background-color: $grey;
+		border-radius: $corner-rad;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	}
+
+}
+
+.wl_actions_email__btn{
+	background-color: $green;
+}
+
+.wl_actions_print__btn{
+	background-color: $orange;
+}
+
 .wl_actions_columns{
 
 	display: flex;

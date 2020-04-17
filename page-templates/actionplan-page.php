@@ -466,8 +466,8 @@ if ( $flg_action_plan ) {
 				Email
 				INFO
 			</div>
-			<div class="wl_actions_email__btn">
-				BTN
+			<div class="wl_actions_email__btn wl_action_btn">
+				<a href="#">Email your Action Plan</a>
 			</div>
 		</div>
 		<div class="wl_actions_columns__item wl_actions_print__container">
@@ -481,8 +481,8 @@ if ( $flg_action_plan ) {
 				Print
 				INFO
 			</div>
-			<div class="wl_actions_print__btn">
-				BTN
+			<div class="wl_actions_print__btn wl_action_btn">
+				<a href="#">Print your Action Plan</a>
 			</div>
 		</div>
 	</div>
