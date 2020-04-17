@@ -326,7 +326,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 					
 					<h1>Action Plan</h1>
 					<label for="wl_goal"><h2>Goal</h2></label>
-					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal">
+					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal for your wellbeing">
 
 					<h2>Key steps</h2>
 					<label class="visually-hidden" for="wl_step_one">Step 1:</label>
