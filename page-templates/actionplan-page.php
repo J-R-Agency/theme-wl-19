@@ -524,6 +524,9 @@ if ( $flg_action_plan ) {
 							<input type="text" name="frm_share_actionplan__their_email" id="frm_share_actionplan__their_email" value="<?php echo $frm_share_actionplan__their_email;?>">
 						</div>
 					</div>
+					<div class="frm_share_actionplan__row">
+						<input type="submit" name="share" value="Share your Action Plan" />
+					</div>
 				</form>
 
 			</div>
