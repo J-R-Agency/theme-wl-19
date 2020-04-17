@@ -11,6 +11,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$theme_path = get_template_directory_uri();
+
 if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
@@ -211,14 +213,12 @@ if(!isset($_COOKIE[$cookie_name])) {
 if(!isset($_COOKIE["wl_goal"])) {
 // Not set
 
-$theme_path = get_template_directory_uri();
-
 ?>
 
 <!-- Separator -->
 <div class="wl_banner_next">
 	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
-		alt="Privacy"
+		alt="Next"
 		height="70"
 		width="70">
 </div>
@@ -320,7 +320,7 @@ $theme_path = get_template_directory_uri();
 <!-- Separator -->
 <div class="wl_banner_next">
 	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
-		alt="Privacy"
+		alt="Next"
 		height="70"
 		width="70">
 </div>
