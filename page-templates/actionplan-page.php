@@ -14,6 +14,7 @@ defined( 'ABSPATH' ) || exit;
 // Set up Action Plan variables
 echo "HELLO";
 include get_template_directory_uri() . 'global-templates/actionplan-variables.php' ; 
+echo "HELLO";
 
 
 if($_POST['submit']) {
