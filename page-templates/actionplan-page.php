@@ -481,7 +481,7 @@ if ( $flg_action_plan ) {
 				Pin your Action Plan somewhere visible so you can track your progress
 			</div>
 			<div class="wl_actions_print__btn wl_action_btn">
-				<a href="#" onclick="window.print();return false;">Print your Action Plan</a>
+				<a onclick="window.print();return false;">Print your Action Plan</a>
 			</div>
 		</div>
 	</div>
