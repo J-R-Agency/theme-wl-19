@@ -252,6 +252,9 @@
 			flex-basis: 45%;
 			text-align: left;
 	    }
+	    &:last-child{
+	    	margin: 0;
+	    }
 	}
 
 }
