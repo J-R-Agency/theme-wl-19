@@ -428,21 +428,22 @@
 	.frm_share_actionplan__col{
 		flex-basis: 100%;
 		// margin: 0 1rem 0 0;
+		margin-right: 2rem;
+	    &:last-child{
+	    	margin: 0;
+	    }
 		@include respond-to('md'){
 			flex-basis: 50%;
 	    }
 		@include respond-to('lg'){
 			flex-basis: 50%;
 	    }
+
 	}	
 
 	label, input[type="text"]{
 		display: block;
 		width: 100%;
-		margin-left: 2rem;
-	    &:last-child{
-	    	margin: 0;
-	    }
 	}
 
 	p{
