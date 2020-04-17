@@ -492,7 +492,7 @@ if ( $flg_action_plan ) {
 				<p>It can feel easier to achieve your goals if you have the support of a friend, family member or health professional. If you want to share your Action Plan, please fill in some details below.</p>
 			</div>
 			<div class="wl_actions_share__img">
-				<div class="wl_actions__img_container wl_action_icon">
+				<div class="wl_actions_share__img_container wl_action_icon">
 					<img src="<?php echo $theme_path; ?>/assets/images/icon-group.png"
 						alt="Share your goals"
 						height="70"
@@ -506,10 +506,21 @@ if ( $flg_action_plan ) {
 	</div>
 	<div class="wl_actions__row wl_actions_full">
 		<div class="wl_actions_full__item">
-			Help
+			<div class="wl_actions_help__img">
+				<div class="wl_actions_help__img_container wl_action_icon">
+					<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png"
+						alt="We are here to help"
+						height="70"
+						width="70">
+				</div>
+			</div>
+			<div class="wl_actions_help__info">
+				<h3>We are here to help!</h3>
+				<p>If you would like a guiding hand to help you create an Action Plan, please fill in the form below and help you on your way to getting what you want out of life.</p>
+			</div>
 		</div>
 	</div>
-</div>
+</div>s
 	<?php
 
 
