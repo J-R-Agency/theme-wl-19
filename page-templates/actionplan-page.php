@@ -455,11 +455,29 @@ if ( $flg_action_plan ) {
 <h2>What to do next</h2>
 <div class="wl_actions__container">
 	<div class="wl_actions__row wl_actions_columns">
-		<div class="wl_actions_columns__item">
-			Email
+		<div class="wl_actions_columns__item wl_actions_email__container">
+			<div class="wl_actions_email__img">
+				IMG
+			</div>
+			<div class="wl_actions_email__info">
+				Email
+				INFO
+			</div>
+			<div class="wl_actions_email__btn">
+				BTN
+			</div>
 		</div>
-		<div class="wl_actions_columns__item">
-			Print
+		<div class="wl_actions_columns__item wl_actions_print__container">
+			<div class="wl_actions_print__img">
+				IMG
+			</div>
+			<div class="wl_actions_print__info">
+				Print
+				INFO
+			</div>
+			<div class="wl_actions_print__btn">
+				BTN
+			</div>
 		</div>
 	</div>
 	<div class="wl_actions__row wl_actions_full">
