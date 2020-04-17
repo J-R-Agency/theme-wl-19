@@ -15,7 +15,9 @@ if($_POST['email']) {
         $headers = array('Content-Type: text/html; charset=UTF-8');
 
         if ( wp_mail( $to, $subject, $body, $headers ) ) {
-            echo "Sent to $to "; 
+            echo " Sent to $to "; 
+        } else {
+            echo " Not sent to $to "; 
         }
 
     }
