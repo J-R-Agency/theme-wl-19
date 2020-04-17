@@ -233,5 +233,18 @@
 	padding-left: 1rem;
 }
 
+.wl_btn_action_plan{
+	margin-bottom: 1rem;
 
+	a{
+		display: block;
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
+		border: 0px solid $dark-blue;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	}
+}
 
