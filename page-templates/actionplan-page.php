@@ -454,15 +454,23 @@ if ( $flg_action_plan ) {
 	?>
 <h2>What to do next</h2>
 <div class="wl_actions__container">
-	<div class="wl_actions__row">
-		Email/Print
-
+	<div class="wl_actions__row wl_actions_columns">
+		<div class="wl_actions_columns__item">
+			Email
+		</div>
+		<div class="wl_actions_columns__item">
+			Print
+		</div>
 	</div>
-	<div class="wl_actions__row">
-		Share
+	<div class="wl_actions__row wl_actions_full">
+		<div class="wl_actions_full__item">
+			Share
+		</div>
 	</div>
-	<div class="wl_actions__row">
-		Help
+	<div class="wl_actions__row wl_actions_full">
+		<div class="wl_actions_full__item">
+			Help
+		</div>
 	</div>
 </div>
 	<?php
