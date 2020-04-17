@@ -520,7 +520,8 @@ if ( $flg_action_plan ) {
 							<input type="text" name="frm_share_actionplan__their_name" id="frm_share_actionplan__their_name" value="<?php echo $frm_share_actionplan__their_name;?>">
 						</div>
 						<div class="frm_share_actionplan__col">
-							THEIR EMAIL
+							<label for="frm_share_actionplan__their_email">Your email</label>
+							<input type="text" name="frm_share_actionplan__their_email" id="frm_share_actionplan__their_email" value="<?php echo $frm_share_actionplan__their_email;?>">
 						</div>
 					</div>
 				</form>
