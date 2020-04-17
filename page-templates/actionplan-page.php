@@ -310,13 +310,6 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 </div>
 
-<?php
-} else {
-// Set
-   
-}
-?>
-
 <!-- Separator -->
 <div class="wl_banner_next">
 	<img src="<?php echo $theme_path; ?>/assets/images/icon-down-arrow.png"
@@ -324,6 +317,14 @@ if(!isset($_COOKIE["wl_goal"])) {
 		height="70"
 		width="70">
 </div>
+
+<?php
+} else {
+// Set
+   
+}
+?>
+
 
 				<!-- action plan form -->
 				<div id="wl_actionplan" class="wl_actionplan">
@@ -411,7 +412,7 @@ if(!isset($_COOKIE["wl_goal"])) {
 							} else {
 								echo $msg_no_activities_a ;
 							}
-							
+
 						endif;
 
 						wp_reset_postdata();
