@@ -501,26 +501,29 @@ if ( $flg_action_plan ) {
 			</div>
 			<div class="wl_actions_share__frm">
 				<form name="frm_share_actionplan" id="frm_share_actionplan" class="frm_share_actionplan" action="" method="POST">
-					<label for="wl_goal"><h2>Goal</h2></label>
-					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo $wl_goal;?>" placeholder="Describe your main goal for your wellbeing">
 					<div class="frm_share_actionplan__row">
 						<div class="frm_share_actionplan__col">
-							YOUR NAME
+							<label for="frm_share_actionplan__your_name">Your name</label>
+							<input type="text" name="frm_share_actionplan__your_name" id="frm_share_actionplan__your_name" value="<?php echo $frm_share_actionplan__your_name;?>">
 						</div>
 						<div class="frm_share_actionplan__col">
-							YOUR EMAIL
+							<label for="frm_share_actionplan__your_email">Your email</label>
+							<input type="text" name="frm_share_actionplan__your_email" id="frm_share_actionplan__your_email" value="<?php echo $frm_share_actionplan__your_email;?>">
 						</div>
 					</div>
 					<div class="frm_share_actionplan__row">
-						ADVICE
+						<p>Please enter the name and email address for the person you would like to share your Action Plan with.</p>
 					</div>
 					<div class="frm_share_actionplan__row">
 						<div class="frm_share_actionplan__col">
-							THEIR NAME
+							<label for="frm_share_actionplan__their_name">Your name</label>
+							<input type="text" name="frm_share_actionplan__their_name" id="frm_share_actionplan__their_name" value="<?php echo $frm_share_actionplan__their_name;?>">
 						</div>
 						<div class="frm_share_actionplan__col">
-							THEIR EMAIL
+							<label for="frm_share_actionplan__their_email">Your email</label>
+							<input type="text" name="frm_share_actionplan__their_email" id="frm_share_actionplan__their_email" value="<?php echo $frm_share_actionplan__their_email;?>">
 						</div>
+					</div>
 					</div>
 				</form>
 
