@@ -416,6 +416,27 @@
 
 }
 
+
+.frm_share_actionplan__row{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	.frm_share_actionplan__col{
+		flex-basis: 100%;
+		// margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 50%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 50%;
+	    }
+	}	
+
+}
+
 /* Styling for plugin */
 
 .wl_steps_list{
