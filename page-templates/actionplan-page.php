@@ -501,11 +501,10 @@ if ( $flg_action_plan ) {
 			</div>
 			<div class="wl_actions_share__frm">
 				<form name="frm_share_actionplan" id="frm_share_actionplan" class="frm_share_actionplan" action="" method="POST">
-					<label for="frm_share_actionplan__your_name">Your name</label>
-					<input type="text" name="frm_share_actionplan__your_name" id="frm_share_actionplan__your_name" value="<?php echo $frm_share_actionplan__your_name;?>">
 					<div class="frm_share_actionplan__row">
 						<div class="frm_share_actionplan__col">
-							YOUR NAME
+							<label for="frm_share_actionplan__your_name">Your name</label>
+							<input type="text" name="frm_share_actionplan__your_name" id="frm_share_actionplan__your_name" value="<?php echo $frm_share_actionplan__your_name;?>">
 						</div>
 						<div class="frm_share_actionplan__col">
 							YOUR EMAIL
