@@ -423,8 +423,10 @@ if(!isset($_COOKIE["wl_goal"])) {
 
 if ( !isset($_COOKIE['wl_goal']) ) {
 	$msg_btn_action_plan = "Create" ;
+	$flg_action_plan = 0 ;
 } else {
 	$msg_btn_action_plan = "Update" ;
+	$flg_action_plan = 1 ;
 }
 
 ?>
@@ -438,6 +440,40 @@ if ( !isset($_COOKIE['wl_goal']) ) {
 				</form>
 				</div>
 				<?php endwhile; // end of the loop. ?>
+
+<?php
+// Show sharing and next steps
+
+if ( $flg_action_plan ) {
+
+	// Display next steps (sharing, print, etc.)
+
+	echo $steps_separator ;
+
+	// Begin HTML
+	?>
+
+<div class="wl_actions__container">
+	<div class="wl_actions__row">
+		Email/Print
+		
+	</div>
+	<div class="wl_actions__row">
+		Share
+	</div>
+	<div class="wl_actions__row">
+		Help
+	</div>
+</div>
+	<?php
+
+
+}
+
+
+?>
+
+
 
 			</main><!-- #main -->
 
