@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set up Action Plan variables
-get_template_part( 'global-templates/actionplan-variables' ); 
+include( 'global-templates/actionplan-variables.php' ); 
 
 
 if($_POST['submit']) {
