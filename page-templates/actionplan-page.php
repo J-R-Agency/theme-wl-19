@@ -11,13 +11,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$theme_path = get_template_directory_uri();
+// Set up Action Plan variables
+get_template_part( 'global-templates/actionplan-variables' ); 
 
-$steps_separator = "
-<!-- Separator -->
-<div class=\"wl_banner_next\">
-	<img src=\"" . $theme_path . "/assets/images/icon-down-arrow.png\"  alt=\"Next\" height=\"70\" width=\"70\">
-</div>" ;
 
 if($_POST['submit']) {
   // we will add the code to process submitted form here
