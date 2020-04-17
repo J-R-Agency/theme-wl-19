@@ -487,7 +487,16 @@ if ( $flg_action_plan ) {
 	</div>
 	<div class="wl_actions__row wl_actions_full">
 		<div class="wl_actions_full__item">
-			Share
+			<div class="wl_actions_share__info">
+				<h3>Share your goals</h3>
+				<p>It can feel easier to achieve your goals if you have the support of a friend, family member or health professional. If you want to share your Action Plan, please fill in some details below.</p>
+			</div>
+			<div class="wl_actions_share__img">
+				IMG
+			</div>
+			<div class="wl_actions_share__frm">
+				FORM
+			</div>
 		</div>
 	</div>
 	<div class="wl_actions__row wl_actions_full">
