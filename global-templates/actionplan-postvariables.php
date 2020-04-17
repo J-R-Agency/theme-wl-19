@@ -1,11 +1,8 @@
 <?php
 
-echo "TEST";
-
 if($_POST['submit']) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
-	echo "IN";
 
     // Goal
     if ( $_POST['wl_goal'] ) {
@@ -88,7 +85,7 @@ if($_POST['submit']) {
 	header('Location: /action-plan/');
 
 } else {
-	echo "ELSE";
+
 }
 
 ?>
