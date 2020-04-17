@@ -503,12 +503,12 @@ if ( $flg_action_plan ) {
 				<form name="frm_share_actionplan" id="frm_share_actionplan" class="frm_share_actionplan" action="" method="POST">
 					<div class="frm_share_actionplan__row">
 						<div class="frm_share_actionplan__col">
-							<label for="frm_share_actionplan__your_name">Your name</label>
-							<input type="text" name="frm_share_actionplan__your_name" id="frm_share_actionplan__your_name" value="<?php echo $frm_share_actionplan__your_name;?>">
+<!-- 							<label for="frm_share_actionplan__your_name">Your name</label>
+							<input type="text" name="frm_share_actionplan__your_name" id="frm_share_actionplan__your_name" value="<?php echo $frm_share_actionplan__your_name;?>"> -->
 						</div>
 						<div class="frm_share_actionplan__col">
-							<label for="frm_share_actionplan__your_email">Your email</label>
-							<input type="text" name="frm_share_actionplan__your_email" id="frm_share_actionplan__your_email" value="<?php echo $frm_share_actionplan__your_email;?>">
+<!-- 							<label for="frm_share_actionplan__your_email">Your email</label>
+							<input type="text" name="frm_share_actionplan__your_email" id="frm_share_actionplan__your_email" value="<?php echo $frm_share_actionplan__your_email;?>"> -->
 						</div>
 					</div>
 					<div class="frm_share_actionplan__row">
@@ -516,12 +516,12 @@ if ( $flg_action_plan ) {
 					</div>
 					<div class="frm_share_actionplan__row">
 						<div class="frm_share_actionplan__col">
-							<label for="frm_share_actionplan__their_name">Your name</label>
-							<input type="text" name="frm_share_actionplan__their_name" id="frm_share_actionplan__their_name" value="<?php echo $frm_share_actionplan__their_name;?>">
+<!-- 							<label for="frm_share_actionplan__their_name">Your name</label>
+							<input type="text" name="frm_share_actionplan__their_name" id="frm_share_actionplan__their_name" value="<?php echo $frm_share_actionplan__their_name;?>"> -->
 						</div>
 						<div class="frm_share_actionplan__col">
-							<label for="frm_share_actionplan__their_email">Your email</label>
-							<input type="text" name="frm_share_actionplan__their_email" id="frm_share_actionplan__their_email" value="<?php echo $frm_share_actionplan__their_email;?>">
+<!-- 							<label for="frm_share_actionplan__their_email">Your email</label>
+							<input type="text" name="frm_share_actionplan__their_email" id="frm_share_actionplan__their_email" value="<?php echo $frm_share_actionplan__their_email;?>"> -->
 						</div>
 					</div>
 					</div>
