@@ -357,7 +357,6 @@
 
 	.wl_actions_share__img{
 		flex-basis: 100%;
-		margin: 0 1rem 0 0;
 		text-align: center;
 		@include respond-to('md'){
 			flex-basis: 30%;
@@ -372,7 +371,6 @@
 	.wl_actions_share__frm{
 		background-color: $purple;
 		flex-basis: 100%;
-		margin: 0 1rem 0 0;
 		padding: 1rem 2rem;
 		text-align: center;
 		@include respond-to('md'){
