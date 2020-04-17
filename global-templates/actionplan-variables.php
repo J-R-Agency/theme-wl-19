@@ -9,6 +9,4 @@ $steps_separator = "
 </div>" ;
 
 
-echo "hello";
-
 ?>
