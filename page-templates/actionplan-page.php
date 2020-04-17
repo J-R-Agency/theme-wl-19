@@ -17,7 +17,7 @@ include get_theme_file_path( '/global-templates/actionplan-variables.php' );
 
 
 
-echo "TEST";
+echo "TEST: " . $_POST['submit'] ;
 
 if($_POST['submit']) {
   // we will add the code to process submitted form here
