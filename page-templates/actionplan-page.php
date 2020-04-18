@@ -11,9 +11,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Set up Action Plan variables
+// Set up Action Plan variables & functions
 $include_path = get_theme_file_path( '/global-templates/actionplan-variables.php' );
 include get_theme_file_path( '/global-templates/actionplan-variables.php' );
+include get_theme_file_path( '/global-templates/actionplan-functions.php' );
 
 // Process posted action plan variables and set cookies
 include get_theme_file_path( '/global-templates/actionplan-postvariables.php' );
