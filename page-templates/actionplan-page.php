@@ -22,6 +22,8 @@ include get_theme_file_path( '/global-templates/actionplan-postvariables.php' );
 // Clear action plan variables and expire cookies
 include get_theme_file_path( '/global-templates/actionplan-clear.php' );
 
+// Set 'action plan' body text for use in HTML emails * uses cookies etc. - check data flow
+include get_theme_file_path( '/global-templates/actionplan-htmlemail.php' );
 
 // Process email form variables and send email
 include get_theme_file_path( '/global-templates/actionplan-email.php' );
