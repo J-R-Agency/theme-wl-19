@@ -45,7 +45,8 @@ if($_POST['share']) {
         $wl_error_log["frm_share_actionplan__their_email"] = 1 ;
     }
 
-    if ( wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details ) {
+    $wl_actionplan_checkerrors__return = wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details ) ;
+    if ( $wl_actionplan_checkerrors__return ) {
         // There are errors
         $msg_type = "error" ;
 
@@ -113,3 +114,4 @@ if($_POST['share']) {
     // Do nothing
 }
 
+?>

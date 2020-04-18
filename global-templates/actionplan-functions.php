@@ -61,7 +61,13 @@ function wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details = false ) 
 			}
 		}
 
-		return $wl_flg_errors ;
+		if ( $wl_flg_errors ) {
+			$wl_actionplan_checkerrors__return = 1 ;
+		} else {
+			$wl_actionplan_checkerrors__return = 0 ;
+		}
+
+		return $wl_actionplan_checkerrors__return ;
 	}
 
 }
