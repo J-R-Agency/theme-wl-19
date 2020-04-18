@@ -48,6 +48,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				include get_theme_file_path( '/global-templates/actionplan-cookievariables.php' );
 				?>
 
+				<?php
+				// Display notifications and errors
+				include get_theme_file_path( '/global-templates/actionplan-notifications.php' );
+				?>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php 
 					if(!isset($_COOKIE["wl_goal"])) {
