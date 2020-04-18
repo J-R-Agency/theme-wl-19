@@ -85,12 +85,12 @@ if($_POST['share']) {
 
         if ( wp_mail( $their_email, $subject, $body, $headers ) ) {
 
-            $frm_email_actionplan__outputs[] = " Sent to $to ";
+            $frm_share_actionplan__outputs[] = " Sent to $to ";
             $msg_type = "success";
 
         } else {
 
-            $frm_email_actionplan__outputs[] = " Not sent to $to "; 
+            $frm_share_actionplan__outputs[] = " Not sent to $to "; 
             $msg_type = "error";
             $wl_error_log["wp_mail"] = 1 ;
 
