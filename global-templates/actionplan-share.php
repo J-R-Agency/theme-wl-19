@@ -20,6 +20,7 @@ if($_POST['share']) {
     // Check for errors
     if ( $your_name != "" ) {
         $your_name = trim( htmlspecialchars( $your_name ) ) ;
+        $frm_share_actionplan__outputs[] = "your_name: $your_name";
     } else {
         $frm_share_actionplan__outputs[] = "Please enter your name";
         $wl_error_log["frm_share_actionplan__your_name"] = 1 ;
@@ -27,12 +28,15 @@ if($_POST['share']) {
 
     if ( filter_var( $your_email, FILTER_VALIDATE_EMAIL ) ) {
         // Do nothing
+        $frm_share_actionplan__outputs[] = "your_email: $your_email";
+
     } else {
         $frm_share_actionplan__outputs[] = "Please check your email address";
         $wl_error_log["frm_share_actionplan__your_email"] = 1 ;
     }
     if ( $their_name != "" ) {
         $their_name = trim( htmlspecialchars( $their_name ) ) ;
+        $frm_share_actionplan__outputs[] = "their_name: $their_name";
     } else {
         $frm_share_actionplan__outputs[] = "Please enter the name of the person you want to share your action plan with";
         $wl_error_log["frm_share_actionplan__their_name"] = 1 ;
@@ -40,6 +44,7 @@ if($_POST['share']) {
 
     if ( filter_var( $their_email, FILTER_VALIDATE_EMAIL ) ) {
         // Do nothing
+        $frm_share_actionplan__outputs[] = "their_email: $their_email";
     } else {
         $frm_share_actionplan__outputs[] = "Please check the email address of the person you want to share your action plan with";
         $wl_error_log["frm_share_actionplan__their_email"] = 1 ;
