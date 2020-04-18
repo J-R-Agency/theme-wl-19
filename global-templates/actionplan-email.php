@@ -21,11 +21,14 @@ if ($inipath) {
     if ( $_POST['wl_actionplan_actions__email'] ) {
 
         unset($email);
+        unset($type);
         unset($frm_email_actionplan__outputs);
 
         $email = $_POST['wl_actionplan_actions__email'];
     	
     	$frm_email_actionplan__outputs[] = "The $email exists:  " . $email ;
+
+        $type = "success";
 
         if ( filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 
@@ -38,17 +41,20 @@ if ($inipath) {
 
             if ( wp_mail( $to, $subject, $body, $headers ) ) {
 
-                $frm_email_actionplan__outputs[] = " Sent to $to "; 
-            
+                $frm_email_actionplan__outputs[] = " Sent to $to ";
+                $type = "success";
+
             } else {
             
                 $frm_email_actionplan__outputs[] = " Not sent to $to "; 
-            
+                $type = "error";
+
             }
 
         } else {
 
             $frm_email_actionplan__outputs[] = "$email is not a valid email address";
+            $type = "error";
 
         }
 
@@ -59,7 +65,7 @@ if ($inipath) {
     $wl_actionplan_notifications__parts = $frm_email_actionplan__outputs;
     $wl_actionplan_notifications__style = "list";
     $wl_actionplan_notifications__class = "frm_email_actionplan__outputs";
-    $wl_actionplan_notifications__type = "warning";
+    $wl_actionplan_notifications__type = $type;
 
     $frm_email_actionplan__output = wl_actionplan_notifications ( $wl_actionplan_notifications__heading, $wl_actionplan_notifications__parts, $wl_actionplan_notifications__style, $wl_actionplan_notifications__class, $wl_actionplan_notifications__type ) ;
 
