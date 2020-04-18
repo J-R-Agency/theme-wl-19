@@ -514,25 +514,34 @@
 
 .warning{
 
-	background-color: rgba($orange, .3);
-	border: 2px solid $orange;
+	$warning: $orange;
+	background-color: rgba($warning, .1);
+	border: 2px solid $warning;
 	color: $dark-grey;
+
+	h2{ color: $warning; }
 
 }
 
 .error{
 
-	background-color: rgba($red, .3);
-	border: 2px solid $red;
+	$error: $red;
+	background-color: rgba($error, .1);
+	border: 2px solid $error;
 	color: $dark-grey;
+
+	h2{ color: $error; }
 
 }
 
 .success{
 
-	background-color: rgba($green, .3);
-	border: 2px solid $green;
+	$success: $green;
+	background-color: rgba($success, .1);
+	border: 2px solid $success;
 	color: $dark-grey;
+
+	h2{ color: $success; }
 
 }
 
