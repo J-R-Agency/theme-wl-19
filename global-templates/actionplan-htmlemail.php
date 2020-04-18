@@ -45,7 +45,7 @@ if( $wl_goal != ""){
       while($shortlist_posts->have_posts()) : 
          $shortlist_posts->the_post();
 
-         $display_wl_shortlist .=  "<li><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_permalink() . "</a></li>\r\n";
+         $display_wl_shortlist .=  "<li><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></li>\r\n";
 
         endwhile;
     else: 
