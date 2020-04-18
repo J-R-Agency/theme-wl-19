@@ -9,7 +9,7 @@ if($_POST['submit']) {
     	
     	// echo "<br>The wl_goal exists:  " . $_POST['wl_goal'] ;
 		$cookie_name = "wl_goal";
-		$cookie_value = $_POST['wl_goal'] ;
+		$cookie_value = stripslashes( $_POST['wl_goal'] ) ;
 		setcookie($cookie_name, $cookie_value, time() + apply_filters( 'simplefavorites_cookie_expiration_interval', 31556926 ), "/");
     	// echo "<br>The wl_goal exists:  " . $_COOKIE['wl_goal'] ;
 
