@@ -12,12 +12,14 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set up Action Plan variables & functions
-$include_path = get_theme_file_path( '/global-templates/actionplan-variables.php' );
-include get_theme_file_path( '/global-templates/actionplan-variables.php' );
 include get_theme_file_path( '/global-templates/actionplan-functions.php' );
+include get_theme_file_path( '/global-templates/actionplan-variables.php' );
 
 // Process posted action plan variables and set cookies
 include get_theme_file_path( '/global-templates/actionplan-postvariables.php' );
+
+// Set up page variables from cookies
+include get_theme_file_path( '/global-templates/actionplan-cookievariables.php' );
 
 // Clear action plan variables and expire cookies
 include get_theme_file_path( '/global-templates/actionplan-clear.php' );
@@ -49,11 +51,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
-
-				<?php
-				// Set up page variables from cookies
-				include get_theme_file_path( '/global-templates/actionplan-cookievariables.php' );
-				?>
 
 				<?php
 				// Display notifications and errors
