@@ -51,7 +51,7 @@ if( $wl_goal != ""){
       while($shortlist_posts->have_posts()) : 
          $shortlist_posts->the_post();
 
-         echo "<h3>" . get_the_title()  . " - " get_the_permalink() . "</h3>";
+         echo "<h3>" . get_the_title()  . " - " . get_the_permalink() . "</h3>";
 
         endwhile;
     else: 
