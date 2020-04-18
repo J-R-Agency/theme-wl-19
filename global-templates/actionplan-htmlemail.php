@@ -68,7 +68,6 @@ if( $wl_goal != ""){
 
     wp_reset_postdata();
 
-    }
 
 
 
