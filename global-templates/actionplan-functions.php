@@ -41,4 +41,30 @@ function wl_actionplan_notifications (
 
 }
 
+function wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details = false ) {
+
+	if ( is_array( $wl_error_log ) ){
+
+		if ( $wl_error_details ){
+			// Show error details
+/*
+			foreach ($wl_error_log as $key => $value) {
+				# code...
+			}
+*/
+		} else {
+			// Simple check for ANY errors
+			foreach ($wl_error_log as $wl_errors) {
+				if ( $wl_errors == 1 ){
+					$wl_flg_errors = 1 ;
+				}
+			}
+		}
+
+		return $wl_flg_errors ;
+	}
+
+}
+
+
 ?>
