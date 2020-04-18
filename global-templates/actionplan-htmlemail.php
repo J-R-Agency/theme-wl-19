@@ -2,6 +2,8 @@
 
 if( $wl_goal != ""){
 
+    echo "GOAL: $wl_goal";
+
     // Parse steps and format HTML
 
     unset($wl_steps);
