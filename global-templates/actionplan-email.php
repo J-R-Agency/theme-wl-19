@@ -60,7 +60,7 @@ if ($inipath) {
     $wl_actionplan_notifications__style = "list";
     $wl_actionplan_notifications__class = "frm_email_actionplan__outputs";
 
-    echo wl_actionplan_notifications ( $wl_actionplan_notifications__heading, $wl_actionplan_notifications__parts, $wl_actionplan_notifications__style, $wl_actionplan_notifications__class ) ;
+    $frm_email_actionplan__output = wl_actionplan_notifications ( $wl_actionplan_notifications__heading, $wl_actionplan_notifications__parts, $wl_actionplan_notifications__style, $wl_actionplan_notifications__class ) ;
 
 	// header('Location: /action-plan/');
 
