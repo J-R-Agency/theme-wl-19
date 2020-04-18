@@ -2,8 +2,6 @@
 
 if( $wl_goal != ""){
 
-    echo "GOAL: " . stripslashes( $wl_goal ) ;
-
     // Parse steps and format HTML
 
     unset($wl_steps);
@@ -32,10 +30,6 @@ if( $wl_goal != ""){
     $wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
     $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
 
-    echo "<pre>SHORTLIST";
-    print_r($wl_shortlist);
-    echo "</pre>";
-
 
 // GET WP DATA FROM POST IDs
 
@@ -51,7 +45,7 @@ if( $wl_goal != ""){
       while($shortlist_posts->have_posts()) : 
          $shortlist_posts->the_post();
 
-         echo "<h3>" . get_the_title()  . " - " . get_the_permalink() . "</h3>";
+         $display_wl_shortlist .=  "<li><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_permalink() . "</a></li>\r\n";
 
         endwhile;
     else: 
@@ -66,11 +60,13 @@ if( $wl_goal != ""){
 
     wp_reset_postdata();
 
+    if( $display_wl_shortlist != "" ){
+        $display_wl_shortlist = "<ul>" . $display_wl_shortlist . "</ul>" ;
+    }
 
 
 
-
-        $body = "
+        $body_actionplan = "
 <div>
 <h1>Action Plan</h1>
 <div>$your_name</div>
@@ -83,14 +79,12 @@ $display_wl_steps
 </div>
 <h2>Activities</h2>
 <div>
-<ul>
-<li>Activity 1: ACTIVITY ONE DETAIL</li>
-<li>Activity 2: ACTIVITY TWO DETAIL</li>
-<li>Activity 3: ACTIVITY THREE DETAIL</li>
-</ul>
+$display_wl_shortlist
 </div>
 
         ";
+
+        echo $body_actionplan ;
 
 } else {
 
