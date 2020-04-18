@@ -45,9 +45,10 @@ if($_POST['share']) {
         $wl_error_log["frm_share_actionplan__their_email"] = 1 ;
     }
 
-    if ( wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details = false ) {
+    if ( wl_actionplan_checkerrors ( $wl_error_log, $wl_error_details ) {
         // There are errors
         $msg_type = "error" ;
+
     } else {
         // There are no errors
         $to = $their_email ; //sendto@example.com
