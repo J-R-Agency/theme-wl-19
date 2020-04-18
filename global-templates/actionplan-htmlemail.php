@@ -2,7 +2,7 @@
 
 if( $wl_goal != ""){
 
-    echo "GOAL: $wl_goal";
+    echo "GOAL: " . stripslashes( $wl_goal ) ;
 
     // Parse steps and format HTML
 
