@@ -19,7 +19,7 @@ if($_POST['share']) {
 
     // Check for errors
     if ( $your_name != "" ) {
-        $your_name = trim( htmlspecialchars( $your_name ) ) ;
+        $your_name = trim( htmlspecialchars( stripslashes( $your_name ) ) ;
         $frm_share_actionplan__outputs[] = "your_name: $your_name";
     } else {
         $frm_share_actionplan__outputs[] = "Please enter your name";
@@ -35,7 +35,7 @@ if($_POST['share']) {
         $wl_error_log["frm_share_actionplan__your_email"] = 1 ;
     }
     if ( $their_name != "" ) {
-        $their_name = trim( htmlspecialchars( $their_name ) ) ;
+        $their_name = trim( htmlspecialchars( stripslashes( $their_name ) ) ) ;
         $frm_share_actionplan__outputs[] = "their_name: $their_name";
     } else {
         $frm_share_actionplan__outputs[] = "Please enter the name of the person you want to share your action plan with";
