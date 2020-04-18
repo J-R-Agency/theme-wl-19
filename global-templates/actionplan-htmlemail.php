@@ -81,7 +81,10 @@ $display_wl_steps
 <div>
 $display_wl_shortlist
 </div>
-
+<h2>Notes</h2>
+<div>
+$wl_notes
+</div>
         ";
 
         echo $body_actionplan ;
