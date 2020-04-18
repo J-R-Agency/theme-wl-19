@@ -34,7 +34,7 @@ function wl_actionplan_notifications (
 
 	}
 
-	$output .= "\r\n\</div>";
+	$output .= "\r\n</div>";
 
 	return $output;
 
