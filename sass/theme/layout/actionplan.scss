@@ -498,6 +498,47 @@
 
 }
 
+/* Styling for notifications and errors */
+
+.wl_actionplan_notifications{
+
+	background-color: rgba($grey, .3);
+	border-radius: $corner-rad;
+	border: 2px solid $grey;
+	width: 100%;
+	margin: 2rem 0 0 0;
+	padding: 0.5rem 1rem;
+	color: $dark-grey;
+
+}
+
+.warning{
+
+	background-color: rgba($orange, .3);
+	border: 2px solid $orange;
+	color: $dark-grey;
+
+}
+
+.error{
+
+	background-color: rgba($red, .3);
+	border: 2px solid $red;
+	color: $dark-grey;
+
+}
+
+.success{
+
+	background-color: rgba($green, .3);
+	border: 2px solid $green;
+	color: $dark-grey;
+
+}
+
+
+
+
 /* Styling for plugin */
 
 .wl_steps_list{

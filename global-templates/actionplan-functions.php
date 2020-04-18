@@ -4,12 +4,13 @@ function wl_actionplan_notifications (
 	$wl_actionplan_notifications__heading, 
 	$wl_actionplan_notifications__parts, 
 	$wl_actionplan_notifications__style = "block", 
-	$wl_actionplan_notifications__class = "wl_actionplan_notifications"
+	$wl_actionplan_notifications__class = "wl_actionplan_notifications",
+	$wl_actionplan_notifications__type = "advice"
 ) {
 
 	unset($output);
 
-	$output = "<div class=\"$wl_actionplan_notifications__class\">\r\n";
+	$output = "<div class=\"$wl_actionplan_notifications__class $wl_actionplan_notifications__type\">\r\n";
 
 	if ( $wl_actionplan_notifications__heading != "" ){
 		$output .= "<h2>$wl_actionplan_notifications__heading</h2>\r\n";
