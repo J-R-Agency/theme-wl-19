@@ -37,6 +37,42 @@ if( $wl_goal != ""){
     echo "</pre>";
 
 
+// GET WP DATA FROM POST IDs
+
+    $args = array(
+        'post_type' => 'activities',
+        'post__in' => $wl_shortlist ,
+    );
+                            
+
+    $shortlist_posts = new WP_Query($args);
+
+    if($shortlist_posts->have_posts()) : 
+      while($shortlist_posts->have_posts()) : 
+         $shortlist_posts->the_post();
+
+         // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
+
+         echo "<h3>" . get_the_title()  . "</h3>";
+
+        endwhile;
+    else: 
+
+        if ( !isset($_COOKIE['wl_goal']) ) {
+            echo $msg_no_activities_b ;
+        } else {
+            echo $msg_no_activities_a ;
+        }
+
+    endif;
+
+    wp_reset_postdata();
+
+    }
+
+
+
+
         $body = "
 <div>
 <h1>Action Plan</h1>
