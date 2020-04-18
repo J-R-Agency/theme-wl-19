@@ -22,7 +22,7 @@ if( $wl_goal != ""){
         $wl_steps[] = $wl_step_five;
     }
 
-    $display_wl_steps = "<ul>\r\n<li>" . implode("</li>\r\n<li>", $wl_actionplan_notifications__parts ) . "</li>\r\n</ul>\r\n";
+    $display_wl_steps = "<ul>\r\n<li>" . implode("</li>\r\n<li>", $wl_steps ) . "</li>\r\n</ul>\r\n";
 
 
     // Parse activities shortlist
