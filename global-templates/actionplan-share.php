@@ -19,7 +19,7 @@ if($_POST['share']) {
 
     // Check for errors
     if ( $your_name != "" ) {
-        $your_name = trim( htmlspecialchars( stripslashes( $your_name ) ) ;
+        $your_name = trim( htmlspecialchars( stripslashes( $your_name ) ) ) ;
         $frm_share_actionplan__outputs[] = "your_name: $your_name";
     } else {
         $frm_share_actionplan__outputs[] = "Please enter your name";
