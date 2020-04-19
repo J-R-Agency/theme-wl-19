@@ -32,21 +32,29 @@ if ($inipath) {
 
         if ( filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 
-            $frm_email_actionplan__outputs[] = "$email is a valid email address";
+            // $frm_email_actionplan__outputs[] = "$email is a valid email address";
 
             $to = $email ; //sendto@example.com
-            $subject = 'The subject';
-            $body = 'The email body content';
+            $subject = "Wellbeing Liverpool: Thank you for creating an Action Plan";
+            $body = "
+<div>
+<p>Here is a copy of the Action Plan you created with us. You can print out this email to keep for reference.</p>
+$body_actionplan
+</div> 
+$body_actionplan
+<div>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</div>
+</div>
+            ";
             $headers = array('Content-Type: text/html; charset=UTF-8');
 
             if ( wp_mail( $to, $subject, $body, $headers ) ) {
 
-                $frm_email_actionplan__outputs[] = " Sent to $to ";
+                $frm_email_actionplan__outputs[] = "Your Action Plan was sent to $to ";
                 $msg_type = "success";
 
             } else {
             
-                $frm_email_actionplan__outputs[] = " Not sent to $to "; 
+                $frm_email_actionplan__outputs[] = "Unfortunately, there was a problem sending your Action Plan to and it was not sent to $to "; 
                 $msg_type = "error";
 
             }

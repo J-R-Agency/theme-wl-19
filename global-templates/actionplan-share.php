@@ -63,28 +63,7 @@ if($_POST['share']) {
 <div>Hello $their_name,</div>
 <div>$your_name has created an Action Plan on Wellbeing Liverpool and has decided to share it with you so that you can help them on their wellbeing journey.</div>
 <div>Please see below for details</div>
-<div>
-<h1>Action Plan</h1>
-<div>$your_name</div>
-<div>$your_email</div>
-<h2>Goal</h2>
-<div>GOALS DETAIL</div>
-<h2>Steps</h2>
-<div>
-<ul>
-<li>Step 1: STEP ONE DETAIL</li>
-<li>Step 2: STEP TWO DETAIL</li>
-<li>Step 3: STEP THREE DETAIL</li>
-</ul>
-</div>
-<h2>Activities</h2>
-<div>
-<ul>
-<li>Activity 1: ACTIVITY ONE DETAIL</li>
-<li>Activity 2: ACTIVITY TWO DETAIL</li>
-<li>Activity 3: ACTIVITY THREE DETAIL</li>
-</ul>
-</div>
+$body_actionplan
 <div>Thank you for your help!</div>
 <div>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</div>
         ";

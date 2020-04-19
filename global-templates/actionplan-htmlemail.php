@@ -85,9 +85,10 @@ $display_wl_shortlist
 <div>
 $wl_notes
 </div>
+</div>
         ";
 
-        echo $body_actionplan ;
+        // echo $body_actionplan ;
 
 } else {
 
