@@ -61,11 +61,11 @@ if($_POST['share']) {
         $subject = "Wellbeing Liverpool: $your_name has shared their Action Plan with you";
         $body = "
 <div>Hello $their_name,</div>
-<div>$your_name has created an Action Plan on Wellbeing Liverpool and has decided to share it with you so that you can help them on their wellbeing journey.</div>
-<div>Please see below for details</div>
+<div><p>$your_name has created an Action Plan on Wellbeing Liverpool and has decided to share it with you so that you can help them on their wellbeing journey.</p></div>
+<div><p>Please see below for details:</p></div>
 $body_actionplan
-<div>Thank you for your help!</div>
-<div>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</div>
+<div><p>Thank you for your help!</p></div>
+<div><p>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</p></div>
         ";
         $headers = array("Content-Type: text/html; charset=UTF-8");
 
