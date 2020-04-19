@@ -26,7 +26,7 @@ if ($inipath) {
 
         $email = $_POST['wl_actionplan_actions__email'];
     	
-    	$frm_email_actionplan__outputs[] = "The $email exists:  " . $email ;
+    	// $frm_email_actionplan__outputs[] = "The $email exists:  " . $email ;
 
         $msg_type = "success";
 
