@@ -25,9 +25,7 @@ include get_theme_file_path( '/global-templates/actionplan-cookievariables.php' 
 include get_theme_file_path( '/global-templates/actionplan-clear.php' );
 
 // Set 'action plan' body text for use in HTML emails * uses cookies etc. - check data flow
-echo "htmlemail";
 include get_theme_file_path( '/global-templates/actionplan-htmlemail.php' );
-echo "htmlemail";
 
 // Process email form variables and send email
 include get_theme_file_path( '/global-templates/actionplan-email.php' );
