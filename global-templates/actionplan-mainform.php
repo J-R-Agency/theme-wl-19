@@ -76,7 +76,7 @@
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h3>" . get_the_title()  . "</h3>";
+						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></h3>";
 
 							endwhile;
 						else: 
