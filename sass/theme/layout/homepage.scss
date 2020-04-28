@@ -124,6 +124,14 @@ button.wp-block-search__button {
 	flex:1;
 	margin-right: 1rem;
 	justify-content: center;
+
+	button{
+			width: 90px;
+			padding: 5px;
+			margin: 5px 0px 5px 0px;
+			font-size: $small-font-size;
+	}
+
 	@include respond-to('xs'){
 		flex-basis: 100%;
 
@@ -134,7 +142,13 @@ button.wp-block-search__button {
 	}
 	@include respond-to('md'){
 		flex-basis: 33%;
-
+		button{
+			width: 150px;
+			padding: 7px;
+			margin: 10px;
+			color: white;
+			border-radius: 8px;
+		}
 	}
 	@include respond-to('lg'){
 		flex-basis: 20%;
