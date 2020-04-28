@@ -28,7 +28,7 @@
 
 				shuffle($suggestions);
 
-				$shuffled_rows = array_slice($suggestions, 0, 4);
+				$shuffled_rows = array_slice($suggestions, 0, 3);
 
 				foreach ($shuffled_rows as $suggested_row) {
 
