@@ -123,6 +123,7 @@ button.wp-block-search__button {
 .mood-btns__item{
 	flex:1;
 	margin-right: 1rem;
+	justify-content: center;
 	@include respond-to('xs'){
 		flex-basis: 20%;
 		margin: 2rem;
