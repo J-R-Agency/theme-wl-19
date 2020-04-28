@@ -123,6 +123,9 @@ button.wp-block-search__button {
 .mood-btns__items{
 	flex:1;
 	margin-right: 1rem;
+	@include respond-to('lg'){
+		flex-basis: 48%;
+	}
 }
 
 
