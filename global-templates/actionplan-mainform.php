@@ -43,13 +43,13 @@
 					// Action Plan but no activities yet
 					$msg_no_activities_a = "
 							<h3>You have no activities yet</h3>
-							<p>Save your action plan then you can <a href=\"/types-of-activity/\">view types of activity</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
+							<p>Save your action plan then you can <a href=\"/types-of-activity/\">view types of activity</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog for ideas</a>.</p>
 					";
 
 					// No Action Plan or activities
 					$msg_no_activities_b = "
 							<h3>You have no activities yet</h3>
-							<p>Save your action plan then you can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
+							<p>Save your action plan then you can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog for ideas</a>.</p>
 					";
 
 					$msg_no_activities_b = $msg_no_activities_a ;
