@@ -125,25 +125,24 @@ button.wp-block-search__button {
 	margin-right: 1rem;
 	justify-content: center;
 	@include respond-to('xs'){
-		flex-basis: 20%;
+		flex-basis: 100%;
+
+	}
+	@include respond-to('sm'){
+		flex-basis: 50%;
+
+	}
+	@include respond-to('md'){
+		flex-basis: 33%;
 		margin: 2rem;
 		padding:2rem;
 	}
-		@include respond-to('sm'){
+	@include respond-to('lg'){
 		flex-basis: 20%;
 		margin: 2rem;
 		padding:2rem;
-	}
-		@include respond-to('md'){
-		flex-basis: 20%;
-		margin: 2rem;
-		padding:2rem;
-	}
-		@include respond-to('lg'){
-		flex-basis: 20%;
-		margin: 2rem;
-		padding:2rem;
-	}	@include respond-to('xl'){
+	}	
+	@include respond-to('xl'){
 		flex-basis: 20%;
 		margin: 2rem;
 		padding:2rem;
