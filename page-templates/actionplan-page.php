@@ -56,11 +56,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
+
+
+				<?php
+				// Display main action plan form
+				include get_theme_file_path( '/global-templates/actionplan-mainform.php' );
+				?>
+				<?php endwhile; // end of the loop. ?>
 					<?php 
 					if(!isset($_COOKIE["wl_goal"])) {
 					// Not set
 					?>
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 					<?php echo $steps_separator ; ?>
 
@@ -73,21 +79,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php
 					} else {
-					// Set
-					   
+						// Set
+						// Display action boxes
+						include get_theme_file_path( '/global-templates/actionplan-nextsteps.php' );
 					}
 					?>
 
-				<?php
-				// Display main action plan form
-				include get_theme_file_path( '/global-templates/actionplan-mainform.php' );
-				?>
-				<?php endwhile; // end of the loop. ?>
-
-			<?php
-			// Display action boxes
-			include get_theme_file_path( '/global-templates/actionplan-nextsteps.php' );
-			?>
 
 			</main><!-- #main -->
 
