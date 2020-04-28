@@ -96,7 +96,7 @@ get_header(); ?>
 
 	   // echo $wl_summary;
 
-
+		$theme_modifier = get_cat_name( $the_theme );
 	    ?>
 
 	    <div class="activity-card__item">
@@ -104,7 +104,7 @@ get_header(); ?>
 	    	<?php
 
 			if(trim($wl_api_logo_url)==""){
-				$activity_card__img = "<div class=\"activity-card_pseudoimg $the_theme\"><h2>$wl_title</h2></div>";
+				$activity_card__img = "<div class=\"activity-card_pseudoimg $theme_modifier\"><h2>$wl_title</h2></div>";
 			} else {
 		    	$activity_card__img = "
 		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
