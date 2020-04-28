@@ -125,9 +125,13 @@ button.wp-block-search__button {
 	margin-right: 1rem;
 	@include respond-to('xs'){
 		flex-basis: 20%;
+		margin: 2rem;
+		padding:2rem;
 	}
 		@include respond-to('sm'){
 		flex-basis: 20%;
+		margin: 2rem;
+		padding:2rem;
 	}
 		@include respond-to('md'){
 		flex-basis: 20%;
@@ -136,11 +140,11 @@ button.wp-block-search__button {
 	}
 		@include respond-to('lg'){
 		flex-basis: 20%;
-				margin: 2rem;
+		margin: 2rem;
 		padding:2rem;
 	}	@include respond-to('xl'){
 		flex-basis: 20%;
-				margin: 2rem;
+		margin: 2rem;
 		padding:2rem;
 	}
 }
