@@ -88,7 +88,7 @@ button.wp-block-search__button {
 	display: flex;
 	justify-content: center;
 	
-	@media all and (max-width: $breakpoint-phone) {
+	@media all and (min-width: $breakpoint-phone) {
 		display: flex;
 		justify-content: center;
 	}
@@ -106,7 +106,7 @@ button.wp-block-search__button {
 			filter: brightness(90%);
 		}	
 		
-		@media all and (max-width: $breakpoint-phone) {
+		@media all and (min-width: $breakpoint-phone) {
 			width: 90px;
 			padding: 5px;
 			margin: 5px 0px 5px 0px;
