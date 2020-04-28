@@ -65,22 +65,19 @@ button.wp-block-search__button {
 
 /* -- What would you like to try? -- */
 .activity {
-
-
-		@include respond-to('md'){
+	@media all and (max-width: $breakpoint-phone) {
 		display: flex;
 		flex-direction: row;
-		}
+	}
 }
 
 .activity-description, .activity-name {
-		
-		text-align: left;
-		@media all and (max-width: $breakpoint-desktop) {
+
+		@media all and (max-width: $breakpoint-tablet) {
 			text-align: left;
 		}	
-		@include respond-to('lg'){
-			text-align: center;
+		@include respond-to('md'){
+				text-align: center;
 		}
 }
 
