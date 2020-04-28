@@ -138,10 +138,34 @@
 		}
 	}
 
+
 	.activity-card_pseudoimg--active{
-		background: $red;
-		background: linear-gradient(90deg, rgba($red,0) 0%, darken($red,10%) 100%);
+		background: $theme-active;
+		background: linear-gradient(90deg, rgba($theme-active,0) 0%, darken($theme-active,10%) 100%);
 	}
+	
+	.activity-card_pseudoimg--calm{
+		background: $theme-calm;
+		background: linear-gradient(90deg, rgba($theme-calm,0) 0%, darken($theme-calm,10%) 100%);
+	}	
+
+	.activity-card_pseudoimg--creative{
+		background: $theme-creative;
+		background: linear-gradient(90deg, rgba($theme-creative,0) 0%, darken($theme-creative,10%) 100%);
+	}
+	
+	.activity-card_pseudoimg--social{
+		background: $theme-social;
+		background: linear-gradient(90deg, rgba($theme-social,0) 0%, darken($theme-social,10%) 100%);
+	}	
+
+	.activity-card_pseudoimg--useful{
+		background: $theme-useful;
+		background: linear-gradient(90deg, rgba($theme-useful,0) 0%, darken($theme-useful,10%) 100%);
+	}
+	
+
+
 
 	.activity-card__summary{
 		text-align: center;
