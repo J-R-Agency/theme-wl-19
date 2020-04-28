@@ -124,6 +124,11 @@ button.wp-block-search__button {
 	button{
 		margin: 1rem;
 		width: 150px;
+		@include respond-to('lg'){
+			margin: 1rem;
+			height: 3rem;
+		}
+
 	}
 
 }
