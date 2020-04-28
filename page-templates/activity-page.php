@@ -20,7 +20,10 @@ get_header(); ?>
 			<div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div>
 			<div class="hero_inner" style="background-image: url('<?php echo $thumb; ?>') ;"></div>	
 	<?php endif ?>
-	
+	<?php
+		$modifier = get_field('modifier');
+		echo "NEW modifier: " . $modifier ;	
+	?>
 	
 	<div class="row entry-header">
 		<div class="col-12">
@@ -96,8 +99,7 @@ get_header(); ?>
 
 	   // echo $wl_summary;
 
-	    $modifier = get_field('modifier');
-	    echo "NEW modifier: " . $modifier ;
+
         if(!empty($modifier)){
         	$modifier_class = " activity-card_pseudoimg--" . $modifier ;
         }
