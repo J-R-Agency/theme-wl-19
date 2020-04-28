@@ -30,6 +30,9 @@
 
 				$shuffled_rows = array_slice($suggestions, 0, 3);
 
+
+				echo count($shuffled_rows);
+
 				foreach ($shuffled_rows as $suggested_row) {
 
 					//var_dump($suggested_row);
