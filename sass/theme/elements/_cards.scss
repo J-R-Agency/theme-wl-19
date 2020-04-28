@@ -131,7 +131,16 @@
 		height:100px;
 		width:100%;
 		margin-bottom: 1rem;
-		h2{text-align: center;}
+		padding:1rem;
+	
+		h2{
+			text-align: center;
+		}
+	}
+
+	.activity-card_pseudoimg.active{
+		background: rgb($red);
+		background: linear-gradient(90deg, rgba($red) 0%, darken($red,10%) 100%);
 	}
 
 	.activity-card__summary{
