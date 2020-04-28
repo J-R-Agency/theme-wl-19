@@ -7,8 +7,11 @@
 		
 		<div class="row">
 			<?php if( have_rows('activity') ): ?>
-						
-				<?php while( have_rows('activity') ): the_row(); 
+<?php 
+$rows = get_field('activity');
+shuffle( $rows ) ; 
+?>
+				<?php while( $rows ): the_row(); 
 			
 					// vars
 					$image = get_sub_field('activity_icon');
