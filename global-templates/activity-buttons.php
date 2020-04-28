@@ -24,7 +24,7 @@
 				endwhile; 
 
 
-				var_dump($suggestions);
+				//var_dump($suggestions);
 
 				shuffle($suggestions);
 
