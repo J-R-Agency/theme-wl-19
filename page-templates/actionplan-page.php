@@ -75,8 +75,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					include get_theme_file_path( '/global-templates/actionplan-adviceboxes.php' );
 					?>
 
-					<?php echo $steps_separator ; ?>
-
 					<?php
 					} else {
 						// Set
