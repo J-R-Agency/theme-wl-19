@@ -18,6 +18,20 @@
 	background-position: center;
 	background-repeat: no-repeat;
 
+
+ /* the fallback for IE 10, 11 and Edge. */
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     	&:after{
+     		content:'';
+     		background: transparentize(darken($dark-pink, 8), .5);
+			position: absolute;
+			top:0;
+			bottom:0;
+			width:100%;
+
+
+
+
     @include respond-to('sm'){
 		padding: 0px;
 		height: 240px;
