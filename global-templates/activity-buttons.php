@@ -10,7 +10,7 @@
 						
 
 				<?php while( have_rows('activity') ): the_row(); 
-			 var_dump( the_row() );
+			 //var_dump( the_row() );
 					// vars
 					$image = get_sub_field('activity_icon');
 					$name = get_sub_field('activity_name');
