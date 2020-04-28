@@ -100,9 +100,14 @@ get_header(); ?>
 	   // echo $wl_summary;
 
 
+		// Processing functions
         if(!empty($modifier)){
         	$modifier_class = " activity-card_pseudoimg--" . $modifier ;
         }
+        $wl_title_short = substr($wl_title, 0, 48) ;
+        $wl_title_short = explode(" ", $wl_title);
+        $wl_title_short = array_slice($wl_title_short,0,5);
+        $wl_title_short = implode(" ", $wl_title_short);
 	    ?>
 
 	    <div class="activity-card__item">
@@ -110,7 +115,7 @@ get_header(); ?>
 	    	<?php
 
 			if(trim($wl_api_logo_url)==""){
-				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title, 0, 48) . "</h2></div>";
+				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . $wl_title_short . "</h2></div>";
 			} else {
 		    	$activity_card__img = "
 		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
