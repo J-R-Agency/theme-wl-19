@@ -134,18 +134,13 @@ button.wp-block-search__button {
 	}
 	@include respond-to('md'){
 		flex-basis: 33%;
-		margin: 2rem;
-		padding:2rem;
+
 	}
 	@include respond-to('lg'){
 		flex-basis: 20%;
-		margin: 2rem;
-		padding:2rem;
 	}	
 	@include respond-to('xl'){
 		flex-basis: 20%;
-		margin: 2rem;
-		padding:2rem;
 	}
 }
 
