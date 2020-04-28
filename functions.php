@@ -577,9 +577,9 @@ add_action( 'init', 'wl_dump', 0 );
 
 function random_search_result( $q ) {
   if ( is_search() && is_main_query() )
-  $q->set( ‘orderby’, ‘rand’);
+  $q->set( 'orderby', 'rand');
 }
-add_action( ‘pre_get_posts’, ‘random_search_result’ );
+add_action( 'pre_get_posts', 'random_search_result' );
 
 
 
