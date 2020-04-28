@@ -129,6 +129,7 @@ if ( !isset($_COOKIE['wl_goal']) ) {
 ?>
 
 					<label for="wl_notes">Notes:</label>
+					<p>Many of the services on Wellbeing Liverpool have multiple activities and services on offer. The Notes section is where you can keep track of any additional information you might need, like any specific dates or costs, a local landmark to look out for which buses might go near to the activity.</p>
 					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo stripslashes( $wl_notes );?></textarea>
 
 					<input type="submit" name="submit" value="<?php echo $msg_btn_action_plan ;?> your Action Plan" />
