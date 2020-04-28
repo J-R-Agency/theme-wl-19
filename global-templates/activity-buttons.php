@@ -33,7 +33,7 @@
 				foreach ($shuffled_rows as $suggested_row) {
 
 					echo "<pre>";
-					var_dump($suggested_row);
+					//var_dump($suggested_row);
 					$image = $suggested_row[0];
 					$name = $suggested_row[1];
 					$description = $suggested_row[2];
