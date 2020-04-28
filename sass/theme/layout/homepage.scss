@@ -123,8 +123,19 @@ button.wp-block-search__button {
 .mood-btns__items{
 	flex:1;
 	margin-right: 1rem;
-	@include respond-to('lg'){
-		flex-basis: 48%;
+	@include respond-to('xs'){
+		flex-basis: 20%;
+	}
+		@include respond-to('sm'){
+		flex-basis: 20%;
+	}
+		@include respond-to('md'){
+		flex-basis: 20%;
+	}
+		@include respond-to('lg'){
+		flex-basis: 20%;
+	}	@include respond-to('xl'){
+		flex-basis: 20%;
 	}
 }
 
