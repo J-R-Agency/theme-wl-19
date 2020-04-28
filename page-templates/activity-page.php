@@ -22,7 +22,6 @@ get_header(); ?>
 	<?php endif ?>
 	<?php
 		$modifier = get_field('modifier');
-		echo "NEW modifier: " . $modifier ;	
 	?>
 	
 	<div class="row entry-header">
