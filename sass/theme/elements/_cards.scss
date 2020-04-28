@@ -125,6 +125,15 @@
 		margin-bottom: 1rem;
 	}
 
+	.activity-card_pseudoimg{
+		background-color: $grey;
+		text-align: center;
+		height:100px;
+		width:100%;
+		margin-bottom: 1rem;
+		h2{text-align: center;}
+	}
+
 	.activity-card__summary{
 		text-align: center;
 		font-size: 1rem;
