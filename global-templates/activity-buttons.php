@@ -26,6 +26,18 @@
 
 				var_dump($suggestions);
 
+				shuffle($suggestions);
+
+				$shuffled_rows = array_slice($suggestions, 0, 4);
+
+				foreach ($shuffled_rows as $suggested_row) {
+
+					echo "<pre>";
+					var_dump($suggested_row);
+					echo "</pre>";
+					# code...
+				}
+
 			}
 			?>
 
