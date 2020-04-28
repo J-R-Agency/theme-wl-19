@@ -97,6 +97,7 @@ get_header(); ?>
 	   // echo $wl_summary;
 
 	    $modifier = get_field('modifier');
+	    echo "NEW modifier: " . $modifier ;
         if(!empty($modifier)){
         	$modifier_class = " activity-card_pseudoimg--" . $modifier ;
         }
