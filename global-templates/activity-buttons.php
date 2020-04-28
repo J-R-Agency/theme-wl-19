@@ -28,7 +28,7 @@
 
 				shuffle($suggestions);
 
-				$shuffled_rows = array_slice($suggestions, 0, 3);
+				$shuffled_rows = array_slice($suggestions, 0, 4);
 
 
 				echo count($shuffled_rows);
