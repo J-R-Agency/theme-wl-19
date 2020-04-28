@@ -69,7 +69,7 @@
 
 
 					$suggestions[] = array( $image, $name, $description, $link);
-		 } // End if ?>
+		  // End if ?>
 					
 				<?php endwhile; ?>
 
