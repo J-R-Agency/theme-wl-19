@@ -126,7 +126,7 @@ button.wp-block-search__button {
 		width: 150px;
 		@include respond-to('lg'){
 			font-size: 1rem;
-
+			align-items: center;
 			margin: 0.5em;
 			height: 2rem;
 		}
