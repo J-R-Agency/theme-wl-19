@@ -139,8 +139,8 @@
 	}
 
 	.activity-card_pseudoimg--active{
-		background: rgb($red);
-		background: linear-gradient(90deg, rgba($red) 0%, darken($red,10%) 100%);
+		background: $red;
+		background: linear-gradient(90deg, rgba($red,0) 0%, darken($red,10%) 100%);
 	}
 
 	.activity-card__summary{
