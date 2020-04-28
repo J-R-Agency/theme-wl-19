@@ -110,7 +110,7 @@ get_header(); ?>
 	    	<?php
 
 			if(trim($wl_api_logo_url)==""){
-				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title, 0, 36) . "</h2></div>";
+				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title, 0, 48) . "</h2></div>";
 			} else {
 		    	$activity_card__img = "
 		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
