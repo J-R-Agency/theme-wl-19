@@ -73,8 +73,8 @@
 						</div>
 						
 					</div>
-					<?php } // End if ?>
-
+					<?php } // End if 
+				endif;
 
 				}
 
