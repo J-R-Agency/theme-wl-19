@@ -56,10 +56,9 @@
 				<?php endwhile; ?>
 			
 
-			<?php if( have_rows('activity') ): ?>
-						
-
-				<?php while( have_rows('activity') ): the_row(); 
+			<?php 
+			if( have_rows('activity') ) {
+			 	while( have_rows('activity') ): the_row(); 
 			 //var_dump( the_row() );
 					// vars
 					$image = get_sub_field('activity_icon');
@@ -69,13 +68,12 @@
 
 
 					$suggestions[] = array( $image, $name, $description, $link);
-		  // End if ?>
-					
-				<?php endwhile; ?>
+				endwhile; 
 
 
-				<?php var_dump($suggestions);?>
+				var_dump($suggestions);
 
-			<?php endif; ?>
+			}
+			?>
 		</div>
 	</div>
