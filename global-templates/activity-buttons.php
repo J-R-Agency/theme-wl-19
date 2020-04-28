@@ -32,33 +32,13 @@
 
 				foreach ($shuffled_rows as $suggested_row) {
 
-					echo "<pre>";
 					//var_dump($suggested_row);
 					$image = $suggested_row[0];
 					$name = $suggested_row[1];
 					$description = $suggested_row[2];
 					$link = $suggested_row[3];
-					echo "</pre>";
-					# code...
-				}
-
-			}
-			?>
 
 
-
-
-
-			<?php if( have_rows('activity') ): ?>
-						
-				<?php while( have_rows('activity') ): the_row(); 
-			
-					// vars
-					$image = get_sub_field('activity_icon');
-					$name = get_sub_field('activity_name');
-					$description = get_sub_field('activity_description');
-					$link = get_sub_field('activity_link');
-					
 					if ($link!=""){
 					?>
 					<div class="col-md-3 col-12 activity">
@@ -94,9 +74,14 @@
 						
 					</div>
 					<?php } // End if ?>
-					
-				<?php endwhile; ?>
-			
-			<?php endif; ?>
+
+
+				}
+
+			}
+			?>
+
+
+
 		</div>
 	</div>
