@@ -34,6 +34,10 @@
 
 					echo "<pre>";
 					var_dump($suggested_row);
+					$image = $suggested_row[0];
+					$name = $suggested_row[1];
+					$description = $suggested_row[2];
+					$link = $suggested_row[3];
 					echo "</pre>";
 					# code...
 				}
