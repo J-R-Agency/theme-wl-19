@@ -56,6 +56,30 @@
 				<?php endwhile; ?>
 			
 
+<?php 
+
+$rows = get_field('activity');
+if($rows)
+{
+	shuffle( $rows )
+ 
+	foreach($rows as $row)
+	{
+					$image = $row['activity_icon'];
+					$name = $row['activity_name'];
+					$description = $row['activity_description'];
+					$link = $row['activity_link'];		
+		?>
+		<a href="<?php echo $row['link']; ?>">
+			<img src="<?php echo $image[0]; ?>" alt="<?php echo $image['alt']; ?>" />
+		</a>
+		<?php
+	}
+ 
+	
+}
+
+?>
 
 
 
