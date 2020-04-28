@@ -101,9 +101,22 @@ get_header(); ?>
 
 	    <div class="activity-card__item">
 	    	<?php echo $wl_link_parts["start"] ;?>
-	    	<div class="activity-card__img" style="background-image: url('<?php echo $wl_api_logo_url ;?>');">
-	    		<!-- <img src="<?php echo $wl_api_logo_url ;?>"> -->
-	    	</div>
+	    	<?php
+
+			if(trim($wl_api_logo_url)==""){
+				$activity_card__img = "<div class=\"activity-card_pseudoimg\"><h2>$wl_title</h2></div>";
+			} else {
+		    	$activity_card__img = "
+		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
+		    		<!-- <img src=" . $wl_api_logo_url . "> -->
+		    	</div>";		
+			}
+
+			echo $activity_card__img;
+
+	    	?>
+
+
 	    	<div class="activity-card__summary">
 	    		<?php echo $wl_summary ;?>
 	    	</div>
