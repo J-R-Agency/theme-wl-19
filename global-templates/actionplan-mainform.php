@@ -49,6 +49,8 @@
 							<p>Save your action plan then you can <a href=\"/create-your-action-plan/\">create a new action plan</a>, <a href=\"/search-for-an-activity/\">search for activities</a> or <a href=\"/blog/\">read our blog</a>.</p>
 					";
 
+					$msg_no_activities_b = $msg_no_activities_a ;
+
 					$cookie_name = "simplefavorites";
 					if(!isset($_COOKIE[$cookie_name])) {
 					// Not set
