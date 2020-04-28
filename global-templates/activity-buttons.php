@@ -8,9 +8,8 @@
 		<div class="row">
 			<?php if( have_rows('activity') ): ?>
 						
-
 				<?php while( have_rows('activity') ): the_row(); 
-			 //var_dump( the_row() );
+			
 					// vars
 					$image = get_sub_field('activity_icon');
 					$name = get_sub_field('activity_name');
@@ -55,7 +54,6 @@
 					
 				<?php endwhile; ?>
 			
-
-
+			<?php endif; ?>
 		</div>
 	</div>
