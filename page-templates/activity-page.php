@@ -106,7 +106,7 @@ get_header(); ?>
         }
         $wl_title_short = substr($wl_title, 0, 48) ;
         $wl_title_short = explode(" ", $wl_title);
-        $wl_title_short = array_slice($wl_title_short,0,7);
+        $wl_title_short = array_slice($wl_title_short,0,5);
         $wl_title_short = implode(" ", $wl_title_short);
 	    ?>
 
