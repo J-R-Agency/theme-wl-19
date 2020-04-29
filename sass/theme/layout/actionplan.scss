@@ -498,6 +498,10 @@
 
 }
 
+.actionplan__activity_title{
+	font-weight: bold;
+}
+
 /* Styling for notifications and errors */
 
 .wl_actionplan_notifications{
@@ -575,5 +579,9 @@
 		padding: 0.5rem 1rem;
 		color: $light;
 	}
+}
+
+.loading {
+
 }
 
