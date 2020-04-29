@@ -95,6 +95,46 @@
 
 						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></h3>";
 
+// META
+
+unset($days);
+$days;
+
+$args = array(
+'taxonomy' => 'days'
+);
+
+$categories = get_terms( $args );  
+
+// echo "<pre>PRE ";
+// print_r($categories);
+// echo "</pre>";
+// $categories = usort($categories, function($a, $b) {
+//    return get_field("days_order", "days_".$a->term_id) - get_field("days_order", "days_".$b->term_id);
+// });
+
+
+// echo "<pre>POST ";
+// print_r($categories);
+// echo "</pre>";
+
+foreach ($categories as $category){
+//print_r($category);
+//echo "<br>" . get_field("days_order", "days_" . $category->term_id);
+$day_of_the_week = get_field("days_order", "days_" . $category->term_id);
+$days[$day_of_the_week] = $category->slug;
+
+}
+
+
+
+		?>
+			<div class="activity-taxonomies">
+				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
+				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
+
+<?php
+
 							endwhile;
 						else: 
 
