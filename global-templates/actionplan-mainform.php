@@ -93,7 +93,7 @@
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\"><strong>" . get_the_title() . "></strong></a></h3>";
+						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\"><strong>" . get_the_title() . "</strong></a></h3>";
 
 // META
 
