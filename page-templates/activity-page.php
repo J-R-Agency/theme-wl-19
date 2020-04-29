@@ -48,7 +48,7 @@ get_header(); ?>
 		<?php
 
 	$the_theme = get_field("theme");
-
+echo $the_theme;
 	$args = array(
 	    'post_type' => 'activities',
 	    'post_status' => 'publish',
