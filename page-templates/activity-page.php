@@ -43,12 +43,16 @@ get_header(); ?>
 		</div>
 	</div>
 
+<?php
+$theme_title = get_the_title();
+
+if ($theme_title == "Active" || $theme_title == "Calm" || $theme_title == "Creative" || $theme_title == "Social" || $theme_title == "Useful"){
+?>
 	<div class="row">
 		<div class="col-12 content-copy">
 		<?php
 
 	$the_theme = get_field("theme");
-echo $the_theme;
 	$args = array(
 	    'post_type' => 'activities',
 	    'post_status' => 'publish',
@@ -141,7 +145,9 @@ echo $the_theme;
 	?>
 	</div>	
 </div>
-
+<?php
+} // End theme check
+?>
 <div class="container-cta">
 	<div class="row">
 		<div class="col-12 content-copy">
