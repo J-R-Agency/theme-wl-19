@@ -93,7 +93,7 @@
 
 						     // echo "<h3>" . get_the_title() ." - " . $post->ID . "</h3>";
 
-						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></h3>";
+						     echo "<h3><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\"><strong>" . get_the_title() . "></strong></a></h3>";
 
 // META
 
@@ -132,6 +132,7 @@ $days[$day_of_the_week] = $category->slug;
 			<div class="activity-taxonomies">
 				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
 				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
+			</div>
 
 <?php
 
