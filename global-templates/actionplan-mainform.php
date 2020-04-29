@@ -129,7 +129,7 @@ $days[$day_of_the_week] = $category->slug;
 
 
 		?>
-			<div class="activity-taxonomies">
+			<div class="activity-taxonomies activity-taxonomies--actionplan">
 				<div class="activity-taxonomies__theme"><?php the_terms( $post->ID, 'themes', '<strong>Themes:</strong> ', '  ' ); ?> &nbsp; <?php the_terms( $post->ID, 'costs', ' <strong>Cost:</strong> ', '  ' ); ?></div>
 				<div class="activity-taxonomies__days"><?php the_terms( $post->ID, 'days', ' <strong>Days:</strong> ', '  ' ); ?></div>
 			</div>
