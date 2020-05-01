@@ -574,12 +574,13 @@ function wl_dump ( $var ) {
 add_action( 'init', 'wl_dump', 0 );
 
 /* RANDOM SEARCH RESULTS */
-
+/*
 function random_search_result( $q ) {
   if ( is_search() && is_main_query() )
   $q->set( 'orderby', 'rand');
 }
 add_action( 'pre_get_posts', 'random_search_result' );
+*/
 
 /* Filter Archive Title */
 
