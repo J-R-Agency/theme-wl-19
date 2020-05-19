@@ -5,6 +5,8 @@
  * @package understrap
  */
 
+error_reporting(0);
+
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
