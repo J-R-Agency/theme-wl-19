@@ -672,3 +672,9 @@ function my_search_is_exact($search, $wp_query){
 
 }
 
+
+/* Media Library Fix */
+
+add_filter('flash_uploader',create_function('$a','return false;'),5);
+
+
