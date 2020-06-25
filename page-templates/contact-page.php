@@ -15,17 +15,29 @@ get_header(); ?>
 		
 		<div class="container-fluid">
 			
+			<?php if ( has_post_thumbnail() ): ?>
+				<?php $thumb = get_the_post_thumbnail_url(); ?>
+			<div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div>
+			<div class="hero_inner" style="background-image: url('<?php echo $thumb; ?>') ;"></div>	
+			<?php endif ?>
+			
+			
+			<div class="row entry-header">
+				<div class="col-12">
+					<h1 class="centered"><?php the_title(); ?></h1>
+				</div>
+			</div>
+
 			<div class="row">
-				<div class="col-12 content-copy">
-					<h1>Get in touch</h1>
-					<p>Here are a few ways to get in touch with us. Please choose whichever method feels the most comfortable for you.</p>
-					
-					
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.238219084266!2d-2.997528484682095!3d53.41056567760082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21d234cfabf9%3A0x93751a74f8df9d9b!2sCitizens%20Advice%20Liverpool%20office!5e0!3m2!1sen!2suk!4v1575385333769!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-					
-					<h1>Contact Information</h1>
-					<h2>Citizens Advice Liverpool</h2>
-					<p>Citizens Advice Liverpool gives you advice on a wide range of subjects such as: benefits, work, debt & money, consumer, family, housing, law & courts, immigration and health. There are a number of ways that you can contact us, depending on the advice you need.</p>
+				<div class="col-12 content-copy">	
+				<?php while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
+			        <div class="entry-content-page">
+			            <?php the_content(); ?> <!-- Page Content -->
+			        </div><!-- .entry-content-page -->
+			    <?php
+			    endwhile; //resetting the page loop
+			    wp_reset_query(); //resetting the page query
+			    ?>
 				</div>
 			</div>
 		

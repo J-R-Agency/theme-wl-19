@@ -9,8 +9,10 @@
 	
 	background-color: $light-grey;
 	border-radius: 10px;
-	padding: 30px;
+	padding: 2rem;
 	margin: 20px 10px;
+
+	font-size: 1.33rem;
 	
 	ul {
 		padding: 0px;
@@ -23,11 +25,14 @@
 }
 
 .action-box {
-	background-color: $blue;
+	background-color: rgba($blue, .5);
+	color: $dark-blue;
 	padding: 30px;
-	color: white;
 	margin: 20px 10px;
 	border-radius: 10px;
+	h1{
+		color: $dark-blue;
+	}
 }
 
 /* -- Search Bar --*/
@@ -70,10 +75,13 @@ button.wp-block-search__button {
 }
 
 .activity-description, .activity-name {
-	text-align: center;
-		@media all and (max-width: $breakpoint-phone) {
+
+		@media all and (max-width: $breakpoint-tablet) {
 			text-align: left;
 		}	
+		@include respond-to('md'){
+				text-align: center;
+		}
 }
 
 /*-- What do you want to be?-- */
@@ -86,9 +94,9 @@ button.wp-block-search__button {
 	display: flex;
 	justify-content: center;
 	
-	@media all and (max-width: $breakpoint-phone) {
+	@media all and (min-width: $breakpoint-phone) {
 		display: flex;
-		justify-content: left;
+		justify-content: center;
 	}
 	
 	button {
@@ -104,7 +112,7 @@ button.wp-block-search__button {
 			filter: brightness(90%);
 		}	
 		
-		@media all and (max-width: $breakpoint-phone) {
+		@media all and (min-width: $breakpoint-phone) {
 			width: 90px;
 			padding: 5px;
 			margin: 5px 0px 5px 0px;
@@ -112,3 +120,26 @@ button.wp-block-search__button {
 		}
 	}
 }
+
+.mood-btns__container{
+	display: flex;
+	justify-content: center;
+}
+
+.mood-btns__item{
+	button{
+		margin: 1rem;
+		width: 150px;
+		@include respond-to('lg'){
+			font-size: 1rem;
+			align-items: center;
+			margin: 1em;
+			padding: 0.5rem;
+			height: 3rem;
+		}
+
+	}
+
+}
+
+

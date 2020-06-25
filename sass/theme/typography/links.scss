@@ -1,3 +1,8 @@
+
+a {
+	color: $dark;
+}
+
 p {
 	a {
 		background:
@@ -7,7 +12,7 @@ p {
 		 );
 		background-position: 0 100%;
 		background-repeat: repeat-x;
-		background-size: 4px 4px;
+		background-size: 2px 1px;
 		color: #000;
 		text-decoration: none;
 		transition: background-size .4s;
@@ -47,4 +52,21 @@ p {
 		text-decoration: none;
 		filter: brightness(90%);
 	}
+
+	&--active{
+		background-color: $theme-active;
+	}
+	&--calm{
+		background-color: $theme-calm;
+	}
+	&--creative{
+		background-color: $theme-creative;
+	}
+	&--useful{
+		background-color: $theme-useful;
+	}
+	&--social{
+		background-color: $theme-social;
+	}
+
 }

@@ -1,5 +1,6 @@
 .btn{
-	&--active{
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  	&--active{
 		background-color: $theme-active;
 	}
 	&--creative{
@@ -13,5 +14,42 @@
 	}
 	&--calm{
 		background-color: $theme-calm;
+	}
+}
+
+.page-link, .current, .entry-meta a, .nav-links a { 
+	color: $dark; 
+}
+
+.page-item.active .page-link{ 
+	color: $dark; 
+	border: 1px solid $grey; 
+}
+
+// SHAME - find somewhere better for this
+.entry-meta {
+	color: $dark-grey;
+	margin-bottom: 1rem;
+}
+
+.btn-primary{
+	background-color: $light-grey;
+	border-color: $grey;
+}
+
+.activity-taxonomies{
+	a {
+		display: inline-block;
+		color: #333;
+		background-color: #eee;
+		padding: 0.25rem 0.5rem;
+		margin-left: 0.25rem;
+		margin-bottom: 0.25rem;
+		border-radius: 3px;
+	}
+	a:hover{
+		color: #333;
+		background-color: #ddd;
+		text-decoration: none;
 	}
 }

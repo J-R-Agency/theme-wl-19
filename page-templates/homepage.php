@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="container-fluid">
+<div class="container">
 	
 	<div class="row mt-20">
 		
@@ -105,25 +105,25 @@ get_header(); ?>
 		<!-- end create an action plan -->
 		
 	</div>
-	
-	<div class="row mt-20">
-		<!-- TWITTER BOX -->
-		<div class="col-md-6 col-sm-12 d-flex">
-			<div class="highlight w-100">
-				<h1>Twitter</h1>
-			</div>
-		</div>
-		<!-- end twitter -->
+<?php	
+	// <div class="row mt-20">
+	// 	<!-- TWITTER BOX -->
+	// 	<div class="col-md-6 col-sm-12 d-flex">
+	// 		<div class="highlight w-100">
+	// 			<h1>Twitter</h1>
+	// 		</div>
+	// 	</div>
+	// 	end twitter
 		
-		<!-- INSTAGRAM BOX -->
-		<div class="col-md-6 col-sm-12 d-flex">
-			<div class="action-box w-100">
-				<h1>Instagram</h1>
-			</div>
-		</div>
-		<!-- end instagram -->
-	</div>	
-	
+	// 	<!-- INSTAGRAM BOX -->
+	// 	<div class="col-md-6 col-sm-12 d-flex">
+	// 		<div class="action-box w-100">
+	// 			<h1>Instagram</h1>
+	// 		</div>
+	// 	</div>
+	// 	<!-- end instagram -->
+	// </div>	
+?>	
 </div>
 
 <?php

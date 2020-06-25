@@ -1,0 +1,36 @@
+.search_summary{
+	margin-bottom: 0.5rem;
+}
+
+.find-activities{
+
+	ul {
+		margin: 1rem 0 0 0;
+		padding: 0;
+		width: 100% !important;
+	}
+
+	li{
+		display: block;
+		margin-bottom: 1rem;
+	}
+	
+	li:last-child{
+		margin-bottom: 0;
+	}
+	
+	div ul li input[type="text"] {
+		border: 0;
+		width: 100%;
+		padding: 0.25rem 0.5rem;
+	}
+
+	div ul li input[type="submit"] {
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
+		border: 0px solid $dark-blue;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		color: $light;
+	}
+}

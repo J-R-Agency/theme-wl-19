@@ -14,6 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 // Get uploads path
 $uploads = wp_get_upload_dir();
+$theme_path = get_template_directory_uri();
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -49,9 +50,11 @@ $uploads = wp_get_upload_dir();
 						
 						<div class="row footer-links">
 							<div class="col-md-6 col-xs-12 footer-left">
-								<h2>
-									Wellbeing Liverpool
-								</h2>
+								
+									<img src="<?php echo $theme_path; ?>/assets/images/logo-colour-white-text.png"
+										alt="Wellbeing Liverpool logo"
+										class="footer-logo centered">
+								
 							</div>
 							
 							<div class="col-md-6 col-xs-12 footer-right">
@@ -75,11 +78,8 @@ $uploads = wp_get_upload_dir();
 								</div>
 								<div class="row">
 									<div class="col-12">
-										<p>
-											0300 77 77 007
-										</p>
-										<p>	enquiries@healthwatchliverpool.co.uk
-										</p>
+										<a href="tel:0300 77 77 007">0300 77 77 007</a>
+										<a href="mailto:enquiries@healthwatchliverpool.co.uk">enquiries@healthwatchliverpool.co.uk</a>
 										<p>
 											4th floor, 151 Dale Street, Liverpool, L2 2AH
 										</p>

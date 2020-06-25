@@ -1,4 +1,4 @@
-<div class="row highlight">
+ <div class="row highlight">
 		<div class="row">
 			<div class="col-12">
 				<h1 class="centered">What would you like to try?</h1>
@@ -6,16 +6,37 @@
 		</div>
 		
 		<div class="row">
-			<?php if( have_rows('activity') ): ?>
-						
-				<?php while( have_rows('activity') ): the_row(); 
-			
-					// vars
+
+
+
+			<?php 
+			if( have_rows('activity') ) {
+			 	while( have_rows('activity') ): the_row(); 
 					$image = get_sub_field('activity_icon');
 					$name = get_sub_field('activity_name');
 					$description = get_sub_field('activity_description');
 					$link = get_sub_field('activity_link');
-			
+					$suggestions[] = array( $image, $name, $description, $link);
+				endwhile; 
+
+				//var_dump($suggestions);
+
+				shuffle($suggestions);
+
+				$shuffled_rows = array_slice($suggestions, 0, 4);
+
+				// echo count($shuffled_rows);
+
+				foreach ($shuffled_rows as $suggested_row) {
+
+					//var_dump($suggested_row);
+					$image = $suggested_row[0];
+					$name = $suggested_row[1];
+					$description = $suggested_row[2];
+					$link = $suggested_row[3];
+
+
+					if ($link!=""){
 					?>
 					<div class="col-md-3 col-12 activity">
 						<!-- Activity icon -->
@@ -37,7 +58,7 @@
 							
 							<h2 class="activity-name">
 								<?php if( $link ): ?>
-									<a href="<?php echo $link; ?>">
+									<a href="<?php echo $link['url']; ?>">
 								<?php endif; ?>							
 							    	<?php echo $name; ?>
 								<?php if( $link ): ?>
@@ -49,9 +70,12 @@
 						</div>
 						
 					</div>
-					
-				<?php endwhile; ?>
-			
-			<?php endif; ?>
+					<?php } // End if 
+
+				}
+
+			}
+			?>
+
 		</div>
 	</div>

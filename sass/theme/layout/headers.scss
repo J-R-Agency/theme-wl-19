@@ -1,5 +1,18 @@
 .navbar-brand {
+	
 	width: 200px;
+    
+    @include respond-to('md'){
+		width: 200px;
+    }
+
+    @include respond-to('lg'){
+		width: 280px;
+    }
+
+    @include respond-to('xl'){
+		width: 320px;
+    }
 }
 
 .navbar-dark .navbar-toggler {
@@ -7,15 +20,26 @@
 	background-color: $secondary;
 }
 
+// Logo
+.navbar-dark .navbar-brand {
+	width: 200px;
+	margin: 1rem 2rem;
+}
+
+
 .navbar-dark .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");	
+}
+
+.nav-link{
+	font-family: 'Lato Regular';
 }
 
 // Normal state
 .navbar-dark .navbar-nav .nav-link {
 	color: rgba(0,0,0,1);
 	margin-left: 15px;
-	
+	padding: 1rem;
 	&:hover, &:active, &:focus {
 		color: $secondary;
 	}
@@ -24,7 +48,7 @@
 // Active state
 .navbar-dark .navbar-nav .active > .nav-link {
 	background-color: $secondary;
-	border-radius: 8px;
+	border-radius: 5px;
 		&:hover, &:active, &:focus {
 			color: white;
 		}
@@ -34,6 +58,35 @@
 	color: black;
 }
 
+.bg-secondary {
+	padding: 0;
+}
+
+@include respond-to('md'){
+	.arrow-right {
+	  width: 0; 
+	  height: 0; 
+	  border-top: 37px solid transparent;
+	  border-bottom: 37px solid transparent;
+	  
+	  border-left: 30px solid $dark-pink;
+	}
+}
+
+
+.be-more-active {
+	background-color: $dark-pink;
+	display:flex;
+	align-items: center;
+	height: 100%;
+	text-transform: uppercase;
+	padding: 1.5rem;
+	font-size: 1.2rem;
+}
+
+#secondary-menu{
+	z-index: 50;
+}
 #secondary-menu, #secondaryNavDropdown a {
 	color: white;
 	text-align: center;
@@ -48,3 +101,4 @@
 	font-size: $small-font-size;
 	flex-direction: row-reverse;
 }
+

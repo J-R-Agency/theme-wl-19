@@ -1,0 +1,608 @@
+.actionplan {
+
+	input, textarea, label {
+
+		display: block;
+		width: 100%;
+
+	}
+
+	input, textarea {
+
+		border: 1px solid $grey;
+		border-radius: 3px;
+		padding: 0.25rem 0.5rem;
+
+	}
+
+	label {
+
+		margin-top: 1rem;
+
+	}
+
+	input[type="submit"] {
+
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
+		border: 0px solid $dark-blue;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	
+	}
+
+	input[name="clear"] {
+
+		background-color: $light;
+		border-radius: $corner-rad;
+		border: 2px solid $red;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $red;
+	
+	}
+
+}
+
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+.wl_actionplan{
+
+	h2{
+		margin: 1rem 0 0.5rem 0;
+		padding: 0;
+	}
+
+	h3, label {
+		font-size: 1rem;
+		margin: 1rem 0 0.5rem 0;
+		padding: 0;
+	}
+
+	label {
+		font-family: 'Lato Black', sans-serif;
+	}
+
+	.wl_steps {
+		margin-top: 0.5rem;
+	}
+
+	#wl_notes {
+		height: 8rem;
+	}
+
+}
+
+
+/* Advice containers */
+
+
+.wl_advice_privacy__container{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	background-color: $grey;
+	border-radius: $corner-rad;
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+	text-align: center;
+	.wl_advice_privacy__img{
+		flex-basis: 100%;
+		margin: 0 1rem 0 0;
+		text-align: center;
+		@include respond-to('md'){
+			flex-basis: 30%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 30%;
+			text-align: left;
+	    }
+	}
+	.wl_advice_privacy__info{
+		flex-basis: 100%;
+		margin: 0 1rem 0 0;
+		text-align: center;
+		@include respond-to('md'){
+			flex-basis: 65%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 65%;
+			text-align: left;
+	    }
+	}
+}
+
+.wl_banner_next{
+	text-align: center; 
+}
+
+
+.wl_advice_header{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	padding: 1rem 0;
+
+	.wl_advice_icon{
+		flex-basis: 30%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 30%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 30%;
+	    }
+	}
+
+	.wl_advice_title{
+		flex-basis: 52%;
+		margin: 0 1rem 0 0;
+		@include respond-to('md'){
+			flex-basis: 52%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 52%;
+	    }
+	}
+}
+
+
+.wl_advice_icon, .wl_action_icon{
+	background-color: $grey;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	padding: 1.2rem;
+}
+
+.wl_advice_email__img, .wl_actions_email__img{
+	background-color: $green;
+}
+
+.wl_advice_email__title h3{
+	color: $green;
+}
+
+
+.wl_advice_print__img, .wl_actions_print__img{
+	background-color: $orange;
+}
+
+.wl_advice_print__title h3{
+	color: $orange;
+}
+
+.wl_advice_share__img,  .wl_actions_share__img_container{
+	background-color: $purple;
+}
+
+.wl_advice_share__title h3{
+	color: $purple;
+}
+
+.wl_advice_help__img, .wl_actions_help__img_container{
+	background-color: $blue;
+}
+
+.wl_advice_help__title h3{
+	color: $blue;
+}
+
+.wl_advice_action__container{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	.wl_advice_action__item{
+		background-color: $white;
+		flex-basis: 100%;
+		margin: 0 0 1rem 0;
+		padding: 1rem;
+		@include respond-to('md'){
+			flex-basis: 100%;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 49%;
+	    }
+	}
+}
+
+
+.wl_actions__row{
+	margin-bottom: 2rem;
+}
+
+.wl_action_icon{
+	margin: 0 auto;
+}
+
+.wl_action_btn {
+
+	a{
+		display: block;
+		text-align: center;
+		background-color: $grey;
+		border-radius: $corner-rad;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	}
+
+}
+
+.wl_actions_email__btn a {
+	background-color: $green;
+}
+
+.wl_actions_print__btn a {
+	background-color: $orange;
+
+	&:hover{
+		color: $light;
+		text-decoration: underline;
+	}
+}
+
+.wl_actions_columns{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	text-align: center;
+
+	.wl_actions_columns__item{
+		flex-basis: 100%;
+		margin: 0 0 1rem 0;
+		text-align: center;
+		border-radius: $corner-rad;
+		@include respond-to('md'){
+			flex-basis: 48%;
+	 		text-align: center;
+			margin: 0 1rem 0 0;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 48%;
+			text-align: center;
+			margin: 0 1rem 0 0;
+	    }
+	    &:last-child{
+	    	margin: 0;
+	    }
+	}
+
+}
+
+
+.wl_actions_full{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	// margin: 1rem 0;
+	// padding: 1rem 2rem;
+	text-align: center;
+
+	.wl_actions_full__item{
+		flex-basis: 100%;
+		margin: 0 0 1rem 0;
+		text-align: center;
+		@include respond-to('md'){
+			flex-basis: 100%;
+			text-align: left;
+			margin: 0 1rem 0 0;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 100%;
+			text-align: left;
+			margin: 0 1rem 0 0;
+	    }
+	}
+
+}
+
+.wl_actions_email__container{
+	background-color: rgba($green, .3);
+	padding: 1rem;
+	
+	.wl_actionplan_actions__email {
+		width: 100%;
+	}
+	
+	input[name="email"]{
+
+		background-color: $green;
+		border-radius: $corner-rad;
+		border: 0px solid $green;
+		width: 100%;
+		margin: 1rem 0 0 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	
+	}
+}
+
+.wl_actions_print__container{
+	background-color: rgba($orange, .3);
+	padding: 1rem;
+}
+
+
+.wl_actions_email__info{
+	margin: 1.5rem 0 0.5rem 0;
+}
+
+
+.wl_actions_print__info{
+	margin: 1rem 0;
+}
+
+
+.wl_actions_full__item{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	.wl_actions_share__info{
+		flex-basis: 100%;
+		margin: 0 1rem 0 0;
+		text-align: center;
+		@include respond-to('md'){
+			flex-basis: 70%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 70%;
+			text-align: left;
+	    }
+	}
+
+	.wl_actions_share__img{
+		flex-basis: 100%;
+		text-align: center;
+		margin: 2rem 0;
+		@include respond-to('md'){
+			flex-basis: 20%;
+			text-align: left;
+			margin: 2rem 0 0 0 ;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 20%;
+			text-align: left;
+			margin: 2rem 0 0 0 ;
+	    }
+	}
+
+	.wl_actions_share__frm{
+		background-color: rgba($purple, .3);
+		flex-basis: 100%;
+		padding: 1rem 2rem;
+		text-align: center;
+		border-radius: $corner-rad;
+		@include respond-to('md'){
+			flex-basis: 100%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 100%;
+			text-align: left;
+	    }
+	}
+
+
+	.wl_actions_help__info{
+		flex-basis: 100%;
+		margin: 0 1rem 0 0;
+		text-align: center;
+		@include respond-to('md'){
+			flex-basis: 70%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 70%;
+			text-align: left;
+	    }
+	}
+
+	.wl_actions_help__img{
+		flex-basis: 100%;
+		text-align: center;
+		margin-top: 2rem;
+		@include respond-to('md'){
+			flex-basis: 20%;
+			text-align: left;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 20%;
+			text-align: left;
+	    }
+	}
+
+
+}
+
+
+.frm_share_actionplan__row{
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	.frm_share_actionplan__col{
+		flex-basis: 100%;
+		// margin: 0 1rem 0 0;
+		margin: 0 0 1rem 0;
+	    &:last-child{
+	    	margin: 0;
+	    }
+		@include respond-to('md'){
+			flex-basis: 47%;
+			margin: 0 2rem 0 0;
+	    }
+		@include respond-to('lg'){
+			flex-basis: 47%;
+			margin: 0 2rem 0 0;
+	    }
+
+	}	
+
+	label, input[type="text"]{
+		display: block;
+		width: 100%;
+	}
+
+	label {
+		font-weight: bold;
+		font-family: 'Lato Black', sans-serif;
+	}
+
+	p{
+		margin-top: 1rem;
+	}
+
+	input[name="share"]{
+
+		background-color: $purple;
+		border-radius: $corner-rad;
+		border: 0px solid $purple;
+		width: 100%;
+		margin: 2rem 0 0 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	
+	}
+
+}
+
+.actionplan__activity_title{
+	font-weight: bold;
+	font-family: 'Lato Bold', sans-serif;
+}
+
+.activity-taxonomies--actionplan{
+	font-size: 0.9rem;
+}
+
+.simplefavorite-button {
+	padding: 0.25rem 0.5rem;
+}
+.simplefavorite-button.loading{
+	background-color: #999999;
+	padding: 0.25rem 0.5rem;
+}
+
+//active
+
+/* Styling for notifications and errors */
+
+.wl_actionplan_notifications{
+
+	background-color: rgba($grey, .3);
+	border-radius: $corner-rad;
+	border: 2px solid $grey;
+	width: 100%;
+	margin: 2rem 0 0 0;
+	padding: 0.5rem 1rem;
+	color: $dark-grey;
+
+}
+
+.warning{
+
+	$warning: $orange;
+	background-color: rgba($warning, .2);
+	border: 2px solid $warning;
+	color: $dark-grey;
+
+	h2{ color: $warning; }
+
+}
+
+.error{
+
+	$error: $red;
+	background-color: rgba($error, .2);
+	border: 2px solid $error;
+	color: $dark-grey;
+
+	h2{ color: $error; }
+
+}
+
+.success{
+
+	$success: $green;
+	background-color: rgba($success, .2);
+	border: 2px solid $success;
+	color: $dark-grey;
+
+	h2{ color: $success; }
+
+}
+
+
+.actionplan__container{
+	background-color: $grey;
+	border-radius: $corner-rad;
+	padding:1rem;
+}
+
+
+
+
+/* Styling for plugin */
+
+.wl_steps_list{
+	padding-left: 1rem;
+}
+
+.wl_btn_action_plan{
+	margin-bottom: 1rem;
+
+	a{
+		display: block;
+		text-align: center;
+		background-color: $dark-blue;
+		border-radius: $corner-rad;
+		border: 0px solid $dark-blue;
+		width: 100%;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: $light;
+	}
+}
+
+
+.simplefavorite-button:active, .simplefavorite-button:visited{
+	background-color: #333;
+	color: #eee;
+}
+
+.loading {
+
+}
+

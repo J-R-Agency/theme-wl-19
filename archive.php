@@ -20,11 +20,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
-
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+				
+				<?php do_action('show_beautiful_filters'); ?>
 
 				<?php if ( have_posts() ) : ?>
 
@@ -37,7 +38,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-
 						<?php
 
 						/*
@@ -45,7 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
+						get_template_part( 'loop-templates/content-search', get_post_format() );
 						?>
 
 					<?php endwhile; ?>

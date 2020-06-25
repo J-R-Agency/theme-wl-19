@@ -17,11 +17,12 @@ get_header(); ?>
 	
 	<?php if ( has_post_thumbnail() ): ?>
 		<?php $thumb = get_the_post_thumbnail_url(); ?>
-			<div class="hero" style="background: url('<?php echo $thumb; ?>') no-repeat; background-size: cover; background-position: center;"></div>	
+			<div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div>
+			<div class="hero_inner" style="background-image: url('<?php echo $thumb; ?>') ;"></div>	
 	<?php endif ?>
 	
 	
-	<div class="row">
+	<div class="row entry-header">
 		<div class="col-12">
 			<h1 class="centered"><?php the_title(); ?></h1>
 		</div>
@@ -54,17 +55,18 @@ get_header(); ?>
 	        $title = get_sub_field('action_title');
 	        $description = get_sub_field('action_description');
 	        $link = get_sub_field('action_link');
+	        $modifier = get_sub_field('modifier');
+	        if(!empty($modifier)){
+	        	$modifier_class = " action-box--" . $modifier ;
+	        }
 	?>    
 			<div class="row content-copy">
 				<div class="col-md-2 col-0"></div>
 				
-				<?php if( get_row_index() == 1 ) { ?>
-					<div class="col-md-8 col-12 action-box-one">
-				<?php } elseif( get_row_index() == 2 ) { ?>
-					<div class="col-md-8 col-12 action-box-two">
-				<?php } else {?>
-					<div class="col-md-8 col-12 action-box-three">
-				<?php } ?>
+				<?php
+					echo "<div class=\"col-md-8 col-12 action-box action-box--" . get_row_index() . $modifier_class . "\">" ;
+				?>
+
 				
 					<h2><?php echo $title; ?></h2>
 					<p><?php echo $description; ?></p>

@@ -11,6 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -111,7 +112,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		
 		<!-- SECONDARY MENU -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-secondary" id="secondary-menu">
-			<strong>Be more active: </strong>
+			<div class="be-more-active"> &nbsp; </div><div class="arrow-right"></div>
 			<?php
 				wp_nav_menu(
 					array(
