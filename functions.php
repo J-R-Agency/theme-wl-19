@@ -680,7 +680,9 @@ add_action( 'init', 'wl_display_activity_logo', 0 );
 
 
 
+/*
 
+** SEEMS TO CAUSE ISSUE WITH MEDIA UPLOADER **
 
 function wl_dump ( $var ) {
 
@@ -692,7 +694,7 @@ function wl_dump ( $var ) {
 
 add_action( 'init', 'wl_dump', 0 );
 
-
+*/
 
 
 
