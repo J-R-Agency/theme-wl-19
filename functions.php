@@ -34,7 +34,7 @@ foreach ( $understrap_includes as $file ) {
 	require_once $filepath;
 }
 
-/** Hodge Halsall Custom Functions
+/** Wellbeing Liverpool Custom Functions
  *
  *
  */
@@ -68,3 +68,39 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+
+/* -- CUSTOM THEME FUNCTIONALITY FOR J&R -- */
+
+/* -- ADD POST TYPE SUPPORT FOR EXCERPTS ON PAGES -- */
+add_post_type_support( 'page', 'excerpt' );
+
+
+/* -- CREATE **TEST** IMPORT FUNCTIONALITY FOR WELLBEING DIRECTORY FROM LIVEWELL -- */
+
+// Our custom post type function
+function create_post_type() {
+ 
+    register_post_type( 'activities',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Activities' ),
+                'singular_name' => __( 'Activity' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'activities'),
+            'taxonomies' => array( 'theme', 'cost', 'day' ),
+            'hierarchical' => false,
+            'menu_icon' => 'dashicons-awards',
+
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_post_type' );
+
+
+
