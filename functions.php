@@ -414,3 +414,37 @@ add_action( 'init', 'wl_display_example', 0 );
 
 
 
+
+function wl_display_additional_information ( $args ) {
+
+// Aggregates all relevant AI fields pulled through from
+// the Live Well API for this particular entry 
+
+
+  if( ! class_exists('ACF') ) {
+    // Do nothing
+  } else {
+
+    setup_postdata ( $args ) ;
+
+    $wl_api_additional_information = get_field("additional_information");
+
+    if ( $wl_api_additional_information != "" ) {
+      
+      echo "<div class=\"additional_information\"> " . $wl_api_additional_information . "</div>" ;
+
+    }    
+  }
+
+
+}
+
+add_action( 'init', 'wl_display_additional_information', 0 );
+
+
+
+
+
+
+
+
