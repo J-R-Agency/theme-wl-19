@@ -371,3 +371,25 @@ add_action( 'after_setup_theme', 'wl_set_google_api_key' );
 
 
 
+
+
+// Limit search to custom post type
+
+function searchfilter($query) {
+ 
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('activities'));
+    }
+ 
+return $query;
+}
+ 
+add_filter('pre_get_posts','searchfilter');
+
+
+
+
+
+
+
+
