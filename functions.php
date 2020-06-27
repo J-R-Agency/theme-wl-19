@@ -519,4 +519,40 @@ add_action( 'init', 'wl_display_activity_contacts', 0 );
 
 
 
+function wl_display_activity_documents ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  if( ! class_exists('ACF') ) {
+    // Do nothing
+  } else {
+
+    setup_postdata ( $args ) ;
+
+    $wl_api_activity_documents = get_field("activity_documents");
+    $activity_documents = unserialize($wl_api_activity_documents);
+
+    if ($activity_documents != ""){
+      // Display documents
+      // Documents
+      foreach ($activity_documents as $activity_document) {
+        $activity_document_list[] = "<li class=\"activity_document__item\"><a href=\"" . $activity_document["Url"] . "\" title=\"" . $activity_document["Title"] . "\" target=\"_blank\">" . $activity_document["Title"] . "</a></li>";
+      }
+      $wl_api_activity_documents = implode("", $activity_document_list);
+      echo "<div class=\"activity_documents__container\"><h3 class=\"activity_documents__title\">Documents</h3> <ul class=\"activity_document__list\">" . $wl_api_activity_documents . "</ul></div>" ;
+    }else{
+      // Do not display documents
+    }
+  }
+}
+
+add_action( 'init', 'wl_display_activity_documents', 0 );
+
+
+
+
+
+
+
 
