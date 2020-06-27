@@ -260,3 +260,103 @@ function create_days_nonhierarchical_taxonomy() {
 
 
 
+//hook into the init action and call create_days_nonhierarchical_taxonomy when it fires
+ 
+add_action( 'init', 'create_postcode_nonhierarchical_taxonomy', 0 );
+ 
+function create_postcode_nonhierarchical_taxonomy() {
+ 
+// Labels part for the GUI
+ 
+  $labels = array(
+    'name' => _x( 'Postcodes', 'taxonomy general name' ),
+    'singular_name' => _x( 'Postcode', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Postcodes' ),
+    'popular_items' => __( 'Popular Postcodes' ),
+    'all_items' => __( 'All Postcodes' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Postcode' ), 
+    'update_item' => __( 'Update Postcode' ),
+    'add_new_item' => __( 'Add New Postcode' ),
+    'new_item_name' => __( 'New Topic Postcode' ),
+    'separate_items_with_commas' => __( 'Separate postcodes with commas' ),
+    'add_or_remove_items' => __( 'Add or remove postcodes' ),
+    'choose_from_most_used' => __( 'Choose from the most used postcodes' ),
+    'menu_name' => __( 'Postcodes' ),
+  ); 
+ 
+// Now register the non-hierarchical taxonomy like tag
+ 
+  register_taxonomy('postcodes','activities',array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'postcode' ),
+  ));
+
+
+
+   // Add terms
+  wp_insert_term('L1', 'postcodes');
+  wp_insert_term('L2', 'postcodes');
+  wp_insert_term('L3', 'postcodes');
+  wp_insert_term('L4', 'postcodes');
+  wp_insert_term('L5', 'postcodes');
+  wp_insert_term('L6', 'postcodes');
+  wp_insert_term('L7', 'postcodes');
+  wp_insert_term('L8', 'postcodes');
+  wp_insert_term('L9', 'postcodes');
+  wp_insert_term('L10', 'postcodes');
+  wp_insert_term('L11', 'postcodes');
+  wp_insert_term('L12', 'postcodes');
+  wp_insert_term('L13', 'postcodes');
+  wp_insert_term('L14', 'postcodes');
+  wp_insert_term('L15', 'postcodes');
+  wp_insert_term('L16', 'postcodes');
+  wp_insert_term('L17', 'postcodes');
+  wp_insert_term('L18', 'postcodes');
+  wp_insert_term('L19', 'postcodes');
+  wp_insert_term('L20', 'postcodes');
+  wp_insert_term('L21', 'postcodes');
+  wp_insert_term('L22', 'postcodes');
+  wp_insert_term('L23', 'postcodes');
+  wp_insert_term('L24', 'postcodes');
+  wp_insert_term('L25', 'postcodes');
+  wp_insert_term('L26', 'postcodes');
+  wp_insert_term('L27', 'postcodes');
+  wp_insert_term('L28', 'postcodes');
+  wp_insert_term('L29', 'postcodes');
+  wp_insert_term('L30', 'postcodes');
+  wp_insert_term('L30', 'postcodes');
+  wp_insert_term('L30', 'postcodes');
+  wp_insert_term('L30', 'postcodes');
+  wp_insert_term('L31', 'postcodes');
+  wp_insert_term('L32', 'postcodes');
+  wp_insert_term('L33', 'postcodes');
+  wp_insert_term('L34', 'postcodes');
+  wp_insert_term('L35', 'postcodes');
+  wp_insert_term('L36', 'postcodes');
+  wp_insert_term('L37', 'postcodes');
+  wp_insert_term('L38', 'postcodes');
+  wp_insert_term('L39', 'postcodes');
+  wp_insert_term('L40', 'postcodes');
+  wp_insert_term('L70', 'postcodes');
+  wp_insert_term('L71', 'postcodes');
+  wp_insert_term('L72', 'postcodes');
+  wp_insert_term('L73', 'postcodes');
+  wp_insert_term('L74', 'postcodes');
+  wp_insert_term('L75', 'postcodes');
+  wp_insert_term('L80', 'postcodes');
+
+}
+
+
+
+
+
+
+
