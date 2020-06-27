@@ -393,3 +393,24 @@ add_filter('pre_get_posts','searchfilter');
 
 
 
+// WL ACTIVITY FUNCTIONS
+
+function wl_display_example ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  setup_postdata ( $args ) ;
+
+  
+}
+
+add_action( 'init', 'wl_display_example', 0 );
+
+
+
+
+
+
+
+
