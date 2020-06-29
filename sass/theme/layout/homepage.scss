@@ -79,19 +79,24 @@ button.wp-block-search__button {
 		@media all and (max-width: $breakpoint-phone) {
 			text-align: left;
 			font-size: 0.8rem;
+			color: red;
 		}
 		@media all and (max-width: $breakpoint-tablet) and (min-width: $breakpoint-phone) {
 			text-align: left;
 			font-size: 0.8rem;
+			color: blue;
 		}	
 		@media all and (max-width: $breakpoint-desktop) and (min-width: $breakpoint-tablet) {
 			font-size: 1rem;
+			color: green;
 		}
 		@media all and (max-width: $breakpoint-superwide) and (min-width: $breakpoint-desktop){
 			font-size: 1.33rem;
+			color: orange;
 		}
 		@include respond-to('md'){
 				text-align: center;
+				color: pink;
 		}
 }
 
