@@ -83,7 +83,7 @@ button.wp-block-search__button {
 		@media all and (max-width: $breakpoint-desktop) {
 			font-size: 1rem;
 		}
-		@media all and (max-width: $breakpoint-superwide) {
+		@media all and (max-width: $breakpoint-superwide) and (min-width: $breakpoint-desktop){
 			font-size: 1.33rem;
 		}
 		@include respond-to('md'){
