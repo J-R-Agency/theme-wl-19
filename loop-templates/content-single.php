@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 		<div class="blog__featured-image" style="background-image: url(' <?php echo get_the_post_thumbnail_url( 'full') ;?> ');">
+			IMAGE
 		</div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
