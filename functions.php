@@ -110,7 +110,7 @@ add_action( 'init', 'create_topics_nonhierarchical_taxonomy', 0 );
  
 function create_topics_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Themes', 'taxonomy general name' ),
@@ -134,7 +134,7 @@ function create_topics_nonhierarchical_taxonomy() {
  
   register_taxonomy('themes','activities',array(
     'hierarchical' => false,
-    'Labels' => $labels,
+    'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
@@ -161,7 +161,7 @@ add_action( 'init', 'create_costs_nonhierarchical_taxonomy', 0 );
  
 function create_costs_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Costs', 'taxonomy general name' ),
@@ -185,7 +185,7 @@ function create_costs_nonhierarchical_taxonomy() {
  
   register_taxonomy('costs','activities',array(
     'hierarchical' => false,
-    'Labels' => $labels,
+    'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
@@ -210,7 +210,7 @@ add_action( 'init', 'create_days_nonhierarchical_taxonomy', 0 );
  
 function create_days_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Days', 'taxonomy general name' ),
@@ -234,7 +234,7 @@ function create_days_nonhierarchical_taxonomy() {
  
   register_taxonomy('days','activities',array(
     'hierarchical' => false,
-    'Labels' => $labels,
+    'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
@@ -266,7 +266,7 @@ add_action( 'init', 'create_postcode_nonhierarchical_taxonomy', 0 );
  
 function create_postcode_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Postcodes', 'taxonomy general name' ),
@@ -290,7 +290,7 @@ function create_postcode_nonhierarchical_taxonomy() {
  
   register_taxonomy('postcodes','activities',array(
     'hierarchical' => false,
-    'Labels' => $labels,
+    'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
