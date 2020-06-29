@@ -53,3 +53,9 @@
 		text-decoration: none;
 	}
 }
+
+/* HIDE SHORTLIST BUTTON ON SINGLE BLOG POSTS */
+
+.single-post .simplefavorite-button {
+	display:none;
+}
