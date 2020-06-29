@@ -31,8 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- TERTIARY MENU -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<nav style="display:none;" class="navbar navbar-expand-md navbar-dark bg-primary" id="tertiary-menu">
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="tertiary-menu">
 			<?php
+/*
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'tertiary_menu',
@@ -45,6 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				);
+*/
 			?>
 		</nav>
 
