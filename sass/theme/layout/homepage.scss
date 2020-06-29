@@ -72,6 +72,9 @@ button.wp-block-search__button {
 		display: flex;
 		flex-direction: row;
 	}
+	& .icon{
+		min-width:80px;
+	}
 }
 
 .activity-description, .activity-name {
