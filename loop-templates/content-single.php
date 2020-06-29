@@ -28,8 +28,6 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
 	<div class="entry-content">
 <!-- 		<?php echo get_favorites_button($post_id, $site_id); ?>
  -->		<?php the_content(); ?>
