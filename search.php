@@ -25,8 +25,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<?php do_action('show_beautiful_filters'); ?>
-
 
 				<?php if ( have_posts() ) : ?>
 
@@ -41,6 +39,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 								);
 								?>
 							</h1>
+
+						<?php do_action('show_beautiful_filters'); ?>
 
 					</header><!-- .page-header -->
 
