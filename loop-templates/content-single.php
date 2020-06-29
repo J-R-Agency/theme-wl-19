@@ -18,6 +18,9 @@ defined( 'ABSPATH' ) || exit;
 				the_post_thumbnail( 'full' );
 			}
 		?>
+
+		<div class="blog__featured-image" style="background-image: url(' <?php echo get_the_post_thumbnail_url( 'full') ;?> ');">
+		</div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
