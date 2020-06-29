@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- 		<?php echo get_favorites_button($post_id, $site_id); ?>
  -->		<?php the_content(); ?>
  			<div class="page-links">
- 				<a href="window.history.back();">&lt; Back</a>
+ 				<p><a href="javascript:window.history.back();">&lt; Back</a></p>
  			</div>
 
 	</div><!-- .entry-content -->
