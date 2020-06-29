@@ -76,8 +76,12 @@ button.wp-block-search__button {
 
 .activity-description, .activity-name {
 
-		@media all and (max-width: $breakpoint-tablet) {
+		@media all and (max-width: $breakpoint-phone) {
 			text-align: left;
+			font-size: 0.8rem;
+		}
+		@media all and (max-width: $breakpoint-tablet) {
+			text-align: center;
 			font-size: 0.8rem;
 		}	
 		@media all and (max-width: $breakpoint-desktop) {
