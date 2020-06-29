@@ -78,7 +78,7 @@ if( have_rows('blog_block') ):
 			<div class="article__item">
 				<div class="article__img">
 					<img src="">
-					<?php get_the_post_thumbnail(); ?>
+					<?php echo get_the_post_thumbnail(); ?>
 				</div>
 				<h3 class="article__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 				<div class="article__summary">
