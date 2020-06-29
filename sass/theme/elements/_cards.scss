@@ -59,6 +59,10 @@
 		@include respond-to('lg'){
 			flex-basis: 32%;
 	    }
+		a {
+			text-decoration: none;
+			color: $dark;
+		}
 	}
 
 	.article__img{
@@ -70,6 +74,7 @@
 		padding-top: 66.7%;
 		width: 100%;
 		margin-bottom: 1rem;
+
 	}
 
 	.article__summary{
