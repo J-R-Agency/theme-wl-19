@@ -363,9 +363,9 @@ function create_postcode_nonhierarchical_taxonomy() {
 
 //hook into the init action and call create_postcode_nonhierarchical_taxonomy when it fires
  
-add_action( 'init', 'create_postcode_nonhierarchical_taxonomy', 0 );
+add_action( 'init', 'create_secondary_postcode_nonhierarchical_taxonomy', 0 );
  
-function create_postcode_nonhierarchical_taxonomy() {
+function create_secondary_postcode_nonhierarchical_taxonomy() {
  
 // Labels part for the GUI
  
