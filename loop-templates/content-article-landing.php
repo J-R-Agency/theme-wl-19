@@ -76,9 +76,7 @@ if( have_rows('blog_block') ):
 		$catquery = new WP_Query( $new_query ) ;
 		while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="article__item">
-				<div class="article__img">
-					<img src="">
-					<?php echo get_the_post_thumbnail(); ?>
+				<div class="article__img" style="background-image: url('<?php echo get_the_post_thumbnail(); ?>');">
 				</div>
 				<h3 class="article__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 				<div class="article__summary">
