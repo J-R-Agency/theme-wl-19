@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 				the_post_thumbnail( 'full' );
-				$blog__featuredimage = get_the_post_thumbnail_url( 'full') ;
+				$blog__featuredimage = get_the_post_thumbnail_url( $post, 'full' ) ;
 				echo $blog__featuredimage ;
 			}
 		?>
