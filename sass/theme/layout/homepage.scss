@@ -78,7 +78,14 @@ button.wp-block-search__button {
 
 		@media all and (max-width: $breakpoint-tablet) {
 			text-align: left;
+			font-size: 0.8rem;
 		}	
+		@media all and (max-width: $breakpoint-desktop) {
+			font-size: 1rem;
+		}
+		@media all and (max-width: $breakpoint-superwide) {
+			font-size: 1.33rem;
+		}
 		@include respond-to('md'){
 				text-align: center;
 		}
