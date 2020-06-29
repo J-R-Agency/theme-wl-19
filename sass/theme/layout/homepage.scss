@@ -68,7 +68,7 @@ button.wp-block-search__button {
 
 /* -- What would you like to try? -- */
 .activity {
-	@media all and (max-width: calc($breakpoint-tablet + 1)) {
+	@media all and (max-width: calc($breakpoint-tablet)) {
 		display: flex;
 		flex-direction: row;
 	}
