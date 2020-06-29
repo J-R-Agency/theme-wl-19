@@ -195,9 +195,9 @@ function create_costs_nonhierarchical_taxonomy() {
 
   // Add terms
   wp_insert_term('Free', 'costs');
-  wp_insert_term('£', 'costs');
-  wp_insert_term('££', 'costs');
-  wp_insert_term('£££', 'costs');
+  wp_insert_term('£ (up to £5)', 'costs');
+  wp_insert_term('££ (£6-£9)', 'costs');
+  wp_insert_term('£££ (£10+)', 'costs');
 
 }
 
