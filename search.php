@@ -41,6 +41,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</h1>
 
 						<?php do_action('show_beautiful_filters'); ?>
+	
+						<div class="advanced-search">Or use our <a href="/advanced-search/" title="Advanced Search">Advanced Search</a></div>
 
 					</header><!-- .page-header -->
 

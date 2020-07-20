@@ -30,10 +30,6 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php endif; ?>
 
-
-
-	<div class="advanced-search">Or use our <a href="/advanced-search/" title="Advanced Search">Advanced Search</a></div>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
