@@ -25,7 +25,7 @@ select {
 	}
 
 	input {
-		& [name="ofsearch"]{
+		& [name=ofsearch]{
 			width: 38rem !important;
 		}
 		& [type=checkbox]{
