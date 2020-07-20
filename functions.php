@@ -783,7 +783,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 /* SEARCH FOR WHOLE WORDS ONLY */
 
-add_filter('posts_search', 'my_search_is_exact', 20, 2);
+//add_filter('posts_search', 'my_search_is_exact', 20, 2);
 
 function my_search_is_exact($search, $wp_query){
 
