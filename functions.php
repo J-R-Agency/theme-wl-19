@@ -820,61 +820,20 @@ function my_search_is_exact($search, $wp_query){
 
 
 
-/* SEARCH FOR EXTENDED TERMS (ACF FIELDS) */
 
-/**
- * Extend WordPress search to include custom fields
- *
- * https://adambalee.com
- */
-
-/**
- * Join posts and postmeta tables
- *
- * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_join
- */
-function cf_search_join( $join ) {
-    global $wpdb;
-
-    if ( is_search() ) {    
-        $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
-    }
-
-    return $join;
+function custom_search_query( $query ) {
+    if ( !is_admin() && $query->is_search ) {
+        $query->set('meta_query', array(
+            array(
+                'key' => '__meta_key__',
+                'value' => $query->query_vars['s'],
+                'compare' => 'LIKE'
+            )
+        ));
+         $query->set('post_type', '__your_post_type__'); // optional
+    };
 }
-add_filter('posts_join', 'cf_search_join', 20, 2 );
+add_filter( 'pre_get_posts', 'dc_custom_search_query');
 
-/**
- * Modify the search query with posts_where
- *
- * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
- */
-function cf_search_where( $where ) {
-    global $pagenow, $wpdb;
 
-    if ( is_search() ) {
-        $where = preg_replace(
-            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-            "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where );
-    }
-
-    return $where;
-}
-add_filter( 'posts_where', 'cf_search_where', 20, 2 );
-
-/**
- * Prevent duplicates
- *
- * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
- */
-function cf_search_distinct( $where ) {
-    global $wpdb;
-
-    if ( is_search() ) {
-        return "DISTINCT";
-    }
-
-    return $where;
-}
-add_filter( 'posts_distinct', 'cf_search_distinct', 20, 2 );
 
