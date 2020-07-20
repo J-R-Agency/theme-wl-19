@@ -833,7 +833,7 @@ function custom_search_query( $query ) {
          $query->set('post_type', '__your_post_type__'); // optional
     };
 }
-add_filter( 'pre_get_posts', 'dc_custom_search_query');
+//add_filter( 'pre_get_posts', 'dc_custom_search_query');
 
 
 
