@@ -842,7 +842,7 @@ function cf_search_join( $join ) {
 
     return $join;
 }
-add_filter('posts_join', 'cf_search_join' );
+add_filter('posts_join', 'cf_search_join', 20, 2 );
 
 /**
  * Modify the search query with posts_where
@@ -860,7 +860,7 @@ function cf_search_where( $where ) {
 
     return $where;
 }
-add_filter( 'posts_where', 'cf_search_where' );
+add_filter( 'posts_where', 'cf_search_where', 20, 2 );
 
 /**
  * Prevent duplicates
@@ -876,5 +876,5 @@ function cf_search_distinct( $where ) {
 
     return $where;
 }
-add_filter( 'posts_distinct', 'cf_search_distinct' );
+add_filter( 'posts_distinct', 'cf_search_distinct', 20, 2 );
 
