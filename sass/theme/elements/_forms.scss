@@ -11,3 +11,16 @@ select {
 	border-radius: 3px;
 	color: $dark-grey;
 }
+
+.advanced-search{
+	
+	margin:1rem;
+
+	& a{
+		text-decoration: underline;
+	}
+
+	& a:hover{
+		color: $dark;
+	}
+}
