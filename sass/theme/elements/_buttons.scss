@@ -21,6 +21,10 @@
 	color: $dark; 
 }
 
+.current{
+	font-weight: bold;
+}
+
 .page-item.active .page-link{ 
 	color: $dark; 
 	border: 1px solid $grey; 
