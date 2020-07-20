@@ -31,8 +31,11 @@ select {
 		& [name="ofsearch"]{
 			width: 100% !important;
 		}
-		& [type=checkbox]{
+		& [type="checkbox"]{
 			margin-right: 1rem !important;
+		}
+		& [type="submit"]{
+			margin: 1rem !important;
 		}
 	}
 	li{
