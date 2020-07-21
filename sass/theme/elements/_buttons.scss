@@ -21,6 +21,22 @@
 	color: $dark; 
 }
 
+.current{
+	font-family: 'Lato Bold', sans-serif;
+	background-color: $light-grey !important;
+}
+
+.pagination .page-link:hover{
+
+	color:$dark !important;
+	background-color: $light-grey !important;
+
+}
+
+strong{
+	font-family: 'Lato Bold', sans-serif;	
+}
+
 .page-item.active .page-link{ 
 	color: $dark; 
 	border: 1px solid $grey; 

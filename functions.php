@@ -195,9 +195,9 @@ function create_costs_nonhierarchical_taxonomy() {
 
   // Add terms
   wp_insert_term('Free', 'costs');
-  wp_insert_term('£ (up to £5)', 'costs');
-  wp_insert_term('££ (£6-£9)', 'costs');
-  wp_insert_term('£££ (£10+)', 'costs');
+  wp_insert_term('£', 'costs');
+  wp_insert_term('££', 'costs');
+  wp_insert_term('£££', 'costs');
 
 }
 
@@ -353,6 +353,56 @@ function create_postcode_nonhierarchical_taxonomy() {
   wp_insert_term('L80', 'postcodes');
 
 }
+
+
+
+
+//hook into the init action and call create_remote_nonhierarchical_taxonomy when it fires
+ 
+add_action( 'init', 'create_remote_nonhierarchical_taxonomy', 0 );
+ 
+function create_remote_nonhierarchical_taxonomy() {
+ 
+// labels part for the GUI
+ 
+  $labels = array(
+    'name' => _x( 'Remote', 'taxonomy general name' ),
+    'singular_name' => _x( 'Remote', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Remote' ),
+    'popular_items' => __( 'Popular Remote' ),
+    'all_items' => __( 'All Remote' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Remote' ), 
+    'update_item' => __( 'Update Remote' ),
+    'add_new_item' => __( 'Add New Remote' ),
+    'new_item_name' => __( 'New Topic Remote' ),
+    'separate_items_with_commas' => __( 'Separate remote with commas' ),
+    'add_or_remove_items' => __( 'Add or remove remote' ),
+    'choose_from_most_used' => __( 'Choose from the most used remote' ),
+    'menu_name' => __( 'Remote' ),
+  ); 
+ 
+// Now register the non-hierarchical taxonomy like tag
+ 
+  register_taxonomy('remote','activities',array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'remote' ),
+  ));
+
+  // Add terms
+  wp_insert_term('Remote', 'remote');
+
+}
+
+
+
+
 
 
 
@@ -733,7 +783,8 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 /* SEARCH FOR WHOLE WORDS ONLY */
 
-add_filter('posts_search', 'my_search_is_exact', 20, 2);
+//add_filter('posts_search', 'my_search_is_exact', 20, 2);
+
 function my_search_is_exact($search, $wp_query){
 
     global $wpdb;
@@ -766,6 +817,23 @@ function my_search_is_exact($search, $wp_query){
 
 }
 
+
+
+
+
+function custom_search_query( $query ) {
+    if ( !is_admin() && $query->is_search ) {
+        $query->set('meta_query', array(
+            array(
+                'key' => '__meta_key__',
+                'value' => $query->query_vars['s'],
+                'compare' => 'LIKE'
+            )
+        ));
+         $query->set('post_type', '__your_post_type__'); // optional
+    };
+}
+//add_filter( 'pre_get_posts', 'dc_custom_search_query');
 
 
 

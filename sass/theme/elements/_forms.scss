@@ -1,0 +1,60 @@
+input, textarea {
+
+	border: 1px solid $grey;
+	border-radius: 3px;
+	padding: 0.25rem 0.5rem;
+
+}
+
+select {
+	border: 1px solid $grey;
+	border-radius: 3px;
+	color: $dark-grey;
+}
+
+.advanced-search{
+	
+	margin:1rem 0 0 0;
+
+	& a{
+		text-decoration: underline;
+	}
+
+	& a:hover{
+		color: $dark;
+	}
+
+	input {
+		& [type="text"]{
+			width: 100% !important;
+		}
+		& [name="ofsearch"]{
+			width: 100% !important;
+		}
+		& [type="checkbox"]{
+			margin-right: 1rem !important;
+		}
+		& [type="submit"]{
+			margin: 1rem !important;
+		}
+	}
+	li{
+		width:100%;
+	}
+
+	.cat-item{
+		width: 7rem;
+	}
+}
+
+.advanced-search div ,.advanced-search ul , .advanced-search > div , .advanced-search > div > ul {
+	margin: 0 !important;
+}
+
+.advanced-search input[type=submit]{
+	margin: 1rem 0 0 0 !important;
+}
+
+.advanced-search input[type=text]{
+	width: 100% !important;
+}
