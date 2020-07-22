@@ -1,6 +1,6 @@
 <?php
 
-if($_POST['clear']) {
+if( isset($_POST['clear']) ) {
 
 	// Delete Action Plan cookies
 	// Set expiration to time in the past
