@@ -1,11 +1,11 @@
 <?php
 
-if($_POST['submit']) {
+if( isset($_POST['submit']) ) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
 
     // Goal
-    if ( $_POST['wl_goal'] ) {
+    if ( isset($_POST['wl_goal']) ) {
     	
     	// echo "<br>The wl_goal exists:  " . $_POST['wl_goal'] ;
 		$cookie_name = "wl_goal";
@@ -17,7 +17,7 @@ if($_POST['submit']) {
 
 
     // Step One
-    if ( $_POST['wl_step_one'] ) {
+    if ( isset($_POST['wl_step_one']) ) {
     	
     	// echo "<br>The wl_step_one exists:  " . $_POST['wl_step_one'] ;
 		$cookie_name = "wl_step_one";
@@ -28,7 +28,7 @@ if($_POST['submit']) {
     }
 
     // Step Two
-    if ( $_POST['wl_step_two'] ) {
+    if ( isset($_POST['wl_step_two']) ) {
     	
     	// echo "<br>The wl_step_two exists:  " . $_POST['wl_step_two'] ;
 		$cookie_name = "wl_step_two";
@@ -39,7 +39,7 @@ if($_POST['submit']) {
     }
 
     // Step Three
-    if ( $_POST['wl_step_three'] ) {
+    if ( isset($_POST['wl_step_three']) ) {
     	
     	// echo "<br>The wl_step_three exists:  " . $_POST['wl_step_three'] ;
 		$cookie_name = "wl_step_three";
@@ -50,7 +50,7 @@ if($_POST['submit']) {
     }
 
     // Step Four
-    if ( $_POST['wl_step_four'] ) {
+    if ( isset($_POST['wl_step_four']) ) {
     	
     	// echo "<br>The wl_step_four exists:  " . $_POST['wl_step_four'] ;
 		$cookie_name = "wl_step_four";
@@ -61,7 +61,7 @@ if($_POST['submit']) {
     }
 
     // Step Three
-    if ( $_POST['wl_step_five'] ) {
+    if ( isset($_POST['wl_step_five']) ) {
     	
     	// echo "<br>The wl_step_five exists:  " . $_POST['wl_step_five'] ;
 		$cookie_name = "wl_step_five";
@@ -72,7 +72,7 @@ if($_POST['submit']) {
     }
 
     // Notes
-    if ( $_POST['wl_notes'] ) {
+    if ( isset($_POST['wl_notes']) ) {
     	
     	// echo "<br>The wl_notes exists:  " . $_COOKIE['wl_notes'] ;
 		$cookie_name = "wl_notes";
