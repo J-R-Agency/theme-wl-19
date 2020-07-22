@@ -22,15 +22,15 @@
 					<h2>Key steps</h2>
 					<ol>
 						<li><label class="visually-hidden" for="wl_step_one">Step 1:</label>
-<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo stripslashes( $wl_step_one );?>" placeholder=" e.g. Find out what groups there are"></li>
+<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php if ( isset( $wl_step_one ) ){ echo stripslashes( $wl_step_one ); }?>" placeholder=" e.g. Find out what groups there are"></li>
 						<li><label class="visually-hidden" for="wl_step_two">Step 2:</label>
-<input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php echo stripslashes( $wl_step_two );?>" placeholder=" e.g. Join a walking group"></li>
+<input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php if ( isset( $wl_step_two ) ){ echo stripslashes( $wl_step_two ); }?>" placeholder=" e.g. Join a walking group"></li>
 						<li><label class="visually-hidden" for="wl_step_three">Step 3:</label>
-<input class="wl_steps" type="text" name="wl_step_three" id="wl_step_three" value="<?php echo stripslashes( $wl_step_three );?>" placeholder=" e.g. Try to socialise at least once a week"></li>
+<input class="wl_steps" type="text" name="wl_step_three" id="wl_step_three" value="<?php if ( isset( $wl_step_three ) ){ echo stripslashes( $wl_step_three ); }?>" placeholder=" e.g. Try to socialise at least once a week"></li>
 						<li><label class="visually-hidden" for="wl_step_four">Step 4:</label>
-<input class="wl_steps" type="text" name="wl_step_four" id="wl_step_four" value="<?php echo stripslashes( $wl_step_four );?>" placeholder="..."></li>
+<input class="wl_steps" type="text" name="wl_step_four" id="wl_step_four" value="<?php if ( isset( $wl_step_four ) ){ echo stripslashes( $wl_step_four ); }?>" placeholder="..."></li>
 						<li><label class="visually-hidden" for="wl_step_five">Step 5:</label>
-<input class="wl_steps" type="text" name="wl_step_five" id="wl_step_five" value="<?php echo stripslashes( $wl_step_five );?>" placeholder="..."></li>
+<input class="wl_steps" type="text" name="wl_step_five" id="wl_step_five" value="<?php if ( isset( $wl_step_five ) ){ echo stripslashes( $wl_step_five ); }?>" placeholder="..."></li>
 					</ol>
 
 					<input type="submit" name="submit" value="Save" />
