@@ -20,6 +20,7 @@
 						<div>Think about the main things that will help you achieve your goal, these should be 3–5 specific things you can do that are relevant to you and what you want out of your Action Plan.</div>";
 					}?>
 					<h2>Key steps</h2>
+					<p>STEPS</p>
 					<ol>
 						<li><label class="visually-hidden" for="wl_step_one">Step 1:</label>
 <input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="
