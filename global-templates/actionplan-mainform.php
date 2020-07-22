@@ -22,9 +22,10 @@
 					<h2>Key steps</h2>
 					<p>STEPS</p>
 					<ol>
-						<li><label class="visually-hidden" for="wl_step_one">Step 1:</label>
-<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="
+						<li><label class="visually-hidden" for="ddwl_step_one">Step 1:</label>
+<input class="wl_steps" type="text" name="wl_step_one" id="ddwl_step_one" value="
 <?php 
+// EXTRA LINES
 if ( isset( $wl_step_one ) ){ 
 	echo stripslashes( $wl_step_one ); 
 }
