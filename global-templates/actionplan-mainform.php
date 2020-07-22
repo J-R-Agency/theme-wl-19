@@ -22,7 +22,13 @@
 					<h2>Key steps</h2>
 					<ol>
 						<li><label class="visually-hidden" for="wl_step_one">Step 1:</label>
-<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php if ( isset( $wl_step_one ) ){ echo stripslashes( $wl_step_one ); }?>" placeholder=" e.g. Find out what groups there are"></li>
+<input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="
+<?php 
+if ( isset( $wl_step_one ) ){ 
+	echo stripslashes( $wl_step_one ); 
+}
+?>
+" placeholder=" e.g. Find out what groups there are"></li>
 						<li><label class="visually-hidden" for="wl_step_two">Step 2:</label>
 <input class="wl_steps" type="text" name="wl_step_two" id="wl_step_two" value="<?php if ( isset( $wl_step_two ) ){ echo stripslashes( $wl_step_two ); }?>" placeholder=" e.g. Join a walking group"></li>
 						<li><label class="visually-hidden" for="wl_step_three">Step 3:</label>
