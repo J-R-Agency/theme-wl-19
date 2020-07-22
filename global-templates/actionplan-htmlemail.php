@@ -26,9 +26,12 @@ if( $wl_goal != ""){
 
 
     // Parse activities shortlist
+    if ( isset($_COOKIE['simplefavorites']) ){
 
-    $wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
-    $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+        $wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
+        $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
+    }
 
 
 // GET WP DATA FROM POST IDs
