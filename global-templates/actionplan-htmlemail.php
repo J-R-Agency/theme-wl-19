@@ -28,15 +28,14 @@ if( $wl_goal != ""){
     // Parse activities shortlist
     if ( isset($_COOKIE['simplefavorites']) ){
 
-        var_dump( $_COOKIE['simplefavorites'] );
-
         $wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
 
         if ( is_array( $wl_simplefavorites ) ){
-            var_dump( $wl_simplefavorites );
 
             if ( isset($wl_simplefavorites[0]["posts"]) ){
+
                 $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
             }
 
         }
