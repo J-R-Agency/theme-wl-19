@@ -29,7 +29,12 @@ if( $wl_goal != ""){
     if ( isset($_COOKIE['simplefavorites']) ){
 
         $wl_simplefavorites = json_decode(stripslashes($_COOKIE['simplefavorites']), true);
-        $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
+        if ( is_array( $wl_simplefavorites ) ){
+    
+            $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
+        }
 
     }
 
