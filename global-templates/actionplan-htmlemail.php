@@ -34,7 +34,10 @@ if( $wl_goal != ""){
 
         if ( is_array( $wl_simplefavorites ) ){
             var_dump( $wl_simplefavorites );
-            $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+
+            if ( isset($wl_simplefavorites[0]["posts"]) ){
+                $wl_shortlist = $wl_simplefavorites[0]["posts"] ;
+            }
 
         }
 
