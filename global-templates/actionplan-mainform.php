@@ -8,6 +8,7 @@ if ( !isset( $wl_step_two ) ){ $wl_step_two = "" ;}
 if ( !isset( $wl_step_three ) ){ $wl_step_three = "" ;}
 if ( !isset( $wl_step_four ) ){ $wl_step_four = "" ;}
 if ( !isset( $wl_step_five ) ){ $wl_step_five = "" ;}
+if ( !isset( $wl_notes ) ){ $wl_notes = "" ;}
 ?>
 
 
