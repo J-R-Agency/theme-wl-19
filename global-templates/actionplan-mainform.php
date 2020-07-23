@@ -16,7 +16,7 @@ if ( !isset( $wl_step_five ) ){ $wl_step_five = "" ;}
 					
 					<h1>Action Plan</h1>
 					<?php
-					if ($wl_goal==""){
+					if ( !isset($wl_goal) ){
 						echo "<h2>Set a clear goal</h2>
 						<div>A clear goal will provide focus and direction, it will help give clarity to your decision making and puts you in control of your own future. It can help keep you motivated as you remember why you are choosing your activities. It only needs to be a sentence or two about your ideal outcome and why you want that.</div>";
 					}?>
