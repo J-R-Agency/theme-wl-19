@@ -9,16 +9,16 @@ if( isset($wl_goal) ){
     if ( isset($wl_step_one) ) {
         $wl_steps[] = $wl_step_one;
     }
-    if ( $wl_step_two != "" ) {
+    if ( isset($wl_step_two) ) {
         $wl_steps[] = $wl_step_two;
     }
-    if ( $wl_step_three != "" ) {
+    if ( isset($wl_step_three) ) {
         $wl_steps[] = $wl_step_three;
     }
-    if ( $wl_step_four != "" ) {
+    if ( isset($wl_step_four) ) {
         $wl_steps[] = $wl_step_four;
     }
-    if ( $wl_step_five != "" ) {
+    if ( isset($wl_step_five) ) {
         $wl_steps[] = $wl_step_five;
     }
 
