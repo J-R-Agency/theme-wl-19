@@ -6,7 +6,7 @@ if( isset($wl_goal) ){
 
     unset($wl_steps);
 
-    if ( $wl_step_one != "" ) {
+    if ( isset($wl_step_one) ) {
         $wl_steps[] = $wl_step_one;
     }
     if ( $wl_step_two != "" ) {
