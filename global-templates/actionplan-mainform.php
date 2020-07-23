@@ -2,6 +2,7 @@
 <?php 
 
 // Set up fields
+if ( !isset( $wl_goal ) ){ $wl_goal = "" ;}
 if ( !isset( $wl_step_one ) ){ $wl_step_one = "" ;}
 if ( !isset( $wl_step_two ) ){ $wl_step_two = "" ;}
 if ( !isset( $wl_step_three ) ){ $wl_step_three = "" ;}
