@@ -1,6 +1,6 @@
 <?php
 
-if( $wl_goal != ""){
+if( isset($wl_goal) ){
 
     // Parse steps and format HTML
 
