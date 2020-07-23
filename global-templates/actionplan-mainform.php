@@ -27,7 +27,7 @@ if ( !isset( $wl_notes ) ){ $wl_notes = "" ;}
 					<input type="submit" name="submit" value="Save" />
 
 					<?php
-					if ($wl_step_one==""){
+					if ( empty($wl_step_one) ){
 						echo "<h2>Decide on the key steps</h2>
 						<div>Think about the main things that will help you achieve your goal, these should be 3–5 specific things you can do that are relevant to you and what you want out of your Action Plan.</div>";
 					}?>
