@@ -20,7 +20,7 @@ if ( !isset( $wl_step_five ) ){ $wl_step_five = "" ;}
 						echo "<h2>Set a clear goal</h2>
 						<div>A clear goal will provide focus and direction, it will help give clarity to your decision making and puts you in control of your own future. It can help keep you motivated as you remember why you are choosing your activities. It only needs to be a sentence or two about your ideal outcome and why you want that.</div>";
 					}?>
-					<label for="wl_goal"><h2>Goal</h2></label>
+					<label for="wl_goal"><h2>Goal</h2>TEST</label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo stripslashes( $wl_goal );?>" placeholder="Describe your main goal for your wellbeing">
 					<input type="submit" name="submit" value="Save" />
 
@@ -29,7 +29,7 @@ if ( !isset( $wl_step_five ) ){ $wl_step_five = "" ;}
 						echo "<h2>Decide on the key steps</h2>
 						<div>Think about the main things that will help you achieve your goal, these should be 3–5 specific things you can do that are relevant to you and what you want out of your Action Plan.</div>";
 					}?>
-					<h2>Key steps</h2>
+					<h2>Key stepsTEST</h2>
 					<ol>
 						<li><label class="visually-hidden" for="wl_step_one">Step 1:</label>
 <input class="wl_steps" type="text" name="wl_step_one" id="wl_step_one" value="<?php echo stripslashes( $wl_step_one );?>" placeholder=" e.g. Find out what groups there are"></li>
