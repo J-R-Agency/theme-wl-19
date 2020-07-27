@@ -26,6 +26,13 @@ if( isset($wl_goal) ){
         $display_wl_steps = "<ul>\r\n<li>" . implode("</li>\r\n<li>", $wl_steps ) . "</li>\r\n</ul>\r\n";
     }
 
+    if ( !isset($your_name) ){
+        $your_name = "";
+    }
+
+    if ( !isset($your_email) ){
+        $your_email = "";
+    }
 
     // Parse activities shortlist
     if ( isset($_COOKIE['simplefavorites']) ){
