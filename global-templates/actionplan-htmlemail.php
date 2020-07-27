@@ -22,14 +22,6 @@ if( isset($wl_goal) ){
         $wl_steps[] = $wl_step_five;
     }
 
-    if ( !isset($display_wl_steps) ){
-        $display_wl_steps = "";
-    }   
-
-    if ( isset($wl_steps) ){
-        $display_wl_steps = "<ul>\r\n<li>" . implode("</li>\r\n<li>", $wl_steps ) . "</li>\r\n</ul>\r\n";
-    }
-
     if ( !isset($your_name) ){
         $your_name = "";
     }
@@ -37,6 +29,20 @@ if( isset($wl_goal) ){
     if ( !isset($your_email) ){
         $your_email = "";
     }
+
+    if ( !isset($wl_notes) ){
+        $wl_notes = "";
+    }   
+
+    if ( !isset($display_wl_steps) ){
+        $display_wl_steps = "";
+    } 
+    
+    if ( isset($wl_steps) ){
+        $display_wl_steps = "<ul>\r\n<li>" . implode("</li>\r\n<li>", $wl_steps ) . "</li>\r\n</ul>\r\n";
+    }
+
+
 
     // Parse activities shortlist
     if ( isset($_COOKIE['simplefavorites']) ){
