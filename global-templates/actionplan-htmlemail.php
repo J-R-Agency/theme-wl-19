@@ -51,10 +51,14 @@ if( isset($wl_goal) ){
                     $shortlist_posts = new WP_Query($args);
 
                     if($shortlist_posts->have_posts()) : 
-                      while($shortlist_posts->have_posts()) : 
-                         $shortlist_posts->the_post();
+                        
+                        $display_wl_shortlist = "";
 
-                         $display_wl_shortlist .=  "<li><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></li>\r\n";
+                        while($shortlist_posts->have_posts()) : 
+
+                            $shortlist_posts->the_post();
+
+                            $display_wl_shortlist .=  "<li><a href=\"" . get_the_permalink() . "\" title=\"View " . get_the_title()  . " on the Wellbeing Liverpool site\">" . get_the_title() . "</a></li>\r\n";
 
                         endwhile;
                     else: 
