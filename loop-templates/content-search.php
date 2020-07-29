@@ -19,6 +19,10 @@ $i = 0 ;
 if ( !isset($site_id) ) {
 	$site_id = NULL ;
 }
+
+if ( !isset($post_id) ) {
+	$post_id = NULL ;
+}
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
