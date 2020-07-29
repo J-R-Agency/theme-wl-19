@@ -103,8 +103,8 @@ if ( $flg_action_plan ) {
 				</div>
 			</div>
 			<div class="wl_actions_help__info">
-				<h3>We are here to help!</h3>
-				<p>If you would like a hand setting up your Action Plan we can help. The best way to do this is a referral through your GP.</p>
+				<h3>Do you need help?</h3>
+				<p>If you would like a hand setting up your Action Plan there is help available. The best way to get help is via a referral for a Link Worker through your GP practice.</p>
 				<p>If you are having any other issues, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
 			</div>
 		</div>
