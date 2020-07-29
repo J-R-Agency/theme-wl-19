@@ -75,11 +75,11 @@
 					width="70">
 			</div>
 			<div class="wl_advice_help__title wl_advice_title">
-				<h3>We are here to help</h3>
+				<h3>Do you need help?</h3>
 			</div>
 		</div>
 		<div class="wl_advice_help__info">
-			<p>If you would like a hand setting up your Action Plan we can help. The best way to do this is a referral through your GP.</p>
+			<p>If you would like a hand setting up your Action Plan there is help available. The best way to get help is via a referral for a Link Worker through your GP practice.</p>
 		</div>
 	</div>
 
