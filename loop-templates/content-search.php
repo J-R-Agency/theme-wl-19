@@ -7,6 +7,18 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+// Initialise variables
+
+$search_summary_display_max = 255 ;
+//$search_summary_parts_max = count( $search_summary_parts ) ;
+$search_summary_parts_max = 3 ;
+$search_summary_display = NULL ;
+$i = 0 ;
+
+if ( !isset($site_id) ) {
+	$site_id = NULL ;
+}
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -52,11 +64,7 @@ defined( 'ABSPATH' ) || exit;
 
 		$search_summary = str_replace("</p>", "", $search_summary);
 		$search_summary_parts = preg_split('#<p([^>])*>#', $search_summary);
-		$search_summary_display_max = 255 ;
-		//$search_summary_parts_max = count( $search_summary_parts ) ;
-		$search_summary_parts_max = 3 ;
-		$search_summary_display = NULL ;
-		$i = 0 ;
+
 		while ( $i <= $search_summary_parts_max ) {			
 			if ( strlen( $search_summary_display ) >= $search_summary_display_max ) {
 				break ;
