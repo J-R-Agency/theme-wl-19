@@ -74,9 +74,15 @@ if ( !isset($post_id) ) {
 				break ;
 			} else {
 				$search_summary_display_diff = $search_summary_display_max - strlen( $search_summary_display ) ;
-				if ( strlen( wp_strip_all_tags( $search_summary_parts[$i] ) ) <= $search_summary_display_diff ) {
-					$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) . " " ;
+
+				if ( isset($search_summary_parts[$i])){
+
+					if ( strlen( wp_strip_all_tags( $search_summary_parts[$i] ) ) <= $search_summary_display_diff ) {
+						$search_summary_display .= wp_strip_all_tags( $search_summary_parts[$i] ) . " " ;
+					}
+
 				}
+
 				$i = $i + 1 ;		
 			}
 		}
