@@ -105,7 +105,7 @@ if ( $flg_action_plan ) {
 			<div class="wl_actions_help__info">
 				<h3>Do you need help?</h3>
 				<p>If you would like a hand setting up your Action Plan there is help available. The best way to get help is via a referral for a Link Worker through your GP practice.</p>
-				<p>If you are having any other issues, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
+				<p>If you are having any other issues with the website, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
 			</div>
 		</div>
 	</div>
