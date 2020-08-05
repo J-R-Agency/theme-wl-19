@@ -396,7 +396,7 @@ function create_remote_nonhierarchical_taxonomy() {
   ));
 
   // Add terms
-  wp_insert_term('Remote', 'remote');
+  wp_insert_term('Yes', 'remote');
 
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-if($_POST['email']) {
+if( isset($_POST['email']) ) {
   // we will add the code to process submitted form here
     // we can also echo some text here if form is submitted
 

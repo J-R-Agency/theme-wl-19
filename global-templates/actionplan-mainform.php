@@ -1,4 +1,16 @@
 
+<?php 
+
+// Set up fields
+if ( !isset( $wl_goal ) ){ $wl_goal = "" ;}
+if ( !isset( $wl_step_one ) ){ $wl_step_one = "" ;}
+if ( !isset( $wl_step_two ) ){ $wl_step_two = "" ;}
+if ( !isset( $wl_step_three ) ){ $wl_step_three = "" ;}
+if ( !isset( $wl_step_four ) ){ $wl_step_four = "" ;}
+if ( !isset( $wl_step_five ) ){ $wl_step_five = "" ;}
+if ( !isset( $wl_notes ) ){ $wl_notes = "" ;}
+?>
+
 
 				<!-- action plan form -->
 				<div id="wl_actionplan" class="wl_actionplan">
@@ -6,16 +18,16 @@
 					
 					<h1>Action Plan</h1>
 					<?php
-					if ($wl_goal==""){
+					if ( empty($wl_goal) ){
 						echo "<h2>Set a clear goal</h2>
-						<div>A clear goal will provide focus and direction, it will help give clarity to your decision making and puts you in control of your own future. It can help keep you motivated as you remember why you are choosing your activities. It only needs to be a sentence or two about your ideal outcome and why you want that.</div>";
+						<div>A clear goal will help give you focus and motivation by reminding you why you are choosing your activities. It only needs to be a sentence or two about your ideal outcome and why you want that.</div>";
 					}?>
 					<label for="wl_goal"><h2>Goal</h2></label>
 					<input type="text" name="wl_goal" id="wl_goal" value="<?php echo stripslashes( $wl_goal );?>" placeholder="Describe your main goal for your wellbeing">
 					<input type="submit" name="submit" value="Save" />
 
 					<?php
-					if ($wl_step_one==""){
+					if ( empty($wl_step_one) ){
 						echo "<h2>Decide on the key steps</h2>
 						<div>Think about the main things that will help you achieve your goal, these should be 3–5 specific things you can do that are relevant to you and what you want out of your Action Plan.</div>";
 					}?>
@@ -38,7 +50,7 @@
 					<!-- display shortlist from action plan (favorites plugin) -->
 					<?php
 
-					echo "<h2>Key Activities</h2>" ;
+					echo "<h2>My Activities</h2>" ;
 
 					// Action Plan but no activities yet
 					$msg_no_activities_a = "
@@ -170,7 +182,7 @@ if ( !isset($_COOKIE['wl_goal']) ) {
 ?>
 
 					<label for="wl_notes">Notes:</label>
-					<p>Many of the services on Wellbeing Liverpool have multiple activities and services on offer. The Notes section is where you can keep track of any additional information you might need, like any specific dates or costs, a local landmark to look out fo, or which buses might go near to the activity.</p>
+					<p>Many of the organisations on Wellbeing Liverpool have multiple groups and activities on offer.  The Notes section is where you can keep track of any additional information you might need on your action plan like any specific dates and times or costs of your chosen group or activity.</p>
 					<textarea name="wl_notes" id="wl_notes" placeholder="Here you can add any notes or tips"><?php echo stripslashes( $wl_notes );?></textarea>
 
 					<input type="submit" name="submit" value="<?php echo $msg_btn_action_plan ;?> your Action Plan" />
