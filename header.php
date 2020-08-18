@@ -157,9 +157,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 $banner_active = get_field('banner_active', 'option'); 
 
+/*
 the_field('banner_active', 'option'); 
 the_field('banner_heading', 'option'); 
 the_field('banner_content', 'option'); 
+*/
 
 echo get_page_template();
 
@@ -189,7 +191,7 @@ if ( $banner_active && in_array('true', $banner_active) ){
 
 } else {
 
-	echo $banner_active;
+	// echo $banner_active;
 
 }
 
