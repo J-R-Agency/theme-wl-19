@@ -167,6 +167,8 @@ echo get_page_template();
 
 print_r(get_post_class());
 
+echo $pagename;
+
 if ( $banner_active && in_array('true', $banner_active) ){
 	
 	$banner_heading = get_field('banner_heading', 'option'); 
