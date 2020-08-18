@@ -161,6 +161,8 @@ the_field('banner_active', 'option');
 the_field('banner_heading', 'option'); 
 the_field('banner_content', 'option'); 
 
+echo get_page_template();
+
 if ( $banner_active && in_array('true', $banner_active) ){
 	
 	$banner_heading = get_field('banner_heading', 'option'); 
