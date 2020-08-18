@@ -155,12 +155,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php 
 
-$banner_active = the_field('banner_active', 'option'); 
+$banner_active = get_field('banner_active', 'option'); 
 
 if ( $banner_active == "true" ){
 	
-	$banner_heading = the_field('banner_heading', 'option'); 
-	$banner_content = the_field('banner_content', 'option'); 
+	$banner_heading = get_field('banner_heading', 'option'); 
+	$banner_content = get_field('banner_content', 'option'); 
 
 	echo "
 	<div class=\"notification_banner\">
