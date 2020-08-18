@@ -161,7 +161,7 @@ the_field('banner_active', 'option');
 the_field('banner_heading', 'option'); 
 the_field('banner_content', 'option'); 
 
-if ( $banner_active == "true" ){
+if ( $banner_active && in_array('true', $banner_active) ){
 	
 	$banner_heading = get_field('banner_heading', 'option'); 
 	$banner_content = get_field('banner_content', 'option'); 
