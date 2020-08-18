@@ -173,7 +173,7 @@ if ( $banner_active && in_array('true', $banner_active) ){
 	$banner_heading = get_field('banner_heading', 'option'); 
 	$banner_content = get_field('banner_content', 'option'); 
 
-	if ( is_page_template( array( 'search.php', 'single-activities.php' ) ) ) {
+	if ( is_page( array( 'search.php', 'single-activities.php' ) ) ) {
 
 		echo "CORRECT TEMPLATE";
 
