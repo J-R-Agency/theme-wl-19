@@ -157,6 +157,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 $banner_active = get_field('banner_active', 'option'); 
 
+the_field('banner_active', 'option'); 
+the_field('banner_heading', 'option'); 
+the_field('banner_content', 'option'); 
+
 if ( $banner_active == "true" ){
 	
 	$banner_heading = get_field('banner_heading', 'option'); 
