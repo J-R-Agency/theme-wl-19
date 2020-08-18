@@ -837,3 +837,12 @@ function custom_search_query( $query ) {
 
 
 
+/*  ADD CUSTOM OPTIONS PAGE FOR ACF FIELDS */
+
+if( function_exists('acf_add_options_page') ) {
+  
+  acf_add_options_page();
+  
+}
+
+
