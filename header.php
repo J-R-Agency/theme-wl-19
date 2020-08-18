@@ -167,12 +167,6 @@ echo get_page_template();
 
 print_r(get_post_class());
 
-echo $pagename;
-
-$obj_id = get_queried_object_id();
-$current_url = get_term_link( $obj_id );
-
-echo $current_url;
 
 if ( $banner_active && in_array('true', $banner_active) ){
 	
