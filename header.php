@@ -162,9 +162,19 @@ if ( $banner_active == "true" ){
 	$banner_heading = get_field('banner_heading', 'option'); 
 	$banner_content = get_field('banner_content', 'option'); 
 
+	if ( is_page_template( array( 'search.php', 'single-activities.php' ) ) ) {
+
+		echo "CORRECT TEMPLATE";
+
+	} else {
+
+		echo "INCORRECT TEMPLATE";
+
+	}
+
 	echo "
 	<div class=\"notification_banner\">
-		<h3 class=\"banner_heading\">" . $banner_heading . "</h2>
+		<h3 class=\"banner_heading\">" . $banner_heading . "</h3>
 		<div class=\"banner_content\">
 			" . $banner_content . "
 		</div>
@@ -175,7 +185,3 @@ if ( $banner_active == "true" ){
 
 ?>
 
-
-<div style="width: 100%; background-color: #0B8CE3;">
-        Banner
-    </div>
