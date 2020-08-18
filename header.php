@@ -166,22 +166,22 @@ if ( $banner_active && in_array('true', $banner_active) ){
 
 	if ( $post_type_to_check == "activities" ) {
 
-		echo "CORRECT TEMPLATE";
-
+		echo "
+		<div class=\"notification_banner\">
+			<h3 class=\"banner_heading\">" . $banner_heading . "</h3>
+			<div class=\"banner_content\">
+				" . $banner_content . "
+			</div>
+		</div>
+		";
+	
 	} else {
 
-		echo "INCORRECT TEMPLATE";
+		// echo "INCORRECT TEMPLATE";
 
 	}
 
-	echo "
-	<div class=\"notification_banner\">
-		<h3 class=\"banner_heading\">" . $banner_heading . "</h3>
-		<div class=\"banner_content\">
-			" . $banner_content . "
-		</div>
-	</div>
-	";
+
 
 } else {
 
