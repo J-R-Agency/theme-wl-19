@@ -153,3 +153,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 	}
 </script>
 
+<?php 
+
+$banner_active = the_field('banner_active', 'option'); 
+
+if ( $banner_active == "true" ){
+	
+	$banner_heading = the_field('banner_heading', 'option'); 
+	$banner_content = the_field('banner_content', 'option'); 
+
+	echo "
+	<div class=\"notification_banner\">
+		<h3 class=\"banner_heading\">" . $banner_heading . "</h2>
+		<div class=\"banner_content\">
+			" . $banner_content . "
+		</div>
+	</div>
+	";
+
+}
+
+?>
+
+
+<div style="width: 100%; background-color: #0B8CE3;">
+        Banner
+    </div>
