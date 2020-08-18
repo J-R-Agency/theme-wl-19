@@ -165,7 +165,7 @@ the_field('banner_content', 'option');
 
 echo get_page_template();
 
-print_r(get_post_class());
+print_r(get_post_type());
 
 
 if ( $banner_active && in_array('true', $banner_active) ){
