@@ -169,6 +169,11 @@ print_r(get_post_class());
 
 echo $pagename;
 
+$obj_id = get_queried_object_id();
+$current_url = get_term_link( $obj_id );
+
+echo $current_url;
+
 if ( $banner_active && in_array('true', $banner_active) ){
 	
 	$banner_heading = get_field('banner_heading', 'option'); 
