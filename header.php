@@ -185,6 +185,10 @@ if ( $banner_active == "true" ){
 	</div>
 	";
 
+} else {
+
+	echo $banner_active;
+
 }
 
 ?>
