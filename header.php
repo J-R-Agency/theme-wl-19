@@ -153,3 +153,41 @@ $container = get_theme_mod( 'understrap_container_type' );
 	}
 </script>
 
+<?php 
+
+$banner_active = get_field('banner_active', 'option'); 
+
+$post_type_to_check = get_post_type();
+
+if ( $banner_active && in_array('true', $banner_active) ){
+	
+	$banner_heading = get_field('banner_heading', 'option'); 
+	$banner_content = get_field('banner_content', 'option'); 
+
+	if ( $post_type_to_check == "activities" ) {
+
+		echo "
+		<div class=\"notification_banner\">
+			<h3 class=\"banner_heading\">" . $banner_heading . "</h3>
+			<div class=\"banner_content\">
+				" . $banner_content . "
+			</div>
+		</div>
+		";
+	
+	} else {
+
+		// echo "INCORRECT TEMPLATE";
+
+	}
+
+
+
+} else {
+
+	// echo $banner_active;
+
+}
+
+?>
+
