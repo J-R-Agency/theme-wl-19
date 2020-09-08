@@ -43,12 +43,23 @@ if ( $notice_active && in_array('true', $notice_active) ){
 
 	}
 
-	echo "
+	$internet_explorer_notice_contents = "
 	<div class=\"internet_explorer_notice\">
 		<h3 class=\"notice_heading\">" . $notice_heading . "</h3>
 		<div class=\"notice_content\">
 			" . $notice_content . "
 		</div>
+	</div>
+	";
+
+	echo "
+	<!--[if IE]>
+	<div class=\"internet_explorer_notice internet_explorer_notice--ie9\">
+	" . $internet_explorer_notice_ie9 . "
+	</div>
+	<![endif]-->
+	<div class=\"internet_explorer_notice internet_explorer_notice--ie10\">
+	" . $internet_explorer_notice_ie10 . "
 	</div>
 	";
 

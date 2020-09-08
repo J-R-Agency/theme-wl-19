@@ -119,6 +119,8 @@
 
 
 .internet_explorer_notice{
+	/* CREATE ALL STYLES BUT HIDE FROM MODERN BROWSERS BY DEFAULT */
+	display: none;
 
 	background-color: $dark-grey;
 	color: $light;
@@ -130,6 +132,20 @@
 	}
 	p a:hover{
 		color: $dark;
+	}
+
+}
+
+.internet_explorer_notice--ie9{
+	/* SHOW FOR IE9 AND BELOW - CONDITIONAL */
+	display: block;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+	/* SHOW FOR IE10 AND ABOVE - MS-SPECIFIC MEDIA QUERY */
+	/* IE10+ specific styles go here */ 
+	.internet_explorer_notice--ie10{
+		display: block;
 	}
 }
 
