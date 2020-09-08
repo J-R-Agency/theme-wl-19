@@ -55,11 +55,11 @@ if ( $notice_active && in_array('true', $notice_active) ){
 	echo "
 	<!--[if IE]>
 	<div class=\"internet_explorer_notice internet_explorer_notice--ie9\">
-	" . $internet_explorer_notice_ie9 . "
+	" . $internet_explorer_notice_contents . "
 	</div>
 	<![endif]-->
 	<div class=\"internet_explorer_notice internet_explorer_notice--ie10\">
-	" . $internet_explorer_notice_ie10 . "
+	" . $internet_explorer_notice_contents . "
 	</div>
 	";
 
