@@ -117,3 +117,19 @@
 	}
 }
 
+
+.internet_explorer_notice{
+
+	background-color: $dark-grey;
+	color: $light;
+	text-align: center;
+	padding: 2rem 17.5vw;
+
+}
+
+@include respond-to('md'){
+	.internet_explorer_notice-right {
+		padding: 2rem 33vw;
+	}
+}
+
