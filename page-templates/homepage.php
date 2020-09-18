@@ -59,8 +59,8 @@ get_header(); ?>
 	<div class="row mt-20">
 		
 		<!-- Benefits of an Action Plan -->
-		<div class="col-md-6 col-sm-12 d-flex">
-			<div class="highlight w-100">
+		<div class="col-md-6 col-sm-12 d-flex ie-flex-override">
+			<div class="highlight w-100 ie-flex-override">
 				<h1><?php the_field("benefits_title"); ?></h1>
 				<ul>
 					<?php

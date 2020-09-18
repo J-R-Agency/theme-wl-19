@@ -147,6 +147,9 @@
 	.internet_explorer_notice--ie10{
 		display: block;
 	}
+	.ie-flex-override{
+		display: block !important;
+	}
 }
 
 @include respond-to('md'){
