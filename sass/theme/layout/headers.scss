@@ -150,6 +150,9 @@
 	.ie-flex-override{
 		display: block !important;
 	}
+	.ie-float{
+		float: left;
+	}
 }
 
 @include respond-to('md') {

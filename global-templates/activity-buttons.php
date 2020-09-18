@@ -38,7 +38,7 @@
 
 					if ($link!=""){
 					?>
-					<div class="col-md-3 col-12 activity ie-flex-override">
+					<div class="col-md-3 col-12 activity ie-flex-override ie-float">
 						<!-- Activity icon -->
 						<div class="col-md-12 col-4 centered">
 							<?php if( $link ): ?>
