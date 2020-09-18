@@ -111,7 +111,7 @@
 
 }
 
-@include respond-to('md'){
+@include respond-to('md') {
 	.notification_banner-right {
 		padding: 2rem 33vw;
 	}
@@ -152,7 +152,7 @@
 	}
 }
 
-@include respond-to('md'){
+@include respond-to('md') {
 	.internet_explorer_notice-right {
 		padding: 2rem 33vw;
 	}
