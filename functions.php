@@ -535,6 +535,9 @@ function wl_display_activity_contacts ( $args ) {
       }
 
       $wl_api_activity_contacts = implode("", $activity_contact_list);
+          
+      // Get website URL 
+      $websiteurl = get_field('websiteurl');
       
       if ( $websiteurl != "" ) {
         $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
@@ -543,12 +546,13 @@ function wl_display_activity_contacts ( $args ) {
         $activity_link[0] = "";
         $activity_link[1] = "";
       }
-      
+
       if ( $websiteurl != "" ) {
 
         $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
 
       }
+      
       echo "
         <div class=\"activity_contact__container\">
           <h3 class=\"activity_contact__title\">Contacts</h3>
