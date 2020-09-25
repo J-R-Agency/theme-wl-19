@@ -535,12 +535,25 @@ function wl_display_activity_contacts ( $args ) {
       }
 
       $wl_api_activity_contacts = implode("", $activity_contact_list);
+          
+      // Get website URL 
+      $websiteurl = get_field('websiteurl');
+      $wl_api_logo_description = get_field('logo_description');
       
+      if ( $websiteurl != "" ) {
+        $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+        $activity_link[1] = "</a>";
+      } else {
+        $activity_link[0] = "";
+        $activity_link[1] = "";
+      }
+
       if ( $websiteurl != "" ) {
 
         $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
 
       }
+
       echo "
         <div class=\"activity_contact__container\">
           <h3 class=\"activity_contact__title\">Contacts</h3>
@@ -729,6 +742,48 @@ function wl_display_activity_logo ( $args ) {
 add_action( 'init', 'wl_display_activity_logo', 0 );
 
 
+function wl_display_activity_website ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  if( ! class_exists('ACF') ) {
+    // Do nothing
+  } else {
+
+    setup_postdata ( $args ) ;
+    
+    // Get website URL 
+    $websiteurl = get_field('websiteurl');
+
+    // Get logo if available
+    $wl_api_logo_description = get_field("logo_description");
+    $wl_api_logo_url = get_field("logo_url");
+
+    if ( $websiteurl != "" ) {
+      $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+      $activity_link[1] = "</a>";
+    } else {
+      $activity_link[0] = "";
+      $activity_link[1] = "";
+    }
+
+
+      if ( $wl_api_logo_url != "" ){
+        echo "
+          <p>&nbsp;</p>
+          <div class=\"activity-logo\">
+            " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+          </div>
+          <p>&nbsp;</p>
+        ";
+      }
+
+
+  }
+}
+
+add_action( 'init', 'wl_display_activity_website', 0 );
 
 
 

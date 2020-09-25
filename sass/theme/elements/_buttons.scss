@@ -1,10 +1,13 @@
 .btn{
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
+  	font-family: 'Lato Bold', sans-serif;
+	font-weight: bold;
   	&--active{
 		background-color: $theme-active;
 	}
 	&--creative{
 		background-color: $theme-creative;
+		color: $theme-creative-dark !important;
 	}
 	&--useful{
 		background-color: $theme-useful;

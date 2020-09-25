@@ -1,11 +1,11 @@
  <div class="row highlight">
-		<div class="row">
+		<div class="row ie-flex-override">
 			<div class="col-12">
 				<h1 class="centered">What would you like to try?</h1>
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row ie-flex-override">
 
 
 
@@ -38,7 +38,7 @@
 
 					if ($link!=""){
 					?>
-					<div class="col-md-3 col-12 activity">
+					<div class="col-md-3 col-12 activity ie-flex-override ie-float">
 						<!-- Activity icon -->
 						<div class="col-md-12 col-4 centered">
 							<?php if( $link ): ?>
