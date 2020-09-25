@@ -17,16 +17,8 @@ get_header(); ?>
 	
 	<?php if ( has_post_thumbnail() ): ?>
 		<?php $thumb = get_the_post_thumbnail_url(); ?>
-
-			<!--[if IE]>
-			<div class="hero"></div>
-			<![endif]-->
-			<!--[if !IE]>
 			<div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div>
-			<![endif]-->
-			<!-- div class="hero" style="background-image: url('<?php echo $thumb; ?>') ;"></div -->
 			<div class="hero_inner" style="background-image: url('<?php echo $thumb; ?>') ;"></div>	
-
 	<?php endif ?>
 	<?php
 		$modifier = get_field('modifier');
