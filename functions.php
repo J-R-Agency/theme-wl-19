@@ -5,10 +5,9 @@
  * @package understrap
  */
 
-error_reporting(0);
-
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 $understrap_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
@@ -22,11 +21,9 @@ $understrap_includes = array(
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
-	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567
+	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
-	'/wp-admin.php',                        // /wp-admin/ related functions
-	'/deprecated.php',                      // Load deprecated functions.
 );
 
 foreach ( $understrap_includes as $file ) {
@@ -36,6 +33,42 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+/** Wellbeing Liverpool Custom Functions
+ *
+ *
+ */
+
+/**
+ * Add excerpt support to pages
+ */
+
+add_post_type_support( 'page', 'excerpt' );
+
+function change_excerpt( $text )
+{
+	$pos = strrpos( $text, '[');
+	if ($pos === false)
+	{
+		return $text;
+	}
+	
+	return rtrim (substr($text, 0, $pos) );
+}
+add_filter('get_the_excerpt', 'change_excerpt');
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 
 
 /* -- CUSTOM THEME FUNCTIONALITY FOR J&R -- */
@@ -69,13 +102,15 @@ function create_post_type() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_post_type' );
 
+
+
 //hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
  
 add_action( 'init', 'create_topics_nonhierarchical_taxonomy', 0 );
  
 function create_topics_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Themes', 'taxonomy general name' ),
@@ -119,13 +154,14 @@ function create_topics_nonhierarchical_taxonomy() {
 
 
 
+
 //hook into the init action and call create_costs_nonhierarchical_taxonomy when it fires
  
 add_action( 'init', 'create_costs_nonhierarchical_taxonomy', 0 );
  
 function create_costs_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Costs', 'taxonomy general name' ),
@@ -168,14 +204,13 @@ function create_costs_nonhierarchical_taxonomy() {
 
 
 
-
 //hook into the init action and call create_days_nonhierarchical_taxonomy when it fires
  
 add_action( 'init', 'create_days_nonhierarchical_taxonomy', 0 );
  
 function create_days_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Days', 'taxonomy general name' ),
@@ -222,13 +257,16 @@ function create_days_nonhierarchical_taxonomy() {
 }
 
 
-//hook into the init action and call create_days_nonhierarchical_taxonomy when it fires
+
+
+
+//hook into the init action and call create_postcode_nonhierarchical_taxonomy when it fires
  
 add_action( 'init', 'create_postcode_nonhierarchical_taxonomy', 0 );
  
 function create_postcode_nonhierarchical_taxonomy() {
  
-// Labels part for the GUI
+// labels part for the GUI
  
   $labels = array(
     'name' => _x( 'Postcodes', 'taxonomy general name' ),
@@ -318,6 +356,60 @@ function create_postcode_nonhierarchical_taxonomy() {
 
 
 
+
+//hook into the init action and call create_remote_nonhierarchical_taxonomy when it fires
+ 
+add_action( 'init', 'create_remote_nonhierarchical_taxonomy', 0 );
+ 
+function create_remote_nonhierarchical_taxonomy() {
+ 
+// labels part for the GUI
+ 
+  $labels = array(
+    'name' => _x( 'Remote', 'taxonomy general name' ),
+    'singular_name' => _x( 'Remote', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Remote' ),
+    'popular_items' => __( 'Popular Remote' ),
+    'all_items' => __( 'All Remote' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Remote' ), 
+    'update_item' => __( 'Update Remote' ),
+    'add_new_item' => __( 'Add New Remote' ),
+    'new_item_name' => __( 'New Topic Remote' ),
+    'separate_items_with_commas' => __( 'Separate remote with commas' ),
+    'add_or_remove_items' => __( 'Add or remove remote' ),
+    'choose_from_most_used' => __( 'Choose from the most used remote' ),
+    'menu_name' => __( 'Remote' ),
+  ); 
+ 
+// Now register the non-hierarchical taxonomy like tag
+ 
+  register_taxonomy('remote','activities',array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'remote' ),
+  ));
+
+  // Add terms
+  wp_insert_term('Yes', 'remote');
+
+}
+
+
+
+
+
+
+
+
+
+
+
 function wl_set_google_api_key() {
 
     global $wl_google_api_key;
@@ -326,6 +418,9 @@ function wl_set_google_api_key() {
 }
     
 add_action( 'after_setup_theme', 'wl_set_google_api_key' );
+
+
+
 
 
 
@@ -346,6 +441,10 @@ add_filter('pre_get_posts','searchfilter');
 
 
 
+
+
+
+
 // WL ACTIVITY FUNCTIONS
 
 function wl_display_example ( $args ) {
@@ -359,6 +458,13 @@ function wl_display_example ( $args ) {
 }
 
 add_action( 'init', 'wl_display_example', 0 );
+
+
+
+
+
+
+
 
 
 function wl_display_additional_information ( $args ) {
@@ -386,6 +492,12 @@ function wl_display_additional_information ( $args ) {
 }
 
 add_action( 'init', 'wl_display_additional_information', 0 );
+
+
+
+
+
+
 
 
 function wl_display_activity_contacts ( $args ) {
@@ -423,12 +535,25 @@ function wl_display_activity_contacts ( $args ) {
       }
 
       $wl_api_activity_contacts = implode("", $activity_contact_list);
+          
+      // Get website URL 
+      $websiteurl = get_field('websiteurl');
+      $wl_api_logo_description = get_field('logo_description');
       
+      if ( $websiteurl != "" ) {
+        $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+        $activity_link[1] = "</a>";
+      } else {
+        $activity_link[0] = "";
+        $activity_link[1] = "";
+      }
+
       if ( $websiteurl != "" ) {
 
         $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
 
       }
+
       echo "
         <div class=\"activity_contact__container\">
           <h3 class=\"activity_contact__title\">Contacts</h3>
@@ -451,6 +576,11 @@ function wl_display_activity_contacts ( $args ) {
 }
 
 add_action( 'init', 'wl_display_activity_contacts', 0 );
+
+
+
+
+
 
 
 
@@ -483,6 +613,10 @@ function wl_display_activity_documents ( $args ) {
 }
 
 add_action( 'init', 'wl_display_activity_documents', 0 );
+
+
+
+
 
 
 function wl_display_activity_images ( $args ) {
@@ -527,6 +661,10 @@ function wl_display_activity_images ( $args ) {
 add_action( 'init', 'wl_display_activity_images', 0 );
 
  
+
+
+
+ 
 function wl_display_activity_largemap ( $args ) {
 
 // Aggregates all relevant address fields pulled through from
@@ -559,6 +697,10 @@ function wl_display_activity_largemap ( $args ) {
 }
 
 add_action( 'init', 'wl_display_activity_largemap', 0 );
+
+
+
+
 
 
 function wl_display_activity_logo ( $args ) {
@@ -599,6 +741,56 @@ function wl_display_activity_logo ( $args ) {
 
 add_action( 'init', 'wl_display_activity_logo', 0 );
 
+
+function wl_display_activity_website ( $args ) {
+
+// Aggregates all relevant contact fields pulled through from
+// the Live Well API for this particular entry 
+
+  if( ! class_exists('ACF') ) {
+    // Do nothing
+  } else {
+
+    setup_postdata ( $args ) ;
+    
+    // Get website URL 
+    $websiteurl = get_field('websiteurl');
+
+    // Get logo if available
+    $wl_api_logo_description = get_field("logo_description");
+    $wl_api_logo_url = get_field("logo_url");
+
+    if ( $websiteurl != "" ) {
+      $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+      $activity_link[1] = "</a>";
+    } else {
+      $activity_link[0] = "";
+      $activity_link[1] = "";
+    }
+
+
+      if ( $wl_api_logo_url != "" ){
+        echo "
+          <p>&nbsp;</p>
+          <div class=\"activity-logo\">
+            " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+          </div>
+          <p>&nbsp;</p>
+        ";
+      }
+
+
+  }
+}
+
+add_action( 'init', 'wl_display_activity_website', 0 );
+
+
+
+/*
+
+** SEEMS TO CAUSE ISSUE WITH MEDIA UPLOADER **
+
 function wl_dump ( $var ) {
 
   echo "<pre>";
@@ -608,6 +800,11 @@ function wl_dump ( $var ) {
 }
 
 add_action( 'init', 'wl_dump', 0 );
+
+*/
+
+
+
 
 /* RANDOM SEARCH RESULTS */
 /*
@@ -637,9 +834,12 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
+
+
 /* SEARCH FOR WHOLE WORDS ONLY */
 
-add_filter('posts_search', 'my_search_is_exact', 20, 2);
+//add_filter('posts_search', 'my_search_is_exact', 20, 2);
+
 function my_search_is_exact($search, $wp_query){
 
     global $wpdb;
@@ -673,8 +873,31 @@ function my_search_is_exact($search, $wp_query){
 }
 
 
-/* Media Library Fix */
 
-add_filter('flash_uploader',create_function('$a','return false;'),5);
+
+
+function custom_search_query( $query ) {
+    if ( !is_admin() && $query->is_search ) {
+        $query->set('meta_query', array(
+            array(
+                'key' => '__meta_key__',
+                'value' => $query->query_vars['s'],
+                'compare' => 'LIKE'
+            )
+        ));
+         $query->set('post_type', '__your_post_type__'); // optional
+    };
+}
+//add_filter( 'pre_get_posts', 'dc_custom_search_query');
+
+
+
+/*  ADD CUSTOM OPTIONS PAGE FOR ACF FIELDS */
+
+if( function_exists('acf_add_options_page') ) {
+  
+  acf_add_options_page();
+  
+}
 
 

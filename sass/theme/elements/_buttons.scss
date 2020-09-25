@@ -1,10 +1,13 @@
 .btn{
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
+  	font-family: 'Lato Bold', sans-serif;
+	font-weight: bold;
   	&--active{
 		background-color: $theme-active;
 	}
 	&--creative{
 		background-color: $theme-creative;
+		color: $theme-creative-dark !important;
 	}
 	&--useful{
 		background-color: $theme-useful;
@@ -19,6 +22,22 @@
 
 .page-link, .current, .entry-meta a, .nav-links a { 
 	color: $dark; 
+}
+
+.current{
+	font-family: 'Lato Bold', sans-serif;
+	background-color: $light-grey !important;
+}
+
+.pagination .page-link:hover{
+
+	color:$dark !important;
+	background-color: $light-grey !important;
+
+}
+
+strong{
+	font-family: 'Lato Bold', sans-serif;	
 }
 
 .page-item.active .page-link{ 
@@ -52,4 +71,10 @@
 		background-color: #ddd;
 		text-decoration: none;
 	}
+}
+
+/* HIDE SHORTLIST BUTTON ON SINGLE BLOG POSTS */
+
+.single-post .simplefavorite-button {
+	display:none;
 }

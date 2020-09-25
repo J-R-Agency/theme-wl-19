@@ -18,9 +18,9 @@ get_header(); ?>
 	<div class="row mt-20">
 		
 		<!-- What we do -->
-		<div class="col-md-6 col-12 d-flex">
-			<div class="highlight w-100">
-				<p class="vertical-center">
+		<div class="col-md-6 col-12 d-flex ie-flex-override">
+			<div class="highlight w-100 ie-flex-override">
+				<p class="vertical-center ie-flex-override">
 					<?php while(have_posts()) : the_post(); ?>
 						<?php the_content();?>
 					<?php endwhile; ?>
@@ -59,8 +59,8 @@ get_header(); ?>
 	<div class="row mt-20">
 		
 		<!-- Benefits of an Action Plan -->
-		<div class="col-md-6 col-sm-12 d-flex">
-			<div class="highlight w-100">
+		<div class="col-md-6 col-sm-12 d-flex ie-flex-override">
+			<div class="highlight w-100 ie-flex-override">
 				<h1><?php the_field("benefits_title"); ?></h1>
 				<ul>
 					<?php

@@ -1,6 +1,6 @@
 <?php
 
-if($_POST['share']) {
+if( isset($_POST['share']) ){
 
     unset($your_name);
     unset($your_email);

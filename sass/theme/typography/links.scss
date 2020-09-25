@@ -61,6 +61,7 @@ p {
 	}
 	&--creative{
 		background-color: $theme-creative;
+		color: $theme-creative-dark !important;
 	}
 	&--useful{
 		background-color: $theme-useful;

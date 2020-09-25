@@ -1,6 +1,29 @@
 <?php
 // Show sharing and next steps
 
+// Set up variables
+
+
+if ( !isset($wl_actionplan_actions__email) ){
+    $wl_actionplan_actions__email = "";
+}
+
+if ( !isset($frm_share_actionplan__your_name) ){
+    $frm_share_actionplan__your_name = "";
+}
+
+if ( !isset($frm_share_actionplan__your_email) ){
+    $frm_share_actionplan__your_email = "";
+}
+
+if ( !isset($frm_share_actionplan__their_name) ){
+    $frm_share_actionplan__their_name = "";
+}
+
+if ( !isset($frm_share_actionplan__their_email) ){
+    $frm_share_actionplan__their_email = "";
+}
+
 if ( $flg_action_plan ) {
 
 	// Display next steps (sharing, print, etc.)
@@ -96,16 +119,16 @@ if ( $flg_action_plan ) {
 		<div class="wl_actions_full__item">
 			<div class="wl_actions_help__img">
 				<div class="wl_actions_help__img_container wl_action_icon">
-					<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png"
+					<img src="<?php echo $theme_path; ?>/assets/images/icon-message.png" 
 						alt="We are here to help"
 						height="70"
 						width="70">
 				</div>
 			</div>
 			<div class="wl_actions_help__info">
-				<h3>We are here to help!</h3>
-				<p>If you would like a hand setting up your Action Plan we can help. The best way to do this is a referral through your GP.</p>
-				<p>If you are having any other issues, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
+				<h3>Do you need help?</h3>
+				<p>If you would like a hand setting up your Action Plan there is help available. The best way to get help is via a referral for a Link Worker through your GP practice.</p>
+				<p>If you are having any other issues with the website, please <a href="/get-in-touch/" title="Get in touch">Get in touch</a></p>
 			</div>
 		</div>
 	</div>

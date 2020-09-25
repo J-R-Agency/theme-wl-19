@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class=\"lead_story__details\">
 						<h3><a href=\"\">" . $post->post_title . "</a></h3>
 						<p class=\"lead_story__excerpt\">" . $post->post_excerpt . "</p>
-						<div class=\"lead_story__button\"><a class=\"btn btn-secondary understrap-read-more-link\" href=\"" . $lead_link . "\"> Read more &gt;</a></div>
+						<div class=\"lead_story__button\"><a class=\"btn btn-secondary understrap-read-more-link\" href=\"" . get_permalink() . "\">Read more &gt;</a></div>
 					</div>
 				</div>
 			</div>
@@ -76,14 +76,14 @@ if( have_rows('blog_block') ):
 		$catquery = new WP_Query( $new_query ) ;
 		while($catquery->have_posts()) : $catquery->the_post(); ?>
 			<div class="article__item">
-				<div class="article__img">
-					<img src="">
-					<?php get_the_post_thumbnail(); ?>
+				<a href="<?php the_permalink() ?>" rel="bookmark">
+				<div class="article__img" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
 				</div>
-				<h3 class="article__title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+				<h3 class="article__title"><?php the_title(); ?></h3>
 				<div class="article__summary">
 					<?php the_excerpt(); ?>
 				</div>
+				</a>
 			</div>
 		<?php endwhile; ?> 
 		<?php wp_reset_postdata(); ?>

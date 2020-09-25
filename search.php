@@ -25,8 +25,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<?php do_action('show_beautiful_filters'); ?>
-
 
 				<?php if ( have_posts() ) : ?>
 
@@ -41,7 +39,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								);
 								?>
 							</h1>
+						<div class="advanced-search">Refine your search using the filters below or try our <a href="/advanced-search/" title="Advanced Search">Advanced Search</a></div>
 
+						<?php do_action('show_beautiful_filters'); ?>
+	
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>

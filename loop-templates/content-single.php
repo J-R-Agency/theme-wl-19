@@ -13,6 +13,15 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
+		<?php
+			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+				$blog__featuredimage = get_the_post_thumbnail_url( $post, 'full' ) ;
+				?>
+				<div class="blog__featured-image" style="background-image: url(' <?php echo $blog__featuredimage ;?> ');">
+				</div>
+				<?php
+			}
+		?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
@@ -23,20 +32,12 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
 	<div class="entry-content">
-		<?php echo get_favorites_button($post_id, $site_id); ?>
-		<?php the_content(); ?>
-
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+<!-- 		<?php echo get_favorites_button($post_id, $site_id); ?>
+ -->		<?php the_content(); ?>
+ 			<div class="page-links">
+ 				<p><a href="javascript:window.history.back();">&lt; Back</a></p>
+ 			</div>
 
 	</div><!-- .entry-content -->
 

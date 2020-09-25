@@ -23,6 +23,54 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php 
+
+$notice_active = get_field('notice_active', 'option'); 
+
+$post_type_to_check = get_post_type();
+
+if ( $notice_active && in_array('true', $notice_active) ){
+	
+	$notice_heading = get_field('notice_heading', 'option'); 
+	$notice_content = get_field('notice_content', 'option'); 
+
+	if ( $post_type_to_check == "activities" ) {
+		// specific activities template
+	
+	} else {
+		// everything else
+
+	}
+
+	$internet_explorer_notice_contents = "
+		<h3 class=\"notice_heading\">" . $notice_heading . "</h3>
+		<div class=\"notice_content\">
+			" . $notice_content . "
+		</div>
+	";
+
+	echo "
+	<!--[if IE]>
+	<div class=\"internet_explorer_notice internet_explorer_notice--ie9\">
+	" . $internet_explorer_notice_contents . "
+	</div>
+	<![endif]-->
+	<div class=\"internet_explorer_notice internet_explorer_notice--ie10\">
+	" . $internet_explorer_notice_contents . "
+	</div>
+	";
+
+
+} else {
+
+	// echo $banner_active;
+
+}
+
+?>
+
+
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
@@ -32,6 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="tertiary-menu">
 			<?php
+/*			
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'tertiary_menu',
@@ -44,6 +93,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				);
+*/
 			?>
 		</nav>
 
@@ -150,4 +200,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 		mobileMenu.style.display = "none";
 	}
 </script>
+
+<?php 
+
+$banner_active = get_field('banner_active', 'option'); 
+
+$post_type_to_check = get_post_type();
+
+if ( $banner_active && in_array('true', $banner_active) ){
+	
+	$banner_heading = get_field('banner_heading', 'option'); 
+	$banner_content = get_field('banner_content', 'option'); 
+
+	if ( $post_type_to_check == "activities" ) {
+
+		echo "
+		<div class=\"notification_banner\">
+			<h3 class=\"banner_heading\">" . $banner_heading . "</h3>
+			<div class=\"banner_content\">
+				" . $banner_content . "
+			</div>
+		</div>
+		";
+	
+	} else {
+
+		// echo "INCORRECT TEMPLATE";
+
+	}
+
+
+
+} else {
+
+	// echo $banner_active;
+
+}
+
+?>
 

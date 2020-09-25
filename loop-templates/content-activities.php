@@ -45,7 +45,8 @@ global $wl_google_api_key;
 
 		wl_display_additional_information( $post->ID ); 
 		wl_display_activity_contacts( $post->ID ); 
-		wl_display_activity_documents( $post->ID ); 
+		wl_display_activity_website( $post->ID ); 
+		// wl_display_activity_documents( $post->ID ); 
 		wl_display_activity_images( $post->ID ); 
 		wl_display_activity_largemap( $post->ID ); 
 
