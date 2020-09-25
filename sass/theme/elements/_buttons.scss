@@ -1,6 +1,7 @@
 .btn{
   /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
-  font-weight: bold;
+  	font-family: 'Lato Bold', sans-serif;
+	font-weight: bold;
   	&--active{
 		background-color: $theme-active;
 	}
