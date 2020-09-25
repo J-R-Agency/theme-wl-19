@@ -553,7 +553,7 @@ function wl_display_activity_contacts ( $args ) {
         $website_link = $activity_link[0] . $websiteurl . $activity_link[1] ;
 
       }
-      
+
       echo "
         <div class=\"activity_contact__container\">
           <h3 class=\"activity_contact__title\">Contacts</h3>
@@ -768,22 +768,14 @@ function wl_display_activity_website ( $args ) {
       $activity_link[1] = "";
     }
 
-    if ( isset($websiteurl) ) {
-
-      echo "
-
-
-      ";
-
-
-    }
-
 
       if ( $wl_api_logo_url != "" ){
         echo "
+          <p>&nbsp;</p>
           <div class=\"activity-logo\">
             " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
           </div>
+          <p>&nbsp;</p>
         ";
       }
 
