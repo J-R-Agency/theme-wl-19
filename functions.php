@@ -550,7 +550,7 @@ function wl_display_activity_contacts ( $args ) {
           <ul class=\"activity_contact__list\">" . 
           $wl_api_activity_contacts . 
           "</ul>
-          $website_link
+          $websiteurl
           </div>" ;
     } else {
       // Do not display documents
@@ -755,13 +755,26 @@ function wl_display_activity_website ( $args ) {
       $activity_link[1] = "";
     }
 
-    if ( $wl_api_logo_url != "" ){
+    if ( isset($websiteurl) ) {
+
       echo "
-        <div class=\"activity-logo\">
-          " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
-        </div>
+
+
       ";
+
+
     }
+
+
+      if ( $wl_api_logo_url != "" ){
+        echo "
+          <div class=\"activity-logo\">
+            " . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+          </div>
+        ";
+      }
+
+
   }
 }
 
