@@ -538,6 +538,7 @@ function wl_display_activity_contacts ( $args ) {
           
       // Get website URL 
       $websiteurl = get_field('websiteurl');
+      $wl_api_logo_description = get_field('logo_description');
       
       if ( $websiteurl != "" ) {
         $activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
