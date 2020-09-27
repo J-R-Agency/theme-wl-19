@@ -56,6 +56,7 @@ get_header(); ?>
 		$wl_link_parts["end"] = "</a>";
 		$wl_summary = $wl_link_parts["start"] . $wl_title . $wl_link_parts["end"];
 
+		echo $wl_summary;
 
 		// Processing functions
         if(!empty($modifier)){
