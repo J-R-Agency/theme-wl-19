@@ -69,8 +69,7 @@ if (1==1){
 		$wl_link = $entries["link"];
 		$wl_title = $entries["title"];
 
-		$wl_api_logo_description = get_field("logo_description");
-		$wl_api_logo_url = get_field("logo_url");
+
 
 		if ( $websiteurl !="" ) {
 			$activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
@@ -109,13 +108,17 @@ if (1==1){
 	    	<?php echo $wl_link_parts["start"] ;?>
 	    	<?php
 
-			if(trim($wl_api_logo_url)==""){
-				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title_short, 0, 48) . "</h2></div>";
-			} else {
+			if( has_post_thumbnail() ){
+
 		    	$activity_card__img = "
-		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
+		    	<div class=\"activity-card__img\" style=\"background-image: url('" . get_the_post_thumbnail_url() . "');\">
 		    		<!-- <img src=" . $wl_api_logo_url . "> -->
-		    	</div>";		
+		    	</div>";
+
+			} else {
+
+				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title_short, 0, 48) . "</h2></div>";
+
 			}
 
 			echo $activity_card__img;
