@@ -54,7 +54,7 @@ if (1==1){
 
 	$the_theme = get_field("theme");
 	$args = array(
-	    'post_type' => 'posts',
+	    'post_type' => 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' => 30
 		);
