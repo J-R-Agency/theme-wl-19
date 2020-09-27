@@ -46,7 +46,7 @@ get_header(); ?>
 <?php
 $theme_title = get_the_title();
 
-if ($theme_title == "Active" || $theme_title == "Calm" || $theme_title == "Creative" || $theme_title == "Social" || $theme_title == "Useful"){
+if (1==1){
 ?>
 	<div class="row">
 		<div class="col-12 content-copy">
@@ -54,18 +54,10 @@ if ($theme_title == "Active" || $theme_title == "Calm" || $theme_title == "Creat
 
 	$the_theme = get_field("theme");
 	$args = array(
-	    'post_type' => 'activities',
+	    'post_type' => 'posts',
 	    'post_status' => 'publish',
-	    'orderby'        => 'rand',
-	    'posts_per_page' => 9,
-	    'tax_query' => array(
-	        array(
-	            'taxonomy' => 'themes',
-	            'field' => 'id',
-	            'terms' => $the_theme
-	        )
-	    )
-	);
+	    'posts_per_page' => 30
+		);
 	$the_query = new WP_Query( $args );
 	echo "<h3>Here's a selection of organisations that offer something '" . get_the_title() . "' you could try.<h3>";
 	echo "<div class=\"activity-container\">";
