@@ -40,6 +40,94 @@ get_header(); ?>
 
   $my_query = new WP_Query('post_type=post&nopaging=1');
   if($my_query->have_posts()) {
+
+
+	echo "<div class=\"activity-container\">";
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	    // content
+	    unset($entries); // reset current entry
+		$entries["link"] = get_permalink();
+		$entries["title"] = get_the_title();
+		$wl_link = $entries["link"];
+		$wl_title = $entries["title"];
+
+		$wl_api_logo_description = get_field("logo_description");
+		$wl_api_logo_url = get_field("logo_url");
+
+		if ( $websiteurl !="" ) {
+			$activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+			$activity_link[1] = "</a>";
+		} else {
+			$activity_link[0] = "";
+			$activity_link[1] = "";
+		}
+
+		if ( $wl_api_logo_url!="" ){
+			// echo "
+			// 	<div class=\"activity-logo\">
+			// 		" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+			// 	</div>
+			// ";
+		}
+
+		$wl_link_parts["start"] = "<a href=\"" . $wl_link . "\" title=\"" . $wl_title . "\">";
+		$wl_link_parts["end"] = "</a>";
+		$wl_summary = $wl_link_parts["start"] . $wl_title . $wl_link_parts["end"];
+
+	   // echo $wl_summary;
+
+
+		// Processing functions
+        if(!empty($modifier)){
+        	$modifier_class = " activity-card_pseudoimg--" . $modifier ;
+        }
+        $wl_title_short = substr($wl_title, 0, 48) ;
+        $wl_title_short = explode(" ", $wl_title);
+        $wl_title_short = array_slice($wl_title_short,0,5);
+        $wl_title_short = implode(" ", $wl_title_short);
+	    ?>
+
+	    <div class="activity-card__item">
+	    	<?php echo $wl_link_parts["start"] ;?>
+	    	<?php
+
+			if(trim($wl_api_logo_url)==""){
+				$activity_card__img = "<div class=\"activity-card_pseudoimg " . $modifier_class . "\"><h2>" . substr($wl_title_short, 0, 48) . "</h2></div>";
+			} else {
+		    	$activity_card__img = "
+		    	<div class=\"activity-card__img\" style=\"background-image: url('" . $wl_api_logo_url . "');\">
+		    		<!-- <img src=" . $wl_api_logo_url . "> -->
+		    	</div>";		
+			}
+
+			echo $activity_card__img;
+
+	    	?>
+
+
+	    	<div class="activity-card__summary">
+	    		<?php echo $wl_summary ;?>
+	    	</div>
+	    	<?php echo $wl_link_parts["end"] ;?>
+	    </div>
+	    <?php
+
+	endwhile;
+	echo "</div>";
+
+
+
+
+
+
+    wp_reset_postdata();
+  }
+  ?>
+
+
+<!--
+  $my_query = new WP_Query('post_type=post&nopaging=1');
+  if($my_query->have_posts()) {
     echo '<h1 class="widget-title">Last '.$how_many_last_posts.' Posts <i class="fa fa-bullhorn" style="vertical-align: baseline;"></i></h1>&nbsp;';
     echo '<div class="archives-latest-section"><ol>';
     $counter = 1;
@@ -54,6 +142,8 @@ get_header(); ?>
     wp_reset_postdata();
   }
   ?>
+-->
+
 <!--
 
 <h2>Recent Articles</h2>
