@@ -44,6 +44,7 @@ get_header(); ?>
 
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
+		echo "IN LOOP";
 	    // content
 	    unset($entries); // reset current entry
 		$entries["link"] = get_permalink();
