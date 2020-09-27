@@ -34,6 +34,9 @@ get_header(); ?>
 
 
 <?php the_post(); ?>
+
+<!--
+
 <h2>Recent Articles</h2>
 <ol><?php wp_get_archives('type=postbypost&limit=10'); ?></ol>
 <h2>Archives by Month:</h2>
@@ -58,9 +61,9 @@ get_header(); ?>
 <?php wp_get_archives('type=yearly'); ?>
 
 // Display all posts by date
-
+-->
 <?php wp_get_archives('type=postbypost'); ?>
-
+<!--
 // Display all posts alphabetically
 
 <?php wp_get_archives('type=alpha'); ?>
@@ -85,7 +88,7 @@ get_header(); ?>
 
 <?php wp_get_archives('type=daily&limit=30'); ?>
 
-
+-->
 	        </div><!-- .entry-content-page -->
 	    <?php
 	    endwhile; //resetting the page loop
