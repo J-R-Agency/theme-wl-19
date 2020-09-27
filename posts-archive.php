@@ -33,7 +33,7 @@ get_header(); ?>
 	        <div class="entry-content-page">
 
 
-<?php the_post(); ?>
+<?php the_content(); ?>
   <?php
   $how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
   if($how_many_last_posts > 200 || $how_many_last_posts < 2) $how_many_last_posts = 15;
