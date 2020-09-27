@@ -59,7 +59,6 @@ if (1==1){
 	    'posts_per_page' => 30
 		);
 	$the_query = new WP_Query( $args );
-	echo "<h3>Here's a selection of organisations that offer something '" . get_the_title() . "' you could try.<h3>";
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	    // content
