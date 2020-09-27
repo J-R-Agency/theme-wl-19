@@ -62,6 +62,7 @@ if (1==1){
 	echo "<h3>Here's a selection of organisations that offer something '" . get_the_title() . "' you could try.<h3>";
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
+		echo "Hello";
 	    // content
 	    unset($entries); // reset current entry
 		$entries["link"] = get_permalink();
