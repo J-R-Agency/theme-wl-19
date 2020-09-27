@@ -1,6 +1,9 @@
 <?php
 /**
- * Template Name: Posts Archive
+ * Template Name: Activity Page Template
+ *
+ * Template for displaying a page just with the header and footer area and a "naked" content area in between.
+ * Good for landingpages and other types of pages where you want to add a lot of custom markup.
  *
  * @package understrap
  */
@@ -31,20 +34,42 @@ get_header(); ?>
 		<div class="col-12 content-copy">	
 		<?php while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
 	        <div class="entry-content-page">
+	            <?php the_content(); ?> <!-- Page Content -->
+	        </div><!-- .entry-content-page -->
+	    <?php
+	    endwhile; //resetting the page loop
+	    wp_reset_query(); //resetting the page query
+	    ?>
+		</div>
+	</div>
 
+<?php
+$theme_title = get_the_title();
 
-<?php the_content(); ?>
-  <?php
-  $how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
-  if($how_many_last_posts > 200 || $how_many_last_posts < 2) $how_many_last_posts = 15;
+if ($theme_title == "Active" || $theme_title == "Calm" || $theme_title == "Creative" || $theme_title == "Social" || $theme_title == "Useful"){
+?>
+	<div class="row">
+		<div class="col-12 content-copy">
+		<?php
 
-  $my_query = new WP_Query('post_type=post&nopaging=1');
-  if($my_query->have_posts()) {
-
-
+	$the_theme = get_field("theme");
+	$args = array(
+	    'post_type' => 'activities',
+	    'post_status' => 'publish',
+	    'orderby'        => 'rand',
+	    'posts_per_page' => 9,
+	    'tax_query' => array(
+	        array(
+	            'taxonomy' => 'themes',
+	            'field' => 'id',
+	            'terms' => $the_theme
+	        )
+	    )
+	);
+	$the_query = new WP_Query( $args );
+	echo "<h3>Here's a selection of organisations that offer something '" . get_the_title() . "' you could try.<h3>";
 	echo "<div class=\"activity-container\">";
 	while ( $the_query->have_posts() ) : $the_query->the_post();
-		echo "IN LOOP";
 	    // content
 	    unset($entries); // reset current entry
 		$entries["link"] = get_permalink();
@@ -52,12 +77,31 @@ get_header(); ?>
 		$wl_link = $entries["link"];
 		$wl_title = $entries["title"];
 
+		$wl_api_logo_description = get_field("logo_description");
+		$wl_api_logo_url = get_field("logo_url");
+
+		if ( $websiteurl !="" ) {
+			$activity_link[0] = "<a href=\"" . $websiteurl . "\" title=\"" . $wl_api_logo_description . "\" target=\"_blank\">";
+			$activity_link[1] = "</a>";
+		} else {
+			$activity_link[0] = "";
+			$activity_link[1] = "";
+		}
+
+		if ( $wl_api_logo_url!="" ){
+			// echo "
+			// 	<div class=\"activity-logo\">
+			// 		" . $activity_link[0] . "<img src=\"" . $wl_api_logo_url . "\" title=\"" . $wl_api_logo_description . "\">" . $activity_link[1] . "
+			// 	</div>
+			// ";
+		}
 
 		$wl_link_parts["start"] = "<a href=\"" . $wl_link . "\" title=\"" . $wl_title . "\">";
 		$wl_link_parts["end"] = "</a>";
 		$wl_summary = $wl_link_parts["start"] . $wl_title . $wl_link_parts["end"];
 
-		echo $wl_summary;
+	   // echo $wl_summary;
+
 
 		// Processing functions
         if(!empty($modifier)){
@@ -96,23 +140,37 @@ get_header(); ?>
 
 	endwhile;
 	echo "</div>";
+    wp_reset_query(); //resetting the page query
 
-
-    wp_reset_postdata();
-  }
-  ?>
-
-
-
-	        </div><!-- .entry-content-page -->
-	    <?php
-	    endwhile; //resetting the page loop
-	    wp_reset_query(); //resetting the page query
-	    ?>
+	?>
+	</div>	
+</div>
+<?php
+} // End theme check
+?>
+<div class="container-cta">
+	<div class="row">
+		<div class="col-12 content-copy">
+			<?php
+			$cta_button_title = get_field('cta_button_title');
+			if ( $cta_button_title != "" ) {
+				echo "<h1 class=\"centered\">$cta_button_title</h1>" ;
+			}
+			$link = get_field('cta_button');
+			if( $link ): 
+			    $link_url = $link['url'];
+			    $link_title = $link['title'];
+			    $link_target = $link['target'] ? $link['target'] : '_self';
+			    $modifier = get_field('modifier');
+		        if(!empty($modifier)){
+		        	$modifier_class = " call-to-action-btn--" . $modifier ;
+		        }
+			    ?>
+			    <a class="call-to-action-btn <?php echo $modifier_class ;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+			<?php endif; ?>
 		</div>
 	</div>
-
-
+</div>
 
 <?php
 get_footer();
