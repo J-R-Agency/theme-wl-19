@@ -65,13 +65,14 @@ if( isset($_POST['share']) ){
 <div><p>Please see below for details:</p></div>
 $body_actionplan
 <div><p>Thank you for your help!</p></div>
-<div><p>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</p></div>
+<div><p>Please visit <a href=\"https://wellbeingliverpool.co.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</p></div>
         ";
         $headers = array("Content-Type: text/html; charset=UTF-8");
 
         if ( wp_mail( $their_email, $subject, $body, $headers ) ) {
 
-            $frm_share_actionplan__outputs[] = "Shared with $their_name on $to ";
+            $frm_share_actionplan__outputs[] = "Your action plan was sent to $their_name on $to";
+            $frm_share_actionplan__outputs[] = "If they cannot find it in their email inbox, please check the spelling of the email address above or ask them to check their spam or junk mail folder";
             $msg_type = "success";
 
         } else {
