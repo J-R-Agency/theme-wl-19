@@ -7,7 +7,7 @@
 	//opacity: 0.7;
 	z-index: -1;
 
-	@supports(background-blend-mode){
+	@supports(background-blend-mode: soft-light){
 		background-blend-mode: soft-light;
 	}
 

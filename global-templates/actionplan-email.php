@@ -42,7 +42,7 @@ if ($inipath) {
 $body_actionplan
 </div> 
 $body_actionplan
-<div>Please visit <a href=\"https://preview.wellbeingliverpool.org.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</div>
+<div>Please visit <a href=\"https://wellbeingliverpool.co.uk\" title=\"Wellbeing Liverpool website\">Wellbeing Liverpool</a> if you need any more information or assistance.</div>
 </div>
             ";
             $headers = array('Content-Type: text/html; charset=UTF-8');
@@ -50,6 +50,8 @@ $body_actionplan
             if ( wp_mail( $to, $subject, $body, $headers ) ) {
 
                 $frm_email_actionplan__outputs[] = "Your Action Plan was sent to $to ";
+                $frm_email_actionplan__outputs[] = "If you cannot find the email in your inbox please check your spam or junk mail folder or check the spelling of the email address above";
+
                 $msg_type = "success";
 
             } else {
