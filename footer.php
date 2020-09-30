@@ -100,6 +100,7 @@ if( have_rows('social_media_accounts') ):
 // No value.
 else :
     // Do something...
+    echo "No social accounts found";
 endif;
 ?>
 
