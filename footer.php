@@ -62,16 +62,14 @@ $theme_path = get_template_directory_uri();
 <?php
 
 // Check rows exists.
-if( have_rows('social_media_accounts') ){
-
-
+if( have_rows('social_media_accounts', 'options') ):
 
 	echo "
 			<div class=\"social-media-container\">
 		";
 
     // Loop through rows.
-    while( have_rows('social_media_accounts') ) : the_row();
+    while( have_rows('social_media_accounts','options') ) : the_row();
 
         // Load sub field value.
         $social_media_handle = get_sub_field('social_media_handle');
@@ -100,11 +98,10 @@ if( have_rows('social_media_accounts') ){
 		";
 
 // No value.
-} else {
+else :
     // Do something...
     echo "No social accounts found";
-}
-
+endif;
 ?>
 
 
