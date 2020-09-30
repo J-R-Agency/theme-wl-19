@@ -64,6 +64,10 @@ $theme_path = get_template_directory_uri();
 // Check rows exists.
 if( have_rows('social_media_accounts', 'options') ):
 
+	if( get_field("social_media_cta") ):
+		echo "<p>" . get_field("social_media_cta") . "</p>";
+	endif;
+
 	echo "
 			<div class=\"social-media-container\">
 		";
