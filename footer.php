@@ -82,7 +82,7 @@ if( have_rows('social_media_accounts', 'options') ):
         	echo "
         		<div class=\"social-media-item\">
         			<a href=\"" . $social_media_url["url"] . "\" title=\"" . $social_media_url["title"] , "\" target=\"" . $social_media_url["target"] , "\">
-        				<img src=\"" . esc_url($social_media_icon["url"]) . "\"  alt=\"" . esc_url($social_media_icon["alt"]) . "\" >
+        				<img class=\"social-media-icon\" src=\"" . esc_url($social_media_icon["url"]) . "\"  alt=\"" . esc_url($social_media_icon["alt"]) . "\" >
         			</a>
         		</div>
         		";
