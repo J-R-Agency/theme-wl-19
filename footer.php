@@ -56,7 +56,22 @@ $theme_path = get_template_directory_uri();
 										class="footer-logo centered">
 								
 							</div>
-							
+							<div class="col-md-4 col-xs-12 footer-centre">
+								
+									
+									<div class="social-media-container">
+										<div class="social-media-item">
+											SOCIAL
+										</div>
+										<div class="social-media-item">
+											SOCIAL
+										</div>
+										<div class="social-media-item">
+											SOCIAL
+										</div>
+									</div>
+								
+							</div>
 							<div class="col-md-6 col-xs-12 footer-right">
 								<div class="row">
 									<div class="col-12 links">
