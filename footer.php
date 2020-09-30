@@ -49,7 +49,7 @@ $theme_path = get_template_directory_uri();
 						</div>
 						
 						<div class="row footer-links">
-							<div class="col-md-6 col-xs-12 footer-left">
+							<div class="col-md-4 col-xs-12 footer-left">
 								
 									<img src="<?php echo $theme_path; ?>/assets/images/logo-colour-white-text.png"
 										alt="Wellbeing Liverpool logo"
@@ -72,7 +72,7 @@ $theme_path = get_template_directory_uri();
 									</div>
 								
 							</div>
-							<div class="col-md-6 col-xs-12 footer-right">
+							<div class="col-md-4 col-xs-12 footer-right">
 								<div class="row">
 									<div class="col-12 links">
 										<span>
