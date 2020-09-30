@@ -57,7 +57,6 @@ $theme_path = get_template_directory_uri();
 								
 							</div>
 							<div class="col-md-4 col-xs-12 footer-centre">
-								
 									
 									<div class="social-media-container">
 										<div class="social-media-item">

@@ -35,6 +35,19 @@
 	}	
 }
 
+.social-media-container {
+	display: flex;
+	align-items: center;
+	@media all and (max-width: $breakpoint-phone) {
+		justify-content: center;
+	}	
+}
+
+.social-media-item{
+	flex-basis: 1;
+}
+
+
 .footer-right {
 	text-align: right;
 	padding: 0rem 1rem;
