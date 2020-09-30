@@ -49,15 +49,68 @@ $theme_path = get_template_directory_uri();
 						</div>
 						
 						<div class="row footer-links">
-							<div class="col-md-6 col-xs-12 footer-left">
+							<div class="col-md-4 col-xs-12 footer-left">
 								
 									<img src="<?php echo $theme_path; ?>/assets/images/logo-colour-white-text.png"
 										alt="Wellbeing Liverpool logo"
 										class="footer-logo centered">
 								
 							</div>
-							
-							<div class="col-md-6 col-xs-12 footer-right">
+							<div class="col-md-4 col-xs-12 footer-centre">
+
+								
+<?php
+
+// Check rows exists.
+if( have_rows('social_media_accounts', 'options') ):
+
+	if( get_field("social_media_cta", "options") ):
+		echo "<p>" . get_field("social_media_cta", "options") . "</p>";
+	endif;
+
+	echo "
+			<div class=\"social-media-container\">
+		";
+
+    // Loop through rows.
+    while( have_rows('social_media_accounts','options') ) : the_row();
+
+        // Load sub field value.
+        $social_media_handle = get_sub_field('social_media_handle');
+        $social_media_url = get_sub_field('social_media_url');
+        $social_media_icon = get_sub_field('social_media_icon');
+        // Do something...
+
+        if ( isset($social_media_url) && isset($social_media_icon)){
+
+        	echo "
+        		<div class=\"social-media-item\">
+        			<a href=\"" . $social_media_url["url"] . "\" title=\"" . $social_media_url["title"] , "\" target=\"" . $social_media_url["target"] , "\">
+        				<img class=\"social-media-icon\" src=\"" . esc_url($social_media_icon["url"]) . "\"  alt=\"" . esc_url($social_media_icon["alt"]) . "\" >
+        			</a>
+        		</div>
+        		";
+
+
+        }
+
+    // End loop.
+    endwhile;
+	
+	echo "
+			</div>
+		";
+
+// No value.
+else :
+    // Do something...
+    echo "No social accounts found";
+endif;
+?>
+
+
+							</div>
+							<div class="col-md-4 col-xs-12 footer-right">
 								<div class="row">
 									<div class="col-12 links">
 										<span>
