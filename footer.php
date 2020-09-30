@@ -104,6 +104,7 @@ if( have_rows('social_media_accounts', 'options') ):
 // No value.
 else :
     // Do something...
+    // No message to display
 endif;
 ?>
 
