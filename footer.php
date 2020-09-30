@@ -62,7 +62,9 @@ $theme_path = get_template_directory_uri();
 <?php
 
 // Check rows exists.
-if( have_rows('social_media_accounts') ):
+if( have_rows('social_media_accounts') ){
+
+
 
 	echo "
 			<div class=\"social-media-container\">
@@ -98,10 +100,11 @@ if( have_rows('social_media_accounts') ):
 		";
 
 // No value.
-else :
+} else {
     // Do something...
     echo "No social accounts found";
-endif;
+}
+
 ?>
 
 
