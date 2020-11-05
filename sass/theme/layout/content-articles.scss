@@ -1,8 +1,22 @@
 .block_container{
+	display: flex;
+	flex-direction: column;
 	background-color: $grey;
 	padding: 2rem;
 	margin: 1rem 0;
 	border-radius: 10px;
+	a {
+		color: $secondary;
+		font-weight: bold;
+	}
+	.read-more-link {
+		align-self: flex-end;
+		margin: 2rem 0 0 0;
+		&:after {
+			content: '>';
+		}
+	}
+	
 }
 
 .block_title{
