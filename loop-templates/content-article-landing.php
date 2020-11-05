@@ -66,12 +66,13 @@ if( have_rows('blog_block') ):
         $block_category = get_sub_field('block_category');
         $read_more_link_text = get_sub_field('read_more_link_text');
         $block_term = get_term($block_category);
+        $category_link = get_category_link($block_category);
 
 ?>
 	
 	<div class="block_container">
 		<!-- Section title -->
-		<a href='<?php echo $site_url; ?>/blog/<?php echo $block_term->slug; ?>'>
+		<a href='<?php echo $category_link; ?>'>
 			<h3 class="block_title"><?php echo $block_title ; ?></h3>
 		</a>
 		
@@ -98,7 +99,7 @@ if( have_rows('blog_block') ):
 			<?php wp_reset_postdata(); ?>
 		</div>
 		
-		<a class='read-more-link' href='<?php echo $site_url; ?>/blog/<?php echo $block_term->slug; ?>'>
+		<a class='read-more-link' href='<?php echo $category_link; ?>'>
 			<?php
 				if (!$read_more_link_text) {
 					echo "Read more of our ".$block_term->name;
