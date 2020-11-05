@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <section>
 	<div class='container'>
 		<div class="block_container">
-			<h1><?php echo $category->name; ?></h1>
+			<h1>Archive</h1>
 			
 			<div class='row'>
 				<div class="article__container">
