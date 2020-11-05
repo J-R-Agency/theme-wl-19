@@ -146,36 +146,31 @@
 
 
 	.activity-card_pseudoimg--active{
-//		color: darken($theme-creative,50%);
-		color: $light !important;
+		color: darken($theme-creative,50%);
 		background: $theme-active;
 		background: linear-gradient(45deg, rgba($theme-active,50%) 0%, darken($theme-active,5%) 100%);
 	}
 	
 	.activity-card_pseudoimg--calm{
-//		color: darken($theme-creative,50%);
-		color: $light !important;
+		color: darken($theme-creative,50%);
 		background: $theme-calm;
 		background: linear-gradient(45deg, rgba($theme-calm,50%) 0%, darken($theme-calm,5%) 100%);
 	}	
 
 	.activity-card_pseudoimg--creative{
-//		color: darken($theme-creative,50%);
-		color: $theme-creative-dark !important;
+		color: darken($theme-creative,50%);
 		background: $theme-creative;
 		background: linear-gradient(45deg, rgba($theme-creative,50%) 0%, darken($theme-creative,5%) 100%);
 	}
 	
 	.activity-card_pseudoimg--social{
-//		color: darken($theme-creative,50%);
-		color: $light !important;
+		color: darken($theme-creative,50%);
 		background: $theme-social;
 		background: linear-gradient(45deg, rgba($theme-social,50%) 0%, darken($theme-social,5%) 100%);
 	}	
 
 	.activity-card_pseudoimg--useful{
-//		color: darken($theme-creative,50%);
-		color: $light !important;
+		color: darken($theme-creative,50%);
 		background: $theme-useful;
 		background: linear-gradient(45deg, rgba($theme-useful,50%) 0%, darken($theme-useful,5%) 100%);
 	}
