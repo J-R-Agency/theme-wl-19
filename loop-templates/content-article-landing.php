@@ -7,6 +7,8 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+$site_url = site_url();
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -62,32 +64,52 @@ if( have_rows('blog_block') ):
         $block_title = get_sub_field('block_title');
         $block_intro = get_sub_field('block_intro');
         $block_category = get_sub_field('block_category');
+        $read_more_link_text = get_sub_field('read_more_link_text');
+        $block_term = get_term($block_category);
+        $category_link = get_category_link($block_category);
 
 ?>
-
+	
 	<div class="block_container">
-		<h3 class="block_title"><?php echo $block_title ; ?></h3>
+		<!-- Section title -->
+		<a href='<?php echo $category_link; ?>'>
+			<h3 class="block_title"><?php echo $block_title ; ?></h3>
+		</a>
+		
 		<div class="block_intro"><?php echo $block_intro ; ?></div>
+		
 		<div class="article__container">
-		<?php 
-		unset($catquery);
-		unset($new_query);
-		$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
-		$catquery = new WP_Query( $new_query ) ;
-		while($catquery->have_posts()) : $catquery->the_post(); ?>
-			<div class="article__item">
-				<a href="<?php the_permalink() ?>" rel="bookmark">
-				<div class="article__img" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+			<?php 
+			unset($catquery);
+			unset($new_query);
+			$new_query = "cat=" . $block_category . "&posts_per_page=3" ;
+			$catquery = new WP_Query( $new_query ) ;
+			while($catquery->have_posts()) : $catquery->the_post(); ?>
+				<div class="article__item">
+					<a href="<?php the_permalink() ?>" rel="bookmark">
+					<div class="article__img" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+					</div>
+					<h3 class="article__title"><?php the_title(); ?></h3>
+					<div class="article__summary">
+						<?php the_excerpt(); ?>
+					</div>
+					</a>
 				</div>
-				<h3 class="article__title"><?php the_title(); ?></h3>
-				<div class="article__summary">
-					<?php the_excerpt(); ?>
-				</div>
-				</a>
-			</div>
-		<?php endwhile; ?> 
-		<?php wp_reset_postdata(); ?>
+			<?php endwhile; ?> 
+			<?php wp_reset_postdata(); ?>
 		</div>
+		
+		<a class='read-more-link' href='<?php echo $category_link; ?>'>
+			<?php
+				if (!$read_more_link_text) {
+					echo "Read more of our ".$block_term->name;
+				} else {
+					echo $read_more_link_text;
+				}
+				
+			?>
+		</a>
+		
 	</div>
 
 

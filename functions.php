@@ -73,6 +73,10 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 /* -- CUSTOM THEME FUNCTIONALITY FOR J&R -- */
 
+/* -- ADD SUPPORT FOR LARGER THUMBNAILS  -- */
+add_image_size( 'extra-large', 1200, 1200 );
+add_image_size( 'extra-extra-large', 1800, 1800 );
+
 /* -- ADD POST TYPE SUPPORT FOR EXCERPTS ON PAGES -- */
 add_post_type_support( 'page', 'excerpt' );
 

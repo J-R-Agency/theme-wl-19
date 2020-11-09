@@ -19,9 +19,30 @@ $theme_path = get_template_directory_uri();
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<section>
+	<div class='container'>
+		<!--<?php understrap_site_info(); ?>-->
+		<div class="row partners">
+			<div class="col-12">
+				<h4>
+					Delivered in partnership with
+				</h4>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<img src="<?php echo $uploads['baseurl'];?>/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
+				</div>
+				<div class="col-4">
+					<img src="<?php echo $uploads['baseurl'];?>/2019/12/citizens-advice-liverpool-logo.jpg" alt="Citizens Advice Liverpool">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-	<div class="container-fluid">
+<footer>
+
+	<div class="container">
 
 		<div class="row">
 
@@ -30,23 +51,6 @@ $theme_path = get_template_directory_uri();
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-
-						<!--<?php understrap_site_info(); ?>-->
-						<div class="row partners">
-							<div class="col-12">
-								<h4>
-									Delivered in partnership with
-								</h4>
-							</div>
-							<div class="row">
-								<div class="col-4">
-									<img src="<?php echo $uploads['baseurl'];?>/2019/12/healthwatch-liverpool-logo.png" alt="Healthwatch Liverpool">
-								</div>
-								<div class="col-4">
-									<img src="<?php echo $uploads['baseurl'];?>/2019/12/citizens-advice-liverpool-logo.jpg" alt="Citizens Advice Liverpool">
-								</div>
-							</div>
-						</div>
 						
 						<div class="row footer-links">
 							<div class="col-md-4 col-xs-12 footer-left">
@@ -153,7 +157,7 @@ endif;
 
 	</div><!-- container end -->
 
-</div><!-- wrapper end -->
+</footer><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 
