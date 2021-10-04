@@ -12,8 +12,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
-
-<div class="container-fluid">
 	
 	<?php if ( has_post_thumbnail() ): ?>
 		<?php $thumb = get_the_post_thumbnail_url(); ?>
